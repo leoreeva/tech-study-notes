@@ -15,7 +15,7 @@ def generate_toc():
             i = 1
             for file in sorted(filenames):
                 if file.endswith('.md'):
-                    file_path = os.path.relpath(os.path.join(dirpath, file))
+                    file_path = os.path.relpath(os.path.join(dirpath, file)).replace('\\','/')
                     display_name = file.replace('_', ' ').replace('.md', '').title()
                     toc_lines.append(f'{i}. [{display_name}]({file_path})')
                     i += 1
