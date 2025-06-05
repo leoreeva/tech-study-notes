@@ -1,4 +1,4 @@
-# ACID principle
+# ACID & BASE
 
 In the context of databases and data storage systems, a transaction is any operation that is treated as a single unit of work, which either completes fully or does not complete at all, and leaves the storage system in a consistent state. The classic example of a transaction is what occurs when you withdraw money from your bank account. Either the money has left your bank account, or it has not — there cannot be an in-between state.
 
@@ -8,3 +8,7 @@ ACID is an acronym that refers to the set of 4 key properties that define a tran
 - **Consistency**: ensures that transactions only make changes to tables in predefined, predictable ways. Transactional consistency ensures that corruption or errors in your data do not create unintended consequences for the integrity of your table.
 - **Isolation**: when multiple users are reading and writing from the same table all at once, isolation of their transactions ensures that the concurrent transactions don't interfere with or affect one another. Each request can occur as though they were occurring one by one, even though they're actually occurring simultaneously.
 - **Durability**: ensures that changes to your data made by successfully executed transactions will be saved, even in the event of system failure.
+
+https://aws.amazon.com/compare/the-difference-between-acid-and-base-database/#:~:text=ACID%20databases%20prioritize%20consistency%20over,can%20access%20inconsistent%20data%20temporarily.
+
+continue ...
