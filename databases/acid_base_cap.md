@@ -6,7 +6,7 @@ In the context of databases and data storage systems, a **transaction** is any o
 
 ## Overview
 
-![difference](acid_base.png)
+![difference](images/acid_base.png)
 
 ACID and BASE are acronyms for different database properties representing how the database behaves during online transaction processing. 
 - **ACID** databases prioritize consistency over availability: the whole transaction fails if an error occurs in any step within the transaction
@@ -22,7 +22,7 @@ Modern databases are distributed data stores that replicate data across multiple
 - **Availability**: every database request receives a successful response, without guaranteeing it contains the most recently updated data.
 - **Partition tolerance**: the system continues to operate despite dropped or delayed messages between the distributed nodes.
 
-![cap](cap_theorem.png)
+![cap](images/cap_theorem.png)
 
 For example, if a customer adds an item to a cart on an ecommerce website, all other customers should see the stock levels of the product drop. If the customer adds the last item to the cart, all other users should see the item as out of stock. In case any operation fails within a transaction, database designers must make a choice. The database can do one of the following:
 
