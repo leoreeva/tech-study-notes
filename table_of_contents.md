@@ -11,7 +11,7 @@
 **🧪 Databases**
 - Relational (SQL): normalization, joins, complex queries
 - NoSQL (MongoDB, Redis): when to use, pros/cons
-- [ACID & BASE](databases/acid_base.md)
+- [ACID, BASE, CAP](databases/acid_base_cap.md)
 - Transactions, indexes, locking, deadlocks
 
 **🏗️ Software Design**
@@ -21,7 +21,7 @@
 
 **🏗️ System Design and Scalability**
 - Scalability: Vertical vs. Horizontal scaling, Load Balancing, Caching (CDN, application-level, database-level), Database scaling (sharding, replication, denormalization).
-- Distributed Systems: CAP theorem, REST vs RPC, microservices, event-driven architecture, message queues (Kafka, RabbitMQ), distributed consensus (Paxos, Raft).
+- Distributed Systems: REST vs RPC, microservices, event-driven architecture, message queues (Kafka, RabbitMQ), distributed consensus (Paxos, Raft).
 - Networking Basics: OSI model (basic understanding), HTTP/HTTPS, TCP/IP.
 - Databases: Relational (SQL) vs. Non-relational (NoSQL - document, key-value, graph, column-family), CAP Theorem.
 - API Design: RESTful principles, idempotency, versioning.
