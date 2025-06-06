@@ -1,10 +1,8 @@
 # SOLID principle
 
-https://andreacavallo.medium.com/s-o-l-i-d-i-5-principi-dalla-oop-alla-programmazione-funzionale-617ba2b6a691
-
-https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898
-
 In software programming, SOLID is an acronym for 5 design principles intended to make object-oriented designs more understandable, flexible, and maintainable.
+
+<br>
 
 ## S = Single Responsability (SRP)
 Classes and objects should have one, and only one, responsibility (reason to change). 
@@ -60,6 +58,8 @@ public class SalaryCalculator {
     }
 }
 ```
+
+<br>
 
 ## O = Open Closed (OCP)
 Entities should be open for extension (can be extended by adding what is needed), but closed for modification (should never be modified). 
@@ -128,13 +128,25 @@ public class Main {
 ```
 In this example, if we wanted to add new vehicle types (e.g. truck), we would not have to modify the `TaxCalculator` class. We would simply have to create a new class that implements the Vehicle interface and provide an implementation of the `calculateTaxCost()` method. The `TaxCalculator` class would remain unchanged and would be able to calculate taxes for new vehicle types without any modifications.
 
+<br>
+
 ## L = Liskov Substitution (LSP)
 Subtypes must be substitutable for their base types.
 The principle says that it is possible to use base type and get a correct result as the outcome. It can be said that the LSP confirms abstractions are correct.
 
+// TODO: CONTINUE FROM HERE
+
+https://andreacavallo.medium.com/s-o-l-i-d-i-5-principi-dalla-oop-alla-programmazione-funzionale-617ba2b6a691
+
+https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898
+
+<br>
+
 ## I = Interface Segregation (ISP)
 Classes that implement interfaces, should not be forced to implement methods they do not use.
 Big interfaces should be split into smaller ones so there are no methods that are not used implemented. Classes know only about methods related to them providing decoupling and easier modifications.
+
+<br>
 
 ## D = Dipendency Inversion (DIP)
 High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.
