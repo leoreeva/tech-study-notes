@@ -9,7 +9,7 @@ Classes and objects should have one, and only one, responsibility (reason to cha
 
 This separation of responsibilities makes code more modular, more maintainable, less complex, and promotes the reduction of bugs due to changes in one responsibility that may affect another.
 
-**Before**:
+Before:
 ```java
 public class Employee {
     private String name;
@@ -30,7 +30,7 @@ public class Employee {
 }
 ```
 
-**After**:
+After:
 ```java
 public class Employee {
     private String name;
@@ -131,23 +131,224 @@ In this example, if we wanted to add new vehicle types (e.g. truck), we would no
 <br>
 
 ## L = Liskov Substitution (LSP)
-Subtypes must be substitutable for their base types.
-The principle says that it is possible to use base type and get a correct result as the outcome. It can be said that the LSP confirms abstractions are correct.
+If S is a subtype of T, then objects of type T in a program may be replaced with objects of type S without altering any of the desirable properties of that program.
 
-// TODO: CONTINUE FROM HERE
+When a child Class cannot perform the same actions as its parent Class, this can cause bugs. If you have a Class and create another Class from it, it becomes a parent and the new Class becomes a child. The child Class should be able to do everything the parent Class can do. This process is called Inheritance.
 
-https://andreacavallo.medium.com/s-o-l-i-d-i-5-principi-dalla-oop-alla-programmazione-funzionale-617ba2b6a691
+Before:
+```java
+@Getter
+@Setter
+@ToString
+public class Bird {
+    private String name;
 
-https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898
+    public Bird(String name) {
+        this.name = name;
+    }
+
+    public void fly() {
+        System.out.println(getName() + " is flying.");
+    }
+}
+
+@Getter
+@Setter
+@ToString(callSuper = true)
+public class Penguin extends Bird {
+    public Penguin(String name) {
+        super(name);
+    }
+
+    // Penguin is a Bird that cannot fly, so using the fly method violates the Liskov Substitution Principle. This method should be removed.
+    @Override
+    public void fly() {
+        throw new UnsupportedOperationException("Penguins cannot fly!");
+    }
+}
+```
+
+After:
+```java
+public interface FlyingBird {
+    void fly();
+}
+
+@Getter
+@Setter
+@ToString
+public class Bird {
+    private String name;
+
+    public Bird(String name) {
+        this.name = name;
+    }
+}
+
+@Getter
+@Setter
+@ToString(callSuper = true)
+public class Eagle extends Bird implements FlyingBird {
+    public Eagle(String name) {
+        super(name);
+    }
+
+    @Override
+    public void fly() {
+        System.out.println(getName() + " is flying.");
+    }
+}
+
+@Getter
+@Setter
+@ToString(callSuper = true)
+public class Penguin extends Bird {
+    public Penguin(String name) {
+        super(name);
+    }
+
+    // Penguin does not implement the FlyingBird interface because it cannot fly.
+}
+```
 
 <br>
 
 ## I = Interface Segregation (ISP)
+Clients should not be forced to depend on methods that they do not use.
+
 Classes that implement interfaces, should not be forced to implement methods they do not use.
-Big interfaces should be split into smaller ones so there are no methods that are not used implemented. Classes know only about methods related to them providing decoupling and easier modifications.
+Big interfaces should be split into smaller ones so there are no methods that are not used. Classes know only about methods related to them providing decoupling and easier modifications.
+
+Before:
+```java
+public interface Worker {
+    void work();
+    void rest();
+}
+
+public class Robot implements Worker {
+    
+    @Override
+    public void work() {
+        // implementation
+    }
+    
+    @Override
+    public void rest() {
+        throw new UnsopportedOperationException();
+    }
+}
+
+public class Man implements Worker {
+    
+    @Override
+    public void work() {
+        // implementation
+    }
+    
+    @Override
+    public void rest() {
+        // implementation
+    }
+}
+```
+
+After:
+```java
+public interface Work {
+    void work();
+}
+
+public interface Rest {
+    void rest();
+}
+
+public class Robot implements Work {
+    
+    @Override
+    public void work() {
+        // implementation
+    }
+}
+
+public class Man implements Work, Rest {
+    
+    @Override
+    public void work() {
+        // implementation
+    }
+    
+    @Override
+    public void rest() {
+        // implementation
+    }
+}
+```
 
 <br>
 
 ## D = Dipendency Inversion (DIP)
-High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.
-This reduces dependencies in the code modules. Code is much more easier to maintain if abstractions and details are isolated from each other.
+High-level modules should not depend on low-level modules; both should depend on abstractions. Abstractions should not depend on details; details should depend on abstractions.
+
+Code is much more reusable easier to maintain if abstractions and details are isolated from each other. This goes both ways:
+- we can substitute different details in order to reuse high-level code
+- we can reuse implementation details by layering alternative business logic on top.
+
+
+Before:
+```java
+public class Radio {
+    public string playSong() {
+        return "random song from the radio"
+    }
+}
+
+public class MusicListener {
+    private Radio radio;
+
+    public MusicListener() {
+        this.radio = new Radio();
+    }
+
+    public void listen() {
+        String song = this.radio.playSong();
+        System.out.println(song);
+    }
+}
+```
+
+After:
+```java
+public class MusicSource {
+    string playSong();
+}
+
+public class Radio implements MusicSource {
+    @Override
+    public string playSong() {
+        return "random song from the radio"
+    }
+}
+
+public class MP3Device implements MusicSource {
+    @Override
+    public string playSong() {
+        return "random song from the MP3 device"
+    }
+}
+
+public class MusicListener {
+    private MusicSource source;
+
+    public MusicListener(MusicSource source) {
+        this.source = source;
+    }
+
+    public void listen() {
+        String song = this.source.playSong();
+        System.out.println(song);
+    }
+}
+```
+In this example, if you want to change the source of music, you just need to pass a different instance of `MusicSource` to `MusicListener`, without editing the `MusicListener` class.
+
