@@ -5,8 +5,9 @@
 - Algorithms: binary search, sorting (merge sort, quick sort), backtracking, BFS, DFS, Dijkstra's, greedy algorithms, dynamic programming
 - Time and Space Complexity: Big-O notation, trade-offs, performance analysis
 - Programming
-    - Coding problems (e.g., from LeetCode)
+    - [Programming paradigms](computer_science_fundamentals/programming_paradigms.md)
     - OOP programming: Encapsulation, Inheritance, Polymorphism, Abstraction, Composition, etc.
+    - Coding problems (e.g., from LeetCode)
 
 **🧪 Databases**
 - Relational (SQL): normalization, joins, complex queries
