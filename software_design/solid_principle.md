@@ -287,10 +287,10 @@ public class Man implements Work, Rest {
 
 <br>
 
-## D = Dipendency Inversion (DIP)
+## D = Dependency Inversion (DIP)
 High-level modules should not depend on low-level modules; both should depend on abstractions. Abstractions should not depend on details; details should depend on abstractions.
 
-Code is much more reusable easier to maintain if abstractions and details are isolated from each other. This goes both ways:
+Code is much more reusable and easier to maintain if abstractions and details are isolated from each other. This goes both ways:
 - we can substitute different details in order to reuse high-level code
 - we can reuse implementation details by layering alternative business logic on top.
 
