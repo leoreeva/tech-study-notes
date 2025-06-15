@@ -49,37 +49,126 @@ A hybrid approach that combines vertical and horizontal scaling. Start by scalin
 
 <br>
 
+
+## Database scaling
+When an application increase it user base, the database can struggle to handle the increasing load, resulting in slower response times, longer query execution, and eventual system crashes. Traditional relational databases work well initially but tend to show their limits in terms of scalability as they reach hardware limits (CPU, disk, memory).
+
+Scaling a database means increasing read/write traffic, handling larger data volumes properly, having high availability and fault tolerance. 
+
+### Sharding: Distributing Data Across Multiple Servers
+Challenges Faced:
+Data Growth: When a single database server can no longer hold all the data.
+Increased Traffic: A single database struggling with too many read/write operations simultaneously.
+Uneven Load Distribution: Some parts of the database getting hit harder than others, causing performance issues.
+What is Sharding?
+Sharding is a database partitioning technique where data is split into smaller, more manageable chunks (called shards) and stored across multiple servers. Each shard holds a subset of the data, and together, they make up the complete dataset.
+
+For example, instead of storing all user data on one server, you could shard users based on their geographical region, dividing users from the US, Europe, and Asia into different shards.
+
+How I Solved the Problem with Sharding:
+
+To handle increasing data volumes and high traffic, I implemented range-based sharding in one of our projects where user data was growing exponentially.
+
+Range-based Sharding: I partitioned data based on a specific key, such as user ID or date ranges. This allowed the system to split the data logically, with users from different regions or time zones distributed across different shards.
+Shard Management: We used a shard manager to direct traffic to the appropriate database shard based on user queries. For example, if a user from Europe logs in, the shard manager directs the request to the EU-based shard.
+Key Benefits of Sharding:
+
+Horizontal Scalability: We were able to add more database servers (shards) as needed, distributing both the data and the load across multiple nodes.
+Fault Isolation: If one shard went down, only a portion of the data and requests were affected, rather than the entire system.
+Optimized Query Performance: Since each shard had a smaller subset of data, queries ran faster because they were operating on a reduced dataset.
+Challenges in Sharding:
+
+Complexity: Sharding adds complexity to the system. Querying across multiple shards, managing shard key selection, and handling resharding (moving data between shards) require careful planning.
+Data Skew: If shards are not evenly distributed, some servers might be overloaded while others remain underutilized.
+
+### Replication: Ensuring High Availability and Load Balancing
+Challenges Faced:
+High Read Traffic: A single database server struggling to handle high-volume read queries.
+Downtime Risk: The need for high availability to ensure the system stays operational even if one database server fails.
+What is Replication?
+Replication involves copying data from one database (called the primary) to one or more databases (called replicas). The replicas act as backups and can also be used to distribute read traffic.
+
+In a typical setup:
+
+Primary Database: Handles all write operations.
+Replica Databases: Handle read operations, reducing the load on the primary database.
+How I Solved the Problem with Replication:
+
+When facing high read traffic, I used master-slave replication (now commonly known as primary-replica replication).
+
+Master-Slave Replication: The primary (master) database handled all write operations (such as user data updates), while the replicas (slaves) were used to serve read requests.
+Read/Write Separation: I implemented a load balancer to direct read requests to the replica databases and write requests to the primary database. This allowed us to scale reads horizontally by adding more replicas when needed.
+Key Benefits of Replication:
+
+Load Distribution: By distributing read traffic to replicas, we reduced the load on the primary database, ensuring faster response times for both read and write queries.
+High Availability: In case the primary database went down, one of the replicas could be promoted to act as the new primary, ensuring minimal downtime.
+Fault Tolerance: Replication provided a real-time backup of the primary database, ensuring data redundancy.
+Challenges in Replication:
+
+Replication Lag: There’s often a slight delay between writing data to the primary database and propagating it to the replicas. This can lead to inconsistencies for read-heavy applications where real-time data is critical.
+Handling Failover: Promoting a replica to a primary during an outage needs careful coordination, especially in avoiding split-brain scenarios (where two databases mistakenly assume they’re both primaries).
+
+### Caching: Reducing Database Load and Improving Latency
+Challenges Faced:
+Frequent Access to the Same Data: Certain queries were being repeatedly executed, putting unnecessary load on the database.
+Slow Response Times: Database queries, especially those involving complex joins or large datasets, were taking too long to return results.
+What is Caching?
+Caching involves storing frequently accessed data in a faster, temporary storage layer (typically in-memory) to reduce the load on the database and improve response times.
+
+How I Solved the Problem with Caching:
+
+To improve performance and reduce the strain on the database, I implemented caching with Redis.
+
+In-memory Cache: Redis was used as an in-memory data store to cache frequently accessed data. For instance, user profiles that were being repeatedly accessed were cached in Redis, allowing the application to retrieve the data quickly without querying the database.
+Cache Expiry: To avoid serving stale data, I implemented TTL (Time to Live) policies where cache entries automatically expired after a set period, ensuring that the cache was refreshed with updated data.
+Key Benefits of Caching:
+
+Improved Latency: By caching frequently accessed data, we significantly reduced query response times, as the cache is faster than querying the database.
+Reduced Load on the Database: With fewer queries hitting the database, its overall performance improved, allowing it to focus on more critical tasks.
+Cost Efficiency: By serving data from the cache, we were able to reduce the need for additional database instances, saving on infrastructure costs.
+Challenges in Caching:
+
+Cache Invalidation: Ensuring the cache is always up-to-date is tricky. If the data in the cache becomes outdated, it can lead to users seeing stale information.
+Cache Misses: If the data is not in the cache (cache miss), the application still needs to query the database, potentially causing a performance drop.
+
+<br>
+
 ## Load balancing
-https://www.geeksforgeeks.org/what-is-load-balancer-system-design/
 
 Load balancing is the process of distributing incoming network traffic across a set of resources, ensuring the performance and reliability of the system. This provides the flexibility to add or subtract resources as demand dictates.
 
 ![Load balancing](images/load_balancing.png)
 *[(Image source)](https://www.geeksforgeeks.org/what-is-load-balancer-system-design/)*
 
+There are three main problems that it solves:
 
-A load balancer can sit in front of the server and direct client requests across all servers capable of servicing them, optimizing speed and capacity use. This prevents one server from getting too busy and slowing down. If a server goes down, the load balancer redirects traffic to the remaining online servers. When we add a new server, the load balancer automatically starts sending requests to it.
+- Single Point of Failure: if the server goes down or something happens to the server the whole application would be interrupted and it would become unavailable for the users for a certain period
+- Overloaded Servers: there would be a limitation on the number of requests that a web server can handle
+- Limited Scalability: without a load balancer, adding more servers to share the traffic is complicated. All requests are stuck with one server, and adding new servers won’t automatically solve the load issue
 
-### Types
-aaa
+A load balancer can sit in front of the servers and direct client requests across all servers capable of serving them, optimizing speed and capacity use. This prevents one server from getting too busy and slowing down. If a server goes down, the load balancer redirects traffic to the remaining online servers. When we add a new server, the load balancer automatically starts sending requests to it.
 
+### Algorithms
+We need a load-balancing algorithm to decide which request should be redirected to which backend server.
 
+- **Static Load Balancing Algorithms** involves predetermined assignment of tasks or resources without considering real-time variations in the system. This approach relies on a fixed allocation of workloads to servers or resources, and it doesn't adapt to changes during runtime. Might work well in situations that are more predictable
+    - Round Robin
+    - Weighted Round-Robin
+    - Source IP hash
+
+- **Dynamic Load Balancing Algorithms** make judgments in real time, regarding the distribution of incoming network traffic or computing burden among several servers or resources. This method adjusts to the system's shifting circumstances, including changes in resource availability, network traffic, and server load
+    - Least Connection Method
+    - Least Response Time Method
 
 <br>
 
-
-## Caching
-Caching (CDN, application-level, database-level)
-https://medium.com/@truongbui95/exploring-caching-in-distributed-systems-concepts-and-practical-demonstration-7d6635253fc6
-
+## aaa
+aaa
 
 <br>
 
 
 ## stuff to add...
-Scalability:
-- Rate Limiting
-- Database scaling (sharding, replication, denormalization)
 
 Distributed Systems
 - event-driven architecture
