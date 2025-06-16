@@ -22,4 +22,5 @@ ENV/
 dist/
 build/
 
+todo*
 to_do*
