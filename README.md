@@ -1,7 +1,7 @@
 # Tech study notes
 Resources for data engineering / software engineering. Useful for interviews.
 
-Work in progress. Lots of stuff missing or just skipped (because of prior knowledge in the field)
+Work in progress. Lots of stuff missing or even just skipped (because of prior knowledge in the field)
 
 <br>
 
@@ -41,14 +41,6 @@ Work in progress. Lots of stuff missing or just skipped (because of prior knowle
 - Testing: unit tests, integration tests
 - CI/CD pipelines (e.g., Jenkins, GitHub Actions)
 
-**☁️ Cloud Computing (GCP PDE 2023)**
-- Data lifecycle in data engineering
-- Storage
-- Compute
-- Data processing
-- Machine learning
-- Data visualization
-- Data transfer
-- Management
-- IAM
-- Sample questions
+**☁️ Cloud Certifications**
+- [GCP PDE (2023)](cloud_certifications/google_cloud_platform/gcp_pde.md)
+- [SnowPro Core (2025)](cloud_certifications/snowflake/snowpro_core.md)
