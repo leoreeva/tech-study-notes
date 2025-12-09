@@ -1,7 +1,7 @@
 # Tech study notes
-Resources for data engineering / software engineering. Useful for interviews.
+Data engineering / software engineering resources. Useful for interviews or just personal knowledge.
 
-Work in progress. Lots of stuff missing or even just skipped (because of prior knowledge in the field)
+Work in progress. Lots of stuff missing or even just skipped (because of prior knowledge in the field). Feel free to contribute.
 
 <br>
 
@@ -11,7 +11,7 @@ Work in progress. Lots of stuff missing or even just skipped (because of prior k
 - Data Structures: arrays, linked lists, stacks, queues, hash tables, heaps, tries, graphs, trees (binary, BST, AVL, etc.)
 - Algorithms: binary search, sorting (merge sort, quick sort), backtracking, BFS, DFS, Dijkstra's, greedy algorithms, dynamic programming
 - Time and Space Complexity: Big-O notation, trade-offs, performance analysis
-- Concurrency (in Java) (tutta la roba sul quaderno; poi differenza thread vs process vs container...)
+- Concurrency
 - Programming
     - [Programming paradigms](computer_science_fundamentals/programming_paradigms.md)
     - [OOP (object-oriented programming)](computer_science_fundamentals/oop.md)
