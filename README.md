@@ -36,6 +36,10 @@ Work in progress. Lots of stuff missing or even just skipped (because of prior k
 - [API Design (RPC & REST)](system_design/api_design.md)
 - Security: Authentication, Authorization, common vulnerabilities (OWASP top 10)
 
+**⚙️ Data Engineering**
+- [Data modeling](data_engineering/data_modeling.md)
+- [Data marts](data_engineering/data_marts.md)
+
 **⚙️ DevOps & CI/CD Basics**
 - Docker, Kubernetes (basic concepts)
 - Testing: unit tests, integration tests
