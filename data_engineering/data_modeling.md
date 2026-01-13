@@ -1,17 +1,111 @@
 # Data modeling
 
-https://www.datacamp.com/blog/data-modeling
+Data modeling is a detailed process that involves creating a visual representation of data and its relationships. It serves as a blueprint for how data is structured, stored, and accessed to ensure consistency and clarity in data management. 
 
-https://agiledata.org/essays/datamodeling101.html
+Defining data elements and their relationships helps teams organize information to support efficient storage, retrieval, and analysis—improving both performance and decision-making.
 
 
-## Normalization vs denormalization
+## Types of data models
+There are three main types of data models, from high-level planning to physical implementation.
 
-aaa
+- A **conceptual data model** provides a high-level view of the data. This model defines key business entities (e.g., customers, products, and orders) and their relationships without getting into technical details. 
+
+    ![cdm](images/cdm.png)
+
+- The **logical data model** defines how the data will be structured. This model focuses on data organization without being tied to any specific database or technology. It includes detailed information about the data's attributes, relationships, and constraints, thus offering a bridge between business requirements and the physical implementation of the data.
+
+    ![ldm](images/ldm.png)
+
+- A **physical data model** represents how data is actually stored in a database. This model defines the specific table structures, indexes, and storage mechanisms required to optimize performance and ensure data integrity. It translates the logical design into a format suitable for database systems.
+
+    ![pdm](images/pdm.png)
+
+
+## How to model data
+The following tasks are performed in an iterative manner:
+
+- **Identify entity types**. An entity type (commonly called entity) represents a collection of similar objects (e.g. Customer, Address, Order, etc). If you were class modeling you would expect to discover classes with the exact same names. However, the difference between a class and an entity type is that classes have both data and behavior whereas entity types just have data.
+
+- **Identify attributes**. Each entity type will have one or more data attributes. Attributes should also be cohesive from the point of view of your domain, something that is often a judgment call. Getting the level of detail right can have a significant impact on your development and maintenance efforts. Refactoring a single data column into several columns can be difficult, although over-specifying an attribute (e.g. having three attributes for zip code when you only needed one) can result in overbuilding your system and hence you incur greater development and maintenance costs than you actually needed.
+
+- **Identify relationships**. In the real world entities have relationships with other entities (e.g. customers PLACE orders, customers LIVE AT addresses, etc.). You also need to identify the cardinality (1-to-1, 1-to-many, may-to-many) and optionality (can be null) of a relationship. 
+
+- **Assign keys**. Two strategies
+    - assign a natural key, which is one or more existing data attributes that are unique to the business concept (e.g. SocialSecurityNumber)
+    - introduce a new column, called a surrogate key, which is a key that has no business meaning. 
+
+- **Normalize to reduce data redundancy**. Data normalization is the process in which data attributes within a data model are organized to increase the cohesion of entity types. In other words, the goal of data normalization is to reduce and even eliminate data redundancy. Three most common normalization rules:
+
+    | Normal Form | Main Rule | What It Eliminates | Key Requirement |
+    |------------|-----------|--------------------|-----------------|
+    | **1NF** | All attributes contain atomic (indivisible) values | Repeating groups and multi-valued attributes | Each field holds a single value; records are unique |
+    | **2NF** | Every non-key attribute is fully functionally dependent on the entire primary key | Partial dependencies | Must be in 1NF and have no dependency on part of a composite key |
+    | **3NF** | Non-key attributes depend only on the primary key | Transitive dependencies | Must be in 2NF and non-key attributes must not depend on other non-key attributes |
+
+    The advantage of having a highly normalized data schema is that information is stored in one place and one place only, reducing the possibility of inconsistent data. Furthermore, highly-normalized data schemas in general are closer conceptually to object-oriented schemas because the object-oriented goals of promoting high cohesion and loose coupling between classes results in similar solutions (at least from a data point of view). This generally makes it easier to map your objects to your data schema.
+
+- **Denormalize to improve performance**. Normalized data schemas, when put into production, often suffer from performance problems. This makes sense – the rules of data normalization focus on reducing data redundancy, not on improving performance of data access. An important part of data modeling is to denormalize portions of your data schema to improve database access times. Note that if your initial, normalized data design meets the performance needs of your application then it is fine as is. Denormalization should be resorted to only when performance testing shows that you have a problem with your objects and subsequent profiling reveals that you need to improve database access time. 
+
+
+## Data modeling techniques
+Data modeling is not a one-size-fits-all process. Different techniques are employed depending on the complexity of the data and the goals. 
+
+### Entity-relationship (ER) modeling
+One of the most common techniques used to represent data. Three key elements: 
+- Entities (objects or things within the system).
+- Relationships (how these entities interact with each other). Can be one-to-many, many-to-many
+- Attributes (properties of the entities).
+
+![ER modeling](images/modeling_er.png)
+
+### Dimensional modeling
+Dimensional modeling is widely used in data warehousing and analytics, where data is often represented in terms of facts and dimensions.
+
+![Dimensional modeling](images/modeling_dimensional.png)
+
+Most common schemas are star and snowflake schemas (see below).
+
+### Object-oriented modeling
+Object-oriented modeling is used to represent complex systems, where data and the functions that operate on it are encapsulated as objects. This technique is useful for modeling applications with complex, interrelated data and behaviors – especially in software engineering and programming.
+This approach is particularly beneficial in object-oriented programming (OOP) languages like Java and Python, where data models can be directly mapped to classes and objects.
+![OOP modeling](images/modeling_oop.png)
+
+### NoSQL and document-based modeling
+They are designed for flexible, schema-less databases. 
+This technique is often used when data structures are less rigid or evolve over time. These models allow storing and managing unstructured or semi-structured data, such as JSON documents, without predefined schemas.
+In a relational database, user profiles might be stored across multiple tables. But in a NoSQL document-based model like MongoDB, a user's data can be stored in a single JSON-like document:
+```json
+{
+  "user_id": 123,
+  "name": "Alice Smith",
+  "email": "alice@example.com",
+  "address": {
+    "street": "123 Main St",
+    "city": "New York",
+    "zip": "10001"
+  },
+  "purchases": [
+    { "product_id": 101, "price": 19.99 },
+    { "product_id": 202, "price": 49.99 }
+  ]
+}
+```
+
+
+## Matching data models with data modeling techniques
+Each data modeling technique aligns with different stages of database design (data models). 
+- Conceptual data model → Entity-relationship (ER) modeling
+    - Defines high-level business entities and relationships without technical details.
+    - Example: An ER diagram showing how Customers, Orders, and Products relate.
+- Logical data model → ER, dimensional, and object-oriented modeling
+    - Specifies data structure, attributes, and constraints without focusing on storage.
+    - Example: A star schema outlining a Sales fact table with dimension tables like Time, Product, and Customer.
+- Physical data model → Dimensional, object-oriented, and NoSQL modeling
+    - Represents how data is physically stored and optimized in a database.
+    - Example: A MongoDB document storing user profiles as flexible JSON objects or an optimized relational schema in PostgreSQL.
 
 
 ## Star schema
-
 Introduced by Ralph Kimball in the 1990s, a star schema is a multi-dimensional data model used to organize data in a database so that it is easy to understand and analyze. 
 The star schema design is optimized for querying large data sets, maintaining history, and updating data by reducing the duplication of repetitive business definitions, making it fast to aggregate and filter data in the data warehouse (or data mart).
 
@@ -53,6 +147,14 @@ Star and snowflake schemas are most commonly found in dimensional data warehouse
 
 
 ## Slowly Changing Dimensions (Type 1 vs Type 2)
+SCDs are a foundational concept in dimensional modeling and data warehousing. They help track changes in dimension data over time (like changes to customer addresses, product descriptions, or employee roles) so you can maintain historical accuracy or reflect only the most recent updates depending on business requirements.
 
-aaa
+SCDs refer to data attributes in dimension tables that evolve gradually over time rather than changing regularly or rapidly. SCD techniques help determine whether to overwrite old values or preserve historical data.
 
+- **Type 1 SCDs** overwrite old data with new data. No historical data is preserved—only the latest value is retained.
+    - Use case example: a customer’s email address changes, and you don’t need to track previous addresses
+    - Benefits: simple to implement, saves storage space, useful when historical accuracy isn’t important
+
+- **Type 2 SCDs** preserve historical changes by creating a new record for each change. Metadata such as effective_date, end_date, or is_current helps track which version is active.
+    - Use case example: tracking a customer’s address history to understand regional buying behaviors or migration patterns over time
+    - Benefits: preserves historical data, enables time-based analytics, crucial for auditability and trend analysis
