@@ -68,6 +68,7 @@ Most common schemas are star and snowflake schemas (see below).
 ### Object-oriented modeling
 Object-oriented modeling is used to represent complex systems, where data and the functions that operate on it are encapsulated as objects. This technique is useful for modeling applications with complex, interrelated data and behaviors – especially in software engineering and programming.
 This approach is particularly beneficial in object-oriented programming (OOP) languages like Java and Python, where data models can be directly mapped to classes and objects.
+
 ![OOP modeling](images/modeling_oop.png)
 
 ### NoSQL and document-based modeling
