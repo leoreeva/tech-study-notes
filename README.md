@@ -38,12 +38,13 @@ Work in progress. Lots of stuff missing or even just skipped (because of prior k
 
 **⚙️ Data Engineering**
 - [Data modeling](data_engineering/data_modeling.md)
+- [Data pipelines](data_engineering/data_pipelines.md)
 - [Data marts](data_engineering/data_marts.md)
 
-**⚙️ DevOps & CI/CD Basics**
+**⚙️ DevOps & CI/CD**
 - Docker, Kubernetes (basic concepts)
 - Testing: unit tests, integration tests
-- CI/CD pipelines (e.g., Jenkins, GitHub Actions)
+- [CI/CD pipelines](devops_cicd/cicd_pipelines.md)
 
 **☁️ Cloud Certifications**
 - [GCP PDE (2023)](cloud_certifications/google_cloud_platform/gcp_pde.md)
