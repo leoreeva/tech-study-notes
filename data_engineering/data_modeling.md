@@ -36,11 +36,11 @@ The following tasks are performed in an iterative manner:
 
 - **Normalize to reduce data redundancy**. Data normalization is the process in which data attributes within a data model are organized to increase the cohesion of entity types. In other words, the goal of data normalization is to reduce and even eliminate data redundancy. Three most common normalization rules:
 
-    | Normal Form | Main Rule | What It Eliminates | Key Requirement |
-    |------------|-----------|--------------------|-----------------|
-    | **1NF** | All attributes contain atomic (indivisible) values | Repeating groups and multi-valued attributes | Each field holds a single value; records are unique |
-    | **2NF** | Every non-key attribute is fully functionally dependent on the entire primary key | Partial dependencies | Must be in 1NF and have no dependency on part of a composite key |
-    | **3NF** | Non-key attributes depend only on the primary key | Transitive dependencies | Must be in 2NF and non-key attributes must not depend on other non-key attributes |
+    | Normal Form | Description |
+    |-------------|-------------|
+    | **1NF**     | All attributes contain atomic (indivisible) values, each field holds a single value; records are unique                 |
+    | **2NF**     | Every non-key attribute is fully dependent on the entire primary key, not just part of a composite key (must be in 1NF) |
+    | **3NF**     | Non-key attributes shouldn't depend on other non-key attributes, but only on the primary key (must be in 2NF)           |
 
     The advantage of having a highly normalized data schema is that information is stored in one place and one place only, reducing the possibility of inconsistent data. Furthermore, highly-normalized data schemas in general are closer conceptually to object-oriented schemas because the object-oriented goals of promoting high cohesion and loose coupling between classes results in similar solutions (at least from a data point of view). This generally makes it easier to map your objects to your data schema.
 
