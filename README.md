@@ -39,6 +39,7 @@ Work in progress. Lots of stuff missing or even just skipped (because of prior k
 **⚙️ Data Engineering**
 - [Data modeling](data_engineering/data_modeling.md)
 - [Data pipelines](data_engineering/data_pipelines.md)
+- [Batch vs Streaming](data_engineering/batch_streaming.md)
 - [Data marts](data_engineering/data_marts.md)
 
 **⚙️ DevOps & CI/CD**

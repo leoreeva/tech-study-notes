@@ -1,0 +1,39 @@
+# Batch vs Streaming
+
+These are two different data processing semantics used for data engineering workloads, including ingestion, transformation, and real-time processing.
+
+## Batch processing
+It's a method in which large volumes of collected data are processed in chunks or batches.
+
+This approach is especially effective for resource-intensive jobs, repetitive tasks, and managing extensive datasets where real-time processing isn’t required. It is ideal for applications like data warehousing, ETL (Extract, Transform, Load), and large-scale reporting.
+
+Due to its versatility in meeting various business needs, batch processing remains a widely adopted choice for data processing.
+
+Data batch processing is mainly automated, requiring minimal human interaction once the process is set up. Tasks are predefined, and the system executes them according to a scheduled timeline, typically during off-peak hours when computing resources are readily available.
+
+Human involvement is usually limited to configuring the initial parameters, troubleshooting errors if they arise, and reviewing the output, making batch processing a highly efficient and hands-off approach to managing large-scale data tasks.
+
+There are a variety of ETL tools for batch processing. A common tool is Apache Airflow, which allows users to quickly build up data orchestration pipelines that can run on a set schedule and have simple monitoring. Explore different tools to find the one that best fits your business needs!
+
+![Batch processing](images/batch.png)
+
+
+## Stream processing
+Also called real-time data processing, it's a data processing approach designed to handle and analyze data in real time as it flows through a system.
+
+Unlike batch processing, which involves collecting and processing data in large, discrete chunks at scheduled intervals, stream processing deals with data continuously and incrementally.
+
+Data is collected from various sources such as sensors, logs, transactions, social media feeds, or other live data sources. 
+
+Data streams are then processed as they are received, involving a series of operations such as filtering, transforming, and aggregating the data. This allows for real-time implementation such as live analytics, triggering alerts, real-time dashboards, or feeding into other systems for further action. These insights are often used to influence immediate decisions. 
+
+Streaming processing applications include real-time analytics for financial markets, fraud detection, network traffic monitoring, recommendation engines, and more.
+
+Streaming systems often include capabilities for constant monitoring and managing data flows and processing pipelines to support high-velocity data. This includes tracking the system's performance, the health of the data streams, and the outcomes of the processing tasks. 
+
+One popular framework is AWS Kinesis, which is combined with Lambda. Amazon Kinesis is a cloud-based service that allows you to collect, process, and analyze real-time, streaming data, whereas Lambda supports complex functions and automation.
+
+![Streaming processing](images/streaming.png)
+
+
+
