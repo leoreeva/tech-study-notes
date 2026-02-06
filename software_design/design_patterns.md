@@ -13,7 +13,7 @@ Creational patterns provide flexibility in *what* gets created, *who* creates it
 |----------|------------------|------------|----------|
 | **[Singleton](./_creational_patterns.md#singleton)** | Ensure a class has only one instance | ⭐ | ✅ |
 | **[Prototype](./_creational_patterns.md#prototype)** | Clone objects instead of creating new | ⭐ | ✅ |
-| **[Factory Method](./_creational_patterns.md#factory-method)** | Define an interface for creating objects | ⭐⭐ | 🚧 |
+| **[Factory Method](./_creational_patterns.md#factory-method)** | Define an interface for creating objects | ⭐⭐ | ✅ |
 | **[Builder](./_creational_patterns.md#builder)** | Construct complex objects step by step | ⭐⭐ | ❌ |
 | **[Abstract Factory](./_creational_patterns.md#abstract-factory)** | Create families of related objects | ⭐⭐⭐ | ❌ |
 
