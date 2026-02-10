@@ -19,7 +19,7 @@ Work in progress. Lots of stuff missing or even just skipped (because of prior k
 
 **🧪 Databases**
 - [ACID, BASE, CAP](databases/acid_base_cap.md)
-- Relational: normalization, joins, complex queries
+- [SQL](databases/sql.md)
 - NoSQL (document, key-value, graph, column-family): when to use, pros/cons
 - Indexes, locking, deadlocks
 
