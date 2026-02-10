@@ -26,7 +26,7 @@ As systems grow, managing relationships between objects becomes challenging. Str
 | Pattern  | One-Line Summary | Difficulty | Progress |
 |----------|------------------|------------|----------|
 | **[Adapter](./structural_patterns.md#adapter)** | Convert interface to another interface | ⭐ | ❌ |
-| **[Facade](./structural_patterns.md#facade)** | Provide simplified interface to subsystem | ⭐ | 🚧 |
+| **[Facade](./structural_patterns.md#facade)** | Provide simplified interface to subsystem | ⭐ | ✅ |
 | **[Composite](./structural_patterns.md#composite)** | Treat objects and compositions uniformly | ⭐⭐ | ❌ |
 | **[Decorator](./structural_patterns.md#decorator)** | Add behavior to objects dynamically | ⭐⭐ | ❌ |
 | **[Proxy](./structural_patterns.md#proxy)** | Control access to an object | ⭐⭐ | ❌ |
