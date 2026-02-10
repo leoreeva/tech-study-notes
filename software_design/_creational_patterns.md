@@ -30,7 +30,7 @@ All implementations of the Singleton have these two steps in common:
 
 
 ## Prototype
-(aka Clone) Lets you copy existing objects without making your code dependent on their classes.
+Lets you copy existing objects without making your code dependent on their classes.
 
 ### 🚨 The problem
 Copying an object by creating a new instance and manually copying its fields seems straightforward, but it has limitations. Private fields may not be accessible, making a full copy impossible from outside the object. In addition, this approach tightly couples the code to a concrete class, which is problematic when only an interface is known rather than the actual implementation.
@@ -55,7 +55,7 @@ Also, prototyping can avoid creation of new objects, which sometimes can be expe
 
 
 ## Factory Method
-(aka Virtual constructor) Provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
+Provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
 
 ### 🚨 The problem
 Imagine that you’re creating a logistics management app. You first only handle transportation by trucks, but after a while you need to incorporate sea logistics. Now most of your code is coupled to the `Truck` class. Adding `Ships` into the app would require making changes to the entire codebase (and the same happens for each new type of transportation).
@@ -107,7 +107,7 @@ aaa
 
 
 ## Abstract Factory
-(aka Kit) Lets you produce families of related objects without specifying their concrete classes
+Lets you produce families of related objects without specifying their concrete classes
 
 ### 🚨 The problem
 aaa
