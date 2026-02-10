@@ -2,58 +2,10 @@
 # Structural design patterns
 They explain how to assemble objects and classes into larger structures, while keeping these structures flexible and efficient.
 
+<br>
+
 ## Adapter
 Allows objects with incompatible interfaces to collaborate.
-
-### 🚨 The problem
-aaa
-
-### ✅ The solution
-aaa
-
-### 🛠️ Structure
-aaa
-
-### ⚖️ Drawbacks
-aaa
-
-<br>
-
-## Bridge
-
-### 🚨 The problem
-Lets you split a large class or a set of closely related classes into two separate hierarchies (abstraction and implementation) which can be developed independently of each other.
-
-### ✅ The solution
-aaa
-
-### 🛠️ Structure
-aaa
-
-### ⚖️ Drawbacks
-aaa
-
-<br>
-
-## Composite
-Lets you compose objects into tree structures and then work with these structures as if they were individual objects.
-
-### 🚨 The problem
-aaa
-
-### ✅ The solution
-aaa
-
-### 🛠️ Structure
-aaa
-
-### ⚖️ Drawbacks
-aaa
-
-<br>
-
-## Decorator
-Lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.
 
 ### 🚨 The problem
 aaa
@@ -93,8 +45,25 @@ It's useless if the subsystem is already simple, it would add an unnecessary lay
 
 <br>
 
-## Flyweight
-Lets you fit more objects into the available amount of RAM by sharing common parts of state between multiple objects instead of keeping all of the data in each object.
+## Composite
+Lets you compose objects into tree structures and then work with these structures as if they were individual objects.
+
+### 🚨 The problem
+aaa
+
+### ✅ The solution
+aaa
+
+### 🛠️ Structure
+aaa
+
+### ⚖️ Drawbacks
+aaa
+
+<br>
+
+## Decorator
+Lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.
 
 ### 🚨 The problem
 aaa
@@ -112,6 +81,39 @@ aaa
 
 ## Proxy
 Lets you provide a substitute or placeholder for another object. A proxy controls access to the original object, allowing you to perform something either before or after the request gets through to the original object.
+
+### 🚨 The problem
+aaa
+
+### ✅ The solution
+aaa
+
+### 🛠️ Structure
+aaa
+
+### ⚖️ Drawbacks
+aaa
+
+<br>
+
+## Bridge
+
+### 🚨 The problem
+Lets you split a large class or a set of closely related classes into two separate hierarchies (abstraction and implementation) which can be developed independently of each other.
+
+### ✅ The solution
+aaa
+
+### 🛠️ Structure
+aaa
+
+### ⚖️ Drawbacks
+aaa
+
+<br>
+
+## Flyweight
+Lets you fit more objects into the available amount of RAM by sharing common parts of state between multiple objects instead of keeping all of the data in each object.
 
 ### 🚨 The problem
 aaa

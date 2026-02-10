@@ -2,9 +2,7 @@
 # Creational design patterns
 Creational patterns provide flexibility in *what* gets created, *who* creates it, *how* it's created, and *when*. They abstract the instantiation process, making systems independent of how objects are created, composed, and represented.
 
-
 <br>
-
 
 ## Singleton
 Ensure a class has **only one instance** and provide a **global point of access** to it.
@@ -25,9 +23,7 @@ All implementations of the Singleton have these two steps in common:
 - It solves two problems at the time, violating the Single Responsibility Principle.
 - It requires special treatment in a multithreaded environment so that multiple threads won’t create a singleton object several times
 
-
 <br>
-
 
 ## Prototype
 Lets you copy existing objects without making your code dependent on their classes.
@@ -50,9 +46,7 @@ Also, prototyping can avoid creation of new objects, which sometimes can be expe
 - Cloning complex objects that have circular references might be very tricky
 - Avoidable when object creation is cheap & simple or when objects contain unique resources
 
-
 <br>
-
 
 ## Factory Method
 Provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
@@ -83,9 +77,7 @@ The Creator class declares the factory method that returns new product objects. 
 - code may become more complicated because of many subclasses
 - becomes an anti-pattern if you create factories for every class "just in case". Only add factories when you have actual variation in object creation. 
 
-
 <br>
-
 
 ## Builder
 Lets you construct complex objects step by step. The pattern allows you to produce different types and representations of an object using the same construction code
@@ -102,9 +94,7 @@ aaa
 ### ⚖️ Drawbacks
 aaa
 
-
 <br>
-
 
 ## Abstract Factory
 Lets you produce families of related objects without specifying their concrete classes
@@ -121,9 +111,7 @@ aaa
 ### ⚖️ Drawbacks
 aaa
 
-
 <br>
-
 
 ---
 

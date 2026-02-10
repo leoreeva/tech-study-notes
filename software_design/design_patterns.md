@@ -51,7 +51,6 @@ Objects need to collaborate to accomplish tasks. Behavioral patterns define clea
 | **[Mediator](./behavioral_patterns.md#mediator)** | Reduce coupling between objects | ⭐⭐⭐ | ❌ |
 | **[State](./behavioral_patterns.md#state)** | Change behavior when state changes | ⭐⭐⭐ | ❌ |
 | **[Visitor](./behavioral_patterns.md#visitor)** | Add operations without modifying classes | ⭐⭐⭐ | ❌ |
-| **[Interpreter](./behavioral_patterns.md#interpreter)** | Define grammar and interpreter for language | ⭐⭐⭐ | ❌ |
 
 ## Reasons
 Why Use Design Patterns?
