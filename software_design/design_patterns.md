@@ -4,7 +4,7 @@
 
 In software terms, a design pattern is a language-independent reusable solution/template to commonly occurring problems. It's not a library/framework, not algorithms, not a copy-paste solution and finally not mandatory (knowing when NOT to use them is equally important)
 
-## [Creational Patterns](./01_creational_patterns.md)
+## [Creational Patterns](./_creational_patterns.md)
 **Focus:** How objects are created
 
 Creational patterns provide flexibility in *what* gets created, *who* creates it, *how* it's created, and *when*. They abstract the instantiation process, making systems independent of how objects are created, composed, and represented.
@@ -18,7 +18,7 @@ Creational patterns provide flexibility in *what* gets created, *who* creates it
 | **[Abstract Factory](./_creational_patterns.md#abstract-factory)** | Create families of related objects | ⭐⭐⭐ | ❌ |
 
 
-## [Structural Patterns](./02_structural_patterns.md)
+## [Structural Patterns](./_structural_patterns.md)
 **Focus:** How objects are composed and related
 
 As systems grow, managing relationships between objects becomes challenging. Structural patterns help organize classes and objects into larger structures while keeping them flexible and efficient.
@@ -34,7 +34,7 @@ As systems grow, managing relationships between objects becomes challenging. Str
 | **[Flyweight](./structural_patterns.md#flyweight)** | Share common state to save memory | ⭐⭐⭐ | ❌ |
 
 
-## [Behavioral Patterns](./03_behavioral_patterns.md)
+## [Behavioral Patterns](./_behavioral_patterns.md)
 **Focus:** How objects communicate and distribute responsibility
 
 Objects need to collaborate to accomplish tasks. Behavioral patterns define clear communication protocols, making interactions flexible and maintainable.
