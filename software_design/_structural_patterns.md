@@ -8,16 +8,27 @@ They explain how to assemble objects and classes into larger structures, while k
 Allows objects with incompatible interfaces to collaborate.
 
 ### 🚨 The problem
-aaa
+Imagine that you’re creating a stock market monitoring app. The app downloads the stock data in XML format and then displays charts for the user. Then you decide to improve the app by integrating a smart 3rd-party analytics library. But there’s a catch: the analytics library only works with data in JSON format. You could change the library to work with XML. However, this might break some existing code that relies on the library. And worse, you might not have access to the library’s source code in the first place, making this approach impossible.
 
 ### ✅ The solution
-aaa
+You can create an adapter. It wraps one of the objects to hide the complexity of conversion happening behind the scenes. The wrapped object isn’t even aware of the adapter.
+
+Adapters can not only convert data into various formats but can also help objects with different interfaces collaborate. Sometimes it’s even possible to create a two-way adapter that can convert the calls in both directions.
 
 ### 🛠️ Structure
-aaa
+
+#### Object adapter
+![Object adapter structure](images/adapter1.png)
+
+The client contains existing logic and should remain unchanged. It depends only on a client interface, which defines a stable contract. The service provides the needed functionality but exposes an incompatible interface, so it cannot be used directly. The adapter implements the client interface, wraps the service, and translates calls and data between the two. As a result, the client stays decoupled from concrete services, and new or changed services can be integrated without modifying client code.
+
+#### Class adapter
+![Class adapter structure](images/adapter2.png)
+
+The Class Adapter doesn’t need to wrap any objects because it inherits behaviors from both the client and the service. The adaptation happens within the overridden methods. The resulting adapter can be used in place of an existing client class.
 
 ### ⚖️ Drawbacks
-aaa
+The overall complexity of the code increases because you need to introduce a set of new interfaces and classes. Sometimes it’s simpler just to change the service class so that it matches the rest of your code
 
 <br>
 
