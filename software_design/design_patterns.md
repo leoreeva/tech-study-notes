@@ -11,11 +11,11 @@ Creational patterns provide flexibility in *what* gets created, *who* creates it
 
 | Pattern  | One-Line Summary | Difficulty | Progress |
 |----------|------------------|------------|----------|
-| **[Singleton](./_creational_patterns.md#singleton)** | Ensure a class has only one instance | ⭐ | ✅ |
-| **[Prototype](./_creational_patterns.md#prototype)** | Clone objects instead of creating new | ⭐ | ✅ |
-| **[Factory Method](./_creational_patterns.md#factory-method)** | Define an interface for creating objects | ⭐⭐ | ✅ |
-| **[Builder](./_creational_patterns.md#builder)** | Construct complex objects step by step | ⭐⭐ | ❌ |
-| **[Abstract Factory](./_creational_patterns.md#abstract-factory)** | Create families of related objects | ⭐⭐⭐ | ❌ |
+| Singleton | Ensure a class has only one instance | ⭐ | ✅ |
+| Prototype | Clone objects instead of creating new | ⭐ | ✅ |
+| Factory Method | Define an interface for creating objects | ⭐⭐ | ✅ |
+| Builder | Construct complex objects step by step | ⭐⭐ | ❌ |
+| Abstract Factory | Create families of related objects | ⭐⭐⭐ | ❌ |
 
 
 ## [Structural Patterns](./_structural_patterns.md)
@@ -25,13 +25,13 @@ Creational patterns provide flexibility in *what* gets created, *who* creates it
 
 | Pattern  | One-Line Summary | Difficulty | Progress |
 |----------|------------------|------------|----------|
-| **[Adapter](./structural_patterns.md#adapter)** | Convert interface to another interface | ⭐ | ✅ |
-| **[Facade](./structural_patterns.md#facade)** | Provide simplified interface to subsystem | ⭐ | ✅ |
-| **[Composite](./structural_patterns.md#composite)** | Treat objects and compositions uniformly | ⭐⭐ | ❌ |
-| **[Decorator](./structural_patterns.md#decorator)** | Add behavior to objects dynamically | ⭐⭐ | ❌ |
-| **[Proxy](./structural_patterns.md#proxy)** | Control access to an object | ⭐⭐ | ❌ |
-| **[Bridge](./structural_patterns.md#bridge)** | Decouple abstraction from implementation | ⭐⭐⭐ | ❌ |
-| **[Flyweight](./structural_patterns.md#flyweight)** | Share common state to save memory | ⭐⭐⭐ | ❌ |
+| Adapter | Convert interface to another interface | ⭐ | ✅ |
+| Facade | Provide simplified interface to subsystem | ⭐ | ✅ |
+| Composite | Treat objects and compositions uniformly | ⭐⭐ | ❌ |
+| Decorator | Add behavior to objects dynamically | ⭐⭐ | ❌ |
+| Proxy | Control access to an object | ⭐⭐ | ❌ |
+| Bridge | Decouple abstraction from implementation | ⭐⭐⭐ | ❌ |
+| Flyweight | Share common state to save memory | ⭐⭐⭐ | ❌ |
 
 
 ## [Behavioral Patterns](./_behavioral_patterns.md)
@@ -41,16 +41,16 @@ Objects need to collaborate to accomplish tasks. Behavioral patterns define clea
 
 | Pattern  | One-Line Summary | Difficulty | Progress |
 |----------|------------------|------------|----------|
-| **[Iterator](./behavioral_patterns.md#iterator)** | Access collection elements sequentially | ⭐ | ✅ |
-| **[Template Method](./behavioral_patterns.md#template-method)** | Define skeleton of algorithm in base class | ⭐ | ❌ |
-| **[Chain of Responsibility](./behavioral_patterns.md#chain-of-responsibility)** | Pass requests along a chain of handlers | ⭐⭐ | ❌ |
-| **[Command](./behavioral_patterns.md#command)** | Encapsulate requests as objects | ⭐⭐ | ❌ |
-| **[Memento](./behavioral_patterns.md#memento)** | Save and restore object state | ⭐⭐ | ❌ |
-| **[Observer](./behavioral_patterns.md#observer)** | Define one-to-many dependency | ⭐⭐ | 🚧 |
-| **[Strategy](./behavioral_patterns.md#strategy)** | Define family of interchangeable algorithms | ⭐⭐ | ❌ |
-| **[Mediator](./behavioral_patterns.md#mediator)** | Reduce coupling between objects | ⭐⭐⭐ | ❌ |
-| **[State](./behavioral_patterns.md#state)** | Change behavior when state changes | ⭐⭐⭐ | ❌ |
-| **[Visitor](./behavioral_patterns.md#visitor)** | Add operations without modifying classes | ⭐⭐⭐ | ❌ |
+| Iterator | Access collection elements sequentially | ⭐ | ✅ |
+| Template Method | Define skeleton of algorithm in base class | ⭐ | ❌ |
+| Chain of Responsibility | Pass requests along a chain of handlers | ⭐⭐ | ❌ |
+| Command | Encapsulate requests as objects | ⭐⭐ | ❌ |
+| Memento | Save and restore object state | ⭐⭐ | ❌ |
+| Observer | Define one-to-many dependency | ⭐⭐ | 🚧 |
+| Strategy | Define family of interchangeable algorithms | ⭐⭐ | ❌ |
+| Mediator | Reduce coupling between objects | ⭐⭐⭐ | ❌ |
+| State | Change behavior when state changes | ⭐⭐⭐ | ❌ |
+| Visitor | Add operations without modifying classes | ⭐⭐⭐ | ❌ |
 
 ## Reasons
 Why Use Design Patterns?
