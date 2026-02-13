@@ -21,7 +21,7 @@ Creational patterns provide flexibility in *what* gets created, *who* creates it
 ## [Structural Patterns](./_structural_patterns.md)
 **Focus:** How objects are composed and related
 
-As systems grow, managing relationships between objects becomes challenging. Structural patterns help organize classes and objects into larger structures while keeping them flexible and efficient.
+Creational patterns provide flexibility in *what* gets created, *who* creates it, *how* it's created, and *when*. They abstract the instantiation process, making systems independent of how objects are created, composed, and represented.
 
 | Pattern  | One-Line Summary | Difficulty | Progress |
 |----------|------------------|------------|----------|
@@ -41,7 +41,7 @@ Objects need to collaborate to accomplish tasks. Behavioral patterns define clea
 
 | Pattern  | One-Line Summary | Difficulty | Progress |
 |----------|------------------|------------|----------|
-| **[Iterator](./behavioral_patterns.md#iterator)** | Access collection elements sequentially | ⭐ | ❌ |
+| **[Iterator](./behavioral_patterns.md#iterator)** | Access collection elements sequentially | ⭐ | ✅ |
 | **[Template Method](./behavioral_patterns.md#template-method)** | Define skeleton of algorithm in base class | ⭐ | ❌ |
 | **[Chain of Responsibility](./behavioral_patterns.md#chain-of-responsibility)** | Pass requests along a chain of handlers | ⭐⭐ | ❌ |
 | **[Command](./behavioral_patterns.md#command)** | Encapsulate requests as objects | ⭐⭐ | ❌ |

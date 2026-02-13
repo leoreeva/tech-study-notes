@@ -1,6 +1,6 @@
 
 # Behavioral design patterns
-They take care of effective communication and the assignment of responsibilities between objects.
+Objects need to collaborate to accomplish tasks. Behavioral patterns define clear communication protocols, making interactions flexible and maintainable.
 
 <br>
 
@@ -8,16 +8,30 @@ They take care of effective communication and the assignment of responsibilities
 Lets you traverse elements of a collection without exposing its underlying representation (list, stack, tree, etc.).
 
 ### 🚨 The problem
-aaa
+A collection is just a container for a group of objects. Most common collections are based on lists lists, but often they are based on stacks, trees, graphs and other complex data structures. But no matter how a collection is structured, it must provide some way of to go through each element of the collection. It's an easy job if the collection is based on a list (loop over all the elements); but for example it is not on a tree (you might need depth-first traversal once, then breadth-first traversal another time, etc.).
+
+Adding more and more traversal algorithms to the collection gradually blurs its primary responsibility, which is efficient data storage. Additionally, some algorithms might be tailored for a specific application, so including them into a generic collection class would be weird. On the other hand, the client code that’s supposed to work with various collections may not even care how they store their elements. However, since collections all provide different ways of accessing their elements, you have no option other than to couple your code to the specific collection classes.
 
 ### ✅ The solution
-aaa
+The main idea of the Iterator pattern is to extract the traversal behavior of a collection into a separate object called an iterator.
+
+In addition to implementing the algorithm itself, an iterator object encapsulates all of the traversal details, such as the current position and how many elements are left till the end. Because of this, several iterators can go through the same collection at the same time, independently of each other.
+
+Usually, iterators provide one primary method for fetching elements of the collection. The client can keep running this method until it doesn’t return anything, which means that the iterator has traversed all of the elements.
+
+All iterators must implement the same interface. This makes the client code compatible with any collection type or any traversal algorithm as long as there’s a proper iterator. If you need a special way to traverse a collection, you just create a new iterator class, without having to change the collection or the client.
+
+Example:
+![Iterator example](images/iterator2.png)
+
+This way, the iterator pattern lets you traverse different data structure, even if some of them are unknown beforehand; also complexity is hidden from the client.
 
 ### 🛠️ Structure
-aaa
+![Iterator structure](images/iterator1.png)
 
 ### ⚖️ Drawbacks
-aaa
+- Can be an overkill if your app only works with simple collections
+- Can be less efficient than going through elements of some specialized collections directly
 
 <br>
 
