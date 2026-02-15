@@ -4,7 +4,16 @@ OSINT (Open Source Intelligence) involves gathering information on people, busin
 
 All information collected **must** be publicly available and legally accessible.
 
+## Course Scope
+Notes based on:
+- [Open-Source Intelligence (OSINT) in 5 Hours - Full Course](https://www.youtube.com/watch?v=qwA6MmbeGNo)
+
+The **primary focus** is collection methodologies (2nd step); there's also a brief introduction to analysis and reporting. Not covered in depth: full exploitation, advanced production techniques.
+
+
 ## The intelligence life cycle
+
+![OSINT lifecycle](images/osint_lifecycle.png)
 
 ### 1. Planning & Direction
 - Define the 5 W (who, what, when, where, why)
@@ -43,8 +52,3 @@ All information collected **must** be publicly available and legally accessible.
 
 The cycle is never-ending, and doesn't have to follow strict order. It's an **iterative process:** you can move between phases as needed (e.g. during collection, you might realize you need more planning - go back and adjust; while processing, you might need to collect more data for verification; etc.).
 
-## Course Scope
-Notes based on:
-- [Open-Source Intelligence (OSINT) in 5 Hours - Full Course](https://www.youtube.com/watch?v=qwA6MmbeGNo)
-
-The **primary focus** is collection methodologies (2nd step); there's also a brief introduction to analysis and reporting. Not covered in depth: full exploitation, advanced production techniques.
