@@ -50,3 +50,13 @@ Work in progress. Lots of stuff missing or even just skipped (because of prior k
 **☁️ Cloud Certifications**
 - [GCP PDE (2023)](cloud_certifications/google_cloud_platform/gcp_pde.md)
 - [SnowPro Core (2025)](cloud_certifications/snowflake/snowpro_core.md)
+
+**🕵️ OSINT** (for personal interests...)
+1. [Introduction](osint/01_introduction.md)
+2. [Sock Puppets](osint/02_sock_puppets.md)
+3. [Search Engine OSINT](osint/03_search_engine_osint.md)
+4. [Image & Location OSINT](osint/04_image_location_osint.md)
+5. [Email OSINT](osint/05_email_osint.md)
+6. [Password & Breach Data OSINT](osint/06_password_breach_osint.md)
+7. [Username Hunting](osint/07_username_hunting.md)
+8. [Key Tools & Resources](osint/08_tools_resources.md)
