@@ -1,0 +1,119 @@
+# Google Dorks: Advanced Search Techniques & Cybersecurity Insights
+
+[[Original source](https://www.group-ib.com/resources/knowledge-hub/google-dorks/)]
+
+Hackers don’t always require complex tools to identify security vulnerabilities. Sometimes, Google is sufficient.
+
+By using specific search techniques known as Google Dorks, anyone can discover exposed files, login pages, and even confidential information. Cybercriminals employ these searches to identify weaknesses and exploit them. However, security teams can also use them to detect and address issues before they escalate.
+
+In this article, we will explain what is Google Dorking and how you can use it to protect your business.
+
+
+## What is Google Dorking?
+
+Google Dorking is a technique that uses advanced search features to find information that isn’t easy to discover through regular Google searches.
+
+Google Dorks uses special search commands to gather specific data from publicly available websites. It helps users locate sensitive information that website owners may have unintentionally made public.
+
+
+## How Does Google Dorking Work?
+
+Google’s web crawlers index vast amounts of data from websites. When combined with advanced search operators such as site:, filetype:, users can refine their searches to pinpoint specific types of information.
+
+Then, it scans through websites and stores sensitive documents in a cache. It allows users to uncover hidden or sensitive data that may not be linked directly to websites but is still indexed by Google. Here’s how it happens:
+- Using Search Operators: Instead of Instead of searching “login page,” a hacker might use (inurl:admin login) to find website URLs that contain “admin login.”
+- Locating Exposed Credentials: By searching intext:”username password” filetype:txt, the hackers might reveal text files containing login details.
+- Accessing Cached or Old Versions of Pages: Even deleted data can sometimes be found using cache:example.com. This shows Google’s last saved version of a page.
+
+
+## Common Google Dorking Operators and Commands
+| Operators/Commands | Function |
+|---|---|
+| site: | Restricts search results to a specific domain (e.g., site:example.com). |
+| filetype: | Filters results by file type (e.g., filetype:xlsx). |
+| inurl: | Searches for specific text within URLs (e.g., inurl:admin). |
+| intitle: | Finds pages with specific text in the title (e.g., intitle:index). |
+| cache: | Displays cached versions of web pages. |
+| allintext: | Searches for multiple words within page content (e.g., allintext:password). |
+
+
+## Google Dorking Examples and Practical Use Cases
+
+Google Dorking examples include both ethical and unethical applications. Let’s explore some of its practical use cases:
+
+- **Cybersecurity Testing**: Ethical hackers use queries like inurl:/admin/login.php to locate administrative login pages and test their security. They can also use filetype:sql while querying for exposed database files.
+
+- **Research and Data Collection**: Researchers use queries like filetype:csv “survey results” to locate publicly available datasets. Similarly, academics tend to search for specific reports using the intitle:”Annual Report” filetype:pdf.
+
+- **Competitive Intelligence**: Businesses can analyze the strategies of competitors by searching for terms such as site:competitor.com “pricing.”
+
+- **Searching for Exposed Documents**: By searching for filetype:pdf site:example.com confidential, companies can ensure confidential documents aren’t mistakenly published online.
+
+- **Discovering Open Directories**: IT teams can check if sensitive files are openly accessible by using intitle:”index of” “parent directory.”
+
+- **Locating Publicly Available Camera Feeds**: Security teams can identify unsecured cameras and restrict access by using inurl:/view/view.shtml.
+
+- **Finding Leaked Credentials**: Security teams can check if login credentials are exposed through filetype:txt intext:”username password.”
+
+However, businesses need to be very careful as hackers can also use dorks and gain direct access to company accounts.
+
+This is crucial for the companies having vast amounts of financial data. One such example is Libertex, a prominent online trading platform, having more than 700 employees and 300 million customers. It collaborated with Group-IB to enhance its cybersecurity infrastructure. Group-IB conducted a comprehensive audit to identify potential vulnerabilities within Libertex’s infrastructure. As a result, the trading platform was able to strengthen its cybersecurity defense mechanism and safeguard its users from potential cyber threats.
+
+
+
+## Google Dorks List: Most Powerful Search Queries
+Searches 	Targeted Results
+inurl:login 	Finding Login Pages
+allintext:”username” “password” 	Exposed Passwords
+intitle:index.of 	Sensitive Directories
+filetype:sql “password” 	Exposed Databases
+cache:[website URL] 	Cached Pages
+
+
+## Ethical Uses of Google Dorking in Cybersecurity
+
+Cybercriminals, ethical hackers, security teams, and businesses can use Google Dorking to strengthen cybersecurity and prevent data leaks.
+
+- **Security Audits & Vulnerability Assessment**: Ethical hackers use Google Dorking to identify misconfigured servers, exposed login pages, and unsecured files. By searching inurl:admin login site:example.com, the security teams check if admin portals are publicly accessible.
+
+- **Identifying Leaked Credentials**: Companies can check if employee usernames and passwords are exposed online. It is possible through searches like filetype:txt intext:”username password.” It can reveal leaked credentials in public files.
+
+- **Detecting Phishing and Fake Websites**: By searching inurl:login site:fake-trading-site.com, cybersecurity teams can search for phishing sites impersonating their brand.
+
+- **Compliance and Data Privacy Checks**: Organizations can verify if they’re accidentally exposing sensitive data that violates privacy laws. This can be done through filetype:xlsx site:example.com confidential.
+
+
+## Is Google Dorking Illegal? Legal and Ethical Considerations
+
+While using this technique is legal, the ethical considerations depend on the purpose behind accessing the information. However, accessing or exploiting sensitive data without authorization can violate laws, leading to costly penalties under laws like the Computer Fraud and Abuse Act (CFAA) in the U.S. Courts often prosecute individuals who misuse the data obtained through dorking.
+
+Group-IB worked with INTERPOL and Brazilian authorities to take down the Grandoreiro banking trojan operation. It had stolen over €3.5 million from victims since 2017. This shows the costly repercussions when exposed to cyberattacks.
+
+Guidelines for Ethical Usage:
+- Using Google Dork for cybersecurity audits, searching for public information, and recovering lost data is considered legal.
+- The IT and cybersecurity teams should always seek authorization before testing systems.
+
+
+## How Cybercriminals Exploit Google Dorking?
+
+The cybercriminals can exploit it to:
+- Identify vulnerable login pages for brute-force attacks.
+- Locate exposed databases containing sensitive user information.
+- Access confidential documents like financial records or contracts.
+
+
+## How to Protect Your Website from Google Dorking Exploits?
+
+According to Group-IB’s High-Tech Crime Trends Report 2025, Dedicated Leak Sites (DLS) witnessed a surge of 10% in 2024. It reflects an upward trend of cybercriminals exposing stolen data when ransom demands go unmet. Here are a few steps that businesses can take to stay protected against Google 
+
+Dorking exploits:
+- Use a robots.txt file to specify the website parts that should not be indexed by search engines.
+- Test your website using common dorks to identify vulnerabilities.
+- Use authentication mechanisms for sensitive directories and files.
+- Analyze server logs for unusual activity that may indicate malicious queries.
+
+
+## Limitations and Risks of Google Dorking
+- Data Scope: It only works on publicly indexed data; private or encrypted data remains inaccessible.
+- False Positives: Queries may return irrelevant results if not crafted carefully.
+- Legal Risks: Misuse can lead to severe legal consequences.
