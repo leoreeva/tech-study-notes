@@ -1,6 +1,7 @@
 # 4. Image & Location OSINT
 
-## Part 1: Reverse Image Search
+
+## Reverse Image Search
 
 ### Overview
 Reverse image search allows you to:
@@ -14,60 +15,11 @@ Reverse image search allows you to:
 | Tool | URL | Best Feature |
 |------|-----|--------------|
 | **Google Images** | images.google.com | Most comprehensive results |
-| **Yandex** | yandex.com/images | **Best for similar faces/images** |
+| **Yandex** | yandex.com/images | Best for similar faces/images |
 | **TinEye** | tineye.com | Good for finding image origins |
 
-### How to Use
 
-**Google Images:**
-1. Go to images.google.com
-2. Click camera icon (search by image)
-3. Upload image or paste URL
-4. Review results
-
-**Yandex:**
-1. Go to yandex.com
-2. Click Images
-3. Upload or drag image
-4. Check "Similar images" section
-
-### Key Differences
-
-**Google:**
-- Best for exact matches
-- Good for identifying people/objects
-- Shows similar sized images
-
-**Yandex:**
-- **Superior for finding similar faces**
-- Finds variations of the same photo
-- Useful for missing persons cases
-- Can identify same person in different contexts
-
-**TinEye:**
-- Good for finding earliest instances
-- Shows where image first appeared
-- Different algorithm than Google/Yandex
-
-### Use Cases
-
-**1. Catfish Investigation:**
-- Receive suspicious dating profile photo
-- Reverse search on all three engines
-- Find real owner of photo
-- Confirm fake profile
-
-**2. Social Media Verification:**
-- Check if influencer photos are stolen
-- Verify authenticity of images
-- Find original source
-
-**3. Finding Additional Photos:**
-- Start with one photo of target
-- Use Yandex to find similar photos
-- Discover more instances/images of person
-
-## Part 2: EXIF Data Analysis
+## EXIF Data Analysis
 
 ### What is EXIF Data?
 
@@ -130,7 +82,8 @@ EXIF data can reveal:
 
 **Best practice:** Always check EXIF data on any photo obtained during investigation.
 
-## Part 3: Location OSINT (GeoGuessing)
+
+## Location OSINT (GeoGuessing)
 
 ### Overview
 Identifying geographical locations from photos without EXIF data.
