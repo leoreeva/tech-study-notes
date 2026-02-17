@@ -81,4 +81,6 @@ Identifying geographical locations from photos without EXIF data.
    - Clothing styles
    - Advertising
 
+Using Google Earth can be useful to look at older imagery.
+
 Practice on [GeoGuessr](https://geoguessr.com)
