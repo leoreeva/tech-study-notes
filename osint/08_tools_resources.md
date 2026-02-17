@@ -2,6 +2,7 @@
 
 List of stuff:
 - https://github.com/jivoi/awesome-osint
+- https://github.com/smicallef/spiderfoot
 - https://unishka.substack.com/p/osint-of-italy
 
 ## Search Engines
