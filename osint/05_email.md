@@ -1,81 +1,18 @@
-# 5. Email OSINT
+# 5. Email
 
-## Overview
+Email OSINT involves discovering, verifying, and investigating email addresses.
 
-Email OSINT involves discovering, verifying, and investigating email addresses. This is crucial for:
-- Sales lead generation
-- Investigations
-- Penetration testing
-- Social engineering assessments
+## Email Discovery tools
 
-## Tools for Email Discovery
+These tools allows to:
+- Search by company domain to identify email patterns and find employee addresses with their roles
+- Perform bulk collection and export of emails from domain searches
+- Find emails using a person's name combined with their company
+- Integrate with professional networks and email platforms through browser extensions
 
-### 1. Hunter.io
+They typically offer features like pattern identification, department filtering, and monthly search limits on free tiers
 
-**URL:** [hunter.io](https://hunter.io)
-
-**Features:**
-- Search by company domain
-- Identifies email patterns
-- Shows employee roles/titles
-- Lists sources where emails found
-
-**Usage:**
-1. Enter company domain (e.g., tesla.com)
-2. View email pattern (e.g., firstname.lastname@company.com)
-3. Browse discovered email addresses
-4. Filter by department/role
-
-**Free tier:** ~50-100 searches/month
-
-**Example Result for Tesla:**
-- Pattern: {first initial}{lastname}@tesla.com
-- 468+ email addresses indexed
-- Can filter by: HR, Engineering, Management
-
-### 2. Phonebook.cz
-
-**URL:** [phonebook.cz](https://phonebook.cz)
-
-**Features:**
-- Search by domain, email, URL
-- Mass export capability
-- No registration required
-- Large database
-
-**Best for:**
-- Bulk email collection
-- Quick domain searches
-- Exporting lists for further processing
-
-**Note:** Results may not all be verified/valid
-
-### 3. VoilaNorbert
-
-**URL:** [voilanorbert.com](https://voilanorbert.com)
-
-**Features:**
-- Similar to Hunter.io
-- Find email by name + company
-- 50 free leads to start
-
-### 4. Clearbit Connect
-
-**Format:** Chrome extension
-
-**Best for:**
-- LinkedIn integration
-- Finding specific individuals
-- Direct Gmail integration
-
-**Example Result:**
-- Search: TCM Security
-- Found: heat@tcm-sec.com (instructor's email)
-- Revealed email pattern: firstname@company.com
-
-**Free tier:** 100 emails/month
-
-## Email Verification Tools
+## Email Verification tools
 
 ### Why Verify?
 
@@ -214,13 +151,3 @@ Email OSINT involves discovering, verifying, and investigating email addresses. 
 4. **Use forgot password sparingly** - Don't lock accounts
 5. **Document sources** - Note where emails were found
 6. **Respect privacy** - Only collect what needed for investigation
-
-## Tools Summary
-
-| Purpose | Tool | Free Tier |
-|---------|------|-----------|
-| Discovery | Hunter.io | 50-100 searches |
-| Bulk Export | Phonebook.cz | Unlimited |
-| LinkedIn | Clearbit | 100/month |
-| Verification | Email Hippo | Limited |
-| Pattern ID | All of above | Varies |
