@@ -60,14 +60,14 @@ However, businesses need to be very careful as hackers can also use dorks and ga
 This is crucial for the companies having vast amounts of financial data. One such example is Libertex, a prominent online trading platform, having more than 700 employees and 300 million customers. It collaborated with Group-IB to enhance its cybersecurity infrastructure. Group-IB conducted a comprehensive audit to identify potential vulnerabilities within Libertex’s infrastructure. As a result, the trading platform was able to strengthen its cybersecurity defense mechanism and safeguard its users from potential cyber threats.
 
 
-
 ## Google Dorks List: Most Powerful Search Queries
-Searches 	Targeted Results
-inurl:login 	Finding Login Pages
-allintext:”username” “password” 	Exposed Passwords
-intitle:index.of 	Sensitive Directories
-filetype:sql “password” 	Exposed Databases
-cache:[website URL] 	Cached Pages
+| Searches | Targeted Results |
+|---|---|
+| inurl:login | Finding Login Pages |
+| allintext:”username” “password” | Exposed Passwords |
+| intitle:index.of | Sensitive Directories |
+| filetype:sql “password” | Exposed Databases |
+| cache:[website URL] | Cached Pages |
 
 
 ## Ethical Uses of Google Dorking in Cybersecurity
