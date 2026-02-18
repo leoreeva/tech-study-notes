@@ -1,15 +1,8 @@
-# 1. OSINT Introduction
+# 1. OSINT
 
 OSINT (Open Source Intelligence) involves gathering information on people, businesses, and other targets using publicly available data and various methodologies.
 
 All information collected **must** be publicly available and legally accessible.
-
-## Course Scope
-Notes based on:
-- [Open-Source Intelligence (OSINT) in 5 Hours - Full Course](https://www.youtube.com/watch?v=qwA6MmbeGNo)
-
-The **primary focus** is collection methodologies (2nd step); there's also a brief introduction to analysis and reporting. Not covered in depth: full exploitation, advanced production techniques.
-
 
 ## The intelligence life cycle
 
@@ -48,7 +41,18 @@ The **primary focus** is collection methodologies (2nd step); there's also a bri
 - Ensuring the audience can understand the information
 - Delivering actionable intelligence
 
+The **primary focus** is collection methodologies (2nd step); there's also a brief introduction to analysis and reporting. Not covered in depth: full exploitation, advanced production techniques.
+
 ## Important Notes
 
 The cycle is never-ending, and doesn't have to follow strict order. It's an **iterative process:** you can move between phases as needed (e.g. during collection, you might realize you need more planning - go back and adjust; while processing, you might need to collect more data for verification; etc.).
 
+---
+
+Notes based on:
+- [Open-Source Intelligence (OSINT) in 5 Hours - Full Course](https://www.youtube.com/watch?v=qwA6MmbeGNo)
+- [Former Senior CIA Officer Raymond White - Human Intelligence Fundamentals Course](https://www.youtube.com/watch?v=A16r5ir3FrI)
+- [Web Scraping with Python - Beautiful Soup Crash Course](https://www.youtube.com/watch?v=XVv6mJpFOb0)
+- [Scraping Data from a Real Website | Web Scraping in Python](https://www.youtube.com/watch?v=8dTpNajxaH0)
+- [Web Scraping Full Course 2024 | Build and Deploy eCommerce Price Tracker](https://www.youtube.com/watch?v=lh9XVGv6BHs)
+- [Scraping Dynamic JavaScript Websites - Beautiful Soup Python](https://www.youtube.com/watch?v=Xz514u4V_ts)
