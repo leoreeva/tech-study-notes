@@ -1,4 +1,4 @@
-# 6. Password & Breach Data
+# 6. Password OSINT
 
 ## Overview
 

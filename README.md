@@ -1,5 +1,5 @@
 # Tech study notes
-Data engineering / software engineering resources. Useful for interviews or just personal knowledge.
+Data engineering / software engineering resources (or even personal interests, not directly related to tech). Useful for interviews or just personal knowledge.
 
 Work in progress. Lots of stuff missing or even just skipped (because of prior knowledge in the field). Feel free to contribute.
 
@@ -51,12 +51,13 @@ Work in progress. Lots of stuff missing or even just skipped (because of prior k
 - [GCP PDE (2023)](cloud_certifications/google_cloud_platform/gcp_pde.md)
 - [SnowPro Core (2025)](cloud_certifications/snowflake/snowpro_core.md)
 
-**🕵️ OSINT** (for personal interests...)
-1. [Introduction](osint/01_introduction.md)
-2. [Sock Puppets](osint/02_sock_puppets.md)
-3. [Search Engine](osint/03_search_engine.md)
-4. [Image & Location](osint/04_image_location.md)
-5. [Email](osint/05_email.md)
-6. [Password & Breach Data](osint/06_password_breach.md)
-7. [Username Hunting](osint/07_username_hunting.md)
-8. [Key Tools & Resources](osint/08_tools_resources.md)
+**🕵️ OSINT**
+- [Introduction](osint/01_introduction.md)
+- [Sock Puppets](osint/02_sock_puppets.md)
+- [Search Engine OSINT](osint/03_search_engine_osint.md)
+- [Image OSINT](osint/04_image_osint.md)
+- [Email OSINT](osint/05_email_osint.md)
+- [Password OSINT](osint/06_password_osint.md)
+- [Username OSINT](osint/07_username_osint.md)
+- [Social Media OSINT](osint/08_social_media_osint.md)
+- [Tools](osint/09_tools.md)

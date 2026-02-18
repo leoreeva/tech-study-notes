@@ -1,4 +1,4 @@
-# 7. Username Hunting
+# 7. Username OSINT
 
 ## Overview
 
@@ -218,11 +218,6 @@ intitle:"username" site:instagram.com
 
 ### Data Export
 
-**Namechk allows export to:**
-- Excel (.xlsx)
-- CSV (.csv)
-- PDF (.pdf)
-
 **Useful for:**
 - Documentation
 - Reporting
@@ -288,11 +283,3 @@ Username hunting is a **critical OSINT skill** that:
 - Uncovers hidden connections
 
 **Key principle:** One username can lead to dozens of accounts, each providing more information about the target.
-
-## Tools Reference
-
-| Tool | URL | Best Feature |
-|------|-----|--------------|
-| Namechk | namechk.com | Comprehensive platform list |
-| NameCheckup | namecheckup.com | Alternative coverage |
-| KnowEm | knowem.com | 500+ networks |

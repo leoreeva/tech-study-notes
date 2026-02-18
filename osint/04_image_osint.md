@@ -1,4 +1,4 @@
-# 4. Image & Location
+# 4. Image OSINT
 
 ## Reverse Image Search
 

@@ -1,4 +1,4 @@
-# 3. Search Engine
+# 3. Search Engine OSINT
 
 Search engines are typically the **first step** in any OSINT investigation. 
 

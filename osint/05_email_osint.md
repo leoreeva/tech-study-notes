@@ -1,4 +1,4 @@
-# 5. Email
+# 5. Email OSINT
 
 Email OSINT involves discovering, verifying, and investigating email addresses.
 
