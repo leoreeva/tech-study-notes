@@ -14,57 +14,12 @@ They typically offer features like pattern identification, department filtering,
 
 ## Email Verification tools
 
-### Why Verify?
-
-**Before sending:**
-- Avoid bounced emails
-- Don't waste outreach efforts
-- Maintain sender reputation
-
-**During investigations:**
 - Confirm email exists without contacting
 - Validate findings
 - Avoid alerting targets
 
-### Tools
+There are many tools for email verification. 
 
-| Tool | URL | Features |
-|------|-----|----------|
-| **Email Hippo** | tools.verifyemailaddress.io | Quick verification |
-| **EmailChecker** | emailchecker.net | Bulk validation |
-
-**How it works:**
-- Tool checks MX records
-- Tests SMTP connection
-- Reports: Valid, Invalid, or Unknown
-
-**Limitations:**
-- Some corporate servers block verification
-- May return false positives
-- Not 100% accurate for all domains
-
-## Forgot Password Technique
-
-### The Method
-
-**Step 1:** Go to Google login page
-**Step 2:** Enter suspected email
-**Step 3:** Click "Forgot password"
-
-**What you learn:**
-1. **Account exists** - "Welcome" message confirms valid email
-2. **Recovery email** - Often shows partial recovery email:
-   - Example: "h***@tcm-sec.com"
-   - Reveals pattern and likely owner
-
-### Example
-
-**Scenario:**
-- Investigating: "please.dont.hack.me.sir@plz.com"
-- Step 1: Enter at Google login
-- Step 2: Click forgot password
-- Result: Recovery email is "heat@tcm-sec.com"
-- **Finding:** Confirms this sock puppet belongs to instructor
 
 ### Use Cases
 
@@ -133,21 +88,3 @@ They typically offer features like pattern identification, department filtering,
 - Forgot password technique on related accounts
 - Check breach databases
 - Cross-reference LinkedIn
-
-## Breach Database Integration
-
-**Next section covers in detail**, but important connection:
-
-- Have I Been Pwned confirms email existence
-- DeHashed provides additional context
-- Scylla offers free searches
-- Breaches verify emails were actively used
-
-## Best Practices
-
-1. **Always verify before using** - Don't trust scraped lists
-2. **Cross-reference multiple tools** - No single tool is perfect
-3. **Check patterns** - Verify email format before guessing
-4. **Use forgot password sparingly** - Don't lock accounts
-5. **Document sources** - Note where emails were found
-6. **Respect privacy** - Only collect what needed for investigation
