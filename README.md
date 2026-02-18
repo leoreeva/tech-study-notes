@@ -63,3 +63,10 @@ Work in progress. Lots of stuff missing or even just skipped (because of prior k
 - [HUMINT Fundamentals](osint/09_humint_fundamentals.md)
 - [Scraping Fundamentals](osint/10_scraping_fundamentals.md)
 - [Tools](osint/11_tools.md)
+
+**🔒 Deep web**
+- [Course Overview](deep_web/01-course-overview.md)
+- [Technical Foundations: Tor & PGP](deep_web/02-technical-foundations.md)
+- [Installation Guides: OS Setup](deep_web/03-installation-guides.md)
+- [Practical Usage: Browsing & Communication](deep_web/04-practical-usage.md)
+- [Advanced Topics: Markets & Analysis](deep_web/05-advanced-topics.md)
