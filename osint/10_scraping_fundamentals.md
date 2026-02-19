@@ -1,4 +1,4 @@
-# Scraping fundamentals
+# 10. Scraping fundamentals
 
 Web scraping  is the process of:
 - Automatically fetching web pages

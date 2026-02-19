@@ -1,4 +1,4 @@
-# Human Intelligence (HUMINT) Fundamentals
+# 9. Human Intelligence (HUMINT) Fundamentals
 
 ## 1. Introduction to Human Intelligence
 
