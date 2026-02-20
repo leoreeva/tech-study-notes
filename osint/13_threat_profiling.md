@@ -1,0 +1,374 @@
+# Building Threat Profiles: A Framework for Organizational Threat Intelligence
+
+Source: [Building Threat Profiles for your Organization](https://www.youtube.com/live/gD10hFUgfqY)
+
+## Overview
+
+**Threat profiling** is a strategic approach to cybersecurity that focuses on understanding which threats are most relevant to your specific organization. Rather than attempting to defend against every possible threat, this framework helps prioritize resources by identifying:
+
+- Your organization's **crown jewels** (most critical assets)
+- The threats most likely to target your specific industry and profile
+- The capabilities of potential adversaries
+- Where to allocate defensive resources for maximum risk reduction
+
+---
+
+## 1. Understanding Risk in Context
+
+### Risk Components
+
+Risk in both traditional IT and industrial control systems (ICS/OT) consists of three core elements:
+
+| Component | Description |
+|-----------|-------------|
+| **Threats** | Actors with capability and intent to cause harm |
+| **Vulnerabilities** | Weaknesses that can be exploited (e.g., Log4j) |
+| **Impact/Consequences** | Financial loss, operational disruption, or loss of life |
+
+### Resilience in Operational Technology
+
+In **OT (Operational Technology)** environments, **resilience** takes on additional meaning beyond IT:
+
+- **Engineering Controls**: Physical safety mechanisms (blowout valves, relief valves)
+- **Cyber-Physical Boundary**: Controllers that bridge digital commands and physical actions
+- **Mission Criticality**: Ensuring continuous delivery of essential services (power, water, fuel)
+
+> **Key Insight**: No amount of cybersecurity can prevent a pipe from breaking at 1000 PSI. Physical engineering controls remain essential.
+
+### The Value of Human Life in Risk Calculations
+
+The U.S. government values human life at approximately **$7 million** per person for workplace accident calculations. While morbid, this metric enables quantitative risk assessment when evaluating safety investments.
+
+---
+
+## 2. The Diamond Model of Threat Analysis
+
+Developed by Sergio Caltagirone (now VP at Dragos), the **Diamond Model** provides a framework for categorizing threats using four interconnected components:
+
+```
+                    ┌─────────────────┐
+                    │   ADVERSARY     │
+                    │   (Who)         │
+                    └────────┬────────┘
+                             │
+            Social/Political │ Technological
+                    │        │        │
+                    ▼        ▼        ▼
+            ┌─────────────────────────────┐
+            │         VICTIM              │
+            │   (Why am I targeted?)      │
+            └─────────────┬───────────────┘
+                          │
+                    ┌─────┴─────┐
+                    ▼           ▼
+            ┌──────────┐  ┌──────────┐
+            │CAPABILITY│  │INFRASTRUCTURE│
+            │  (How)   │  │   (What)     │
+            └──────────┘  └──────────────┘
+```
+
+### The Four Components
+
+1. **Adversary**: The threat actor (nation-state, criminal group, insider, hacktivist)
+2. **Victim**: The target organization and its attributes
+3. **Capability**: The tools, techniques, and procedures (TTPs) available to the adversary
+4. **Infrastructure**: The systems and networks that must be compromised
+
+### Key Relationships
+
+- **Social-Political**: Connects adversary and victim (why am I being targeted?)
+- **Technological**: Connects capability and infrastructure (can they exploit what I have?)
+
+> **Important**: When analyzing threat groups (like APT-31), you typically understand **three** of the four components. The missing piece creates the "triangle" rather than complete diamond.
+
+---
+
+## 3. Organizational Breakdown for Threat Assessment
+
+To properly assess threats, you must first understand your own organization through an **adversarial lens**. This requires a tiered approach:
+
+### Tier 1: System Owner
+
+**Definition**: The primary organization for which you're creating the threat profile.
+
+**Attributes to Consider**:
+- Public vs. private company status
+- Geographic location and operating regions
+- Industry vertical(s)
+- Investors and ownership structure
+- Size and market capitalization
+- Media presence and public profile
+
+> **Example**: A publicly traded small-cap oil and gas company has different threat considerations than a private manufacturing facility.
+
+### Tier 2: Critical System/Subsystem
+
+**Definition**: The collection of assets, networks, or specific systems requiring protection.
+
+**Considerations**:
+- Large organizations may need **multiple threat profiles** based on:
+  - Geography (Eastern vs. Western operations)
+  - Business units (mergers & acquisitions)
+  - Industry verticals (upstream vs. downstream oil & gas)
+  - Facility types (power plants vs. pipelines)
+
+### Tier 3: Critical Function
+
+**Definition**: The principal task your system performs.
+
+**Examples**:
+- Pipeline: Deliver fuel
+- Hospital: Provide healthcare services
+- Utility: Generate and distribute electricity
+- Manufacturing: Produce goods
+
+### Tier 4: Components
+
+**Definition**: The hardware and software enabling critical functions.
+
+**Examples for a Pipeline**:
+- Pressure control systems (pumps, compressors)
+- Leak detection systems
+- Storage systems (control valves, tanks)
+- SCADA and control systems
+- Vendor support infrastructure
+
+### Tier 5: Controllers
+
+**Definition**: Assets with the ability to manipulate the environment or exercise significant authority.
+
+**In OT Environments**:
+- Remote Terminal Units (RTUs)
+- Distributed Control Systems (DCS)
+- SCADA systems
+- Programmable Logic Controllers (PLCs)
+
+**In IT Environments**:
+- Domain controllers
+- SQL databases
+- Administrative workstations
+- Network backbone infrastructure
+
+> **Key Point**: Controllers represent where **cyber commands become physical actions** or where administrative access enables system-wide control.
+
+### Tier 6: Crown Jewels
+
+**Definition**: The subset of components that, if compromised, cause catastrophic impact.
+
+**Characteristics**:
+- Highest business impact if lost
+- Longest mean time to recovery (MTTR)
+- Most expensive to replace
+- Critical to minimum operating conditions
+
+**Pipeline Crown Jewels Example**:
+1. **RTUs**: Wireless control of remote compressor stations
+2. **Leak Detection Systems**: EPA-mandated shutdown triggers
+3. **SCADA Systems**: Valve and pump control
+4. **Engineering Workstations**: The Windows desktops used to control all above systems
+
+> **Critical Insight**: Engineering workstations often run outdated operating systems (Windows XP, Windows 7, Server 2008/2012) but provide the primary interface for controlling crown jewel systems.
+
+---
+
+## 4. Practical Application: Oil & Gas Pipeline Example
+
+### Organization Profile: "ACME Oil & Gas"
+
+**System Owner Attributes**:
+- Publicly traded small-cap company
+- Regional operator with coastal infrastructure
+- U.S.-based with specific investor profile
+- Target for eco-terrorists due to environmental impact
+
+**Critical Function**:
+- Deliver natural gas/fuel oil 24/7/365
+- Maintain specific delivery capacity (ramp up/down)
+- Meet EPA regulatory requirements
+
+**Key Components**:
+- Pumping stations with vendor-specific equipment
+- Pressure control and monitoring
+- Leak detection systems (compliance-critical)
+- Storage tanks and control valves
+- Multiple vendor remote access solutions (7-8 different types)
+
+**Controllers**:
+- RTUs for remote station control
+- DCS for process management
+- PLCs for discrete control functions
+- SCADA for overall monitoring
+
+**Crown Jewels**:
+1. RTUs controlling compressor stations (1100+ miles away)
+2. Leak detection systems (EPA shutdown mandate)
+3. SCADA control systems
+4. Engineering workstations (single point of control)
+
+---
+
+## 5. Threat Capability Assessment
+
+### Understanding Adversary Sophistication
+
+Not every organization faces the same threat landscape. **MITRE ATT&CK** and **CISA** provide frameworks for assessing threat capabilities:
+
+**Capability Levels**:
+
+| Level | Characteristics | Examples |
+|-------|----------------|----------|
+| **Advanced** | Nation-state, zero-day exploits, custom tools | APT groups, intelligence services |
+| **Intermediate** | Weaponized exploits, commercial tools, training | Criminal organizations, skilled hacktivists |
+| **Basic** | Known exploits, open-source tools, limited resources | Script kiddies, unsophisticated criminals |
+
+### Matching Threats to Your Profile
+
+**Questions to Ask**:
+1. Are you critical infrastructure?
+2. Do you handle sensitive government data?
+3. Are you a high-value financial target?
+4. Do you have geopolitical significance?
+5. Are you vulnerable to insider threats?
+
+**Example Threats by Organization Type**:
+
+| Organization | Primary Threats |
+|--------------|----------------|
+| Small Retail | Opportunistic ransomware, credit card theft |
+| Critical Infrastructure | Nation-states, advanced persistent threats |
+| Healthcare | Ransomware, data theft, insider threats |
+| Manufacturing | IP theft, industrial espionage, ransomware |
+
+---
+
+## 6. Identifying Critical Assets: The "Bad Day" Exercise
+
+### Methodology
+
+To identify crown jewels, ask stakeholders: **"What does a bad day look like?"**
+
+**Who to Ask**:
+- C-Suite executives (business impact perspective)
+- IT administrators (technical failure perspective)
+- Engineering/OT staff (operational impact perspective)
+- Line workers (practical consequences)
+
+**What to Look For**:
+- Systems that cause multi-day outages
+- Assets requiring weeks to rebuild
+- Single points of failure
+- Systems with cascading failure effects
+- Components with limited vendor support
+
+### Real-World Example: Manufacturing
+
+**Scenario**: Elmer's Glue Production
+- **Asset**: Heated extrusion system
+- **Failure Mode**: Heat sink malfunction causes glue to harden in pipes
+- **Recovery Time**: Weeks of manual cleaning with acetylene torches
+- **Business Impact**: 4 weeks of lost production, missed deliveries
+
+**Perspective Differences**:
+- **Floor Worker**: "I'll be here with a blowtorch for weeks"
+- **Factory Manager**: "We're not shipping product for a month"
+- **Business Analyst**: "Lost revenue, angry customers, contract penalties"
+
+> **Key Insight**: Different stakeholders describe the same failure using different language, but they're identifying the same critical asset.
+
+---
+
+## 7. Implementing the Framework
+
+### Step-by-Step Process
+
+**Phase 1: Self-Assessment**
+1. Define your organization (system owner)
+2. Identify all critical systems and business functions
+3. Map components for each critical function
+4. Identify controllers and crown jewels
+5. Document minimum operating conditions
+
+**Phase 2: Threat Intelligence Integration**
+1. Subscribe to relevant threat feeds (US-CERT, CISA)
+2. Filter vulnerabilities by your crown jewels
+3. Assess threat actor capabilities against your defenses
+4. Prioritize based on relevance, not just CVSS scores
+
+**Phase 3: Control Implementation**
+1. Build security controls around crown jewels first
+2. Work outward to less critical systems
+3. Implement defense-in-depth strategies
+4. Plan for resilience and rapid recovery
+
+### Cost-Benefit Analysis
+
+**C-Suite Perspective**: "Can we achieve acceptable risk with minimum spend?"
+
+**Security Response**:
+- Focus resources on crown jewels
+- Accept calculated risks on lower-tier assets
+- Plan for failure (resilience over prevention)
+- Reassess annually or when significant changes occur
+
+---
+
+## 8. Key Takeaways
+
+### Core Principles
+
+1. **Not All Threats Apply to Everyone**
+   - Nation-states don't target small manufacturers of office supplies
+   - Match your defenses to realistic threat actors
+
+2. **Know Yourself Better Than Attackers Do**
+   - Adversaries research your organization extensively
+   - Understanding your own crown jewels is foundational
+
+3. **Prioritize Based on Impact**
+   - Identify minimum operating conditions
+   - Build security outward from crown jewels
+   - Accept that you cannot protect everything equally
+
+4. **Context Matters**
+   - CVSS scores don't tell the complete story
+   - An authenticated vulnerability on a controller may be less critical than unauthenticated access to a monitoring system
+   - Consider exploitability, exposure, and business impact
+
+5. **Threat Landscapes Evolve**
+   - Mergers, acquisitions, and expansions change your profile
+   - Media attention can elevate threat levels
+   - Geopolitical events shift targeting priorities
+
+### Practical Metrics
+
+- **Mean Time to Recovery (MTTR)**: How long to restore crown jewels?
+- **Value at Risk**: Financial impact of crown jewel compromise
+- **Threat Capability vs. Defense Posture**: Gap analysis
+- **Resource Allocation**: Percentage of security budget protecting crown jewels
+
+---
+
+## 9. References and Further Reading
+
+- **Diamond Model**: Developed by Sergio Caltagirone
+- **US STRATCOM Targeting Handbook**: Basis for crown jewel analysis methodology
+- **MITRE ATT&CK Framework**: Threat actor capability assessment
+- **CISA Known Exploited Vulnerabilities Catalog**: Prioritization guidance
+- **Dragos Threat Intelligence**: ICS-specific threat profiling
+
+---
+
+## Summary Checklist
+
+When building your organization's threat profile, ensure you can answer:
+
+- [ ] What are our crown jewels? (4-5 most critical assets)
+- [ ] Who are our most likely adversaries?
+- [ ] What is our minimum operating capability?
+- [ ] Which threats match our profile and capabilities?
+- [ ] How do we prioritize security investments?
+- [ ] What is our plan when (not if) crown jewels are targeted?
+
+---
+
+*These notes summarize a framework for organizational threat profiling, emphasizing practical application over theoretical completeness. The goal is actionable intelligence that enables risk-based security decisions.*

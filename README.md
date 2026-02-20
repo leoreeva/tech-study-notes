@@ -60,9 +60,12 @@ Work in progress. Lots of stuff missing or even just skipped (because of prior k
 - [Password OSINT](osint/06_password_osint.md)
 - [Username OSINT](osint/07_username_osint.md)
 - [SOCMINT](osint/08_social_media_osint.md)
-- [HUMINT Fundamentals](osint/09_humint_fundamentals.md)
-- [Scraping Fundamentals](osint/10_scraping_fundamentals.md)
-- [Tools](osint/11_tools.md)
+- [HUMINT Fundamentals](osint/09_humint.md)
+- [Scraping Fundamentals](osint/10_scraping.md)
+- [Tools](osint/11_api.md)
+- [Tools](osint/12_fact_checking.md)
+- [Tools](osint/13_threat_profiling.md)
+- [Tools](osint/14_tools.md)
 
 **🔒 Deep web**
 - [Overview](deep_web/01-overview.md)
