@@ -62,9 +62,9 @@ Work in progress. Lots of stuff missing or even just skipped (because of prior k
 - [SOCMINT](osint/08_social_media_osint.md)
 - [HUMINT Fundamentals](osint/09_humint.md)
 - [Scraping Fundamentals](osint/10_scraping.md)
-- [Tools](osint/11_api.md)
-- [Tools](osint/12_fact_checking.md)
-- [Tools](osint/13_threat_profiling.md)
+- [API](osint/11_api.md)
+- [Fact-checking](osint/12_fact_checking.md)
+- [Threat profiling](osint/13_threat_profiling.md)
 - [Tools](osint/14_tools.md)
 
 **🔒 Deep web**
