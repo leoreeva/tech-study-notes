@@ -11,7 +11,6 @@ Source: [Building Threat Profiles for your Organization](https://www.youtube.com
 - The capabilities of potential adversaries
 - Where to allocate defensive resources for maximum risk reduction
 
----
 
 ## 1. Understanding Risk in Context
 
@@ -39,7 +38,6 @@ In **OT (Operational Technology)** environments, **resilience** takes on additio
 
 The U.S. government values human life at approximately **$7 million** per person for workplace accident calculations. While morbid, this metric enables quantitative risk assessment when evaluating safety investments.
 
----
 
 ## 2. The Diamond Model of Threat Analysis
 
@@ -81,7 +79,6 @@ Developed by Sergio Caltagirone (now VP at Dragos), the **Diamond Model** provid
 
 > **Important**: When analyzing threat groups (like APT-31), you typically understand **three** of the four components. The missing piece creates the "triangle" rather than complete diamond.
 
----
 
 ## 3. Organizational Breakdown for Threat Assessment
 
@@ -169,7 +166,6 @@ To properly assess threats, you must first understand your own organization thro
 
 > **Critical Insight**: Engineering workstations often run outdated operating systems (Windows XP, Windows 7, Server 2008/2012) but provide the primary interface for controlling crown jewel systems.
 
----
 
 ## 4. Practical Application: Oil & Gas Pipeline Example
 
@@ -205,7 +201,6 @@ To properly assess threats, you must first understand your own organization thro
 3. SCADA control systems
 4. Engineering workstations (single point of control)
 
----
 
 ## 5. Threat Capability Assessment
 
@@ -239,7 +234,6 @@ Not every organization faces the same threat landscape. **MITRE ATT&CK** and **C
 | Healthcare | Ransomware, data theft, insider threats |
 | Manufacturing | IP theft, industrial espionage, ransomware |
 
----
 
 ## 6. Identifying Critical Assets: The "Bad Day" Exercise
 
@@ -275,7 +269,6 @@ To identify crown jewels, ask stakeholders: **"What does a bad day look like?"**
 
 > **Key Insight**: Different stakeholders describe the same failure using different language, but they're identifying the same critical asset.
 
----
 
 ## 7. Implementing the Framework
 
@@ -310,7 +303,6 @@ To identify crown jewels, ask stakeholders: **"What does a bad day look like?"**
 - Plan for failure (resilience over prevention)
 - Reassess annually or when significant changes occur
 
----
 
 ## 8. Key Takeaways
 
@@ -346,7 +338,6 @@ To identify crown jewels, ask stakeholders: **"What does a bad day look like?"**
 - **Threat Capability vs. Defense Posture**: Gap analysis
 - **Resource Allocation**: Percentage of security budget protecting crown jewels
 
----
 
 ## 9. References and Further Reading
 
@@ -356,7 +347,6 @@ To identify crown jewels, ask stakeholders: **"What does a bad day look like?"**
 - **CISA Known Exploited Vulnerabilities Catalog**: Prioritization guidance
 - **Dragos Threat Intelligence**: ICS-specific threat profiling
 
----
 
 ## Summary Checklist
 
@@ -368,7 +358,3 @@ When building your organization's threat profile, ensure you can answer:
 - [ ] Which threats match our profile and capabilities?
 - [ ] How do we prioritize security investments?
 - [ ] What is our plan when (not if) crown jewels are targeted?
-
----
-
-*These notes summarize a framework for organizational threat profiling, emphasizing practical application over theoretical completeness. The goal is actionable intelligence that enables risk-based security decisions.*

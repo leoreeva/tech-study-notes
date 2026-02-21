@@ -16,7 +16,6 @@ This course provides a comprehensive introduction to **APIs (Application Program
 - Basic programming experience ("Hello World" level in any language)
 - Fundamental understanding of how the web works (web servers and browsers)
 
----
 
 ## 1. Understanding Interfaces
 
@@ -69,7 +68,6 @@ Modern applications use APIs at multiple levels:
 
 > **Concept**: "It's APIs all the way down" - Abstractions exist at every level from user interface to binary data.
 
----
 
 ## 2. API Fundamentals
 
@@ -144,7 +142,6 @@ An API is a **contract** between:
 3. What outputs will be returned
 4. How to handle errors
 
----
 
 ## 3. Remote APIs
 
@@ -200,7 +197,6 @@ An API is a **contract** between:
 
 APIs that follow REST constraints are called **RESTful**.
 
----
 
 ## 4. Web Fundamentals Refresher
 
@@ -269,7 +265,6 @@ Content-Type: application/json
 - Use tokens/cookies
 - Client maintains session information
 
----
 
 ## 5. RESTful API Constraints
 
@@ -312,7 +307,6 @@ Four sub-constraints:
 - Only optional constraint
 - Example: JavaScript widgets
 
----
 
 ## 6. Working with REST APIs
 
@@ -369,7 +363,6 @@ In REST, everything is a **resource**:
 - Key-value pairs
 - Supports nested objects and arrays
 
----
 
 ## 7. API Exploration Tools
 
@@ -444,7 +437,6 @@ Store sensitive/configuration data separately:
 - Portability: Share collections without secrets
 - Flexibility: Switch environments (dev/staging/prod)
 
----
 
 ## 8. Helper Libraries & SDKs
 
@@ -507,7 +499,6 @@ async function getMessages() {
 }
 ```
 
----
 
 ## 9. Authentication & Security
 
@@ -561,7 +552,6 @@ const API_KEY = "sk_live_1234567890";
 
 **Solution**: Use server-side proxy to keep keys secure.
 
----
 
 ## 10. Webhooks: Reverse APIs
 
@@ -597,7 +587,6 @@ response.writeHead(200, {'Content-Type': 'text/xml'});
 response.end(twiml.toString());
 ```
 
----
 
 ## 11. Building a Complete API Application
 
@@ -684,7 +673,6 @@ async loadImages() {
 5. **Vue fetches data** from your API endpoint
 6. **Gallery displays** user-submitted photos
 
----
 
 ## 12. API Design Considerations
 
@@ -714,7 +702,6 @@ When designing an API, evaluate against REST constraints:
 9. **Webhooks enable real-time** - Event-driven architecture
 10. **Constraints provide benefits** - REST constraints enable scalability
 
----
 
 ## 13. Additional Resources
 
@@ -743,7 +730,6 @@ When designing an API, evaluate against REST constraints:
 7. Serverless architecture
 8. Microservices and API gateways
 
----
 
 ## Summary
 
