@@ -73,3 +73,9 @@ Work in progress. Lots of stuff missing or even just skipped (because of prior k
 - [Installation Guides: OS Setup](deep_web/03-installation-guides.md)
 - [Practical Usage: Browsing & Communication](deep_web/04-practical-usage.md)
 - [Advanced Topics: Markets & Analysis](deep_web/05-advanced-topics.md)
+
+**📊 Data Visualization**
+- [Data Visualization Fundamentals](data_visualization/1_data_visualization_fundamentals.md)
+- [Dashboard Creation and Data Analysis](data_visualization/2_dashboard_creation_guide.md)
+- [Advanced Data Analysis and Calculations](data_visualization/3_advanced_data_analysis.md)
+- [Programming Languages for Data Visualization](data_visualization/4_programming_visualization_concepts.md)
