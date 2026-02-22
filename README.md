@@ -1,7 +1,7 @@
 # Tech study notes
 Data engineering / software engineering resources (or even personal interests, not directly related to tech). Useful for interviews or just personal knowledge.
 
-Work in progress. Lots of stuff missing or even just skipped (because of prior knowledge in the field). Feel free to contribute.
+Work in progress. It's all based on my knowledge/interests, so lots of stuff might be purposely skipped (or maybe i'm just not interested). Feel free to contribute.
 
 <br>
 
@@ -23,26 +23,26 @@ Work in progress. Lots of stuff missing or even just skipped (because of prior k
 - NoSQL (document, key-value, graph, column-family): when to use, pros/cons
 - Indexes, locking, deadlocks
 
-**🏗️ Software Design**
+**💻 Software Design**
 - [Design patterns](software_design/design_patterns.md)
 - [Refactoring code](software_design/refactoring_code.md)
 - [SOLID Principle](software_design/solid_principle.md)
 - [Git workflows](software_design/git_workflows.md)
 
-**🏗️ System Design**
+**🏛️ System Design**
 - [Distributed systems](system_design/distributed_systems.md)
 - [Microservices](system_design/microservices.md)
 - [Event-driven architecture](system_design/event_driven_architecture.md)
 - [API Design (RPC & REST)](system_design/api_design.md)
 - Security: Authentication, Authorization, common vulnerabilities (OWASP top 10)
 
-**⚙️ Data Engineering**
+**🔄 Data Engineering**
 - [Data modeling](data_engineering/data_modeling.md)
 - [Data pipelines](data_engineering/data_pipelines.md)
 - [Batch vs Streaming](data_engineering/batch_streaming.md)
 - [Data marts](data_engineering/data_marts.md)
 
-**⚙️ DevOps & CI/CD**
+**🚀 DevOps & CI/CD**
 - Docker, Kubernetes (basic concepts)
 - Testing: unit tests, integration tests
 - [CI/CD pipelines](devops_cicd/cicd_pipelines.md)
