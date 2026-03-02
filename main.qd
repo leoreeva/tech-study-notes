@@ -1,0 +1,34 @@
+.docname {Tech Study Notes}
+.include {docs}
+
+Data engineering / software engineering resources (or even personal interests, not directly related to tech). Useful for interviews or just personal knowledge.
+
+> **Work in progress**: This is an ongoing collection based on my knowledge and interests. Many topics may be intentionally skipped or not yet covered. Contributions are welcome!
+
+## 1. About This Project
+
+This is a personal knowledge base built with [Quarkdown](https://github.com/iamgio/quarkdown), a powerful Markdown-based typesetting system.
+
+### 1.1. Compiling
+
+To compile this document:
+```bash
+quarkdown c main.qd
+```
+
+For live preview during editing:
+```bash
+quarkdown c main.qd -p -w
+```
+
+### 1.2. Contributing
+
+Contributions are welcome! Feel free to:
+- Add new topics or sections
+- Improve existing content
+- Fix errors or typos
+- Suggest better explanations or examples
+
+### 1.3. License
+
+This content is provided as-is for educational purposes. See individual files for specific licenses or attribution requirements.

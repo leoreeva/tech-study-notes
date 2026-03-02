@@ -1,0 +1,9 @@
+.docdescription {aaa}
+.doclang {English}
+.theme {galactic} layout:{hyperlegible}
+
+.docauthors
+  - Leonardo Riva
+
+.pagemargin {topleft}
+    tech-study-notes

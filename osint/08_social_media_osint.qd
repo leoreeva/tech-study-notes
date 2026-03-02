@@ -1,0 +1,151 @@
+.docname {Social Media OSINT}
+.include {docs}
+
+
+## 1. Social Media Search
+
+### 1.1. Twitter/X
+| Tool | URL | Purpose |
+|------|-----|----------|
+| Twitter Advanced Search | twitter.com/search-advanced | Complex queries |
+| All My Tweets | allmytweets.net | View all tweets from account |
+| Social Bearing | socialbearing.com | Analytics and search |
+
+### 1.2. Instagram
+| Tool | URL | Purpose |
+|------|-----|----------|
+| InstaFollowers | instafollowers.co | Profile analysis |
+| Pikdo | pikdo.net | Web viewer |
+
+### 1.3. Facebook
+| Tool | URL | Purpose |
+|------|-----|----------|
+| Facebook Search | facebook.com/search | Built-in advanced search |
+| WhoPostedWhat | whopostedwhat.com | Post search by date |
+
+### 1.4. LinkedIn
+| Tool | URL | Purpose |
+|------|-----|----------|
+| LinkedIn Sales Navigator | linkedin.com/sales | Advanced search |
+| Clearbit Connect | (Chrome extension) | Email discovery |
+| Hunter.io | hunter.io | Domain search |
+
+## 2. Domain & Website OSINT
+
+| Tool | URL | Purpose |
+|------|-----|----------|
+| WHOIS | whois.net | Domain registration info |
+| DNS Dumpster | dnsdumpster.com | DNS recon |
+| Sublist3r | (GitHub) | Subdomain enumeration |
+| BuiltWith | builtwith.com | Technology stack |
+| Wayback Machine | web.archive.org | Historical snapshots |
+
+## 3. People Search Engines
+
+| Tool | URL | Notes |
+|------|-----|-------|
+| Spokeo | spokeo.com | US-focused |
+| Pipl | pipl.com | Global |
+| WhitePages | whitepages.com | US contacts |
+| TruePeopleSearch | truepeoplesearch.com | Free, US |
+| FastPeopleSearch | fastpeoplesearch.com | Free, US |
+
+## 4. Professional OSINT Suites
+
+### 4.1. Frameworks
+| Tool | Type | Notes |
+|------|------|-------|
+| Maltego | Desktop app | Visual link analysis |
+| Spiderfoot | Web/CLI | Automated OSINT |
+| theHarvester | CLI | Email/subdomain gathering |
+| Recon-ng | CLI | Full OSINT framework |
+| OSINT Framework | Website | osintframework.com - Tool directory |
+
+## 5. Browser Extensions
+
+| Extension | Purpose |
+|-----------|----------|
+| Clearbit Connect | Email discovery |
+| Hunter | Email finder |
+| Wappalyzer | Technology detection |
+| Exif Viewer | Image metadata |
+| FireShot | Screenshots |
+| FoxyProxy | Proxy management |
+
+## 6. Linux OSINT Tools
+
+### 6.1. Kali Linux Pre-installed
+| Tool | Purpose |
+|------|----------|
+| theHarvester | Email/subdomain gathering |
+| Recon-ng | Full OSINT framework |
+| Maltego | Visual link analysis |
+| ExifTool | Image metadata analysis |
+| Spiderfoot | Automated OSINT |
+
+### 6.2. Installation
+```bash
+# 2. theHarvester
+apt-get install theharvester
+
+# 3. Recon-ng
+apt-get install recon-ng
+
+# 4. ExifTool
+apt-get install libimage-exiftool-perl
+
+# 5. Spiderfoot
+pip install spiderfoot
+```
+
+## 7. Cheat Sheets & References
+
+| Resource | URL | Description |
+|----------|-----|-------------|
+| Google Dorking | github.com | Various cheat sheets |
+| OSINT Framework | osintframework.com | Complete tool directory |
+| GeoGuessr Tips | geoguessr.com/tips | Regional identification |
+| Yandex Search | yandex.com/support | Search operators |
+
+## 8. Essential Reading & Learning
+
+### 8.1. Blogs & Websites
+- Bellingcat (bellingcat.com) - Investigative journalism
+- OSINT Curious (osintcurious.org) - Community resources
+- Sector035 (sector035.nl) - OSINT techniques
+- NixIntel (nixintel.com) - OSINT guides
+
+### 8.2. Practice Platforms
+- Trace Labs (tracelabs.org) - Missing persons CTFs
+- GeoGuessr (geoguessr.com) - Location practice
+- HackTheBox (hackthebox.com) - Technical challenges
+
+### 8.3. YouTube Channels
+- The Cyber Mentor (this course instructor)
+- OSINT Curious
+- Bellingcat
+- NixIntel
+
+## 9. Quick Reference Card
+
+### 9.1. Emergency OSINT Workflow
+
+**1. Starting Point**
+   ↓
+**2. Search Engine** (Google, operators)
+   ↓
+**3. Social Media** (Namechk for username)
+   ↓
+**4. Email Discovery** (Hunter.io)
+   ↓
+**5. Breach Check** (Have I Been Pwned → DeHashed)
+   ↓
+**6. Image Analysis** (Google/Yandex reverse search)
+   ↓
+**7. Location** (Maps, Street View, EXIF)
+   ↓
+**8. Cross-Reference** (Find patterns, connections)
+   ↓
+**9. Document** (Screenshots, notes, timeline)
+   ↓
+**10. Report** (Compile findings)

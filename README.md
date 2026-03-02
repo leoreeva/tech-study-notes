@@ -1,81 +1,175 @@
-# Tech study notes
-Data engineering / software engineering resources (or even personal interests, not directly related to tech). Useful for interviews or just personal knowledge.
+# Tech Study Notes - Quarkdown Edition
 
-Work in progress. It's all based on my knowledge/interests, so lots of stuff might be purposely skipped (or maybe i'm just not interested). Feel free to contribute.
+A comprehensive knowledge base for software engineering, data engineering, and related topics, built with [Quarkdown](https://github.com/iamgio/quarkdown).
 
-<br>
+## 🚀 About
 
-## Table of Contents
+This repository contains study notes, explanations, and resources for various technical topics including:
 
-**🧠 Computer Science Fundamentals**
-- Data Structures: arrays, linked lists, stacks, queues, hash tables, heaps, tries, graphs, trees (binary, BST, AVL, etc.)
-- Algorithms: binary search, sorting (merge sort, quick sort), backtracking, BFS, DFS, Dijkstra's, greedy algorithms, dynamic programming
-- Time and Space Complexity: Big-O notation, trade-offs, performance analysis
-- Concurrency
-- Programming
-    - [Programming paradigms](computer_science_fundamentals/programming_paradigms.md)
-    - [OOP (object-oriented programming)](computer_science_fundamentals/oop.md)
-    - Coding problems (e.g., from LeetCode)
+- Computer Science Fundamentals
+- Databases and Data Engineering
+- Software Design and Architecture
+- System Design
+- Cloud Certifications
+- OSINT (Open Source Intelligence)
+- Deep Web Technologies
+- Data Visualization
 
-**🧪 Databases**
-- [ACID, BASE, CAP](databases/acid_base_cap.md)
-- [SQL](databases/sql.md)
-- NoSQL (document, key-value, graph, column-family): when to use, pros/cons
-- Indexes, locking, deadlocks
+The content is organized as a Quarkdown-based wiki, providing a structured and navigable knowledge base.
 
-**💻 Software Design**
-- [Design patterns](software_design/design_patterns.md)
-- [Refactoring code](software_design/refactoring_code.md)
-- [SOLID Principle](software_design/solid_principle.md)
-- [Git workflows](software_design/git_workflows.md)
+## 📚 Content Structure
 
-**🏛️ System Design**
-- [Distributed systems](system_design/distributed_systems.md)
-- [Microservices](system_design/microservices.md)
-- [Event-driven architecture](system_design/event_driven_architecture.md)
-- [API Design (RPC & REST)](system_design/api_design.md)
-- Security: Authentication, Authorization, common vulnerabilities (OWASP top 10)
+```
+tech-study-notes/
+├── computer_science_fundamentals/  # Core CS concepts
+├── databases/                      # Database theories and practices
+├── software_design/                 # Design patterns and principles
+├── system_design/                   # System architecture
+├── data_engineering/                # Data pipelines and infrastructure
+├── devops_cicd/                     # DevOps practices
+├── cloud_certifications/           # Cloud platform certifications
+├── osint/                          # OSINT techniques
+├── deep_web/                       # Deep web technologies
+├── data_visualization/              # Data presentation techniques
+├── images/                         # Shared images
+├── output/                         # Compiled output (generated)
+├── _nav.qd                         # Navigation structure
+├── _setup.qd                       # Global setup
+├── main.qd                         # Homepage
+└── README.md                       # This file
+```
 
-**🔄 Data Engineering**
-- [Data modeling](data_engineering/data_modeling.md)
-- [Data pipelines](data_engineering/data_pipelines.md)
-- [Batch vs Streaming](data_engineering/batch_streaming.md)
-- [Data marts](data_engineering/data_marts.md)
+## 🛠️ Getting Started
 
-**🚀 DevOps & CI/CD**
-- Docker, Kubernetes (basic concepts)
-- Testing: unit tests, integration tests
-- [CI/CD pipelines](devops_cicd/cicd_pipelines.md)
+### Prerequisites
 
-**☁️ Cloud Certifications**
-- [GCP PDE (2023)](cloud_certifications/google_cloud_platform/gcp_pde.md)
-- [SnowPro Core (2025)](cloud_certifications/snowflake/snowpro_core.md)
+- [Quarkdown installed](https://quarkdown.com/wiki/installation)
+- Java 17+ (required for Quarkdown)
+- Node.js (required for PDF export)
 
-**🕵️ OSINT**
-- [Introduction](osint/01_introduction.md)
-- [Sock Puppets](osint/02_sock_puppets.md)
-- [Search Engine OSINT](osint/03_search_engine_osint.md)
-- [Image OSINT](osint/04_image_osint.md)
-- [Email OSINT](osint/05_email_osint.md)
-- [Password OSINT](osint/06_password_osint.md)
-- [Username OSINT](osint/07_username_osint.md)
-- [SOCMINT](osint/08_social_media_osint.md)
-- [HUMINT Fundamentals](osint/09_humint.md)
-- [Scraping Fundamentals](osint/10_scraping.md)
-- [API](osint/11_api.md)
-- [Fact-checking](osint/12_fact_checking.md)
-- [Threat profiling](osint/13_threat_profiling.md)
-- [Tools](osint/14_tools.md)
+### Installation
 
-**🔒 Deep web**
-- [Overview](deep_web/01-overview.md)
-- [Technical Foundations: Tor & PGP](deep_web/02-technical-foundations.md)
-- [Installation Guides: OS Setup](deep_web/03-installation-guides.md)
-- [Practical Usage: Browsing & Communication](deep_web/04-practical-usage.md)
-- [Advanced Topics: Markets & Analysis](deep_web/05-advanced-topics.md)
+```bash
+# Install Quarkdown (follow instructions at https://quarkdown.com/wiki/installation)
+# Clone this repository
+git clone https://github.com/yourusername/tech-study-notes.git
+cd tech-study-notes
+```
 
-**📊 Data Visualization**
-- [Data Visualization Fundamentals](data_visualization/1_data_visualization_fundamentals.md)
-- [Dashboard Creation and Data Analysis](data_visualization/2_dashboard_creation_guide.md)
-- [Advanced Data Analysis and Calculations](data_visualization/3_advanced_data_analysis.md)
-- [Programming Languages for Data Visualization](data_visualization/4_programming_visualization_concepts.md)
+### Compiling
+
+Compile the entire knowledge base:
+```bash
+quarkdown c main.qd
+```
+
+For live preview during editing:
+```bash
+quarkdown c main.qd -p -w
+```
+
+The compiled output will be in the `output/` directory.
+
+### Viewing
+
+After compilation, open `output/tech-study-notes/index.html` in your browser, or use the preview server:
+```bash
+quarkdown c main.qd -p
+```
+
+## 📖 Navigation
+
+The knowledge base uses Quarkdown's navigation system:
+
+- **Sidebar**: Automatically generated from `_nav.qd`
+- **Cross-references**: Links between related topics
+- **Search**: Full-text search across all content
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how you can help:
+
+### Adding Content
+
+1. Create a new `.qd` file in the appropriate directory
+2. Add Quarkdown headers:
+   ```markdown
+   .docname {Your Title}
+   .include {docs}
+   ```
+3. Write your content using Quarkdown syntax
+4. Add your file to `_nav.qd`
+
+### Improving Existing Content
+
+- Fix errors or typos
+- Add examples or explanations
+- Improve formatting
+- Add images or diagrams
+
+### Migration Help
+
+Help migrate Markdown files to Quarkdown format:
+- Convert syntax where beneficial
+- Add Quarkdown-specific features
+- Update internal links
+
+### For AI Agents and Developers
+
+Please refer to [AGENTS.md](AGENTS.md) for comprehensive guidelines on:
+- Build/lint/test commands
+- Code style guidelines
+- File organization
+- Version control practices
+- Testing approach
+
+## 📝 Writing Guidelines
+
+### Quarkdown Features to Use
+
+- **Document structure**: Use `.docname` and `.include {docs}`
+- **Images**: Use `!(widthxheight)[alt text](path)` for sized images
+- **Cross-references**: Use `.seealso` for related content
+- **Admonitions**: Use `.note`, `.warning`, `.important` etc.
+- **Tables**: Enhanced table formatting
+
+### Content Standards
+
+- Use clear, concise language
+- Provide practical examples
+- Include code samples where relevant
+- Reference sources when appropriate
+- Use consistent terminology
+
+## 🔧 Technical Details
+
+### Quarkdown Configuration
+
+- **Document Type**: Docs (wiki-style)
+- **Theme**: Default Quarkdown theme
+- **Output**: HTML with search and navigation
+
+### Build Process
+
+1. Quarkdown compiles `.qd` files to HTML
+2. Assets are copied to output directory
+3. Navigation is generated from `_nav.qd`
+4. Search index is created
+
+## 📄 License
+
+This content is provided for educational purposes. See individual files for specific attribution requirements.
+
+## 🙏 Acknowledgments
+
+- Built with [Quarkdown](https://github.com/iamgio/quarkdown)
+- Inspired by various study guides and documentation
+- Contributions from the open-source community
+
+## 📬 Contact
+
+For questions or suggestions, please open an issue on GitHub.
+
+---
+
+**Happy learning!** 🚀

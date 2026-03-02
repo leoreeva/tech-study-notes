@@ -1,0 +1,121 @@
+.docname {Google Cloud Platform - Professional Data Engineer}
+.include {docs}
+
+**Note**: Exam attended and passed in September 2023.
+
+---
+
+## 1. Data Lifecycle in Data Engineering
+
+1. **Ingest**: pull in the raw data, such as streaming data from devices, on-premises batch data, app logs, or mobile-app user events and analytics
+2. **Store**: the retrieved data needs to be stored in a format that is durable and easily accessible
+3. **Process and analyze**: the data is transformed from raw form into actionable information
+4. **Explore and visualize**: convert the results of the analysis into a format that is easy to draw insights from and to share with colleagues
+
+Some of the available services at each step:
+
+!(600x300)[GCP Services](images/services.png)
+*[(Image source)](https://medium.com/google-cloud/bigquery-explained-overview-357055ecfda3)*
+
+---
+
+## 2. Storage
+
+GCP offers various storage solutions for different use cases:
+
+- **Cloud Storage**: Object storage for unstructured data
+- **BigQuery**: Serverless data warehouse for analytics
+- **Cloud SQL**: Managed relational databases (MySQL, PostgreSQL, SQL Server)
+- **Cloud Spanner**: Horizontally scalable relational database
+- **Firestore**: NoSQL document database
+- **Persistent Disk**: Block storage for VMs
+
+---
+
+## 3. Compute
+
+Compute services for data processing:
+
+- **Compute Engine**: Virtual machines for custom workloads
+- **Kubernetes Engine (GKE)**: Managed Kubernetes for containerized applications
+- **Cloud Functions**: Serverless functions for event-driven processing
+- **Cloud Run**: Serverless containers
+- **App Engine**: Platform-as-a-Service for web applications
+
+---
+
+## 4. Data Processing
+
+Services for data transformation and processing:
+
+- **Dataflow**: Managed Apache Beam for batch and stream processing
+- **Dataproc**: Managed Spark and Hadoop clusters
+- **BigQuery**: SQL-based analytics and processing
+- **Data Fusion**: GUI-based data integration
+- **Pub/Sub**: Messaging service for event-driven architectures
+
+---
+
+## 5. Machine Learning
+
+ML services for data engineers:
+
+- **Vertex AI**: Unified ML platform
+- **AutoML**: Automated machine learning
+- **BigQuery ML**: ML models directly in BigQuery
+- **TensorFlow Enterprise**: Managed TensorFlow
+- **Vision AI, NLP AI, etc.**: Pre-trained ML APIs
+
+---
+
+## 6. Data Visualization
+
+Tools for data visualization and exploration:
+
+- **Looker**: Business intelligence and analytics platform
+- **Data Studio**: Free dashboarding and reporting
+- **BigQuery BI Engine**: Fast analytics on BigQuery data
+- **Looker Studio**: Integrated visualization tool
+
+---
+
+## 7. Data Transfer
+
+Services for moving data in and out of GCP:
+
+- **Transfer Service**: Managed data transfer from other clouds and on-prem
+- **Storage Transfer Service**: Batch data transfers
+- **BigQuery Data Transfer Service**: Scheduled data loading
+- **Datastream**: CDC (Change Data Capture) for databases
+- **Transfer Appliance**: Physical data transfer for large datasets
+
+---
+
+## 8. Management
+
+Tools for managing GCP resources:
+
+- **Cloud Console**: Web-based management interface
+- **Cloud Shell**: Browser-based command line
+- **gcloud CLI**: Command-line interface
+- **Cloud Monitoring**: Infrastructure and application monitoring
+- **Cloud Logging**: Log management and analysis
+
+---
+
+## 9. IAM (Identity and Access Management)
+
+Security and access control:
+
+- **IAM Roles**: Fine-grained access control
+- **Service Accounts**: Identity for applications and VMs
+- **Cloud Identity**: Identity management
+- **Security Command Center**: Security and risk management
+- **VPC Service Controls**: Network security
+
+---
+
+## 10. Sample Questions
+
+- [ExamTopics](https://www.examtopics.com/exams/google/professional-data-engineer/) (more reliable, always check the discussion)
+- [PassNExam](https://www.passnexam.com/google/professional-data-engineer) (some questions copied from examtopics; answer not always right)

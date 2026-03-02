@@ -1,0 +1,30 @@
+.docname {SQL}
+.include {docs}
+
+Relational stuff: normalization, joins, complex queries...
+
+---
+
+## 1. SQL Queries
+
+... basic stuff...
+
+### 1.1. Useful More Advanced Stuff for Analytical Engineers
+
+- **GROUP BY, HAVING**
+  - Conditional aggregation (SUM(CASE WHEN …))
+
+- **Window Functions** (very common)
+  - ROW_NUMBER, RANK, DENSE_RANK
+  - LAG / LEAD
+  - Running totals (SUM() OVER (...))
+  - Partitioning vs ordering
+
+---
+
+## 2. Typical Question Patterns
+
+- "Top N per group"
+- "Find duplicates / latest record per key"
+- "Compute metrics over time"
+- "Sessionization / rolling metrics"

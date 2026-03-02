@@ -1,0 +1,313 @@
+.docname {Scraping}
+.include {docs}
+
+
+Web scraping  is the process of:
+- Automatically fetching web pages
+- Parsing the HTML structure
+- Extracting specific information
+- Storing data in a structured format
+
+
+## 1. HTML fundamentals
+
+Basic HTML document structure:
+- `<html>`: root element containing all content
+- `<head>`: metadata, title, and resource links (not visible)
+- `<body>`: visible page content
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- Visible content goes here -->
+  </body>
+</html>
+```
+
+Essential HTML **tags**:
+
+| Tag | Purpose | Example |
+|-----|---------|---------|
+| `<h1>` - `<h6>` | Headings (h1 largest) | `<h1>Main Title</h1>` |
+| `<p>` | Paragraph | `<p>Text content</p>` |
+| `<div>` | Division/container | `<div class="card">...</div>` |
+| `<span>` | Inline container | `<span class="price">$20</span>` |
+| `<a>` | Anchor/link | `<a href="url">Link text</a>` |
+| `<table>` | Table structure | Contains rows and cells |
+| `<tr>` | Table row | Contains table cells |
+| `<td>` | Table data cell | Contains cell content |
+| `<th>` | Table header | Header cell |
+
+HTML **attributes** provide additional information about elements:
+
+| Attribute | Purpose | Example |
+|-----------|---------|---------|
+| `class` | CSS styling identifier (can be reused) | `<div class="course-card">...</div>` |
+| `id` | Unique identifier (used once per page) | `<div id="main-content">...</div>` |
+| `href` | Link destination | `<a href="https://example.com">Link</a>` |
+
+### 1.1. The Document Object Model (DOM)
+
+The DOM represents HTML as a **tree** structure:
+- Each element is a node
+- Parent-child relationships define hierarchy
+- Scraping navigates this tree to locate data
+
+### 1.2. HTTP Status Codes
+When requesting (GET) an webpage, the request has a code that defines the status of the request:
+
+| Code | Meaning | Action |
+|------|---------|--------|
+| 200 | OK | Success |
+| 301/302 | Redirect | Follow redirect |
+| 403 | Forbidden | Check headers/permissions |
+| 404 | Not Found | Verify URL |
+| 429 | Too Many Requests | Add delays |
+| 500 | Server Error | Retry later |
+| 503 | Service Unavailable | Server overload |
+
+
+## 2. Web Scraping tools and libraries
+
+| Python library | Purpose | Use Case |
+|----------------|---------|----------|
+| **Beautiful Soup** | HTML/XML parsing | Extracting data from HTML |
+| **Requests** | HTTP requests | Fetching web pages |
+| **lxml** | High-performance parser | Parsing large/malformed HTML |
+| **Pandas** | Data manipulation | Structuring scraped data |
+| **Selenium** | Browser automation | JavaScript-rendered content |
+| **Scrapy** | Full scraping framework | Large-scale projects |
+
+### 2.1. Beautiful Soup key concepts
+
+Installation:
+```bash
+pip install beautifulsoup4
+pip install lxml
+```
+
+Import and initialize soup object with lxml parser:
+```python
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(html_content, 'lxml')
+```
+
+### 2.2. Parser Comparison
+
+| Parser        | Speed    | Fault Tolerance | Recommendation    |
+|---------------|----------|-----------------|-------------------|
+| `html.parser` | Moderate | Good            | Default, built-in |
+| `lxml`        | Fast     | Excellent       | Recommended.      |
+| `html5lib`    | Slow     | Best            | HTML5 compliance  |
+
+### 2.3. Core Beautiful Soup Methods
+
+| Signature | Purpose | Example |
+|-----------|---------|---------|
+| `find(tag, attributes)`     | Returns first matching element | `soup.find('div', class_='card')` |
+| `find_all(tag, attributes)` | Returns list of all matching elements | `soup.find_all('p', limit=5)` |
+| `element.text` | Extract text content |  |
+| `element.get('href')` | Get specific attribute |  |
+
+
+## 3. Scraping methodology
+
+### 3.1. The scraping workflow
+
+1. **Inspect the Target**: Use browser developer tools (F12 on Chrome) to
+    - View and edit HTML/CSS in real-time
+    - Monitor HTTP requests
+    - Test JavaScript and view errors
+    - Hover over elements to see their HTML
+2. **Identify Data Location**: Find HTML tags containing target data
+3. **Make HTTP Request**: Fetch the page content
+4. **Parse HTML**: Convert to Beautiful Soup object
+5. **Extract Data**: Navigate and select elements
+6. **Store Results**: Save to file or database
+
+
+## 4. Data storage and structuring
+
+In Python, data can be easily manipulated with **DataFrames** (like Pandas). They can also export to multiple formats. Most common are CSV, JSON, SQLite, Pickle, etc.
+
+
+## 5. Dynamic Content
+
+Website can be static:
+- HTML contains all data at initial page load  
+- Content is immediately available in the page source  
+- Can be scraped using standard HTTP requests and HTML parsing  
+
+or dynamic:
+- Initial HTML is minimal or incomplete  
+- Additional data is loaded after page load via JavaScript  
+- Content is fetched from API endpoints (often using Ajax or the Fetch API)
+  - Ajax (Asynchronous JavaScript and XML) is a technique for requesting data from a server without reloading the page  
+  - Commonly used by dynamic websites to update content asynchronously  
+  - Typically involves calls to backend APIs returning JSON or XML  
+- Rendered browser content may differ from the raw HTML source  
+
+### 5.1. Selenium for dynamic content
+
+Beautiful Soup is a **parser**—it converts HTML strings into navigable objects. It does **not** execute JavaScript or render dynamic content. Dynamic websites require a **rendering engine** (browser) to execute JavaScript.
+
+When to use Selenium:
+- JavaScript-rendered content not in initial HTML
+- Single-page applications (SPAs)
+- Content loaded via Ajax requests
+- User interactions required (clicks, scrolling)
+
+Selenium architecture:
+1. **Browser**: Chrome, Firefox, Edge, Safari (must be installed)
+2. **WebDriver**: Browser-specific automation driver
+3. **Selenium Package**: Python bindings for browser control
+
+Basic Selenium workflow:
+```python
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
+
+driver = webdriver.Chrome(options=chrome_options)
+
+# 2. Load page (JavaScript executes automatically)
+driver.get('https://example.com')
+
+# 3. Get rendered HTML
+html = driver.page_source
+
+# 4. Close browser
+driver.quit()
+```
+
+Notice how Selenium can use a **headless browser**, a browser that runs without visible GUI. This means faster execution (no rendering overhead) and lower resource consumption (CPU, RAM, bandwidth).
+
+Then, to extract data from rendered pages, a hybrid approach with Beautiful Soup can be implemented:
+- Selenium handles JavaScript execution and rendering
+- Beautiful Soup provides superior parsing and data extraction
+
+**Hybrid Approach (Selenium + Beautiful Soup):**
+```python
+from selenium import webdriver
+from bs4 import BeautifulSoup
+
+# 5. Use Selenium to render JavaScript
+driver.get('https://dynamic-site.com')
+html = driver.page_source
+driver.quit()
+
+# 6. Use Beautiful Soup to parse rendered HTML
+soup = BeautifulSoup(html, 'lxml')
+data = soup.find_all('div', class_='content')
+```
+
+### 5.2. Finding hidden data sources
+
+Instead of rendering full pages, an efficient alternative is to locate where dynamic sites store data. This would even faster than healdess browsing, and would get clean structured data, while reducing load on target side.
+
+Location 1: embedded JSON in Script Tags:
+- Data often stored as JavaScript variables in `<script>` tags
+- View page source (Ctrl+U) and search for content
+- Look for patterns: `var data = {...}` or `window.__DATA__ = {...}`
+
+Location 2: XHR/Fetch API Requests:
+1. Open developer tools → Network tab
+2. Filter by "XHR" or "Fetch"
+3. Trigger content load (scroll, click)
+4. Inspect requests for JSON data endpoints
+5. Extract data directly from API responses
+
+### 5.3. Scraping decision tree
+
+```
+Need to scrape a website?
+        │
+        ▼
+Is content visible with JavaScript disabled?
+        │
+    ┌───┴──-─┐
+   Yes       No
+    │        │
+    ▼        ▼
+Standard   Is data embedded in
+scraping     page source as JSON?
+(Requests)        │
+               ┌──┴─-─┐
+              Yes     No
+               │      │
+               ▼      ▼
+         Extract    Use Selenium
+          JSON       (browser
+          data       automation)
+```
+
+
+## 6. Automation and Scheduling
+
+### 6.1. Cron Jobs
+Time-based job scheduler for automating script execution.
+
+**Syntax Pattern:**
+```
+* * * * * command
+│ │ │ │ │
+│ │ │ │ └─── Day of week (0-7)
+│ │ │ └───── Month (1-12)
+│ │ └─────── Day of month (1-31)
+│ └───────── Hour (0-23)
+└─────────── Minute (0-59)
+```
+
+Example:
+```bash
+# 7. Every Monday at 9 AM
+0 9 * * 1 /usr/bin/python3 /path/to/scraper.py
+```
+
+### 6.2. Monitoring and Alerting
+
+Use Cases:
+- Price drop notifications
+- Stock availability alerts
+- Content change detection
+
+Implementation:
+- Compare current data with previous scrape
+- Send email/SMS notifications on changes
+- Log all scrapes for audit trail
+
+
+## 7. Scraping considerations
+
+### 7.1. Anti-Scraping Measures
+
+| Measure | Description | Mitigation |
+|---------|-------------|------------|
+| **CAPTCHAs** | Human verification challenges | Headless browsers, solving services |
+| **Rate Limiting** | IP-based request throttling | Request delays, IP rotation |
+| **IP Blocking** | Banning scraper IP addresses | Proxy rotation, residential IPs |
+| **Dynamic Content** | JavaScript-rendered content | Selenium, Playwright |
+| **Honeypots** | Hidden traps for bots | Careful element selection |
+
+### 7.2. Ethical and Legal Considerations
+
+**Robots.txt:**
+- File indicating which pages can be scraped
+- Located at `domain.com/robots.txt`
+- Should be respected ethically
+
+**Best Practices:**
+1. **Rate Limiting**: Add delays between requests (1-3 seconds)
+2. **User-Agent**: Identify your scraper properly
+3. **Terms of Service**: Review website ToS
+4. **Copyright**: Don't redistribute scraped content
+5. **Server Load**: Avoid overloading target servers

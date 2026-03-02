@@ -16,6 +16,7 @@ ENV/
 *.log
 *.tmp
 *.swp
+*_cache
 
 # Python egg metadata and distributions
 *.egg-info/
@@ -24,3 +25,4 @@ build/
 
 todo*
 to_do*
+output/
