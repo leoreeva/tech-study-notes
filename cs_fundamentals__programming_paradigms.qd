@@ -1,9 +1,9 @@
 .docname {Programming paradigms}
 .include {docs}
 
-!(300x100)[Programming paradigms](images/programming_paradigms.png)
-
 ## 1. Imperative vs Declarative
+
+!(700x_)[Programming paradigms](images/cs_fundamentals__programming_paradigms.png)
 
 Programming paradigms describe coding on different levels of abstraction:
 - **imperative**: concerned with how to do it, not what to do. C, Java, Python, and most other programming languages are imperative. As a rule, if it has explicit loops (for, while, repeat) that change variables with explicit assignment operations at each loop, then it's imperative.
@@ -43,8 +43,6 @@ Notice:
 ## 2. Functional vs procedural
 
 Functional and procedural programming paradigms are extensions of the concept of declarative and imperative programming paradigms. 
-
-!(300x100)[Programming paradigms](images/programming_paradigms.png)
 
 ### 2.1. Subroutines
 Both functional and procedural programming have some kind of subroutines: one uses **functions**, the other **procedures**.

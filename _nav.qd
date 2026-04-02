@@ -1,72 +1,72 @@
 
 ###! 🧠 Computer Science Fundamentals
 
-- [Programming paradigms](computer_science_fundamentals/programming_paradigms.qd)
-- [OOP](computer_science_fundamentals/oop.qd)
+- [Programming paradigms](cs_fundamentals__programming_paradigms.qd)
+- [OOP](cs_fundamentals__oop.qd)
 
 ###! 🧪 Databases
 
-- [ACID, BASE, CAP](databases/acid_base_cap.qd)
-- [SQL](databases/sql.qd)
+- [ACID, BASE, CAP](db__acid_base_cap.qd)
+- [SQL](db__sql.qd)
 
 ###! 💻 Software Design
 
-- [Design patterns](software_design/design_patterns.qd)
-- [Refactoring code](software_design/refactoring_code.qd)
-- [SOLID Principle](software_design/solid_principle.qd)
-- [Git workflows](software_design/git_workflows.qd)
+- [Design patterns](software_design__design_patterns.qd)
+- [Refactoring code](software_design__refactoring_code.qd)
+- [SOLID Principle](software_design__solid_principle.qd)
+- [Git workflows](software_design__git_workflows.qd)
 
 ###! 🏛️ System Design
 
-- [Distributed systems](system_design/distributed_systems.qd)
-- [Microservices](system_design/microservices.qd)
-- [Event-driven architecture](system_design/event_driven_architecture.qd)
-- [API Design (RPC & REST)](system_design/api_design.qd)
+- [Distributed systems](system_design__distributed_systems.qd)
+- [Microservices](system_design__microservices.qd)
+- [Event-driven architecture](system_design__event_driven_architecture.qd)
+- [API Design (RPC & REST)](system_design__api_design.qd)
 
 ###! 🔄 Data Engineering
 
-- [Data modeling](data_engineering/data_modeling.qd)
-- [Data pipelines](data_engineering/data_pipelines.qd)
-- [Batch vs Streaming](data_engineering/batch_streaming.qd)
-- [Data marts](data_engineering/data_marts.qd)
+- [Data modeling](data_engineering__data_modeling.qd)
+- [Data pipelines](data_engineering__data_pipelines.qd)
+- [Batch vs Streaming](data_engineering__batch_streaming.qd)
+- [Data marts](data_engineering__data_marts.qd)
 
-###! 🚀 DevOps & CI/CD
+###! 🚀 DevOps & CI__CD
 
-- [CI/CD pipelines](devops_cicd/cicd_pipelines.qd)
+- [CI__CD pipelines](devops_cicd__cicd_pipelines.qd)
 
 ###! ☁️ Cloud Certifications
 
-- [GCP PDE (2023)](cloud_certifications/google_cloud_platform/gcp_pde.qd)
-- [SnowPro Core (2025)](cloud_certifications/snowflake/snowpro_core.qd)
+- [GCP PDE (2023)](cloud_certifications__gcp_pde.qd)
+- [SnowPro Core (2025)](cloud_certifications__snowpro_core.qd)
 
 ###! 🕵️ OSINT
 
-- [Introduction](osint/01_introduction.qd)
-- [Sock Puppets](osint/02_sock_puppets.qd)
-- [Search Engine OSINT](osint/03_search_engine_osint.qd)
-- [Image OSINT](osint/04_image_osint.qd)
-- [Email OSINT](osint/05_email_osint.qd)
-- [Password OSINT](osint/06_password_osint.qd)
-- [Username OSINT](osint/07_username_osint.qd)
-- [SOCMINT](osint/08_social_media_osint.qd)
-- [HUMINT Fundamentals](osint/09_humint.qd)
-- [Scraping Fundamentals](osint/10_scraping.qd)
-- [API](osint/11_api.qd)
-- [Fact-checking](osint/12_fact_checking.qd)
-- [Threat profiling](osint/13_threat_profiling.qd)
-- [Tools](osint/14_tools.qd)
+- [Introduction](osint__introduction.qd)
+- [Sock Puppets](osint__sock_puppets.qd)
+- [Search Engine OSINT](osint__search_engine_osint.qd)
+- [Image OSINT](osint__image_osint.qd)
+- [Email OSINT](osint__email_osint.qd)
+- [Password OSINT](osint__password_osint.qd)
+- [Username OSINT](osint__username_osint.qd)
+- [SOCMINT](osint__social_media_osint.qd)
+- [HUMINT Fundamentals](osint__humint.qd)
+- [Scraping Fundamentals](osint__scraping.qd)
+- [API](osint__api.qd)
+- [Fact-checking](osint__fact_checking.qd)
+- [Threat profiling](osint__threat_profiling.qd)
+- [Tools](osint__tools.qd)
 
 ###! 🔒 Deep web
 
-- [Overview](deep_web/01_overview.qd)
-- [Technical Foundations: Tor & PGP](deep_web/02_technical_foundations.qd)
-- [Installation Guides: OS Setup](deep_web/03_installation_guides.qd)
-- [Practical Usage: Browsing & Communication](deep_web/04_practical_usage.qd)
-- [Advanced Topics: Markets & Analysis](deep_web/05_advanced_topics.qd)
+- [Overview](deep_web__overview.qd)
+- [Technical Foundations: Tor & PGP](deep_web__technical_foundations.qd)
+- [Installation Guides: OS Setup](deep_web__installation_guides.qd)
+- [Practical Usage: Browsing & Communication](deep_web__practical_usage.qd)
+- [Advanced Topics: Markets & Analysis](deep_web__advanced_topics.qd)
 
 ###! 📊 Data Visualization
 
-- [Data Visualization Fundamentals](data_visualization/1_data_visualization_fundamentals.qd)
-- [Dashboard Creation and Data Analysis](data_visualization/2_dashboard_creation_guide.qd)
-- [Advanced Data Analysis and Calculations](data_visualization/3_advanced_data_analysis.qd)
-- [Programming Languages for Data Visualization](data_visualization/4_programming_visualization_concepts.qd)
+- [Data Visualization Fundamentals](data_visualization__data_visualization_fundamentals.qd)
+- [Dashboard Creation and Data Analysis](data_visualization__dashboard_creation_guide.qd)
+- [Advanced Data Analysis and Calculations](data_visualization__advanced_data_analysis.qd)
+- [Programming Languages for Data Visualization](data_visualization__programming_visualization_concepts.qd)

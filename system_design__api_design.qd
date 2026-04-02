@@ -25,12 +25,12 @@ Developers can implement a RESTful or RPC API in any language they choose. So as
 
 In Remote Procedure Call (RPC), the client makes a remote function call on a server, as if it was locally to their software.
 
-!(600x300)[RPC API](images/rpc.png "other  caption")
+!(600x_)[RPC API](images/system_design__rpc.png "other  caption")
 *[(Image source)](https://cdn.prod.website-files.com/5ff66329429d880392f6cba2/676ff01bb48efc129a28b29d_61b76e7fdf48bbef0026f39a_JSON%2520works.png)*
 
 In contrast, the REST client requests the server to perform an action on a specific server resource; actions are limited to create, read, update, and delete (CRUD) only and are conveyed as HTTP verbs or HTTP methods.
 
-!(600x300)[REST API](images/rest.png)
+!(600x_)[REST API](images/system_design__rest.png)
 *[(Image source)](https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/2147485434/images/315487-7af3-d17-c8af-0b4d8af188db_rest-api-model-diagram.png)*
 
 RPC focuses on functions or actions, while REST focuses on resources or objects.

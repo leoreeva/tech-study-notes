@@ -3,7 +3,7 @@
 
 Distributed systems generally consist of multiple interconnected devices or computers that work together to perform a task that is beyond the capacity of a single system. These systems work by collaborating, sharing resources and coordinating processes to handle complex workloads.
 
-!(600x300)[Distributed Systems](images/distributed_systems.png)
+!(600x_)[Distributed Systems](images/system_design__distributed_systems.png)
 *[(Image source)](https://www.splunk.com/en_us/blog/learn/distributed-systems.html)*
 
 ---
@@ -56,7 +56,7 @@ The end user sees a distributed system as a single computational unit (a single 
 
 Scalability refers to the ability to grow or expand something efficiently while maintaining the performance. It's not just about "getting bigger", it's about doing so in a way that aligns with your goals ensuring a seamless experience for everyone involved.
 
-!(500x300)[Scaling Strategies](images/scaling.png)
+!(500x_)[Scaling Strategies](images/system_design__scaling.png)
 *[(Image source)](https://media.geeksforgeeks.org/wp-content/uploads/20240208100939/hvs-v.webp)*
 
 ### 3.1. Vertical Scaling (Scaling Up)
@@ -147,7 +147,7 @@ Involves storing frequently accessed data in a faster, temporary storage layer (
 
 The process of distributing incoming network traffic across a set of resources, ensuring the performance and reliability of the system. This provides the flexibility to add or subtract resources as demand dictates.
 
-!(500x300)[Load Balancing](images/load_balancing.png)
+!(500x_)[Load Balancing](images/system_design__load_balancing.png)
 *[(Image source)](https://www.geeksforgeeks.org/what-is-load-balancer-system-design/)*
 
 ### 5.1. Problems Solved by Load Balancing
