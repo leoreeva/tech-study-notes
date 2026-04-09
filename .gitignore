@@ -26,3 +26,4 @@ build/
 todo*
 to_do*
 output/
+_*.py
