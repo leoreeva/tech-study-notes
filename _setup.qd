@@ -10,5 +10,3 @@
     .row gap:{1px}
         !(_*400)[Tech-study-notes](images/_logo.png)
 
-.numbering
-    - headings: 1.1.1
