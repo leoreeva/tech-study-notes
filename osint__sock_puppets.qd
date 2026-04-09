@@ -10,13 +10,13 @@ A sock puppet is a **fake online identity** - a misrepresentation or alternate i
 - Protect your real identity
 
 
-## 1. Types of Sock Puppets
+## Types of Sock Puppets
 
 - **Full Fake Persona**. A complete fabricated identity, with fake name, background, photos, active social media presence, etc. It takes significant time to establish. It has the risk of being identified by "sock hunters"
 
 - **Known Anonymous Account**. It's based on a non-real person that posts stuff (e.g. ShakiraSecurity account is not Shakira). It's useful for building reputation in a community without revealing identity
 
-## 2. Creating a Sock Puppet
+## Creating a Sock Puppet
 
 1. Generate a fake identity
    - [fakenamegenerator.com](https://fakenamegenerator.com) - Generates complete fake profiles
@@ -41,9 +41,9 @@ A sock puppet is a **fake online identity** - a misrepresentation or alternate i
       - Post content, make connections, establish presence
       - Female personas are often more effective (social engineering advantage)
 
-## 3. Operational Security (OPSEC)
+## Operational Security (OPSEC)
 
-### 3.1. Critical Rules
+### Critical Rules
 
 1. **Never use personal devices**
    - Use dedicated laptop for investigations
@@ -65,7 +65,7 @@ A sock puppet is a **fake online identity** - a misrepresentation or alternate i
    - Fund with specific amounts
    - Cards don't tie to your real identity
 
-### 3.2. Common Mistakes to Avoid
+### Common Mistakes to Avoid
 
 **Facebook Example:**
 - Created sock puppet on laptop (fine)
@@ -80,7 +80,7 @@ A sock puppet is a **fake online identity** - a misrepresentation or alternate i
 - Use same passwords as personal accounts
 
 
-## 4. Deep-dive
+## Deep-dive
 - [Creating an Effective Sock Puppet for OSINT Investigations](./appendices/02/creating_an_effective_sock_puppet_for_osint_investigations.qd)
 - [Sock puppet Account Creation](./appendices/02/sock_puppet_account_creation.qd)
 - [The Art Of The Sock](./appendices/02/the_art_of_the_sock.qd)

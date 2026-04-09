@@ -5,7 +5,7 @@ In software engineering, a microservice architecture is an architectural pattern
 
 ---
 
-## 1. Monolith vs Microservices
+## Monolith vs Microservices
 
 !(600x_)[Monolith vs Microservices](images/system_design__monolith_vs_microservices.png)
 *[(Image source)](https://i.octopus.com/blog/2022-q3/monoliths-vs-microservices/monolith-vs-microservices.png)*
@@ -19,7 +19,7 @@ With a **microservices architecture**, an application is built as independent co
 
 ---
 
-## 2. Benefits of Microservices
+## Benefits of Microservices
 
 - **Improved scalability**: Individual microservices can be scaled independently based on their specific needs
 - **Increased agility**: Microservices can be developed, deployed, and updated independently, enabling faster release cycles

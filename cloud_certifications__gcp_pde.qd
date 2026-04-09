@@ -5,7 +5,7 @@
 
 ---
 
-## 1. Data Lifecycle in Data Engineering
+## Data Lifecycle in Data Engineering
 
 1. **Ingest**: pull in the raw data, such as streaming data from devices, on-premises batch data, app logs, or mobile-app user events and analytics
 2. **Store**: the retrieved data needs to be stored in a format that is durable and easily accessible
@@ -19,7 +19,7 @@ Some of the available services at each step:
 
 ---
 
-## 2. Storage
+## Storage
 
 GCP offers various storage solutions for different use cases:
 
@@ -32,7 +32,7 @@ GCP offers various storage solutions for different use cases:
 
 ---
 
-## 3. Compute
+## Compute
 
 Compute services for data processing:
 
@@ -44,7 +44,7 @@ Compute services for data processing:
 
 ---
 
-## 4. Data Processing
+## Data Processing
 
 Services for data transformation and processing:
 
@@ -56,7 +56,7 @@ Services for data transformation and processing:
 
 ---
 
-## 5. Machine Learning
+## Machine Learning
 
 ML services for data engineers:
 
@@ -68,7 +68,7 @@ ML services for data engineers:
 
 ---
 
-## 6. Data Visualization
+## Data Visualization
 
 Tools for data visualization and exploration:
 
@@ -79,7 +79,7 @@ Tools for data visualization and exploration:
 
 ---
 
-## 7. Data Transfer
+## Data Transfer
 
 Services for moving data in and out of GCP:
 
@@ -91,7 +91,7 @@ Services for moving data in and out of GCP:
 
 ---
 
-## 8. Management
+## Management
 
 Tools for managing GCP resources:
 
@@ -103,7 +103,7 @@ Tools for managing GCP resources:
 
 ---
 
-## 9. IAM (Identity and Access Management)
+## IAM (Identity and Access Management)
 
 Security and access control:
 

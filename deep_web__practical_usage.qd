@@ -2,9 +2,9 @@
 .include {docs}
 
 
-## 1. Getting Started with Tor Browser
+## Getting Started with Tor Browser
 
-### 1.1. First Launch
+### First Launch
 
 **Initial Configuration:**
 ```
@@ -20,9 +20,9 @@
 - Expected result: "Congratulations. This browser is configured to use Tor."
 - Displays assigned IP address (different from your real IP)
 
-### 1.2. Understanding the Interface
+### Understanding the Interface
 
-#### 1.2.1. Key Elements
+#### Key Elements
 
 ```
 ┌─────────────────────────────────────────────┐
@@ -45,9 +45,9 @@ Security Level: Standard | Safer | Safest
 - **Security Settings**: Adjust protection level
 - **Tor Network Settings**: Configure bridges/proxies
 
-### 1.3. Security Settings Explained
+### Security Settings Explained
 
-#### 1.3.1. Level: Standard
+#### Level: Standard
 ```javascript
 ✓ All JavaScript enabled
 ✓ Media auto-plays
@@ -56,7 +56,7 @@ Security Level: Standard | Safer | Safest
 Risk: Higher tracking potential
 ```
 
-#### 1.3.2. Level: Safer (Recommended)
+#### Level: Safer (Recommended)
 ```javascript
 ✗ JavaScript disabled on HTTP sites
 ✗ Media click-to-play
@@ -65,7 +65,7 @@ Risk: Higher tracking potential
 Risk: Moderate tracking protection
 ```
 
-#### 1.3.3. Level: Safest
+#### Level: Safest
 ```javascript
 ✗ JavaScript disabled everywhere
 ✗ All media click-to-play
@@ -80,9 +80,9 @@ Risk: Minimal tracking, maximum security
 3. Choose desired level
 4. Restart browser if prompted
 
-## 2. Deep Web Search Engines
+## Deep Web Search Engines
 
-### 2.1. Ahmia (Recommended)
+### Ahmia (Recommended)
 
 **URL:** `https://ahmia.fi` (also accessible via Tor)
 
@@ -108,7 +108,7 @@ Results:
 └─ Direct "onion" links
 ```
 
-### 2.2. Candle
+### Candle
 
 **URL:** `http://candleabrajp5jtrh2"onion"` (Tor only)
 
@@ -131,7 +131,7 @@ Results:
 | Index Size | Large | Medium |
 | Speed | Fast | Fast |
 
-### 2.3. Not Evil
+### Not Evil
 
 **Best For:**
 - Alternative indexing
@@ -144,7 +144,7 @@ Results:
 
 **Note:** Results may include foreign language sites (Russian common)
 
-### 2.4. Grams
+### Grams
 
 **Best For:**
 - Market searches
@@ -162,7 +162,7 @@ Results:
 - View vendor trust levels
 - See product availability
 
-### 2.5. Torch
+### Torch
 
 **Best For:**
 - Large archive searches
@@ -173,9 +173,9 @@ Results:
 - Older index
 - Less reliable than Ahmia/Candle
 
-## 3. Anonymous Email Services
+## Anonymous Email Services
 
-### 3.1. ProtonMail
+### ProtonMail
 
 **Access:** Clear web + Dark web
 
@@ -209,7 +209,7 @@ Plus ($5/month):
 6. Complete CAPTCHA
 7. Account ready
 
-### 3.2. TorBox
+### TorBox
 
 **Access:** Tor only ("onion")
 
@@ -236,7 +236,7 @@ Plus ($5/month):
 - No advanced features
 - Perfect for basic anonymous communication
 
-### 3.3. Bitmessage
+### Bitmessage
 
 **Access:** Gateway service (requires Bitmessage client)
 
@@ -260,7 +260,7 @@ Plus ($5/month):
 - Multiple email addresses
 - High security requirements
 
-### 3.4. Mail2Tor
+### Mail2Tor
 
 **Access:** Tor only
 
@@ -279,9 +279,9 @@ Plus ($5/month):
 | Bitmessage | Decentralized | Complex | Advanced users |
 | Mail2Tor | Basic | Very Easy | Temporary use |
 
-## 4. Forums and Social Networks
+## Forums and Social Networks
 
-### 4.1. Galaxy 2
+### Galaxy 2
 
 **Type:** Social Network / Forum
 
@@ -308,7 +308,7 @@ Plus ($5/month):
 - No illegal content
 - Good for learning
 
-### 4.2. ChatTor
+### ChatTor
 
 **Type:** Anonymous Chat
 
@@ -326,7 +326,7 @@ Plus ($5/month):
 
 **Warning:** Do not trust anyone in chat rooms
 
-### 4.3. Facebook (Onion Mirror)
+### Facebook (Onion Mirror)
 
 **Type:** Social Network (Onion Version)
 
@@ -340,7 +340,7 @@ Plus ($5/month):
 - Use at your own discretion
 - Consider using separate account
 
-### 4.4. Intel Exchange
+### Intel Exchange
 
 **Type:** Discussion Forum
 
@@ -361,9 +361,9 @@ Plus ($5/month):
 - Intellectual content
 - No random spam
 
-## 5. Encrypted Chat Rooms
+## Encrypted Chat Rooms
 
-### 5.1. CryptoDog
+### CryptoDog
 
 **Type:** Private Encrypted Chat
 
@@ -398,7 +398,7 @@ Plus ($5/month):
 - Meet random people
 - Less secure than private rooms
 
-### 5.2. Daniel's Chat
+### Daniel's Chat
 
 **Type:** Traditional IRC-style Chat
 
@@ -428,9 +428,9 @@ Message Bar:
 └─ Color-coded users
 ```
 
-## 6. Hidden Wiki
+## Hidden Wiki
 
-### 6.1. What is the Hidden Wiki?
+### What is the Hidden Wiki?
 
 The Hidden Wiki is a directory of "onion" sites, serving as a starting point for deep web navigation.
 
@@ -461,7 +461,7 @@ Hidden Wiki
 └─ [Other categories...]
 ```
 
-### 6.2. Navigating the Hidden Wiki
+### Navigating the Hidden Wiki
 
 **Best Practices:**
 1. **Start with Editor's Picks** - Verified safe content
@@ -483,7 +483,7 @@ Hidden Wiki
 | Social | Community | Forums, networks |
 | Hosting | File storage | Image hosting |
 
-### 6.3. Important Warnings
+### Important Warnings
 
 ⚠️ **Critical Security Notes:**
 
@@ -505,9 +505,9 @@ Hidden Wiki
    - Check community reviews
    - Look for established reputation
 
-## 7. Link Directories
+## Link Directories
 
-### 7.1. DarkDir (Dark Directory)
+### DarkDir (Dark Directory)
 
 **Purpose:** Categorized collection of "onion" links
 
@@ -537,9 +537,9 @@ Categories (Left Sidebar):
 - Read descriptions before visiting
 - Bookmark working sites
 
-## 8. Daily Usage Best Practices
+## Daily Usage Best Practices
 
-### 8.1. Browsing Habits
+### Browsing Habits
 
 **DO:**
 - Use bookmarks for trusted sites
@@ -555,7 +555,7 @@ Categories (Left Sidebar):
 - Click random links
 - Use real personal information
 
-### 8.2. Communication Security
+### Communication Security
 
 **Email:**
 - Use PGP for sensitive communications
@@ -574,7 +574,7 @@ Categories (Left Sidebar):
 - Don't reveal identifying information
 - Use VPN in addition to Tor (optional)
 
-### 8.3. Verification Checklist
+### Verification Checklist
 
 Before using any service:
 - [ ] Research the site/service

@@ -4,7 +4,7 @@
 This section covers investigative journalism methodologies, focusing on **source verification**, **data validation**, and **fact-checking processes**.
 
 
-## 1. Sourcing strategies
+## Sourcing strategies
 
 The key principle is to prioritize **lived experience** and **direct involvement** over secondhand accounts.
 
@@ -21,9 +21,9 @@ Then there are **non-authoritative sources**, which have to be used selectively:
 - People with tangential knowledge
 
 
-## 2. Evidence and verification
+## Evidence and verification
 
-### 2.1. Background checking sources
+### Background checking sources
 
 For sources WITH digital presence:
 - Review all social media channels
@@ -36,7 +36,7 @@ For sources WITHOUT digital presence (e.g. poorer countries where many lack smar
 - Conduct direct observation (verify with your own eyes)
 - Use visual documentation (photographs, videos)
 
-### 2.2. Types of evidence to gather
+### Types of evidence to gather
 
 | Evidence Type | Example from a Namibia Case |
 |---------------|-----------------------------|
@@ -46,7 +46,7 @@ For sources WITHOUT digital presence (e.g. poorer countries where many lack smar
 | **Visual Documentation** | Photographs of non-functional toilets, unsafe conditions |
 | **Testimonial Evidence** | Victims describing robbery risks when using unsafe areas at night |
 
-### 2.3. Bias assessment
+### Bias assessment
 
 Questions to ask:
 - What is the source's political affiliation?
@@ -55,14 +55,14 @@ Questions to ask:
 - Could there be racial, ethnic, or colonial legacy factors influencing their perspective?
 
 
-## 3. Data analysis and contextualization
+## Data analysis and contextualization
 
-### 3.1. Data verification principles
+### Data verification principles
 
 Always question how/when/what data was collected.
 
 
-### 3.2. Granularity and nuance
+### Granularity and nuance
 
 Avoid oversimplification. Break down national statistics. Example:
 ```
@@ -72,7 +72,7 @@ National Average: 47% of a known phenomenon in Namibia, but:
 └── Capital city proper: Near 0%
 ```
 
-### 3.3. Data sources hierarchy
+### Data sources hierarchy
 
 **Most reliable:**
 - UN agencies (WHO, UNICEF)
@@ -91,9 +91,9 @@ National Average: 47% of a known phenomenon in Namibia, but:
 - Data that cannot be traced to methodology
 
 
-## 4. Digital Verification: Images, Video & AI
+## Digital Verification: Images, Video & AI
 
-### 4.1. Image verification
+### Image verification
 
 **Visual inspection:**
 - Check for mismatched lighting or shadows
@@ -116,7 +116,7 @@ National Average: 47% of a known phenomenon in Namibia, but:
    - Tools like Image Edited (pixel-level analysis)
    - Look for manipulation artifacts
 
-### 4.2. Video verification
+### Video verification
 
 **Red flags:**
 - Gaps in timeline or awkward cuts
@@ -130,7 +130,7 @@ National Average: 47% of a known phenomenon in Namibia, but:
 3. Take screenshots for reverse image search
 4. Use tools like InVID to find original poster and timeline
 
-### 4.3. AI-Generated content detection
+### AI-Generated content detection
 
 Human features to examine:
 
@@ -148,9 +148,9 @@ Human features to examine:
 - Robotic body movements
 
 
-## 5. Interview best practices
+## Interview best practices
 
-### 5.1. Recording and documentation
+### Recording and documentation
 
 Use video when possible (captures body language), otherwise audio recording of every interview.
 
@@ -160,11 +160,11 @@ Use video when possible (captures body language), otherwise audio recording of e
 - How they want to be identified in publication
 - Any descriptors they prefer
 
-### 5.2. Follow-up protocol
+### Follow-up protocol
 
 It's critical for investigative stories: before publicating anything, re-interview key sources, acknowledge updates (e.g., new government sanitation plan discovered)
 
-### 5.3. Transcription and organization
+### Transcription and organization
 
 1. Transcribe all interviews
 2. Highlight key quotes and information
@@ -172,7 +172,7 @@ It's critical for investigative stories: before publicating anything, re-intervi
 4. Review context around quotes to avoid misrepresentation
 
 
-## 6. Editorial fact-checking process
+## Editorial fact-checking process
 
 ```
 ┌────────────────────────────────────────────────────────┐
@@ -184,7 +184,7 @@ It's critical for investigative stories: before publicating anything, re-intervi
 └────────────────────────────────────────────────────────┘
 ```
 
-### 6.1. Verification Steps
+### Verification Steps
 
 For Non-Human Sources:
 - Compare every figure to original source documents
@@ -198,7 +198,7 @@ For Human Sources:
 - Verify name spellings and titles
 - Spot-check by contacting key sources directly
 
-### 6.2. Source Vetting (Editor Level)
+### Source Vetting (Editor Level)
 
 Deep dive when:
 - Source credibility could compromise story
@@ -206,9 +206,9 @@ Deep dive when:
 - Accused parties have high litigation risk
 
 
-## 7. Fairness and precision standards
+## Fairness and precision standards
 
-### 7.1. The "Step Back" assessment
+### The "Step Back" assessment
 
 | Question | Application |
 |----------|-------------|
@@ -217,7 +217,7 @@ Deep dive when:
 | **Is it fair?** | Value judgments avoided? Both sides represented? Limitations transparent? |
 | **Is it complete?** | Missing any complicating details? All accused parties given opportunity to respond? |
 
-### 7.2. Avoiding common pitfalls
+### Avoiding common pitfalls
 
 Superlatives to avoid (almost always inaccurate):
 - "Always," "Never," "Only," "Every"
@@ -227,7 +227,7 @@ Value Judgments (Let facts speak):
 - Avoid: "The government failed"
 - Use: "The government promised 100,000 toilets and delivered 5"
 
-### 7.3. Transparency about limitations
+### Transparency about limitations
 
 Acknowledge:
 - Data gaps (e.g., "2020 data - most recent available")
@@ -235,9 +235,9 @@ Acknowledge:
 - Incomplete information ("Government plan not yet approved")
 
 
-## 8. Organizational Best Practices
+## Organizational Best Practices
 
-### 8.1. Source Management
+### Source Management
 
 Running List Should Include:
 - Source contact information
@@ -245,7 +245,7 @@ Running List Should Include:
 - Corresponding facts for each source
 - Interview transcripts (highlight cited quotes)
 
-### 8.2. Digital Folder Structure
+### Digital Folder Structure
 
 ```
 Investigation_Folder/
@@ -267,7 +267,7 @@ Investigation_Folder/
     └── Final_Edits/
 ```
 
-### 8.3. Citation Format
+### Citation Format
 
 For each fact, maintain:
 - Direct link to source
@@ -276,9 +276,9 @@ For each fact, maintain:
 - Context of quotes (surrounding sentences)
 
 
-## 9. Special Considerations
+## Special Considerations
 
-### 9.1. Small Community Reporting
+### Small Community Reporting
 
 Challenge: Sources may refuse future cooperation if portrayed negatively
 
@@ -288,7 +288,7 @@ Mitigation Strategies:
 - Quote them extensively to show full context
 - Accurate representation builds long-term trust
 
-### 9.2. Expedited Fact-Checking
+### Expedited Fact-Checking
 
 When Timeline is Compressed:
 - Prioritize most controversial claims for verification
@@ -296,7 +296,7 @@ When Timeline is Compressed:
 - Use spot-checks rather than full review
 - Maintain documentation even if abbreviated
 
-### 9.3. Cross-Cultural Reporting
+### Cross-Cultural Reporting
 
 Language Considerations:
 - Define unfamiliar terms

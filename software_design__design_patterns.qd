@@ -7,7 +7,7 @@ In software terms, a design pattern is a language-independent reusable solution/
 
 ---
 
-## 1. Creational Patterns
+## Creational Patterns
 
 **Focus:** How objects are created
 
@@ -23,7 +23,7 @@ Creational patterns provide flexibility in *what* gets created, *who* creates it
 
 ---
 
-## 2. Structural Patterns
+## Structural Patterns
 
 **Focus:** How objects are composed and related
 
@@ -41,7 +41,7 @@ Structural patterns provide flexibility in *what* gets created, *who* creates it
 
 ---
 
-## 3. Behavioral Patterns
+## Behavioral Patterns
 
 **Focus:** How objects communicate and distribute responsibility
 
@@ -62,9 +62,9 @@ Objects need to collaborate to accomplish tasks. Behavioral patterns define clea
 
 ---
 
-## 4. Why Use Design Patterns?
+## Why Use Design Patterns?
 
-### 4.1. Benefits
+### Benefits
 
 - **Proven Solutions**: Patterns have been tested by many developers over time. You're not reinventing the wheel.
 - **Common Vocabulary**: "Let's use the Observer pattern" communicates more than explaining pub-sub from scratch.
@@ -72,7 +72,7 @@ Objects need to collaborate to accomplish tasks. Behavioral patterns define clea
 - **Avoid Pitfalls**: Patterns document not just solutions but also consequences and trade-offs.
 - **Learn from Experts**: Patterns capture expertise from experienced developers.
 
-### 4.2. Warning Signs of Pattern Abuse
+### Warning Signs of Pattern Abuse
 
 When NOT to use patterns:
 
@@ -86,7 +86,7 @@ When NOT to use patterns:
 
 ---
 
-## 5. Important Notes
+## Important Notes
 
 - **Patterns are not rules**: They're guidelines. Break them when it makes sense.
 - **Context matters**: A pattern perfect for one problem might be terrible for another.

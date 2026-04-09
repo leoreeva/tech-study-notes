@@ -5,7 +5,7 @@ These are two different data processing semantics used for data engineering work
 
 ---
 
-## 1. Batch Processing
+## Batch Processing
 
 It's a method in which large volumes of collected data are processed in chunks or batches.
 
@@ -23,7 +23,7 @@ There are a variety of ETL tools for batch processing. A common tool is Apache A
 
 ---
 
-## 2. Stream Processing
+## Stream Processing
 
 Also called real-time data processing, it's a data processing approach designed to handle and analyze data in real time as it flows through a system.
 

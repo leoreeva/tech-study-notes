@@ -13,7 +13,7 @@ A data mart is basically a condensed and more focused version of a data warehous
 
 ---
 
-## 1. Types
+## Types
 
 Today, there are three basic types of data marts:
 
@@ -25,7 +25,7 @@ Today, there are three basic types of data marts:
 
 ---
 
-## 2. Benefits
+## Benefits
 
 - **Single source of truth** — the data mart can serve as a single source of truth for a particular line of business, so everyone is working off of the same facts and data.
 
@@ -33,10 +33,10 @@ Today, there are three basic types of data marts:
 
 ---
 
-## 3. Challenges
+## Challenges
 
 Enterprise data warehouses are created with good intentions to serve all of an enterprise's data management needs. But invariably, you can't keep everyone happy, as different business units have different data needs and objectives. So departments copy and create their own data marts (sometimes with Enterprise IT help) with the aim of augmenting a particular data warehouse's subject area, to meet their self-service analytics and departmental reporting needs. As a result, over time, data marts can become data silos and shadow copies of data — from an enterprise perspective — but they do serve the department's needs well. When many departments do this - there is no single version of truth.
 
-### 3.1. How Lakehouse Solves These Challenges
+### How Lakehouse Solves These Challenges
 
 Lakehouse solves the challenges mentioned above by putting all of the enterprise data warehouses and data marts on one platform, with unified security and governance — while still offering different teams the flexibility to have their own sandboxes. Since any data mart or "augmented copy" is made on the same Lakehouse platform as all the others — the Lakehouse's data catalog discovers that, and given the Data Governance rules like tagging and using a data dictionary etc., it ensures that the augmented copy is made discoverable by all — preventing similar duplicate copies.

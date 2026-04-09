@@ -2,16 +2,16 @@
 .include {docs}
 
 
-## 1. Reverse Image Search
+## Reverse Image Search
 
-### 1.1. Overview
+### Overview
 Reverse image search allows you to:
 - Find where an image appears online
 - Identify fake/catfish profiles
 - Find similar images
 - Trace image origins
 
-### 1.2. Primary Tools
+### Primary Tools
 
 | Tool | URL | Best Feature |
 |------|-----|--------------|
@@ -20,7 +20,7 @@ Reverse image search allows you to:
 | **TinEye** | tineye.com | Good for finding image origins |
 
 
-## 2. EXIF Data Analysis
+## EXIF Data Analysis
 
 **EXIF** (Exchangeable Image File Format) contains metadata embedded in images:
 - Device type (camera/phone model, serial numbers)
@@ -33,7 +33,7 @@ EXIF data can be viewed:
 - on the web, e.g. [exif.regex.info](https://exif.regex.info) (Jeffrey's Image Metadata Viewer)
 - with command line, e.g. on Linux with `exiftool` command
 
-### 2.1. Example case study
+### Example case study
 
 Photo uploaded to website has these EXIF data:
   - Device: Apple iPhone 4S
@@ -47,17 +47,17 @@ Information extracted:
 3. Was in Toledo, Ohio on specific date
 4. Regular visitor to that park
 
-### 2.2. Limitations
+### Limitations
 
 Most modern platforms (e.g. Facebook, Instagram, Twitter) now remove EXIF data automatically. This does not happen on photos sent via email, for example.
 
 
 
-## 3. Location OSINT (GeoGuessing)
+## Location OSINT (GeoGuessing)
 
 Identifying geographical locations from photos without EXIF data.
 
-### 3.1. Key Indicators to Analyze
+### Key Indicators to Analyze
 
 - **Vehicle Analysis**
    - Car brand/model - Some brands regional

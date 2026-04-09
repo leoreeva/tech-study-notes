@@ -5,7 +5,7 @@ In software programming, SOLID is an acronym for 5 design principles intended to
 
 ---
 
-## 1. S = Single Responsibility (SRP)
+## S = Single Responsibility (SRP)
 
 Classes and objects should have one, and only one, responsibility (reason to change).
 
@@ -63,7 +63,7 @@ public class SalaryCalculator {
 
 ---
 
-## 2. O = Open Closed (OCP)
+## O = Open Closed (OCP)
 
 Entities should be open for extension (can be extended by adding what is needed), but closed for modification (should never be modified).
 
@@ -134,7 +134,7 @@ In this example, if we wanted to add new vehicle types (e.g. truck), we would no
 
 ---
 
-## 3. L = Liskov Substitution (LSP)
+## L = Liskov Substitution (LSP)
 
 If S is a subtype of T, then objects of type T in a program may be replaced with objects of type S without altering any of the desirable properties of that program.
 
@@ -218,7 +218,7 @@ public class Penguin extends Bird {
 
 ---
 
-## 4. I = Interface Segregation (ISP)
+## I = Interface Segregation (ISP)
 
 Clients should not be forced to depend on methods that they do not use.
 
@@ -292,7 +292,7 @@ public class Man implements Work, Rest {
 
 ---
 
-## 5. D = Dependency Inversion (DIP)
+## D = Dependency Inversion (DIP)
 
 High-level modules should not depend on low-level modules; both should depend on abstractions. Abstractions should not depend on details; details should depend on abstractions.
 

@@ -5,7 +5,7 @@
 Search engines are typically the **first step** in any OSINT investigation. 
 
 
-## 1. Major Search Engines
+## Major Search Engines
 
 | Engine | Best for | Notes |
 |--------|----------|-------|
@@ -18,12 +18,12 @@ Search engines are typically the **first step** in any OSINT investigation.
 Always check multiple search engines - they return different results.
 
 
-## 2. Filtering
+## Filtering
 (work on Google, but might work on other search engines too)
 
 Results are shown based on these (regular results, images, news, etc.).
 
-### 2.1. **Operators**
+### **Operators**
 
 | Operator | Function | Example |
 |----------|----------|---------|
@@ -38,7 +38,7 @@ Results are shown based on these (regular results, images, news, etc.).
 | `intext:` | Word in page text | `intext:password` |
 | `intitle:` | Word in page title | `intitle:admin` |
 
-### 2.2. Time-Based Searching
+### Time-Based Searching
 
 Use Google's Tools menu to filter by time:
 - Past hour
@@ -46,10 +46,10 @@ Use Google's Tools menu to filter by time:
 - Past week
 - Custom range
 
-### 2.3. Google Advanced Search
+### Google Advanced Search
 
 It's an alternative to operators: [google.com/advanced_search](https://google.com/advanced_search). It's a fill-in form
 
 
-## 3. Deep-dive
+## Deep-dive
 - [Google Dorks: Advanced Search Techniques & Cybersecurity Insights](./appendices/03/google_dorks_advanced_search_techniques_and_cybersecurity_insights.qd)

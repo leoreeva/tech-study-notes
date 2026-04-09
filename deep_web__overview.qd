@@ -5,7 +5,7 @@
 Source: [The Complete Deep Web Course 2025: From Beginner to Expert | Zero to Hero: Become a Deep Web Expert](https://www.youtube.com/watch?v=x6CVnuAJcUI)
 
 
-## 1. Foundations
+## Foundations
 
 Three distinct layers of the internet:
 
@@ -15,7 +15,7 @@ Three distinct layers of the internet:
 | **Deep Web** | Majority of web content (commonly cited ~90-95%) | No | Authentication, paywalls, or dynamically generated access | Mostly legal | Private email inboxes, online banking portals, medical records, corporate databases, cloud storage |
 | **Dark Web** (subset of the Deep Web) | Very small fraction of total web | No | Special software or network configuration (e.g., Tor, I2P) | Mixed (legal and illegal activity) | Tor ("onion") sites, anonymous forums, whistleblowing platforms, darknet marketplaces |
 
-### 1.1. Common Misconceptions
+### Common Misconceptions
 
 Myth 1: Deep Web is illegal
 - Accessing the Deep Web is legal in most countries
@@ -48,9 +48,9 @@ Myth 5: Red rooms exist
 - No verifiable evidence exists
 
 
-## 2. Core technologies
+## Core technologies
 
-### 2.1. The Tor Network
+### The Tor Network
 
 Tor is an anonymity network that hides your IP address by routing your internet traffic through multiple volunteer-operated servers called **relays**. Instead of connecting directly to a website, your traffic is passed through a chain of nodes.
 
@@ -86,7 +86,7 @@ Also, the 3-hop circuits (entry, middle, exit) rotate periodically, among the th
 
 Traffic between the Exit Relay and Destination is **not encrypted by Tor itself**. If visiting an HTTP site (not HTTPS), the exit node can read page contents, login credentials, form data. Tor provides anonymity, not guaranteed content confidentiality.
 
-### 2.2. PGP Encryption
+### PGP Encryption
 
 PGP (Pretty Good Privacy) is a cryptographic system used to:
 - Encrypt emails and files
@@ -125,14 +125,14 @@ This provides:
 - Non-repudiation (sender cannot deny authorship)
 
 
-## 3. OS security
+## OS security
 
 It's better to avoid Windows for accessing the Deep Web. Being this popular, means more malware targeted at it. It also has inherently less secure design. Other better alternatives exist for privacy, like many Linux distros (Qubes OS) that can be run inside virtual machines.
 
 
-## 4. Practical tools
+## Practical tools
 
-### 4.1. Tor Browser configuration
+### Tor Browser configuration
 
 Security Levels:
 1. **Standard** - Normal browser functionality
@@ -144,7 +144,7 @@ Key features:
 - **Onion Circuits**: View current node chain
 - DuckDuckGo default search engine
 
-### 4.2. Deep Web search engines
+### Deep Web search engines
 
 | Search Engine | Best For | Features |
 |--------------|----------|----------|
@@ -155,9 +155,9 @@ Key features:
 | **Torch** | Archive search | Large index, older content |
 
 
-## 5. Communication platforms
+## Communication platforms
 
-### 5.1. Anonymous email providers
+### Anonymous email providers
 
 | Provider | Access | Encryption | Notes |
 |----------|--------|------------|-------|
@@ -166,14 +166,14 @@ Key features:
 | **Bitmessage** | Tor only | Gateway service | Advanced users |
 | **Mail2Tor** | Tor only | Basic | Free, simple interface |
 
-### 5.2. Forums & social networks
+### Forums & social networks
 
 - **Galaxy 2**: Clean social network with groups
 - **ChatTor**: Anonymous chat rooms
 - **Facebook (Onion)**: Official "onion" mirror
 - **Intel Exchange**: Forum for various discussions
 
-### 5.3. Encrypted chat rooms
+### Encrypted chat rooms
 
 **CryptoDog:**
 - Create private chat rooms with unique conversation names
@@ -186,9 +186,9 @@ Key features:
 - Color-coded users
 
 
-## 6. Markets & Directories
+## Markets & Directories
 
-### 6.1. Market Characteristics
+### Market Characteristics
 
 **Common Features:**
 - Cryptocurrency payments (Bitcoin, Monero)
@@ -204,7 +204,7 @@ Key features:
 | Wall Street Market | Escrow system | BTC, XMR |
 | Dream Market | Long-running | BTC, BCH, XMR |
 
-### 6.2. Link Directories
+### Link Directories
 
 **Purpose:** Curated collections of "onion" links
 
@@ -214,9 +214,9 @@ Key features:
 - Updated regularly
 
 
-## 7. Security Best Practices
+## Security Best Practices
 
-### 7.1. Essential Guidelines
+### Essential Guidelines
 
 1. **Never maximize Tor Browser window** - Can reveal screen resolution
 2. **Disable JavaScript** when possible - Reduces attack surface
@@ -227,7 +227,7 @@ Key features:
 7. **Enable 2FA** when available
 8. **Never torrent over Tor** - Leaks real IP address
 
-### 7.2. Operational Security (OpSec)
+### Operational Security (OpSec)
 
 - Use Tails OS for sensitive activities
 - Separate browsing profiles for different activities

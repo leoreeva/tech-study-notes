@@ -2,13 +2,13 @@
 .include {docs}
 
 
-## 1. Table Calculations vs. Database Calculations
+## Table Calculations vs. Database Calculations
 
-### 1.1. Overview
+### Overview
 
 Understanding when to perform calculations in the visualization layer versus the database layer is crucial for performance and accuracy.
 
-#### 1.1.1. Table Calculations
+#### Table Calculations
 - **Processing Location**: Performed locally in the visualization tool
 - **Timing**: After aggregations have occurred
 - **Pros**: 
@@ -26,7 +26,7 @@ Understanding when to perform calculations in the visualization layer versus the
 - Moving averages
 - Rank and percentile
 
-#### 1.1.2. Database Calculations
+#### Database Calculations
 - **Processing Location**: Performed in the source database
 - **Timing**: As part of the query to the data source
 - **Pros**:
@@ -43,42 +43,42 @@ Understanding when to perform calculations in the visualization layer versus the
 
 ---
 
-## 2. Ranking Functions
+## Ranking Functions
 
-### 2.1. Types of Rank Calculations
+### Types of Rank Calculations
 
-#### 2.1.1. Standard Rank (RANK)
+#### Standard Rank (RANK)
 - **Behavior**: Identical values receive identical rank
 - **Gap Handling**: Skips ranks after ties
 - **Example**: Values [100, 90, 90, 80] → Ranks [1, 2, 2, 4]
 
-#### 2.1.2. Dense Rank (RANK_DENSE)
+#### Dense Rank (RANK_DENSE)
 - **Behavior**: Identical values receive identical rank
 - **Gap Handling**: No gaps in ranking sequence
 - **Example**: Values [100, 90, 90, 80] → Ranks [1, 2, 2, 3]
 
-#### 2.1.3. Modified Rank (RANK_MODIFIED)
+#### Modified Rank (RANK_MODIFIED)
 - **Behavior**: Identical values receive identical rank
 - **Tie Breaking**: Uses lower of the possible ranks
 - **Example**: Values [100, 90, 90, 80] → Ranks [1, 3, 3, 4]
 
-#### 2.1.4. Unique Rank (RANK_UNIQUE)
+#### Unique Rank (RANK_UNIQUE)
 - **Behavior**: Every value receives unique rank
 - **Tie Breaking**: Based on additional sort criteria (e.g., alphabetical)
 - **Example**: Values [100, 90, 90, 80] → Ranks [1, 2, 3, 4]
 
-### 2.2. Ranking Applications
+### Ranking Applications
 - **Top N Analysis**: Identify top performers
 - **Competitive Analysis**: Compare entities directly
 - **Percentile Ranking**: Relative performance assessment
 
 ---
 
-## 3. Statistical Analysis Techniques
+## Statistical Analysis Techniques
 
-### 3.1. Reference Lines and Bands
+### Reference Lines and Bands
 
-#### 3.1.1. Reference Lines
+#### Reference Lines
 - **Purpose**: Mark specific values on visualizations
 - **Types**:
   - **Constant**: Fixed value (e.g., target = 100)
@@ -87,7 +87,7 @@ Understanding when to perform calculations in the visualization layer versus the
   - **Minimum/Maximum**: Range boundaries
   - **Percentile**: Specific percentile value
 
-#### 3.1.2. Reference Bands
+#### Reference Bands
 - **Purpose**: Highlight ranges of values
 - **Configuration**:
   - **Per Cell**: Band for each individual data point
@@ -98,16 +98,16 @@ Understanding when to perform calculations in the visualization layer versus the
   - Highlight variance zones
   - Create bullet charts
 
-### 3.2. Distribution Analysis
+### Distribution Analysis
 
-#### 3.2.1. Box Plots (Box and Whisker)
+#### Box Plots (Box and Whisker)
 Components:
 - **Box**: Interquartile range (25th to 75th percentile)
 - **Median Line**: 50th percentile
 - **Whiskers**: Extend to minimum and maximum (excluding outliers)
 - **Outliers**: Points beyond whiskers
 
-#### 3.2.2. Histogram Analysis
+#### Histogram Analysis
 Key Insights:
 - **Central Tendency**: Where data clusters
 - **Spread**: Width of distribution
@@ -117,11 +117,11 @@ Key Insights:
 
 ---
 
-## 4. Forecasting and Trend Analysis
+## Forecasting and Trend Analysis
 
-### 4.1. Trend Lines
+### Trend Lines
 
-#### 4.1.1. Types of Trend Models
+#### Types of Trend Models
 1. **Linear**: Constant rate of change
    - Formula: y = mx + b
    - Use: Steady growth or decline
@@ -138,31 +138,31 @@ Key Insights:
    - Formula: y = a + bx + cx² + ...
    - Use: Cyclical patterns, complex relationships
 
-### 4.2. Forecasting Techniques
+### Forecasting Techniques
 
-#### 4.2.1. Time Series Forecasting
+#### Time Series Forecasting
 - **Moving Averages**: Smooth short-term fluctuations
 - **Seasonal Decomposition**: Separate trend, seasonality, and residuals
 - **Exponential Smoothing**: Weight recent data more heavily
 
-#### 4.2.2. Forecast Components
+#### Forecast Components
 - **Trend**: Long-term direction
 - **Seasonality**: Regular periodic patterns
 - **Cyclical**: Longer-term economic cycles
 - **Residual/Error**: Random variation
 
-#### 4.2.3. Confidence Intervals
+#### Confidence Intervals
 - Show range of likely future values
 - Typically 80% or 95% confidence
 - Wider intervals indicate more uncertainty
 
 ---
 
-## 5. Conditional Logic and Segmentation
+## Conditional Logic and Segmentation
 
-### 5.1. Calculated Fields with Logic
+### Calculated Fields with Logic
 
-#### 5.1.1. IF-THEN-ELSE Logic
+#### IF-THEN-ELSE Logic
 **Structure**:
 ```
 IF condition THEN result
@@ -181,7 +181,7 @@ END
 - **Multi-level Classification**: Complex business rules
   - Example: Business friendly ratings based on multiple criteria
 
-#### 5.1.2. CASE Statements
+#### CASE Statements
 **Structure**:
 ```
 CASE expression
@@ -193,66 +193,66 @@ END
 
 **Use When**: Multiple discrete conditions with specific values
 
-### 5.2. Segmentation Analysis
+### Segmentation Analysis
 
-#### 5.2.1. Cohort Analysis
+#### Cohort Analysis
 - Group data by shared characteristics
 - Track behavior over time
 - Common cohorts: Acquisition date, first purchase month
 
-#### 5.2.2. ABC Analysis (Pareto Segmentation)
+#### ABC Analysis (Pareto Segmentation)
 - **A Items**: Top 20% (generate 80% of value)
 - **B Items**: Next 30% (generate 15% of value)
 - **C Items**: Bottom 50% (generate 5% of value)
 
-#### 5.2.3. RFM Analysis (for customer data)
+#### RFM Analysis (for customer data)
 - **Recency**: How recently customer purchased
 - **Frequency**: How often they purchase
 - **Monetary**: How much they spend
 
 ---
 
-## 6. Data Joins and Relationships
+## Data Joins and Relationships
 
-### 6.1. Types of Joins
+### Types of Joins
 
-#### 6.1.1. Inner Join
+#### Inner Join
 - **Result**: Only matching rows from both tables
 - **Use Case**: When you need complete information from both sources
 - **Venn Diagram**: Intersection of two sets
 
-#### 6.1.2. Left Join (Left Outer Join)
+#### Left Join (Left Outer Join)
 - **Result**: All rows from left table + matching rows from right
 - **Use Case**: Preserve all primary data even without matches
 - **Handling**: Unmatched right table values = NULL
 
-#### 6.1.3. Right Join (Right Outer Join)
+#### Right Join (Right Outer Join)
 - **Result**: All rows from right table + matching rows from left
 - **Use Case**: When right table is primary focus
 - **Handling**: Unmatched left table values = NULL
 
-#### 6.1.4. Full Outer Join
+#### Full Outer Join
 - **Result**: All rows from both tables
 - **Use Case**: Need complete data from both sources
 - **Handling**: Unmatched values from either side = NULL
 
-### 6.2. Join Best Practices
+### Join Best Practices
 
-#### 6.2.1. Performance Considerations
+#### Performance Considerations
 - Join on indexed columns when possible
 - Filter data before joining (reduce row count)
 - Avoid joining on calculated fields
 - Use appropriate join type to minimize data duplication
 
-#### 6.2.2. Data Quality
+#### Data Quality
 - Verify join keys are clean and consistent
 - Check for duplicate keys (cartesian products)
 - Validate join results with spot checks
 - Document join logic for maintenance
 
-### 6.3. Unions vs. Joins
+### Unions vs. Joins
 
-#### 6.3.1. Unions (Append Operations)
+#### Unions (Append Operations)
 - **Purpose**: Stack rows from multiple tables vertically
 - **Requirement**: Same number and type of columns
 - **Use Cases**:
@@ -260,7 +260,7 @@ END
   - Merge historical and current data
   - Aggregate similar datasets
 
-#### 6.3.2. Key Differences
+#### Key Differences
 | Aspect | Join | Union |
 |--------|------|-------|
 | Direction | Horizontal (adds columns) | Vertical (adds rows) |
@@ -270,18 +270,18 @@ END
 
 ---
 
-## 7. Geographic Analysis
+## Geographic Analysis
 
-### 7.1. Geographic Data Types
+### Geographic Data Types
 
-#### 7.1.1. Recognized Geographic Fields
+#### Recognized Geographic Fields
 - **Country**: Full names or ISO codes
 - **State/Province**: Names or abbreviations
 - **City**: City names
 - **Postal Code**: ZIP codes
 - **Latitude/Longitude**: Coordinates
 
-#### 7.1.2. Geographic Hierarchy
+#### Geographic Hierarchy
 ```
 Country
   └── State/Province
@@ -289,66 +289,66 @@ Country
             └── Postal Code
 ```
 
-### 7.2. Map Visualization Types
+### Map Visualization Types
 
-#### 7.2.1. Filled Maps (Choropleth)
+#### Filled Maps (Choropleth)
 - Regions colored by data values
 - Best for: Comparing regions directly
 - Considerations: 
   - Larger areas visually dominate
   - Normalize by population/area when appropriate
 
-#### 7.2.2. Symbol Maps (Proportional Symbol)
+#### Symbol Maps (Proportional Symbol)
 - Symbols sized by data values
 - Best for: Showing magnitude at specific locations
 - Advantage: Symbol size directly represents value
 
-#### 7.2.3. Heat Maps (Density)
+#### Heat Maps (Density)
 - Color intensity shows concentration
 - Best for: Showing density or clustering
 - Use: Customer locations, event concentrations
 
-#### 7.2.4. Flow Maps
+#### Flow Maps
 - Lines show movement between locations
 - Best for: Migration, trade routes, network flows
 - Features: Line thickness represents volume
 
-### 7.3. Spatial Analysis Techniques
+### Spatial Analysis Techniques
 
-#### 7.3.1. Distance Calculations
+#### Distance Calculations
 - Calculate distances between points
 - Find nearest locations
 - Create distance-based filters
 
-#### 7.3.2. Territory Analysis
+#### Territory Analysis
 - Aggregate data by custom regions
 - Compare performance across territories
 - Identify underserved areas
 
 ---
 
-## 8. Time Intelligence
+## Time Intelligence
 
-### 8.1. Time-Based Calculations
+### Time-Based Calculations
 
-#### 8.1.1. Period-to-Date Calculations
+#### Period-to-Date Calculations
 - **Year-to-Date (YTD)**: Cumulative from year start
 - **Quarter-to-Date (QTD)**: Cumulative from quarter start
 - **Month-to-Date (MTD)**: Cumulative from month start
 
-#### 8.1.2. Period Comparisons
+#### Period Comparisons
 - **Year-over-Year (YoY)**: Compare to same period last year
 - **Quarter-over-Quarter (QoQ)**: Sequential quarter comparison
 - **Month-over-Month (MoM)**: Sequential month comparison
 
-#### 8.1.3. Moving Calculations
+#### Moving Calculations
 - **Moving Average**: Average over trailing N periods
 - **Moving Sum**: Total over trailing N periods
 - **Exponential Moving Average**: Weighted average favoring recent data
 
-### 8.2. Date Hierarchy and Drill-Down
+### Date Hierarchy and Drill-Down
 
-#### 8.2.1. Standard Hierarchy
+#### Standard Hierarchy
 ```
 Year
   └── Quarter
@@ -357,23 +357,23 @@ Year
                  └── Day
 ```
 
-#### 8.2.2. Fiscal Calendar
+#### Fiscal Calendar
 - Non-standard year start (e.g., fiscal year begins July 1)
 - Custom quarters and periods
 - 4-4-5 or 5-4-4 week accounting periods
 
 ---
 
-## 9. Advanced Segmentation
+## Advanced Segmentation
 
-### 9.1. Sets and Groups
+### Sets and Groups
 
-#### 9.1.1. Static Sets
+#### Static Sets
 - Manually defined collections of members
 - Fixed membership unless edited
 - Use: Track specific customers, products, or regions
 
-#### 9.1.2. Dynamic Sets (Conditional Sets)
+#### Dynamic Sets (Conditional Sets)
 - Membership based on conditions
 - Automatically update as data changes
 - Examples:
@@ -381,14 +381,14 @@ Year
   - Products with negative profit
   - High-priority orders
 
-#### 9.1.3. Groups
+#### Groups
 - Combine multiple dimension members
 - Create custom categories
 - Simplify complex dimensions
 
-### 9.2. Parameters
+### Parameters
 
-#### 9.2.1. Types of Parameters
+#### Types of Parameters
 1. **Numeric Parameters**
    - Integer or decimal values
    - Range controls (min, max, step)
@@ -406,7 +406,7 @@ Year
    - True/False switches
    - Example: Show details Yes/No
 
-#### 9.2.2. Parameter Applications
+#### Parameter Applications
 - **Dynamic Metrics**: Allow users to select measures
 - **What-If Analysis**: Adjust assumptions
 - **Threshold Controls**: Set alert levels

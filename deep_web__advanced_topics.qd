@@ -2,9 +2,9 @@
 .include {docs}
 
 
-## 1. Understanding Deep Web Markets
+## Understanding Deep Web Markets
 
-### 1.1. Overview
+### Overview
 
 Deep web markets are online marketplaces operating on the dark web, typically using "onion" domains and cryptocurrency payments. They function similarly to e-commerce sites but with enhanced privacy features.
 
@@ -18,9 +18,9 @@ Deep web markets are online marketplaces operating on the dark web, typically us
 **⚠️ LEGAL WARNING:**
 This section is for **educational purposes only**. Many deep web markets facilitate illegal activities. Simply accessing certain markets may be illegal in your jurisdiction. Always comply with local laws.
 
-## 2. Market Architecture
+## Market Architecture
 
-### 2.1. How Markets Work
+### How Markets Work
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -53,7 +53,7 @@ This section is for **educational purposes only**. Many deep web markets facilit
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 2.2. Security Features
+### Security Features
 
 **1. Escrow System**
 - Market holds payment until delivery confirmed
@@ -78,9 +78,9 @@ New Vendor → Level 1 → Level 2 → Level 3 → Trusted
 - Verify vendor authenticity
 - Secure communications
 
-## 3. Market Categories
+## Market Categories
 
-### 3.1. Product Categories (General Information)
+### Product Categories (General Information)
 
 **Common Market Structures:**
 
@@ -112,9 +112,9 @@ Filter Options:
 └─ Cryptocurrency accepted
 ```
 
-## 4. Market Analysis Framework
+## Market Analysis Framework
 
-### 4.1. Evaluating Market Legitimacy
+### Evaluating Market Legitimacy
 
 **Red Flags (AVOID):**
 - No escrow system
@@ -134,7 +134,7 @@ Filter Options:
 - PGP mandatory
 - Bug bounty programs
 
-### 4.2. Market Lifecycle Analysis
+### Market Lifecycle Analysis
 
 ```
 Market Life Cycle:
@@ -155,9 +155,9 @@ Site     Features   Activity    Issues     /Seizure
 - Law enforcement takedowns increasing
 - New markets emerge to replace fallen
 
-## 5. Cryptocurrency Fundamentals
+## Cryptocurrency Fundamentals
 
-### 5.1. Bitcoin Basics
+### Bitcoin Basics
 
 **Why Cryptocurrency?**
 - Pseudonymous (not truly anonymous)
@@ -180,7 +180,7 @@ Buyer Wallet → Bitcoin Network → Market Wallet
 - Chain analysis can trace funds
 - **Recommendation:** Use Monero for better privacy
 
-### 5.2. Monero (XMR)
+### Monero (XMR)
 
 **Advantages Over Bitcoin:**
 - Ring signatures hide sender
@@ -199,7 +199,7 @@ Your transaction mixed with others
   transaction is yours
 ```
 
-### 5.3. Wallet Security
+### Wallet Security
 
 **Best Practices:**
 1. **Hardware Wallets** (Trezor, Ledger)
@@ -218,9 +218,9 @@ Your transaction mixed with others
    - Use separate wallets for different activities
    - Enable 2FA where available
 
-## 6. Risk Analysis
+## Risk Analysis
 
-### 6.1. Types of Risks
+### Types of Risks
 
 **1. Financial Risk**
 - Exit scams (market disappears with funds)
@@ -242,7 +242,7 @@ Your transaction mixed with others
 - Package interception
 - Delivery to real address
 
-### 6.2. Risk Mitigation Strategies
+### Risk Mitigation Strategies
 
 **For Researchers Only:**
 
@@ -267,9 +267,9 @@ Your transaction mixed with others
    - Some markets are honey pots
    - Research-only access
 
-## 7. OSINT Applications
+## OSINT Applications
 
-### 7.1. Legitimate Research Uses
+### Legitimate Research Uses
 
 **Cybersecurity Research:**
 - Track malware distribution
@@ -289,7 +289,7 @@ Your transaction mixed with others
 - Investigative research
 - Document verification
 
-### 7.2. Data Collection Methods
+### Data Collection Methods
 
 **Passive Observation:**
 - Monitor forum discussions
@@ -303,9 +303,9 @@ Your transaction mixed with others
 - Verify cryptography implementations
 - Analyze code repositories
 
-## 8. Technical Analysis
+## Technical Analysis
 
-### 8.1. Site Architecture Analysis
+### Site Architecture Analysis
 
 **Elements to Study:**
 
@@ -330,7 +330,7 @@ Your transaction mixed with others
    - Multi-sig support
    - Address generation
 
-### 8.2. Common Vulnerabilities
+### Common Vulnerabilities
 
 **Security Issues Often Found:**
 - SQL injection potential
@@ -344,9 +344,9 @@ Your transaction mixed with others
 - Good security = more legitimate operation
 - Security research helps understand threats
 
-## 9. Market Evolution Timeline
+## Market Evolution Timeline
 
-### 9.1. Historical Context
+### Historical Context
 
 **Early Markets (2011-2013):**
 - Silk Road (pioneer)
@@ -372,7 +372,7 @@ Your transaction mixed with others
 - Mobile optimization
 - DeFi integration experiments
 
-### 9.2. Lessons Learned
+### Lessons Learned
 
 **From Market Failures:**
 

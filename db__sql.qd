@@ -5,11 +5,11 @@ Relational stuff: normalization, joins, complex queries...
 
 ---
 
-## 1. SQL Queries
+## SQL Queries
 
 ... basic stuff...
 
-### 1.1. Useful More Advanced Stuff for Analytical Engineers
+### Useful More Advanced Stuff for Analytical Engineers
 
 - **GROUP BY, HAVING**
   - Conditional aggregation (SUM(CASE WHEN …))
@@ -22,7 +22,7 @@ Relational stuff: normalization, joins, complex queries...
 
 ---
 
-## 2. Typical Question Patterns
+## Typical Question Patterns
 
 - "Top N per group"
 - "Find duplicates / latest record per key"

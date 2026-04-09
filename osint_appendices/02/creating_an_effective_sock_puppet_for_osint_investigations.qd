@@ -4,7 +4,7 @@
 
 [[Original source](https://web.archive.org/web/20210307173507/https://jakecreps.com/sock-puppets/)]
 
-## 1. Introduction and Philosophy
+## Introduction and Philosophy
 
 In recent light of the epic failure by Surefire Intelligence to frame Robert Mueller for sexual assault allegations, I feel it’s important to discuss and unpack how to make a good sock puppet for OSINT operations.  If you aren’t familiar, just google Jacob Wohl or Surefire Intelligence and you will likely be flooded with information about the scandal.  For further details on the unraveling of the socks Wohl made, check out Aric Toler’s threat on Twitter @arictoler from Bellingcat.
 
@@ -18,7 +18,7 @@ For both options it’s recommended to create content, add media (photos, videos
 
 But enough on theory and philosophy.  Both options are viable and, once again, it depends on your intent and the scope of your project.  If you have a large scale operation, you may create a community of sock puppets that interact with others and each other to create influence that has leverage.  Let’s get into the details on how to set this up.
 
-## 2. The Setup
+## The Setup
 
 Depending on who you ask, there’s an endless list of things you can do to remain anonymous while conducting investigations online.  You can go extreme and jump down the Michael Bazzell rabbit hole, or you can have a little less attention to detail and still do fine. If you’re interested in an almost full proof system, check his book Hiding from the Internet. If you’re asking me how to create a successful sock puppet, I’m more of a subscriber of the Pareto Principle; but I also don’t have much to lose if caught during an investigation like others may have (back to intent).  Here’s the 80/20 on what you need to get started.
 1. A dedicated computer that is only used for investigations
@@ -31,31 +31,31 @@ Depending on who you ask, there’s an endless list of things you can do to rema
 
 Now, this is just a start, but it will help you at least get started.  You will have to customize your avatar as you go along to maintain or add credibility.
 
-## 3. Dedicated Computer
+## Dedicated Computer
 
 Having a dedicated computer is an absolute must.  You don’t want anything you are doing under your avatar to somehow be linked to your personal, real account.  Not only will this reveal that your sock puppet is indeed a sock puppet, it may link your real identity to it (see Surefire Intelligence fail).  This computer doesn’t have to be expensive, you could use something as simple as a Raspberry Pi or a cheap laptop.  Using other tools I’ll discuss below, your dedicated computer should not be able to be linked to another computer on your network.
 
-## 4. Encrypted Email
+## Encrypted Email
 
 This is generally a best practice in the OSINT and infosec community.  While it may be enticing to use Gmail due to the vast number of free tools they provide and their seamless integration, but don’t do it.  Google is tracking you.  Even if you provide false information, they will still know it’s you eventually.  Proton Mail is a name brand in the encrypted email industry.  There are other options but I’d go with Proton Mail if you haven’t experimented with them before.  The user interface is easy to understand and it doesn’t require any advanced setup.
 
-## 5. Phone Number
+## Phone Number
 
 If you can, try to get a very cheap phone plan that’s dedicated to you avatar.  Cheap plans such as Mint will get you the very basics for close to single digits a month.  If you don’t want to spare the cash, consider getting a wifi based phone number from a website that doesn’t recycle phone numbers every month.  Google Voice is a good option.  Keep in mind that a lot of these websites request your primary phone number (Google) when signing up.  If you’re very concerned about privacy, find one that doesn’t.
 
-## 6. VPN
+## VPN
 
 It’s important to mask your IP when doing OSINT research online.  The best way to do this is to use a VPN.  The number one VPN changes frequently so depending on when you read this, it could be different.  I’ve used ProtonVPN, Windscribe, NordVPN, and Private Internet Access.  Pick one that values your privacy and has a user interface that’s easy for you.  Make sure you get a VPN that constantly changes your IP so that you don’t establish a pattern during logons or during interaction.
 
-## 7. Social Media Profiles
+## Social Media Profiles
 
 Now that you have a dedicated computer, encrypted email, phone number, and VPN, we can get to the fun part.  You can use all of your information (email, phone number) to create your social media profiles of choice.  Since you’re starting from scratch, it’s important you start interacting in an organic way.  This could include following people, posting links, doing status updates, interacting with people in the same niche as your target, etc.  This process will take a long time if you do it right.  If you’re really skilled, your target will come to you.  I recommend creating multiple avatars with multiple emails and phone numbers to decrease your risk and to deploy them in different ways.  More on this later.
 
-## 8. Virtual Machines
+## Virtual Machines
 
 Virtual machines are a great way to create an additional layer of privacy.  You can also use them for specific tools in your OSINT investigation.  I recommend starting with Buscador as it offers a wide variety of OSINT tools.  You can also experiment with Windows VMs to access tools like FOCA and other Windows specific tools.  Experiment with Android emulators to take advantage of mobile apps.  Nox is an excellent emulator to get you started.
 
-## 9. Blog
+## Blog
 
 If you want to go another layer deep on your avatar, create a free blog on WordPress, Medium, or Blogger and link it to your social media profile.  Generate content both on social and your blog to increase credibility.  After a period of development, you will have a complex character that’s believable and valuable.
 

@@ -6,26 +6,26 @@ Sources:
 - [Excel Data Visualization Course – Guide to Charts & Dashboards](https://www.youtube.com/watch?v=VV8iRJ-DS0A)
 - [Data Visualization Course | Data Visualization Tutorial | Data Visualization Explained | Simplilearn](https://www.youtube.com/watch?v=7kPqESo1vRw)
 
-## 1. Introduction to Data Visualization
+## Introduction to Data Visualization
 
 **Data visualization** is the graphical representation of information and data. Using visual elements like charts, graphs, and maps, data visualization tools provide an accessible way to see and understand trends, outliers, and patterns in data.
 
-### 1.1. Why Data Visualization Matters
+### Why Data Visualization Matters
 
 - **Pattern Recognition**: Visual formats make it easier to identify trends and correlations
 - **Communication**: Complex data becomes accessible to broader audiences
 - **Decision Making**: Visual insights support data-driven decision making
 - **Storytelling**: Visualizations help narrate the story behind the data
 
-### 1.2. Types of Data Visualization
+### Types of Data Visualization
 
-#### 1.2.1. Exploratory Data Visualization
+#### Exploratory Data Visualization
 - **Purpose**: Helps understand and discover patterns in data
 - **Approach**: Keep all potentially relevant details visible
 - **Question**: How much detail can we interpret effectively?
 - **Focus**: Discovery and analysis phase
 
-#### 1.2.2. Explanatory Data Visualization
+#### Explanatory Data Visualization
 - **Purpose**: Share findings and tell a story with data
 - **Approach**: Make editorial decisions about emphasis
 - **Question**: What features to highlight vs. eliminate?
@@ -33,13 +33,13 @@ Sources:
 
 ---
 
-## 2. Data Types and Field Classifications
+## Data Types and Field Classifications
 
-### 2.1. Dimensions vs. Measures
+### Dimensions vs. Measures
 
 Understanding your data fields is fundamental to choosing appropriate visualizations.
 
-#### 2.1.1. Dimensions (Qualitative/Discrete)
+#### Dimensions (Qualitative/Discrete)
 - **Definition**: Descriptive values such as names, dates, categories, and geographical data
 - **Characteristics**: 
   - Cannot be aggregated meaningfully
@@ -51,7 +51,7 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
   - Categories (High/Medium/Low)
   - Geographic locations (City, State, Country)
 
-#### 2.1.2. Measures (Quantitative/Continuous)
+#### Measures (Quantitative/Continuous)
 - **Definition**: Numeric values that can be measured and aggregated
 - **Characteristics**:
   - Can be summed, averaged, counted, or calculated
@@ -62,7 +62,7 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
   - Temperature, weight, height
   - Counts of orders or customers
 
-### 2.2. Discrete vs. Continuous
+### Discrete vs. Continuous
 
 **Discrete Fields** (Blue/Categorical):
 - Individual, distinct values
@@ -78,9 +78,9 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 ---
 
-## 3. Chart Types and Their Applications
+## Chart Types and Their Applications
 
-### 3.1. Column Charts
+### Column Charts
 
 **Best for**: Comparing values across categories or showing trends over time
 
@@ -98,7 +98,7 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 ---
 
-### 3.2. Bar Charts
+### Bar Charts
 
 **Best for**: Comparing discrete values, especially with long category labels
 
@@ -116,7 +116,7 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 ---
 
-### 3.3. Line Charts
+### Line Charts
 
 **Best for**: Showing trends and changes over time (time series analysis)
 
@@ -135,7 +135,7 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 ---
 
-### 3.4. Area Charts
+### Area Charts
 
 **Best for**: Showing magnitude of change over time and cumulative totals
 
@@ -153,7 +153,7 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 ---
 
-### 3.5. Pie and Donut Charts
+### Pie and Donut Charts
 
 **Best for**: Showing proportional composition of a whole
 
@@ -170,7 +170,7 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 ---
 
-### 3.6. XY Scatter Plots
+### XY Scatter Plots
 
 **Best for**: Identifying relationships and correlations between two variables
 
@@ -193,7 +193,7 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 ---
 
-### 3.7. Heat Maps
+### Heat Maps
 
 **Best for**: Visualizing complex data matrices and identifying patterns
 
@@ -211,7 +211,7 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 ---
 
-### 3.8. Tree Maps
+### Tree Maps
 
 **Best for**: Displaying hierarchical data with proportional representation
 
@@ -224,7 +224,7 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 ---
 
-### 3.9. Radar (Spider) Charts
+### Radar (Spider) Charts
 
 **Best for**: Comparing multiple quantitative variables across categories
 
@@ -314,9 +314,9 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 ---
 
-## 4. Advanced Visualization Techniques
+## Advanced Visualization Techniques
 
-### 4.1. Dual Axis Charts
+### Dual Axis Charts
 
 **Purpose**: Display multiple data series with different scales on the same visualization
 
@@ -335,7 +335,7 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 - Use synchronized axes when comparing similar magnitudes
 - Avoid mixing too many different scales
 
-### 4.2. Blended Axis Charts
+### Blended Axis Charts
 
 **Difference from Dual Axis**:
 - Single shared axis for multiple measures
@@ -349,9 +349,9 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 ---
 
-## 5. Chart Selection Guidelines
+## Chart Selection Guidelines
 
-### 5.1. Choosing the Right Chart
+### Choosing the Right Chart
 
 | **Purpose** | **Recommended Chart Types** |
 |-------------|----------------------------|
@@ -366,7 +366,7 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 | Multi-variable comparison | Radar Chart |
 | Pattern identification | Heat Map |
 
-### 5.2. Key Selection Criteria
+### Key Selection Criteria
 
 1. **Data Type**: Categorical vs. continuous vs. hierarchical
 2. **Number of Variables**: Single, dual, or multiple
@@ -376,30 +376,30 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 ---
 
-## 6. Visualization Best Practices
+## Visualization Best Practices
 
-### 6.1. Color Usage
+### Color Usage
 
-#### 6.1.1. Color Palettes
+#### Color Palettes
 - **Sequential Palettes**: For continuous data ranges (light to dark)
 - **Diverging Palettes**: For data with meaningful midpoint
 - **Categorical Palettes**: For distinct, unrelated categories
 - **Accessibility**: Ensure sufficient contrast for colorblind users
 
-#### 6.1.2. Color Guidelines
+#### Color Guidelines
 - Be consistent across related visualizations
 - Use color to emphasize, not decorate
 - Consider cultural connotations of colors
 - Limit palette to 5-7 colors maximum
 
-### 6.2. Clarity and Simplicity
+### Clarity and Simplicity
 
 - Remove unnecessary chart elements (redundant labels, excessive gridlines)
 - Focus on the key message
 - Limit the number of categories displayed
 - Use clear, descriptive titles and labels
 
-### 6.3. Accurate Representation
+### Accurate Representation
 
 - **Avoid distorting data**: Use appropriate scales
 - **Start axes at zero** for bar/column charts (when appropriate)
@@ -408,7 +408,7 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 ---
 
-## 7. Summary: Data Visualization Workflow
+## Summary: Data Visualization Workflow
 
 1. **Define Objectives**: What questions need answering?
 2. **Understand Data**: What types and structures are available?
@@ -420,7 +420,7 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 ---
 
-## 8. Key Takeaways
+## Key Takeaways
 
 - **Choose charts based on purpose**, not aesthetics alone
 - **Understand your data types**: Dimensions vs. measures drives visualization choices

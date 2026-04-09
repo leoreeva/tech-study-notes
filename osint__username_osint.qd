@@ -2,7 +2,7 @@
 .include {docs}
 
 
-## 1. Overview
+## Overview
 
 Username hunting involves finding all online accounts associated with a specific username. This is valuable when:
 - You only have a username (no email)
@@ -10,9 +10,9 @@ Username hunting involves finding all online accounts associated with a specific
 - Tracking online personas
 - Discovering forgotten accounts
 
-## 2. Username Hunting Tools
+## Username Hunting Tools
 
-### 2.1. Namechk
+### Namechk
 
 **URL:** [namechk.com](https://namechk.com)
 
@@ -33,13 +33,13 @@ Username hunting involves finding all online accounts associated with a specific
 - Pinterest: Taken (red) → Potential new discovery
 - Reddit: Taken (red) → Check post history
 
-### 2.2. NameCheckup
+### NameCheckup
 
 **URL:** [namecheckup.com](https://namecheckup.com)
 
 **Similar to Namechk** with slight differences in platform coverage.
 
-### 2.3. KnowEm
+### KnowEm
 
 **URL:** [knowem.com](https://knowem.com)
 
@@ -48,9 +48,9 @@ Username hunting involves finding all online accounts associated with a specific
 - Shows availability
 - Can register available names (service)
 
-## 3. What These Tools Reveal
+## What These Tools Reveal
 
-### 3.1. Platform Categories
+### Platform Categories
 
 **Social Media:**
 - Twitter/X
@@ -87,20 +87,20 @@ Username hunting involves finding all online accounts associated with a specific
 - Many adult platforms
 - **Warning:** Enable "safe mode" if not relevant to investigation
 
-### 3.2. Benefits
+### Benefits
 
 1. **Find forgotten accounts** - What you signed up for years ago
 2. **Discover target's platforms** - Where they're active
 3. **Cross-reference information** - Consistent usernames = same person
 4. **Expand investigation** - New platforms to investigate
 
-## 4. Mobile Apps Investigation
+## Mobile Apps Investigation
 
-### 4.1. Limitation of Web Tools
+### Limitation of Web Tools
 
 Most username checkers focus on **web platforms**, but miss **mobile-only apps**.
 
-### 4.2. Key Mobile Platforms to Check
+### Key Mobile Platforms to Check
 
 **Manual checking required:**
 - TikTok
@@ -112,7 +112,7 @@ Most username checkers focus on **web platforms**, but miss **mobile-only apps**
 - Signal
 - Various dating apps
 
-### 4.3. How to Check
+### How to Check
 
 **Method 1: Direct Search**
 1. Download app
@@ -131,9 +131,9 @@ kick.com/username
 t.me/username (Telegram)
 ```
 
-## 5. Deep Investigation Techniques
+## Deep Investigation Techniques
 
-### 5.1. Profile Analysis
+### Profile Analysis
 
 Once you find an account:
 
@@ -144,7 +144,7 @@ Once you find an account:
 4. **Timestamps** - When active, patterns
 5. **Cross-posts** - Same content across platforms
 
-### 5.2. Cross-Platform Verification
+### Cross-Platform Verification
 
 **Same username doesn't always mean same person.**
 
@@ -155,7 +155,7 @@ Once you find an account:
 4. **Connections** - Same followers across platforms
 5. **Timing** - Account creation dates
 
-### 5.3. Linking Accounts
+### Linking Accounts
 
 **Example Chain:**
 1. Find: @johndoe on Twitter
@@ -164,9 +164,9 @@ Once you find an account:
 4. Find: LinkedIn reveals real name and company
 5. Result: Anonymous Twitter linked to real identity
 
-## 6. Special Considerations
+## Special Considerations
 
-### 6.1. X-Rated/Adult Content
+### X-Rated/Adult Content
 
 **Why it matters:**
 - Criminal investigations (predators, traffickers)
@@ -180,7 +180,7 @@ Once you find an account:
 - Document carefully if part of official case
 - Be aware of legal implications
 
-### 6.2. False Positives
+### False Positives
 
 **Common issues:**
 - Tools report "taken" but account doesn't exist (error)
@@ -193,9 +193,9 @@ Once you find an account:
 - Don't rely solely on tool results
 - Cross-check multiple indicators
 
-## 7. Advanced: Manual Username Enumeration
+## Advanced: Manual Username Enumeration
 
-### 7.1. URL Patterns by Platform
+### URL Patterns by Platform
 
 **Try direct URLs:**
 ```
@@ -209,7 +209,7 @@ linkedin.com/in/username
 youtube.com/c/username
 ```
 
-### 7.2. Google Dorking for Usernames
+### Google Dorking for Usernames
 
 **Search patterns:**
 ```
@@ -218,16 +218,16 @@ site:twitter.com "username"
 intitle:"username" site:instagram.com
 ```
 
-### 7.3. Data Export
+### Data Export
 
 **Useful for:**
 - Documentation
 - Reporting
 - Further analysis
 
-## 8. Integration with Full OSINT Workflow
+## Integration with Full OSINT Workflow
 
-### 8.1. Complete Investigation Chain
+### Complete Investigation Chain
 
 **Phase 1: Email Discovery**
 - Use Hunter.io, etc.
@@ -255,22 +255,22 @@ intitle:"username" site:instagram.com
 - Show connections between accounts
 - Document methodology
 
-## 9. Best Practices
+## Best Practices
 
-### 9.1. For Self-Assessment
+### For Self-Assessment
 - Search your own usernames
 - Find forgotten accounts
 - Clean up old profiles
 - Understand your digital footprint
 
-### 9.2. For Investigations
+### For Investigations
 - Start with most unique usernames
 - Document all findings immediately
 - Screenshot profiles (they may change)
 - Note timestamps
 - Verify before concluding
 
-### 9.3. For Corporate Security
+### For Corporate Security
 - Check company usernames
 - Monitor brand impersonation
 - Find unauthorized accounts

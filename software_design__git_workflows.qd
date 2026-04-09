@@ -5,7 +5,7 @@ A Git workflow encourages effective collaboration, makes software development pr
 
 ---
 
-## 1. Centralized
+## Centralized
 
 A centralized Git workflow enables all team members to make changes directly to the main branch, with every change logged in a running history. This works well for small teams (or beginners), because team members can communicate easily in order to avoid contributing to the same piece of code simultaneously.
 
@@ -13,7 +13,7 @@ A centralized Git workflow enables all team members to make changes directly to 
 
 ---
 
-## 2. Feature Branching
+## Feature Branching
 
 Rather than commit directly to the main branch, developers create a branch for each feature, make changes, submit a merge request (or pull request), and then merge it into main. This has the benefit of keeping a clean main branch without unfinished features.
 
@@ -21,7 +21,7 @@ Teams of any size can use this feature branching, because it permits multiple de
 
 ---
 
-## 3. GitFlow
+## GitFlow
 
 This workflow doesn't add any new concepts beyond the Feature Branch Workflow, while it assigns specific roles to different branches and defines how and when they should interact. Here you would use a develop branch with feature branches.
 
@@ -33,7 +33,7 @@ The release branch makes the code review process easier, because there's a dedic
 
 ---
 
-## 4. Trunk-Based Development
+## Trunk-Based Development
 
 Trunk-based development facilitates concurrent development on a single branch called trunk. Developers work directly on trunk or on short-lived branches, and when they are ready to release, they use release branches.
 
@@ -43,7 +43,7 @@ Trunk-based development decreases the likelihood of merge conflicts and keeps co
 
 ---
 
-## 5. Personal Branching
+## Personal Branching
 
 Personal branching is similar to feature branching, but rather than have a single branch per feature, it's per developer. This approach works well if team members work on different features and bugs.
 
@@ -60,7 +60,7 @@ This strategy can work well for small teams in which every team member develops 
 
 ---
 
-## 6. Forking
+## Forking
 
 A forking approach to version control starts with a complete copy of the repository. Forking effectively creates a local copy of a Git repository and provides the ability to create a new collaboration structure.
 

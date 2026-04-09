@@ -2,29 +2,29 @@
 .include {docs}
 
 
-## 1. Introduction to Dashboards
+## Introduction to Dashboards
 
-### 1.1. What is a Dashboard?
+### What is a Dashboard?
 
 A **dashboard** is a visual display of the most important information needed to achieve one or more objectives, consolidated and arranged on a single screen so the information can be monitored at a glance.
 
-### 1.2. Types of Dashboards
+### Types of Dashboards
 
-#### 1.2.1. Strategic Dashboards
+#### Strategic Dashboards
 - **Purpose**: High-level performance tracking for executives
 - **Audience**: Senior management, executives
 - **Update Frequency**: Monthly or quarterly
 - **Focus**: KPIs aligned with business objectives
 - **Characteristics**: Summary-level data, trend analysis, long-term metrics
 
-#### 1.2.2. Analytical Dashboards
+#### Analytical Dashboards
 - **Purpose**: Deep-dive analysis and exploration
 - **Audience**: Analysts, data scientists, business intelligence teams
 - **Update Frequency**: Daily, weekly, or on-demand
 - **Focus**: Trends, patterns, and drill-down capabilities
 - **Characteristics**: Interactive features, multiple data dimensions, detailed breakdowns
 
-#### 1.2.3. Operational Dashboards
+#### Operational Dashboards
 - **Purpose**: Real-time monitoring of business operations
 - **Audience**: Front-line workers, operations managers
 - **Update Frequency**: Continuous or near real-time
@@ -33,16 +33,16 @@ A **dashboard** is a visual display of the most important information needed to 
 
 ---
 
-## 2. Planning Your Dashboard
+## Planning Your Dashboard
 
-### 2.1. Define Objectives
+### Define Objectives
 
 **Key Questions**:
 - What business questions should the dashboard answer?
 - What decisions will be made based on this dashboard?
 - What are the critical success factors?
 
-### 2.2. Understand Your Audience
+### Understand Your Audience
 
 **Consider**:
 - Who will use the dashboard?
@@ -50,7 +50,7 @@ A **dashboard** is a visual display of the most important information needed to 
 - What actions will they take based on insights?
 - What devices will they use to access it?
 
-### 2.3. Identify Key Metrics (KPIs)
+### Identify Key Metrics (KPIs)
 
 **Selection Criteria**:
 - Directly tied to business objectives
@@ -66,41 +66,41 @@ A **dashboard** is a visual display of the most important information needed to 
 
 ---
 
-## 3. Data Preparation and Integration
+## Data Preparation and Integration
 
-### 3.1. Data Collection Strategy
+### Data Collection Strategy
 
-#### 3.1.1. Sources of Data
+#### Sources of Data
 - **Internal Systems**: ERP, CRM, databases
 - **External Sources**: Market data, APIs, public datasets
 - **Manual Entry**: Surveys, spreadsheets
 - **Automated Feeds**: Real-time sensors, IoT devices
 
-#### 3.1.2. Data Quality Considerations
+#### Data Quality Considerations
 1. **Accuracy**: Data reflects reality
 2. **Completeness**: No missing critical values
 3. **Consistency**: Uniform formats and definitions
 4. **Timeliness**: Current and relevant
 5. **Validity**: Conforms to expected ranges and types
 
-### 3.2. Data Integration Approaches
+### Data Integration Approaches
 
-#### 3.2.1. ETL (Extract, Transform, Load)
+#### ETL (Extract, Transform, Load)
 - **Extract**: Pull data from source systems
 - **Transform**: Clean, format, and structure data
 - **Load**: Store in target database or data warehouse
 
-#### 3.2.2. ELT (Extract, Load, Transform)
+#### ELT (Extract, Load, Transform)
 - Load raw data first
 - Transform within target system
 - Better for large volumes and cloud storage
 
-#### 3.2.3. Data Virtualization
+#### Data Virtualization
 - Access data in place without moving
 - Real-time querying across sources
 - Reduced storage requirements
 
-### 3.3. Data Cleaning Steps
+### Data Cleaning Steps
 
 1. **Remove Duplicates**: Eliminate redundant records
 2. **Handle Missing Values**: Impute or exclude
@@ -111,9 +111,9 @@ A **dashboard** is a visual display of the most important information needed to 
 
 ---
 
-## 4. Dashboard Architecture
+## Dashboard Architecture
 
-### 4.1. Three-Layer Architecture
+### Three-Layer Architecture
 
 ```
 ┌─────────────────────────────────────┐
@@ -134,9 +134,9 @@ A **dashboard** is a visual display of the most important information needed to 
 └─────────────────────────────────────┘
 ```
 
-### 4.2. Data Modeling for Dashboards
+### Data Modeling for Dashboards
 
-#### 4.2.1. Dimensional Modeling (Star Schema)
+#### Dimensional Modeling (Star Schema)
 
 **Central Concept**: Organize data into facts (measurements) and dimensions (context)
 
@@ -150,7 +150,7 @@ A **dashboard** is a visual display of the most important information needed to 
 - Primary keys for relationships
 - Slowly changing dimensions (track history)
 
-#### 4.2.2. Relationships
+#### Relationships
 
 **One-to-Many**:
 - One dimension record → Many fact records
@@ -166,9 +166,9 @@ A **dashboard** is a visual display of the most important information needed to 
 
 ---
 
-## 5. Interactive Dashboard Elements
+## Interactive Dashboard Elements
 
-### 5.1. Filters and Slicers
+### Filters and Slicers
 
 **Purpose**: Allow users to focus on specific data subsets
 
@@ -185,7 +185,7 @@ A **dashboard** is a visual display of the most important information needed to 
 - Update visualizations in real-time
 - Format filters consistently (e.g., dropdown, multi-select, search)
 
-#### 5.1.1. Filter Scope and Application
+#### Filter Scope and Application
 
 **Global Filters**:
 - Apply to all visualizations in dashboard
@@ -199,7 +199,7 @@ A **dashboard** is a visual display of the most important information needed to 
 - Selection in one filter updates options in another
 - Example: Select Region → Update available Countries
 
-### 5.2. Time-Based Interactivity
+### Time-Based Interactivity
 
 **Timeline Controls**:
 - **Date Sliders**: Select ranges or specific periods
@@ -211,7 +211,7 @@ A **dashboard** is a visual display of the most important information needed to 
 - Drill from year → quarter → month → day
 - Discrete vs. continuous date representations
 
-### 5.3. Cross-Filtering and Brushing
+### Cross-Filtering and Brushing
 
 **Cross-Filtering**:
 - Selecting in one chart filters all others
@@ -223,7 +223,7 @@ A **dashboard** is a visual display of the most important information needed to 
 - Maintains visibility of non-selected data
 - Useful for comparison and outlier analysis
 
-### 5.4. Dashboard Actions
+### Dashboard Actions
 
 **Filter Actions**:
 - Click element in one view → Filter other views
@@ -240,40 +240,40 @@ A **dashboard** is a visual display of the most important information needed to 
 
 ---
 
-## 6. Dashboard Design Principles
+## Dashboard Design Principles
 
-### 6.1. Information Hierarchy
+### Information Hierarchy
 
 - **Primary Metrics**: KPIs and critical insights should be most prominent
 - **Secondary Metrics**: Supporting data in accessible locations
 - **Detailed Data**: Available through drill-down or filtering
 
-### 6.2. Visual Consistency
+### Visual Consistency
 
 - Use consistent **color schemes** throughout
 - Maintain uniform **font families** and sizing
 - Align elements for clean, organized appearance
 - Apply standard spacing and margins
 
-### 6.3. Layout Patterns
+### Layout Patterns
 
-#### 6.3.1. F-Pattern Layout
+#### F-Pattern Layout
 - Most important content top-left
 - Reader scans horizontally, then vertically
 - KPIs and summaries at top
 
-#### 6.3.2. Z-Pattern Layout
+#### Z-Pattern Layout
 - Eye travels from top-left to top-right
 - Diagonal to bottom-left
 - Across to bottom-right
 - Good for storytelling dashboards
 
-#### 6.3.3. Grid Layout
+#### Grid Layout
 - Modular sections
 - Equal visual weight
 - Flexible for different screen sizes
 
-### 6.4. Dashboard Sections
+### Dashboard Sections
 
 1. **Header**: Title, date range, refresh timestamp
 2. **KPI Summary**: Key metrics with sparklines or indicators
@@ -283,7 +283,7 @@ A **dashboard** is a visual display of the most important information needed to 
 6. **Detailed Tables**: Supporting data
 7. **Filters**: Interactive controls
 
-### 6.5. White Space and Layout
+### White Space and Layout
 
 - **Avoid overcrowding**: Let content breathe
 - **Maximize information density** without clutter
@@ -293,9 +293,9 @@ A **dashboard** is a visual display of the most important information needed to 
 
 ---
 
-## 7. Advanced Techniques
+## Advanced Techniques
 
-### 7.1. Calculated Fields and Formulas
+### Calculated Fields and Formulas
 
 **Aggregation Functions**:
 - **SUM**: Total of values
@@ -317,7 +317,7 @@ A **dashboard** is a visual display of the most important information needed to 
 - Month-over-Month (MoM): Sequential period comparison
 - Variance: Difference from target or budget
 
-### 7.2. Level of Detail (LOD) Calculations
+### Level of Detail (LOD) Calculations
 
 **Purpose**: Perform calculations at different granularities than the visualization
 
@@ -331,7 +331,7 @@ A **dashboard** is a visual display of the most important information needed to 
 - Show percent of total while filtering subsets
 - Compare individual values to group averages
 
-### 7.3. Parameters and Dynamic Controls
+### Parameters and Dynamic Controls
 
 **User-Defined Parameters**:
 - **Top N**: Allow users to select how many top items to show
@@ -344,7 +344,7 @@ A **dashboard** is a visual display of the most important information needed to 
 - **Dynamic Sets**: Based on conditions (Top N by metric)
 - **Groups**: Combine categories for analysis
 
-### 7.4. Forecasting and Trend Analysis
+### Forecasting and Trend Analysis
 
 **Forecasting Techniques**:
 - Linear trend projection
@@ -358,29 +358,29 @@ A **dashboard** is a visual display of the most important information needed to 
 
 ---
 
-## 8. Performance Optimization
+## Performance Optimization
 
-### 8.1. Data Volume Management
+### Data Volume Management
 
-#### 8.1.1. Techniques:
+#### Techniques:
 1. **Pre-Aggregation**: Calculate summaries in advance
 2. **Incremental Refresh**: Only update changed data
 3. **Data Sampling**: Work with representative subsets during development
 4. **Columnar Storage**: Optimize for analytical queries
 5. **Partitioning**: Split large tables by date or region
 
-### 8.2. Visualization Performance
+### Visualization Performance
 
-#### 8.2.1. Best Practices:
+#### Best Practices:
 - **Limit Data Points**: Cap at 1,000-5,000 visible points
 - **Use Aggregations**: Show summaries, not individual rows
 - **Debouncing**: Delay updates during rapid filter changes
 - **Lazy Loading**: Load details on demand
 - **Simplify Visuals**: Reduce unnecessary chart elements
 
-### 8.3. Query Optimization
+### Query Optimization
 
-#### 8.3.1. Strategies:
+#### Strategies:
 - **Indexing**: Speed up filter and join operations
 - **Materialized Views**: Pre-compute common aggregations
 - **Query Folding**: Push operations to source database
@@ -388,9 +388,9 @@ A **dashboard** is a visual display of the most important information needed to 
 
 ---
 
-## 9. Dashboard Assembly
+## Dashboard Assembly
 
-### 9.1. Step-by-Step Assembly Process
+### Step-by-Step Assembly Process
 
 1. **Prepare Individual Visualizations**
    - Create and format each chart independently
@@ -416,7 +416,7 @@ A **dashboard** is a visual display of the most important information needed to 
    - Add titles and annotations
    - Ensure consistent styling
 
-### 9.2. Dashboard Sizing Options
+### Dashboard Sizing Options
 
 **Fixed Size**:
 - Exact width and height

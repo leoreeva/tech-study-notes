@@ -1,7 +1,7 @@
 .docname {API Design (RPC and REST)}
 .include {docs}
 
-## 1. What is an API
+## What is an API
 
 APIs are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols. Software developers use previously developed or third-party components to perform functions, so they don't have to write everything from scratch.
 
@@ -11,7 +11,7 @@ APIs are also a common mechanism for the backend of a program (the logic compone
 
 ---
 
-## 2. REST vs RPC
+## REST vs RPC
 
 Remote Procedure Call (RPC) and REST are ways to design APIs.
 
@@ -21,7 +21,7 @@ Developers can implement a RESTful or RPC API in any language they choose. So as
 
 ---
 
-## 3. Architecture Principles
+## Architecture Principles
 
 In Remote Procedure Call (RPC), the client makes a remote function call on a server, as if it was locally to their software.
 
@@ -35,7 +35,7 @@ In contrast, the REST client requests the server to perform an action on a speci
 
 RPC focuses on functions or actions, while REST focuses on resources or objects.
 
-### 3.1. RPC Principles
+### RPC Principles
 
 These are typically followed by RPC systems, but are not standardized like REST though.
 
@@ -45,7 +45,7 @@ These are typically followed by RPC systems, but are not standardized like REST 
 
 - **Stubs**. Function stubs exist on both the client and the server. On the client side, it makes the function call. On the server, it invokes the actual function.
 
-### 3.2. REST Principles
+### REST Principles
 
 These principles are standardized: a REST API must follow these principles to be classified as RESTful.
 
@@ -61,7 +61,7 @@ These principles are standardized: a REST API must follow these principles to be
 
 ---
 
-## 4. How They Work
+## How They Work
 
 In Remote Procedure Call (RPC), the client can perform any type of action, using a HTTP POST to call a specific function by name, and passes parameters as JSON objects. Client-side developers must know the function name and parameters in advance for RPC to work.
 
@@ -69,7 +69,7 @@ In REST, clients perform only CRUD operations, by using HTTP verbs like GET, POS
 
 ---
 
-## 5. When to Use
+## When to Use
 
 Nowadays, REST web APIs are basically the norm; however, RPC hasn't disappeared. A REST API is typically used in applications as it is easier for developers to understand and implement. However, RPC still exists and is used when it suits the use case better.
 

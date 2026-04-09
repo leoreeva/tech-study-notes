@@ -2,7 +2,7 @@
 .include {docs}
 
 
-## 1. Course Overview
+## Course Overview
 
 This course provides a comprehensive introduction to **APIs (Application Programming Interfaces)** for beginners. By completion, you will be able to:
 
@@ -11,19 +11,19 @@ This course provides a comprehensive introduction to **APIs (Application Program
 - **Explain** why APIs exist in software development
 - **Implement** hands-on experience with popular web APIs
 
-### 1.1. Prerequisites
+### Prerequisites
 
 - Basic programming experience ("Hello World" level in any language)
 - Fundamental understanding of how the web works (web servers and browsers)
 
 
-## 2. Understanding Interfaces
+## Understanding Interfaces
 
-### 2.1. What is an Interface?
+### What is an Interface?
 
 An **interface** is a boundary across which two independent systems meet and interact. Interfaces abstract away implementation details while exposing controlled functionality.
 
-#### 2.1.1. Physical Interface Examples
+#### Physical Interface Examples
 
 | Interface | Exposed Controls | Hidden Implementation |
 |-----------|------------------|----------------------|
@@ -33,7 +33,7 @@ An **interface** is a boundary across which two independent systems meet and int
 
 **Key Principle**: You don't need to understand *how* something works internally to use it effectively.
 
-### 2.2. Graphical User Interfaces (GUI)
+### Graphical User Interfaces (GUI)
 
 A **GUI (Graphical User Interface)** provides visual elements for user interaction:
 
@@ -46,7 +46,7 @@ A **GUI (Graphical User Interface)** provides visual elements for user interacti
 - The user knows: Clicking it starts music
 - The user doesn't know: Audio data transmission, hardware communication, buffering algorithms
 
-### 2.3. Application Programming Interfaces (API)
+### Application Programming Interfaces (API)
 
 While **UIs (User Interfaces)** are designed for end-users, **APIs** are designed for **application programmers** to use and extend in their applications.
 
@@ -57,7 +57,7 @@ API provides: Visual rendering, click detection, sound feedback
 Developer doesn't write: Button physics, rendering engine, audio feedback
 ```
 
-#### 2.3.1. Layered API Architecture
+#### Layered API Architecture
 
 Modern applications use APIs at multiple levels:
 
@@ -69,9 +69,9 @@ Modern applications use APIs at multiple levels:
 > **Concept**: "It's APIs all the way down" - Abstractions exist at every level from user interface to binary data.
 
 
-## 3. API Fundamentals
+## API Fundamentals
 
-### 3.1. Definition
+### Definition
 
 An **API (Application Programming Interface)** is a **contract** that:
 - Defines how the API is expected to be used
@@ -79,7 +79,7 @@ An **API (Application Programming Interface)** is a **contract** that:
 - Provides a set of tools for software developers
 - Offers **abstraction** of implementation details
 
-### 3.2. Core Benefits
+### Core Benefits
 
 | Benefit | Description |
 |---------|-------------|
@@ -88,9 +88,9 @@ An **API (Application Programming Interface)** is a **contract** that:
 | **Standardization** | Consistent interfaces across platforms |
 | **Efficiency** | Complex operations in few lines of code |
 
-### 3.3. Types of APIs
+### Types of APIs
 
-#### 3.3.1. Language APIs
+#### Language APIs
 
 Programming languages provide APIs for common operations:
 
@@ -109,7 +109,7 @@ Output: "HELLO"
 - Implementation adapts to underlying system (Windows vs. macOS file structures)
 - Code portability: Write once, run anywhere
 
-#### 3.3.2. Web APIs
+#### Web APIs
 
 Web browsers implement standardized **Web APIs**:
 - DOM manipulation
@@ -119,7 +119,7 @@ Web browsers implement standardized **Web APIs**:
 
 **Cross-Browser Compatibility**: Code works in Chrome, Firefox, Safari, Edge because they all implement the same web API specifications.
 
-#### 3.3.3. Library/Framework APIs
+#### Library/Framework APIs
 
 **Libraries** package code to solve common problems:
 - Image processing (e.g., converting photos to black and white)
@@ -130,7 +130,7 @@ Web browsers implement standardized **Web APIs**:
 - Web frameworks: Route handling, template rendering
 - Mobile frameworks: UI components, lifecycle management
 
-### 3.4. API as Contract
+### API as Contract
 
 An API is a **contract** between:
 - **Provider**: The system exposing functionality
@@ -143,13 +143,13 @@ An API is a **contract** between:
 4. How to handle errors
 
 
-## 4. Remote APIs
+## Remote APIs
 
-### 4.1. Concept
+### Concept
 
 **Remote APIs** allow control of objects and services over a network, not just locally.
 
-#### 4.1.1. Examples of Remote APIs
+#### Examples of Remote APIs
 
 | Use Case | API Function |
 |----------|--------------|
@@ -158,9 +158,9 @@ An API is a **contract** between:
 | Traffic Signs | Change displays via API calls |
 | Drone Control | Control flight via mobile app |
 
-### 4.2. Benefits of Remote APIs
+### Benefits of Remote APIs
 
-#### 4.2.1. Data Access
+#### Data Access
 
 **Problem**: Local devices have limited storage
 **Solution**: Access vast remote databases
@@ -172,7 +172,7 @@ An API is a **contract** between:
 - Returns match in seconds
 - **You don't need** to store all songs locally
 
-#### 4.2.2. Computational Power
+#### Computational Power
 
 **Example - Google Translate AR**:
 - Camera captures text in real-time
@@ -180,11 +180,11 @@ An API is a **contract** between:
 - Translation overlay appears instantly
 - **Processing power** exceeds local device capabilities
 
-### 4.3. REST: Representational State Transfer
+### REST: Representational State Transfer
 
 **REST** is an architectural style for designing networked applications. It emerged as the dominant standard for web APIs.
 
-#### 4.3.1. Why REST Became Popular
+#### Why REST Became Popular
 
 1. **Clear structure** for resource interaction
 2. **Built on HTTP** - leverages existing web infrastructure
@@ -193,18 +193,18 @@ An API is a **contract** between:
 
 > **Note**: While REST is dominant, alternatives exist (e.g., GraphQL) for specific use cases.
 
-#### 4.3.2. RESTful APIs
+#### RESTful APIs
 
 APIs that follow REST constraints are called **RESTful**.
 
 
-## 5. Web Fundamentals Refresher
+## Web Fundamentals Refresher
 
-### 5.1. HTTP Protocol
+### HTTP Protocol
 
 **HTTP (HyperText Transfer Protocol)** is the foundation of web communication.
 
-#### 5.1.1. Key Components
+#### Key Components
 
 | Component | Description |
 |-----------|-------------|
@@ -214,7 +214,7 @@ APIs that follow REST constraints are called **RESTful**.
 | **Path** | Specific resource location |
 | **Query String** | Parameters after `?` |
 
-#### 5.1.2. HTTP Request Structure
+#### HTTP Request Structure
 
 ```
 GET /users/123 HTTP/1.1
@@ -223,7 +223,7 @@ Authorization: Bearer token123
 Content-Type: application/json
 ```
 
-#### 5.1.3. HTTP Methods (Verbs)
+#### HTTP Methods (Verbs)
 
 | Method | Purpose | CRUD Operation |
 |--------|---------|----------------|
@@ -233,7 +233,7 @@ Content-Type: application/json
 | **PATCH** | Partial update | Update |
 | **DELETE** | Remove resource | Delete |
 
-#### 5.1.4. HTTP Response Status Codes
+#### HTTP Response Status Codes
 
 | Code Range | Meaning | Examples |
 |------------|---------|----------|
@@ -242,7 +242,7 @@ Content-Type: application/json
 | **4xx** | Client Error | 400 Bad Request, 401 Unauthorized, 404 Not Found |
 | **5xx** | Server Error | 500 Internal Server Error |
 
-### 5.2. Headers
+### Headers
 
 **Headers** are key-value pairs in requests and responses:
 
@@ -256,7 +256,7 @@ Content-Type: application/json
 - `Content-Length`: Size of response
 - `Cache-Control`: Caching instructions
 
-### 5.3. Statelessness
+### Statelessness
 
 **HTTP is stateless**: Each request is independent. The server doesn't remember previous requests.
 
@@ -266,34 +266,34 @@ Content-Type: application/json
 - Client maintains session information
 
 
-## 6. RESTful API Constraints
+## RESTful API Constraints
 
-### 6.1. The RESTful Scavenger Hunt
+### The RESTful Scavenger Hunt
 
 For an API to be considered **RESTful**, it must satisfy these architectural constraints:
 
-#### 6.1.1. ✅ 1. Client-Server Architecture
+#### ✅ 1. Client-Server Architecture
 - Separation of concerns
 - Client handles user interface
 - Server handles data storage and business logic
 - Both can evolve independently
 
-#### 6.1.2. ✅ 2. Stateless
+#### ✅ 2. Stateless
 - Each request contains all information needed
 - No client context stored on server
 - Session state kept entirely on client
 
-#### 6.1.3. ✅ 3. Cacheable
+#### ✅ 3. Cacheable
 - Responses must define themselves as cacheable or not
 - Improves scalability and performance
 - Reduces server load
 
-#### 6.1.4. ✅ 4. Layered System
+#### ✅ 4. Layered System
 - Client cannot tell if connected directly to server or through intermediaries
 - Load balancers, caches, and proxies can be added transparently
 - Improves scalability
 
-#### 6.1.5. ✅ 5. Uniform Interface
+#### ✅ 5. Uniform Interface
 
 Four sub-constraints:
 
@@ -302,15 +302,15 @@ Four sub-constraints:
 3. **Self-descriptive Messages**: Each message includes enough information to describe how to process it
 4. **Hypermedia as the Engine of Application State (HATEOAS)**: Responses include links to related resources
 
-#### 6.1.6. ⭕ 6. Code on Demand (Optional)
+#### ⭕ 6. Code on Demand (Optional)
 - Servers can extend client functionality by sending executable code
 - Only optional constraint
 - Example: JavaScript widgets
 
 
-## 7. Working with REST APIs
+## Working with REST APIs
 
-### 7.1. Resources
+### Resources
 
 In REST, everything is a **resource**:
 
@@ -331,7 +331,7 @@ In REST, everything is a **resource**:
 /albums             → Album resources
 ```
 
-### 7.2. CRUD Operations via HTTP
+### CRUD Operations via HTTP
 
 | Operation | HTTP Method | Endpoint | Description |
 |-----------|-------------|----------|-------------|
@@ -341,7 +341,7 @@ In REST, everything is a **resource**:
 | Update | PATCH | `/authors/123` | Update author |
 | Delete | DELETE | `/authors/123` | Remove author |
 
-### 7.3. JSON: JavaScript Object Notation
+### JSON: JavaScript Object Notation
 
 **JSON** is the standard data format for REST APIs:
 
@@ -364,9 +364,9 @@ In REST, everything is a **resource**:
 - Supports nested objects and arrays
 
 
-## 8. API Exploration Tools
+## API Exploration Tools
 
-### 8.1. cURL
+### cURL
 
 **cURL** is a command-line tool for making HTTP requests:
 
@@ -391,9 +391,9 @@ curl -X POST \
 - Scriptable
 - Great for documentation examples
 
-### 8.2. API Client Applications
+### API Client Applications
 
-#### 8.2.1. REST Fox (Lightweight)
+#### REST Fox (Lightweight)
 
 Features:
 - Clean, simple interface
@@ -401,7 +401,7 @@ Features:
 - Request collections
 - Syntax highlighting
 
-#### 8.2.2. Postman (Enterprise)
+#### Postman (Enterprise)
 
 Features:
 - Comprehensive API testing
@@ -410,7 +410,7 @@ Features:
 - Code generation for multiple languages
 - API documentation generation
 
-#### 8.2.3. Thunder Client (VS Code Extension)
+#### Thunder Client (VS Code Extension)
 
 Features:
 - Integrated into code editor
@@ -418,7 +418,7 @@ Features:
 - Environment management
 - Collection organization
 
-### 8.3. Environment Variables
+### Environment Variables
 
 Store sensitive/configuration data separately:
 
@@ -438,13 +438,13 @@ Store sensitive/configuration data separately:
 - Flexibility: Switch environments (dev/staging/prod)
 
 
-## 9. Helper Libraries & SDKs
+## Helper Libraries & SDKs
 
-### 9.1. Concept
+### Concept
 
 **SDKs (Software Development Kits)** or **Helper Libraries** wrap HTTP calls in native language constructs.
 
-### 9.2. Benefits
+### Benefits
 
 | Benefit | Description |
 |---------|-------------|
@@ -454,7 +454,7 @@ Store sensitive/configuration data separately:
 | **Authentication** | Automatic credential management |
 | **Documentation** | IDE autocomplete and tooltips |
 
-### 9.3. Example: Twilio Helper Library
+### Example: Twilio Helper Library
 
 **Raw HTTP (cURL)**:
 ```bash
@@ -476,7 +476,7 @@ client.messages.create({
 });
 ```
 
-### 9.4. Asynchronous Operations
+### Asynchronous Operations
 
 Most API calls are **asynchronous** (non-blocking):
 

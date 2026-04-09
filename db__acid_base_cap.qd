@@ -5,7 +5,7 @@ In the context of databases and data storage systems, a **transaction** is any o
 
 ---
 
-## 1. Overview
+## Overview
 
 !(600x_)[ACID vs BASE](images/db__acid_base.png)
 
@@ -16,7 +16,7 @@ ACID and BASE are acronyms for different database properties representing how th
 
 ---
 
-## 2. CAP Theorem
+## CAP Theorem
 
 Modern databases are distributed data stores that replicate data across multiple nodes connected by a network. They allow users to perform multiple data manipulations like reads and writes in a single transaction. Users expect data to remain consistent across all nodes at the end of the transaction. However, in theoretical computer science, Brewer's theorem (also called CAP theorem) states that any distributed data store can provide only two of the following three guarantees:
 
@@ -35,43 +35,43 @@ In some use cases, consistency is critical and ACID databases are favored. Howev
 
 ---
 
-## 3. ACID Properties
+## ACID Properties
 
-### 3.1. Atomicity
+### Atomicity
 
 Each statement in a transaction (to read, write, update or delete data) is treated as a single unit. Either the entire statement is executed, or none of it is executed. This property prevents data loss and corruption from occurring if, for example, if your streaming data source fails mid-stream.
 
-### 3.2. Consistency
+### Consistency
 
 Ensures that transactions only make changes to tables in predefined, predictable ways. Transactional consistency ensures that corruption or errors in your data do not create unintended consequences for the integrity of your table.
 
-### 3.3. Isolation
+### Isolation
 
 When multiple users are reading and writing from the same table all at once, isolation of their transactions ensures that the concurrent transactions don't interfere with or affect one another. Each request can occur as though they were occurring one by one, even though they're actually occurring simultaneously.
 
-### 3.4. Durability
+### Durability
 
 Ensures that changes to your data made by successfully executed transactions will be saved, even in the event of system failure.
 
 ---
 
-## 4. BASE Properties
+## BASE Properties
 
-### 4.1. Basically Available
+### Basically Available
 
 It's the database's concurrent accessibility by users at all times. One user doesn't need to wait for others to finish the transaction before updating the record. For example, during a sudden surge in traffic on an ecommerce platform, the system may prioritize serving product listings and accepting orders. Even if there is a slight delay in updating inventory quantities, users continue to check out items.
 
-### 4.2. Soft State
+### Soft State
 
 The database's state can change over time, even without external triggers or inputs. Inconsistency is tolerated, and the database is not necessarily in a consistent state at all times. For example, if users edit a social media post, the change may not be visible to other users immediately. However, later on, the post updates by itself (reflecting the older change) even though no user triggered it.
 
-### 4.3. Eventually Consistent
+### Eventually Consistent
 
 Eventually consistent means the record will achieve consistency when all the concurrent updates have been completed. At that point, applications querying the record will see the same value. For example, consider a distributed document editing system where multiple users can simultaneously edit a document. If User A and User B both edit the same section of the document simultaneously, their local copies may temporarily differ until the changes are propagated and synchronized. However, over time, the system ensures eventual consistency by propagating and merging the changes made by different users.
 
 ---
 
-## 5. Can a Database be Both ACID and BASE?
+## Can a Database be Both ACID and BASE?
 
 According to the CAP theorem, a database can satisfy two of the three guarantees of consistency, availability, and partition tolerance. Both ACID and BASE database models provide partition tolerance, so they cannot be both highly consistent and always available. So, a database either leans towards ACID or BASE, but it cannot be both.
 
@@ -79,7 +79,7 @@ For example, SQL databases are structured over the ACID model, while NoSQL datab
 
 ---
 
-## 6. Trade-offs Comparison
+## Trade-offs Comparison
 
 | Aspect | ACID | BASE |
 |--------|------|------|
@@ -90,17 +90,17 @@ For example, SQL databases are structured over the ACID model, while NoSQL datab
 
 ---
 
-## 7. Use Cases
+## Use Cases
 
 Despite their differences and trade-offs, both ACID and BASE database systems are relevant in different applications.
 
-### 7.1. ACID Databases
+### ACID Databases
 
 - **Ideal for**: Enterprise applications that require data consistency, reliability, and predictability
 - **Example**: Banks use ACID databases to store customer transactions because data integrity is the top priority
 - **Technologies**: Traditional SQL databases (PostgreSQL, MySQL, Oracle)
 
-### 7.2. BASE Databases
+### BASE Databases
 
 - **Ideal for**: Online analytical processing of less structured, high-volume data
 - **Example**: Ecommerce websites use BASE databases to update product prices, which change frequently. Pricing accuracy is less vital than allowing all customers real-time access to the product price

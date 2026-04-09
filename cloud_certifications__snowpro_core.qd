@@ -5,7 +5,7 @@
 
 ---
 
-## 1. Snowflake Key Concepts & Architecture
+## Snowflake Key Concepts & Architecture
 
 [Official Documentation](https://docs.snowflake.com/en/user-guide/intro-key-concepts)
 
@@ -17,7 +17,7 @@ Unlike legacy database technologies or Hadoop-based platforms, Snowflake is buil
 
 ---
 
-## 2. Data Platform as a Self-managed Service
+## Data Platform as a Self-managed Service
 
 Snowflake is a **true self-managed service**, meaning:
 - No hardware (virtual or physical) to install or manage
@@ -28,7 +28,7 @@ It runs entirely on **public cloud infrastructure**, so it cannot run on private
 
 ---
 
-## 3. Architecture
+## Architecture
 
 Snowflake's architecture is a hybrid of more traditional:
 - **Shared-disk** database architectures; uses a central data repository for persisted data that is accessible from all compute nodes in the platform (benefit: **data management simplicity**)
@@ -62,7 +62,7 @@ Snowflake's unique architecture consists of three key **layers**:
 
 ---
 
-## 4. Connecting to Snowflake
+## Connecting to Snowflake
 
 Snowflake supports multiple ways of connecting to the service:
 - A web-based user interface from which all aspects of managing and using Snowflake can be accessed
@@ -73,7 +73,7 @@ Snowflake supports multiple ways of connecting to the service:
 
 ---
 
-## 5. Snowflake Editions
+## Snowflake Editions
 
 Snowflake offers different editions with varying features:
 
@@ -84,7 +84,7 @@ Snowflake offers different editions with varying features:
 
 ---
 
-## 6. Access Control
+## Access Control
 
 Snowflake provides comprehensive security features:
 
@@ -95,7 +95,7 @@ Snowflake provides comprehensive security features:
 
 ---
 
-## 7. Tables
+## Tables
 
 Snowflake supports various table types:
 
@@ -106,7 +106,7 @@ Snowflake supports various table types:
 
 ---
 
-## 8. Views
+## Views
 
 Views in Snowflake provide virtual tables based on SQL queries:
 
@@ -116,7 +116,7 @@ Views in Snowflake provide virtual tables based on SQL queries:
 
 ---
 
-## 9. Courses
+## Courses
 
 - [Free YouTube Playlist](https://www.youtube.com/playlist?list=PL3WUjOOQCEw1nRXz-LEuHu8itUYr9upj6)
 - [Paid Udemy Courses](https://www.udemy.com/courses/search/?src=ukw&q=snowpro+core)

@@ -8,7 +8,7 @@ https://www.interviewbit.com/oops-interview-questions/
 some concepts: Encapsulation, Inheritance, Polymorphism, Abstraction, Composition, etc.
 
 
-### 0.1. Classes and Objects
+### Classes and Objects
 
 **Class**: A blueprint for creating objects
 **Object**: An instance of a class
@@ -26,7 +26,7 @@ my_dog = Dog("Buddy")
 print(my_dog.bark())  # "Buddy says woof!"
 ```
 
-### 0.2. Encapsulation
+### Encapsulation
 
 Bundling data and methods that operate on that data within a single unit (class). Hide internal details.
 
@@ -45,7 +45,7 @@ class BankAccount:
     # External code can't directly modify _balance improperly
 ```
 
-### 0.3. Inheritance
+### Inheritance
 
 Create new classes based on existing ones, inheriting attributes and methods.
 
@@ -66,7 +66,7 @@ class Cat(Animal):
         return f"{self.name} meows"
 ```
 
-### 0.4. Polymorphism
+### Polymorphism
 
 Objects of different classes can be treated as objects of a common parent class. Same interface, different implementations.
 
@@ -82,7 +82,7 @@ make_animal_speak(cat)  # Works with Cat
 # 3. Both have speak() method but behave differently
 ```
 
-### 0.5. Abstraction
+### Abstraction
 
 Hide complex implementation details, expose only necessary features.
 
@@ -112,7 +112,7 @@ processor: PaymentProcessor = CreditCardProcessor()
 processor.process_payment(100.00)
 ```
 
-### 0.6. Composition
+### Composition
 
 "Has-a" relationship. Build complex objects from simpler ones.
 

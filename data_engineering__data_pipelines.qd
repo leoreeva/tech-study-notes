@@ -1,7 +1,7 @@
 .docname {Data Pipelines}
 .include {docs}
 
-## 1. ETL and ELT
+## ETL and ELT
 
 They are two data-processing approaches for analytics. Large organizations have several hundred (or even thousands) of data sources from all aspects of their operations—like applications, sensors, IT infrastructure, and third-party partners. They have to filter, sort, and clean this large data volume to make it useful for analytics and business intelligence. The ETL approach uses a set of business rules to process data from several sources before centralized integration.
 
@@ -17,7 +17,7 @@ Both are composed of three steps:
 
 - **Load** is the third step in ETL and second step in ELT. In this phase, you store data into the target database.
 
-### 1.1. Key Differences
+### Key Differences
 
 !(600x_)[ETL vs ELT](images/data_engineering__etl_elt.png)
 
@@ -34,7 +34,7 @@ ETL has been around since the 1970s, becoming especially popular with the rise o
 
 ---
 
-## 2. Idempotency
+## Idempotency
 
 Idempotency means that if you perform the same action multiple times, you get the same result every time. Why does it matter?
 

@@ -4,7 +4,7 @@
 
 Email OSINT involves discovering, verifying, and investigating email addresses.
 
-## 1. Email Discovery tools
+## Email Discovery tools
 
 These tools allows to:
 - Search by company domain to identify email patterns and find employee addresses with their roles
@@ -14,7 +14,7 @@ These tools allows to:
 
 They typically offer features like pattern identification, department filtering, and monthly search limits on free tiers
 
-## 2. Email Verification tools
+## Email Verification tools
 
 - Confirm email exists without contacting
 - Validate findings
@@ -23,7 +23,7 @@ They typically offer features like pattern identification, department filtering,
 There are many tools for email verification. 
 
 
-### 2.1. Use Cases
+### Use Cases
 
 **Investigations:**
 - Link sock puppets to real identities
@@ -35,9 +35,9 @@ There are many tools for email verification.
 - Confirm account existence
 - Gather information for social engineering
 
-## 3. Email Pattern Analysis
+## Email Pattern Analysis
 
-### 3.1. Common Corporate Patterns
+### Common Corporate Patterns
 
 | Pattern | Example | Notes |
 |-----------|---------|-------|
@@ -48,14 +48,14 @@ There are many tools for email verification.
 | FirstL | john.d@company.com | Initial only |
 | Last | doe@company.com | Rare |
 
-### 3.2. How to Determine Pattern
+### How to Determine Pattern
 
 1. **Use Hunter.io** - Often shows pattern
 2. **Search for one known email** - "john.doe@company.com"
 3. **Analyze multiple results** - Look for consistency
 4. **Test variations** - Try pattern with target name
 
-### 3.3. Real-World Example
+### Real-World Example
 
 **Company: TCM Security**
 - Found: heat@tcm-sec.com, rizwan@tcm-sec.com
@@ -66,9 +66,9 @@ There are many tools for email verification.
 - Pattern: {first initial}{lastname}@tesla.com
 - Also: Some use full names, others initials
 
-## 4. Integration with Other OSINT
+## Integration with Other OSINT
 
-### 4.1. Workflow Example
+### Workflow Example
 
 **Investigation Goal:** Find email for Bob Jones at Target Company
 

@@ -9,7 +9,7 @@ Web scraping  is the process of:
 - Storing data in a structured format
 
 
-## 1. HTML fundamentals
+## HTML fundamentals
 
 Basic HTML document structure:
 - `<html>`: root element containing all content
@@ -51,14 +51,14 @@ HTML **attributes** provide additional information about elements:
 | `id` | Unique identifier (used once per page) | `<div id="main-content">...</div>` |
 | `href` | Link destination | `<a href="https://example.com">Link</a>` |
 
-### 1.1. The Document Object Model (DOM)
+### The Document Object Model (DOM)
 
 The DOM represents HTML as a **tree** structure:
 - Each element is a node
 - Parent-child relationships define hierarchy
 - Scraping navigates this tree to locate data
 
-### 1.2. HTTP Status Codes
+### HTTP Status Codes
 When requesting (GET) an webpage, the request has a code that defines the status of the request:
 
 | Code | Meaning | Action |
@@ -72,7 +72,7 @@ When requesting (GET) an webpage, the request has a code that defines the status
 | 503 | Service Unavailable | Server overload |
 
 
-## 2. Web Scraping tools and libraries
+## Web Scraping tools and libraries
 
 | Python library | Purpose | Use Case |
 |----------------|---------|----------|
@@ -83,7 +83,7 @@ When requesting (GET) an webpage, the request has a code that defines the status
 | **Selenium** | Browser automation | JavaScript-rendered content |
 | **Scrapy** | Full scraping framework | Large-scale projects |
 
-### 2.1. Beautiful Soup key concepts
+### Beautiful Soup key concepts
 
 Installation:
 ```bash
@@ -97,7 +97,7 @@ from bs4 import BeautifulSoup
 soup = BeautifulSoup(html_content, 'lxml')
 ```
 
-### 2.2. Parser Comparison
+### Parser Comparison
 
 | Parser        | Speed    | Fault Tolerance | Recommendation    |
 |---------------|----------|-----------------|-------------------|
@@ -105,7 +105,7 @@ soup = BeautifulSoup(html_content, 'lxml')
 | `lxml`        | Fast     | Excellent       | Recommended.      |
 | `html5lib`    | Slow     | Best            | HTML5 compliance  |
 
-### 2.3. Core Beautiful Soup Methods
+### Core Beautiful Soup Methods
 
 | Signature | Purpose | Example |
 |-----------|---------|---------|
@@ -115,9 +115,9 @@ soup = BeautifulSoup(html_content, 'lxml')
 | `element.get('href')` | Get specific attribute |  |
 
 
-## 3. Scraping methodology
+## Scraping methodology
 
-### 3.1. The scraping workflow
+### The scraping workflow
 
 1. **Inspect the Target**: Use browser developer tools (F12 on Chrome) to
     - View and edit HTML/CSS in real-time
@@ -131,12 +131,12 @@ soup = BeautifulSoup(html_content, 'lxml')
 6. **Store Results**: Save to file or database
 
 
-## 4. Data storage and structuring
+## Data storage and structuring
 
 In Python, data can be easily manipulated with **DataFrames** (like Pandas). They can also export to multiple formats. Most common are CSV, JSON, SQLite, Pickle, etc.
 
 
-## 5. Dynamic Content
+## Dynamic Content
 
 Website can be static:
 - HTML contains all data at initial page load  
@@ -152,7 +152,7 @@ or dynamic:
   - Typically involves calls to backend APIs returning JSON or XML  
 - Rendered browser content may differ from the raw HTML source  
 
-### 5.1. Selenium for dynamic content
+### Selenium for dynamic content
 
 Beautiful Soup is a **parser**—it converts HTML strings into navigable objects. It does **not** execute JavaScript or render dynamic content. Dynamic websites require a **rendering engine** (browser) to execute JavaScript.
 
@@ -210,7 +210,7 @@ soup = BeautifulSoup(html, 'lxml')
 data = soup.find_all('div', class_='content')
 ```
 
-### 5.2. Finding hidden data sources
+### Finding hidden data sources
 
 Instead of rendering full pages, an efficient alternative is to locate where dynamic sites store data. This would even faster than healdess browsing, and would get clean structured data, while reducing load on target side.
 
@@ -226,7 +226,7 @@ Location 2: XHR/Fetch API Requests:
 4. Inspect requests for JSON data endpoints
 5. Extract data directly from API responses
 
-### 5.3. Scraping decision tree
+### Scraping decision tree
 
 ```
 Need to scrape a website?
@@ -251,9 +251,9 @@ scraping     page source as JSON?
 ```
 
 
-## 6. Automation and Scheduling
+## Automation and Scheduling
 
-### 6.1. Cron Jobs
+### Cron Jobs
 Time-based job scheduler for automating script execution.
 
 **Syntax Pattern:**
@@ -273,7 +273,7 @@ Example:
 0 9 * * 1 /usr/bin/python3 /path/to/scraper.py
 ```
 
-### 6.2. Monitoring and Alerting
+### Monitoring and Alerting
 
 Use Cases:
 - Price drop notifications
@@ -286,9 +286,9 @@ Implementation:
 - Log all scrapes for audit trail
 
 
-## 7. Scraping considerations
+## Scraping considerations
 
-### 7.1. Anti-Scraping Measures
+### Anti-Scraping Measures
 
 | Measure | Description | Mitigation |
 |---------|-------------|------------|
@@ -298,7 +298,7 @@ Implementation:
 | **Dynamic Content** | JavaScript-rendered content | Selenium, Playwright |
 | **Honeypots** | Hidden traps for bots | Careful element selection |
 
-### 7.2. Ethical and Legal Considerations
+### Ethical and Legal Considerations
 
 **Robots.txt:**
 - File indicating which pages can be scraped
