@@ -3,7 +3,7 @@
 
 A data mart is a structure/access pattern specific to data warehouse environments. The data mart is a subset of the data warehouse that focuses on a specific business line, department, subject area, or team. Whereas data warehouses have an enterprise-wide depth, the information in data marts pertains to a single department. In some deployments, each department or business unit is considered the owner of its data mart, including all the hardware, software, and data. This enables each department to isolate the use, manipulation, and development of their data. In other deployments where conformed dimensions are used, this business unit ownership will not hold true for shared dimensions like customer, product, etc.
 
-!(600x_)[Data Mart](images/data_engineering__data_mart.png)
+!(600x_)[Data Mart](images/data_mart.png)
 
 Warehouses and data marts are built because the information in the database is not organized in a way that makes it readily accessible. This organization requires queries that are too complicated, difficult to access or resource intensive.
 

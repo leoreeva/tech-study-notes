@@ -19,12 +19,12 @@ Adapters can not only convert data into various formats but can also help object
 ### Structure
 
 #### Object adapter
-![Object adapter structure](images/software_design__adapter1.png)
+![Object adapter structure](images/adapter1.png)
 
 The client contains existing logic and should remain unchanged. It depends only on a client interface, which defines a stable contract. The service provides the needed functionality but exposes an incompatible interface, so it cannot be used directly. The adapter implements the client interface, wraps the service, and translates calls and data between the two. As a result, the client stays decoupled from concrete services, and new or changed services can be integrated without modifying client code.
 
 #### Class adapter
-![Class adapter structure](images/software_design__adapter2.png)
+![Class adapter structure](images/adapter2.png)
 
 The Class Adapter doesn't need to wrap any objects because it inherits behaviors from both the client and the service. The adaptation happens within the overridden methods. The resulting adapter can be used in place of an existing client class.
 
@@ -45,7 +45,7 @@ A facade is a class that provides a simple interface to a complex subsystem whic
 It might provide limited functionality in comparison to working with the subsystem directly; however, it includes only those features that clients really care about. It's handy when a sophisticated library has dozens of features, but you just need a tiny bit of them.
 
 ### Structure
-![facade1](images/software_design__facade1.png)
+![facade1](images/facade1.png)
 
 - The Facade provides convenient access to a particular part of the subsystem's functionality. It knows where to direct the client's request and how to operate all the moving parts.
 - Additional Facade classes can be created to prevent polluting a single facade with unrelated features that might make it yet another complex structure; they can be used by both clients and other facades.

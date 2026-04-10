@@ -3,7 +3,7 @@
 
 ## Imperative vs Declarative
 
-!(700x_)[Programming paradigms](images/cs_fundamentals__programming_paradigms.png)
+!(700x_)[Programming paradigms](images/programming_paradigms.png)
 
 Programming paradigms describe coding on different levels of abstraction:
 - **imperative**: concerned with how to do it, not what to do. C, Java, Python, and most other programming languages are imperative. As a rule, if it has explicit loops (for, while, repeat) that change variables with explicit assignment operations at each loop, then it's imperative.

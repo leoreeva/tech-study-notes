@@ -3,21 +3,21 @@
 
 Data engineering / software engineering resources (or even personal interests, not directly related to tech). Useful for interviews or just personal knowledge.
 
+It's built with [Quarkdown](https://github.com/iamgio/quarkdown).
+
 > **Work in progress**: This is an ongoing collection based on my knowledge and interests. Many topics may be intentionally skipped or not yet covered. Contributions are welcome!
 
-## About This Project
 
-This is a personal knowledge base built with [Quarkdown](https://github.com/iamgio/quarkdown), a powerful Markdown-based typesetting system.
+### Qwarkdown commands
 
-### Compiling
-
-To compile this document:
 ```bash
+# compile
 quarkdown c main.qd
-```
 
-For live preview during editing:
-```bash
+# preview
+quarkdown c main.qd -p
+
+# live preview while editing
 quarkdown c main.qd -p -w
 ```
 
@@ -31,4 +31,4 @@ Contributions are welcome! Feel free to:
 
 ### License
 
-This content is provided as-is for educational purposes. See individual files for specific licenses or attribution requirements.
+Add a license...

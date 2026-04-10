@@ -23,12 +23,12 @@ Usually, iterators provide one primary method for fetching elements of the colle
 All iterators must implement the same interface. This makes the client code compatible with any collection type or any traversal algorithm as long as there's a proper iterator. If you need a special way to traverse a collection, you just create a new iterator class, without having to change the collection or the client.
 
 Example:
-![Iterator example](images/software_design__iterator2.png)
+![Iterator example](images/iterator2.png)
 
 This way, the iterator pattern lets you traverse different data structure, even if some of them are unknown beforehand; also complexity is hidden from the client.
 
 ### Structure
-![Iterator structure](images/software_design__iterator1.png)
+![Iterator structure](images/iterator1.png)
 
 ### Drawbacks
 - Can be an overkill if your app only works with simple collections
@@ -121,7 +121,7 @@ Whenever an event happens to the publisher, it goes over its subscribers and cal
 If you have multiple publisher, even them can implement same interface, so that subscribers can observe them with same methods.
 
 ### Structure
-![Observe structure](images/software_design__observer1.png)
+![Observe structure](images/observer1.png)
 - The Publisher issues events of interest to other objects. These events occur when the publisher changes its state or executes some behaviors. Publishers contain a subscription infrastructure that lets new subscribers join and current subscribers leave the list
 - When a new event happens, the publisher goes over the subscription list and calls the notification method declared in the subscriber interface on each subscriber object.
 - The Subscriber interface declares the notification interface. In most cases, it consists of a single update method. The method may have several parameters that let the publisher pass some event details along with the update.

@@ -34,7 +34,7 @@ Snowflake's architecture is a hybrid of more traditional:
 - **Shared-disk** database architectures; uses a central data repository for persisted data that is accessible from all compute nodes in the platform (benefit: **data management simplicity**)
 - **Shared-nothing** database architecture; processes queries using MPP (massively parallel processing) compute clusters where each node in the cluster stores a portion of the entire data set locally (benefit: **performance and scale-out**)
 
-!(600x_)[Snowflake Architecture](images/cloud_certifications__snowpro_core__architecture.png)
+!(600x_)[Snowflake Architecture](images/snowpro_core__architecture.png)
 
 Snowflake's unique architecture consists of three key **layers**:
 

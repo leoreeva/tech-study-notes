@@ -12,10 +12,10 @@
 3. **Process and analyze**: the data is transformed from raw form into actionable information
 4. **Explore and visualize**: convert the results of the analysis into a format that is easy to draw insights from and to share with colleagues
 
-Some of the available services at each step:
+Some of the :
 
-!(600x_)[GCP Services](images/cloud_certifications__gcp_pde__services.png)
-*[(Image source)](https://medium.com/google-cloud/bigquery-explained-overview-357055ecfda3)*
+![GCP Services](images/gcp_pde__services.png "Some of the available services at each step [(source)](https://cloud.google.com/products)")
+
 
 ---
 

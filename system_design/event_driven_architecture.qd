@@ -7,8 +7,7 @@ An **event** is a change in state, or an update, like an item being placed in a 
 
 Event-driven architectures have three key components: event producers, event routers, and event consumers. A producer publishes an event to the router, which filters and pushes the events to consumers. Producer services and consumer services are decoupled, which allows them to be scaled, updated, and deployed independently.
 
-!(600x_)[Event-Driven Architecture](images/system_design__event_driven_architecture.png)
-*[(Image source)](https://hazelcast.com/foundations/event-driven-architecture/event-driven-architecture/)*
+![Event-Driven Architecture](images/event_driven_architecture.png "High-level example of an event-driven architecture [(source)](https://hazelcast.com/foundations/event-driven-architecture/event-driven-architecture/)")
 
 The main **advantages** of event-driven architecture are improved responsiveness, scalability, and agility in business. The ability to respond to real-time information and quickly and easily add new services and analytics significantly improves business processes and the customer experience.
 
@@ -60,8 +59,7 @@ Apache Kafka is an open source, distributed, event streaming platform that proce
 
 ### Architecture
 
-!(600x_)[Kafka Architecture](images/system_design__kafka_architecture.png)
-*[(Image source)](https://medium.com/@buttraheel6/understanding-apache-kafka-a-deep-dive-into-its-architecture-9fed765507a3/)*
+![Kafka Architecture](images/kafka_architecture.png "Representation of Kafka internals [(source)](https://medium.com/@buttraheel6/understanding-apache-kafka-a-deep-dive-into-its-architecture-9fed765507a3/)")
 
 **Topics**. Data is organized into topics, which are essentially feeds of messages. Topics can be thought of as a category or a stream of data. Each message in Kafka is a key-value pair, with also a timestamp. Topics are partitioned to enable parallel processing and scalability.
 
@@ -94,8 +92,7 @@ Producers can choose to receive acknowledgment of data writes:
 
 Offsets play a crucial role in managing the position of consumers and ensuring that they can correctly process messages in the right order. Offsets won't be reused, they keep increasing incrementally as you send messages into your Kafka topic; that also means the order of messages is guaranteed only within a partition but not across partitions.
 
-!(600x_)[Kafka Partitions](images/system_design__kafka_partitions.png)
-*[(Image source)](https://eryilmaz0.medium.com/designing-event-consumers-everything-about-commit-offsets-in-kafka-23d3f88472bd/)*
+![Kafka Partitions](images/kafka_partitions.png "Representation of Kafka topic and partitions [(source)](https://eryilmaz0.medium.com/designing-event-consumers-everything-about-commit-offsets-in-kafka-23d3f88472bd/)")
 
 **Committing an offset** means saving the offset information to kafka brokers. This process is used to keep track of which messages have been successfully processed by the consumer. If the consumer restarts or crashes, it can resume processing from the last committed offset, ensuring that messages are not reprocessed or skipped.
 

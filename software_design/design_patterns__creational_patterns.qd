@@ -17,7 +17,7 @@ All implementations of the Singleton have these two steps in common:
 - Make the default constructor private, to prevent other objects from using the `new` operator with the Singleton class.
 - Create a static creation method that acts as a constructor. Under the hood, this method calls the private constructor to create an object and saves it in a static field. All following calls to this method return the cached object.
 
-![Singleton structure](images/software_design__singleton1.png)
+![Singleton structure](images/singleton1.png)
 
 ### Drawbacks
 - Singleton is often considered an **anti-pattern**, because it creates a global state and hidden dependencies, making code harder to test (many test frameworks rely on inheritance when producing mock objects), to understand (because of hidden dependencies), to parallelize (because of shared state) and more coupled. **Dependency injection** is often a better alternative.
@@ -37,7 +37,7 @@ The pattern delegates the cloning process to the actual objects that are being c
 
 An object that supports cloning is called a prototype. Its clone method creates an object of the current class and carries over all of the field values of the old object into the new one. 
 
-![Prototype structure](images/software_design__prototype1.png)
+![Prototype structure](images/prototype1.png)
 
 When your objects have dozens of fields and hundreds of possible configurations, cloning them might serve as an **alternative to subclassing**: instead of having multiple dummy subclasses that match some configuration, the client can simply look for an appropriate prototype and clone it.
 
@@ -60,9 +60,9 @@ The pattern suggests that you replace direct object construction calls (using th
 
 Creator and product classes for this example:
 
-![Factory method creator classes](images/software_design__factory_metod1.png)
+![Factory method creator classes](images/factory_metod1.png)
 
-![Factory method product classes](images/software_design__factory_metod2.png)
+![Factory method product classes](images/factory_metod2.png)
 
 The client doesn't see a difference between the actual products returned by various subclasses; it treats all the products as abstract Transport. It knows they are supposed to have the deliver method, but exactly how it works isn't important to the client.
 
@@ -70,7 +70,7 @@ It's clear that this pattern is useful when you don't know beforehand the exact 
 
 ### Structure
 
-![Factory method Structure](images/software_design__factory_metod3.png)
+![Factory method Structure](images/factory_metod3.png)
 
 The Creator class declares the factory method that returns new product objects. nNote that the factory method doesn't have to create new instances all the time; it can also return existing objects from a cache, an object pool, or another source.
 

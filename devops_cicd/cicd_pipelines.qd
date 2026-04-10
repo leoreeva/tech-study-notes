@@ -3,7 +3,7 @@
 
 CI/CD is an automated workflow that replaces manual steps (human intervention needed to get new code from a commit into production, encompassing the build, test, deploy infrastructure provisioning) with reliable pipelines. It falls under DevOps; it accelerates software delivery, reduces downtime, and improves product quality through automation.
 
-!(600x_)[CI/CD Flow](images/devops_cicd__cicd_flow.png)
+!(600x_)[CI/CD Flow](images/cicd_flow.png)
 
 ---
 
