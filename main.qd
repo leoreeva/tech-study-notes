@@ -1,34 +1,29 @@
 .docname {Tech Study Notes}
 .include {docs}
 
-Data engineering / software engineering resources (or even personal interests, not directly related to tech). Useful for interviews or just personal knowledge.
+A growing collection of notes on data engineering, software engineering, computer science, and related technical subjects.
 
-It's built with [Quarkdown](https://github.com/iamgio/quarkdown).
+This project is a personal study notebook and reference library for interview preparation, concept review, and long-term learning.
 
-> **Work in progress**: This is an ongoing collection based on my knowledge and interests. Many topics may be intentionally skipped or not yet covered. Contributions are welcome!
+> **Work in progress**  
+> This is an evolving collection based on my knowledge and interests. Some topics are still incomplete or not yet covered.
 
+## Inside this notebook
 
-### Qwarkdown commands
+Topics include:
 
-```bash
-# compile
-quarkdown c main.qd
+- computer science fundamentals
+- databases and data engineering
+- software design and architecture
+- system design
+- DevOps and CI/CD
+- cloud certifications
+- data visualization
+- OSINT
+- deep web technologies
 
-# preview
-quarkdown c main.qd -p
+## How to use it
 
-# live preview while editing
-quarkdown c main.qd -p -w
-```
+The content is organized by topic, so it can be read either as a reference or as a study guide.
 
-### Contributing
-
-Contributions are welcome! Feel free to:
-- Add new topics or sections
-- Improve existing content
-- Fix errors or typos
-- Suggest better explanations or examples
-
-### License
-
-Add a license...
+Some notes are brief summaries, while others go deeper into concepts, patterns, and trade-offs.
