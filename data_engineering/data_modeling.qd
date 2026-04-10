@@ -15,19 +15,19 @@ There are three main types of data models, from high-level planning to physical 
 
 Provides a high-level view of the data. This model defines key business entities (e.g., customers, products, and orders) and their relationships without getting into technical details.
 
-!(600_)[Conceptual Data Model](images/cdm.png)
+![Conceptual Data Model](images/cdm.png)
 
 ### Logical Data Model
 
 Defines how the data will be structured. This model focuses on data organization without being tied to any specific database or technology. It includes detailed information about the data's attributes, relationships, and constraints, thus offering a bridge between business requirements and the physical implementation of the data.
 
-!(600_)[Logical Data Model](images/ldm.png)
+![Logical Data Model](images/ldm.png)
 
 ### Physical Data Model
 
 Represents how data is actually stored in a database. This model defines the specific table structures, indexes, and storage mechanisms required to optimize performance and ensure data integrity. It translates the logical design into a format suitable for database systems.
 
-!(600_)[Physical Data Model](images/pdm.png)
+![Physical Data Model](images/pdm.png)
 
 ---
 
@@ -84,13 +84,13 @@ One of the most common techniques used to represent data. Three key elements:
 - Relationships (how these entities interact with each other). Can be one-to-many, many-to-many
 - Attributes (properties of the entities).
 
-!(600_)[ER Modeling](images/modeling_er.png)
+![ER Modeling](images/modeling_er.png)
 
 ### Dimensional Modeling
 
 Widely used in data warehousing and analytics, where data is often represented in terms of facts and dimensions.
 
-!(600_)[Dimensional Modeling](images/modeling_dimensional.png)
+![Dimensional Modeling](images/modeling_dimensional.png)
 
 Most common schemas are star and snowflake schemas (see below).
 
@@ -100,7 +100,7 @@ Used to represent complex systems, where data and the functions that operate on 
 
 This approach is particularly beneficial in object-oriented programming (OOP) languages like Java and Python, where data models can be directly mapped to classes and objects.
 
-!(600_)[OOP Modeling](images/modeling_oop.png)
+![OOP Modeling](images/modeling_oop.png)
 
 ### NoSQL and Document-Based Modeling
 
@@ -153,7 +153,7 @@ The star schema design is optimized for querying large data sets, maintaining hi
 
 A star schema has a single fact table in the center, containing business "facts" (like transaction amounts and quantities). The fact table connects to multiple other dimension tables along "dimensions" like time, or product. Star schemas enable users to slice and dice the data however they see fit, typically by joining two or more fact tables and dimension tables together.
 
-!(600_)[Star Schema](images/star_schema.png)
+![Star Schema](images/star_schema.png)
 
 Star schemas denormalize data, which means adding redundant columns to some dimension tables to make querying and working with the data faster and easier. The purpose is to trade some redundancy (duplication of data) in the data model for increased query speed, by avoiding computationally expensive join operations. In this model, the fact table is normalized but the dimensions tables are not. That is, data from the fact table exists only on the fact table, but dimensional tables may hold redundant data.
 
@@ -184,7 +184,7 @@ Dimension tables are generally assigned a surrogate primary key, usually a singl
 
 "Snowflaking" is a method of normalizing the dimension tables in a star schema. When it is completely normalized along all the dimension tables, the resultant structure resembles a snowflake with the fact table in the middle. The principle behind snowflaking is normalization of the dimension tables by removing low cardinality attributes and forming separate tables.
 
-!(600_)[Star vs Snowflake Schema](images/star_vs_snowflake_schema.png)
+![Star vs Snowflake Schema](images/star_vs_snowflake_schema.png)
 
 The snowflake schema is similar to the star schema. However, in the snowflake schema, dimensions are normalized into multiple related tables, whereas the star schema's dimensions are denormalized with each dimension represented by a single table. A complex snowflake shape emerges when the dimensions of a snowflake schema are elaborate, having multiple levels of relationships, and the child tables have multiple parent tables ("forks in the road").
 

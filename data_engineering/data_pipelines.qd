@@ -19,7 +19,7 @@ Both are composed of three steps:
 
 ### Key Differences
 
-!(600x_)[ETL vs ELT](images/etl_elt.png)
+![ETL vs ELT](images/etl_elt.png)
 
 | Aspect | ETL | ELT |
 | ------ | --- | --- |

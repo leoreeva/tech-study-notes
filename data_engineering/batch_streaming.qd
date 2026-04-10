@@ -19,7 +19,7 @@ Human involvement is usually limited to configuring the initial parameters, trou
 
 There are a variety of ETL tools for batch processing. A common tool is Apache Airflow, which allows users to quickly build up data orchestration pipelines that can run on a set schedule and have simple monitoring. Explore different tools to find the one that best fits your business needs!
 
-!(600x_)[Batch Processing](images/batch.png)
+![Batch Processing](images/batch.png)
 
 ---
 
@@ -39,4 +39,4 @@ Streaming systems often include capabilities for constant monitoring and managin
 
 One popular framework is AWS Kinesis, which is combined with Lambda. Amazon Kinesis is a cloud-based service that allows you to collect, process, and analyze real-time, streaming data, whereas Lambda supports complex functions and automation.
 
-!(600x_)[Streaming Processing](images/streaming.png)
+![Streaming Processing](images/streaming.png)

@@ -25,7 +25,7 @@ Teams of any size can use this feature branching, because it permits multiple de
 
 This workflow doesn't add any new concepts beyond the Feature Branch Workflow, while it assigns specific roles to different branches and defines how and when they should interact. Here you would use a develop branch with feature branches.
 
-!(600x_)[GitFlow](images/gitflow.png)
+![GitFlow](images/gitflow.png)
 
 The main branch should always be releasable to production, and there should never be untested / incomplete code on it. When the develop branch is ready to go to production, a contributor creates a release branch where testing and bug fixing occur before being merged back to the develop branch.
 
@@ -37,7 +37,7 @@ The release branch makes the code review process easier, because there's a dedic
 
 Trunk-based development facilitates concurrent development on a single branch called trunk. Developers work directly on trunk or on short-lived branches, and when they are ready to release, they use release branches.
 
-!(600x_)[Trunk Based](images/trunk_based.png)
+![Trunk Based](images/trunk_based.png)
 
 Trunk-based development decreases the likelihood of merge conflicts and keeps code clean, because there are many frequent, small merges made each day.
 

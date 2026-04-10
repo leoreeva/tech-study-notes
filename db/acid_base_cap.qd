@@ -7,7 +7,7 @@ In the context of databases and data storage systems, a **transaction** is any o
 
 ## Overview
 
-!(600x_)[ACID vs BASE](images/acid_base.png)
+![ACID vs BASE](images/acid_base.png)
 
 ACID and BASE are acronyms for different database properties representing how the database behaves during online transaction processing.
 
