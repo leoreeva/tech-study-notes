@@ -14,11 +14,12 @@ image_extensions = {
 # Create media folder if it does not exist
 media_dir.mkdir(parents=True, exist_ok=True)
 
+# First pass: copy images to media and remove originals
 for file_path in root.rglob("*"):
     if not file_path.is_file():
         continue
 
-    # Skip files already inside A/media
+    # Skip files already inside media
     if media_dir in file_path.parents:
         continue
 
@@ -36,5 +37,24 @@ for file_path in root.rglob("*"):
 
         shutil.copy2(file_path, destination)
         print(f"Copied: {file_path} -> {destination}")
+
+        # Remove original image after successful copy
+        file_path.unlink()
+        print(f"Deleted original: {file_path}")
+
+# Second pass: remove empty folders, deepest first
+for dir_path in sorted(root.rglob("*"), key=lambda p: len(p.parts), reverse=True):
+    if not dir_path.is_dir():
+        continue
+
+    # Never remove the root folder or media folder
+    if dir_path == root or dir_path == media_dir:
+        continue
+
+    try:
+        next(dir_path.iterdir())
+    except StopIteration:
+        dir_path.rmdir()
+        print(f"Removed empty folder: {dir_path}")
 
 print("Done.")
