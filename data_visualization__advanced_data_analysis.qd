@@ -414,26 +414,26 @@ Year
 
 ---
 
-## 10. Annotations and Context
+## Annotations and Context
 
-### 10.1. Types of Annotations
+### Types of Annotations
 
-#### 10.1.1. Mark Annotations
+#### Mark Annotations
 - Attached to specific data points
 - Contextual information about that value
 - Updates position if data changes
 
-#### 10.1.2. Point Annotations
+#### Point Annotations
 - Fixed position on visualization
 - Highlight specific locations
 - Manual placement
 
-#### 10.1.3. Area Annotations
+#### Area Annotations
 - Cover regions of the visualization
 - Explain patterns or groupings
 - Call out sections
 
-### 10.2. Best Practices for Annotations
+### Best Practices for Annotations
 - Keep text concise and clear
 - Use to explain anomalies or key insights
 - Don't overcrowd the visualization
@@ -442,11 +442,11 @@ Year
 
 ---
 
-## 11. Data Storytelling
+## Data Storytelling
 
-### 11.1. Narrative Structure
+### Narrative Structure
 
-#### 11.1.1. The Data Story Arc
+#### The Data Story Arc
 1. **Setup**: Context and baseline
 2. **Conflict**: Problem or question
 3. **Rising Action**: Analysis and exploration
@@ -454,30 +454,30 @@ Year
 5. **Falling Action**: Implications and recommendations
 6. **Resolution**: Action items or conclusions
 
-### 11.2. Story Points
+### Story Points
 
-#### 11.2.1. Sequential Storytelling
+#### Sequential Storytelling
 - Guide users through analysis step-by-step
 - Build context gradually
 - Progressive disclosure of complexity
 - Each point reveals new information
 
-#### 11.2.2. Interactive Storytelling
+#### Interactive Storytelling
 - Allow user exploration within narrative
 - Branching paths based on interests
 - Drill-down capabilities at key points
 - Filter and highlight to focus attention
 
-### 11.3. Effective Data Communication
+### Effective Data Communication
 
-#### 11.3.1. Key Principles
+#### Key Principles
 1. **Start with Questions**: What does the audience need to know?
 2. **Show, Don't Tell**: Let visualizations speak
 3. **Highlight Insights**: Direct attention to findings
 4. **Provide Context**: Baseline comparisons matter
 5. **Recommend Actions**: Data without action is just numbers
 
-#### 11.3.2. Common Pitfalls to Avoid
+#### Common Pitfalls to Avoid
 - **Chart Junk**: Excessive decoration distracts
 - **Misleading Scales**: Can distort perceptions
 - **Overloading**: Too much information at once
@@ -486,11 +486,11 @@ Year
 
 ---
 
-## 12. Performance and Optimization
+## Performance and Optimization
 
-### 12.1. Query Performance
+### Query Performance
 
-#### 12.1.1. Strategies for Large Datasets
+#### Strategies for Large Datasets
 1. **Extract vs. Live Connections**
    - **Extracts**: Pre-aggregated, faster performance
    - **Live**: Real-time data, always current
@@ -506,45 +506,45 @@ Year
    - Use appropriate granularity
    - Avoid unnecessary detail levels
 
-### 12.2. Dashboard Performance
+### Dashboard Performance
 
-#### 12.2.1. Loading Optimization
+#### Loading Optimization
 - **Limit Initial Load**: Show summary first
 - **Progressive Loading**: Load critical elements first
 - **Pagination**: Break large tables into pages
 - **Data Blending**: Only blend when necessary
 
-#### 12.2.2. Interactive Performance
+#### Interactive Performance
 - **Debouncing**: Wait for user to finish input before updating
 - **Caching**: Store frequently accessed calculations
 - **Simplification**: Reduce complexity for real-time interactions
 
 ---
 
-## 13. Key Takeaways
+## Key Takeaways
 
-### 13.1. Calculations and Analysis
+### Calculations and Analysis
 - **Choose calculation type** based on context needs (table vs. database)
 - **Use appropriate ranking** for your analysis goals
 - **Apply statistical methods** to understand distributions
 - **Leverage forecasting** for predictive insights
 
-### 13.2. Data Relationships
+### Data Relationships
 - **Understand join types** and their impact on results
 - **Use unions** for similar data, **joins** for related data
 - **Validate join logic** to prevent data duplication or loss
 
-### 13.3. Geographic and Time Analysis
+### Geographic and Time Analysis
 - **Normalize map data** for accurate comparison
 - **Use appropriate time hierarchies** for your analysis
 - **Apply period comparisons** to identify trends
 
-### 13.4. Advanced Techniques
+### Advanced Techniques
 - **Dynamic sets and parameters** enable flexible analysis
 - **Annotations provide context** and highlight insights
 - **Data storytelling** transforms analysis into action
 
-### 13.5. Performance
+### Performance
 - **Optimize early** in the design process
 - **Balance interactivity** with performance
 - **Test with realistic data volumes**

@@ -1,4 +1,4 @@
-.docname {creating_an_effective_sock_puppet_for_osint_investigations}
+.docname {Creating an effective sock puppet for osint investigations}
 .include {docs}
 
 
@@ -59,15 +59,15 @@ Virtual machines are a great way to create an additional layer of privacy.  You 
 
 If you want to go another layer deep on your avatar, create a free blog on WordPress, Medium, or Blogger and link it to your social media profile.  Generate content both on social and your blog to increase credibility.  After a period of development, you will have a complex character that’s believable and valuable.
 
-## 10. Chrome Extensions
+## Chrome Extensions
 
 Part of remaining anonymous on the web is blocking all forms of tracking.  The two extensions I’d recommend of the top of my head are AdBlock and Disconnect Me.  These will stop ads from tracking you as well as all pull requests from social media sites.  Combined with a VPN, you should have what you need to search safely.
 
-## 11. Bonus
+## Bonus
 
 Once you’ve developed all of the above, you may want to verify yourself on Keybase and get involved in other opportunities such as Slack channels or Rocket Chats  This will grant you an opportunity to open a dialogue with your target or associates in an environment separate from social media.
 
-## 12. Things to Consider
+## Things to Consider
 
 It’s important to remember that you should be very careful before deploying your sock puppet.  If you use it too soon, you’ll lose credibility with your target or associates and you may not recover.  I recommend setting goals such as a certain number of Tweets, followers, blog posts, or months, etc. before creating plan to use it.  With that being said, the intent of your sock puppet should be dictated by the influence it creates organically.  Don’t steer your sock puppet in an unnatural direction.  Let it grow organically and deploy it in the direction it develops on it’s own.  That’s why it’s important to have multiple accounts.
 
@@ -75,6 +75,6 @@ Another thing to consider is forensic linguistics.  Try to make the content you 
 
 Some mistakes Wohl made was using stock images that were easily traceable through image search, not using Whois protection during domain registration, using his socks too soon, and not collecting OSINT/investigating himself before deployment. Read Aric Toler’s write up on this for lessons learned.
 
-## 13. Further Research
+## Further Research
 
 This post is closing in on 2000 words, which is quite concerning to me.  The OSINT community is already saturated with long form content that’s difficult to digest.  Keeping that in mind, I’d like to conduct an experiment of my own with this process and share the results in another medium.  I’ve been talking on Twitter about how I want to write an OSINT related book.  I think this is it.  I’ll be keeping everyone updated on the progress of this as I set up my sock puppet ecosystem, document, and write the results. Use this post as an introduction to the process and a precursor to the book.

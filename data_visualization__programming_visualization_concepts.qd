@@ -358,7 +358,7 @@ Process:
 
 ---
 
-## 10. Language Comparison Matrix
+## Language Comparison Matrix
 
 | Feature | Python (Matplotlib) | R (ggplot2) | JavaScript (Plotly) |
 |---------|---------------------|-------------|---------------------|
@@ -372,27 +372,27 @@ Process:
 
 ---
 
-## 11. Key Takeaways
+## Key Takeaways
 
-### 11.1. Programming Principles
+### Programming Principles
 - **Understand your data structure** before visualizing
 - **Choose appropriate geometries** for your data type
 - **Apply aesthetic mappings** thoughtfully
 - **Layer elements** to build complexity gradually
 
-### 11.2. Visualization Choices
+### Visualization Choices
 - **Match chart type to question** being answered
 - **Use statistical representations** for distributions
 - **Enable interactivity** for exploration
 - **Maintain accessibility** in all outputs
 
-### 11.3. Workflow
+### Workflow
 - **Prototype with sample data**
 - **Iterate on design** before finalizing
 - **Document your process**
 - **Test with real users**
 
-### 11.4. Cross-Language Concepts
+### Cross-Language Concepts
 - **Grammar of graphics** applies everywhere
 - **Coordinate systems** are universal
 - **Color theory** is language-agnostic

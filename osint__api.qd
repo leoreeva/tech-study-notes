@@ -500,11 +500,11 @@ async function getMessages() {
 ```
 
 
-## 10. Authentication & Security
+## Authentication & Security
 
-### 10.1. Common Authentication Methods
+### Common Authentication Methods
 
-#### 10.1.1. API Keys
+#### API Keys
 
 Simple key passed in header or query parameter:
 
@@ -512,7 +512,7 @@ Simple key passed in header or query parameter:
 Header: X-API-Key: your_api_key
 ```
 
-#### 10.1.2. Bearer Tokens
+#### Bearer Tokens
 
 Token-based authentication (OAuth 2.0):
 
@@ -520,7 +520,7 @@ Token-based authentication (OAuth 2.0):
 Header: Authorization: Bearer eyJhbGciOiJ...
 ```
 
-#### 10.1.3. Basic Authentication
+#### Basic Authentication
 
 Username and password (base64 encoded):
 
@@ -528,7 +528,7 @@ Username and password (base64 encoded):
 Header: Authorization: Basic dXNlcjpwYXNz
 ```
 
-### 10.2. Security Best Practices
+### Security Best Practices
 
 | Practice | Reason |
 |----------|--------|
@@ -538,7 +538,7 @@ Header: Authorization: Basic dXNlcjpwYXNz
 | **Use HTTPS only** | Encrypt data in transit |
 | **Implement rate limiting** | Prevent abuse |
 
-### 10.3. Client-Side Security Concern
+### Client-Side Security Concern
 
 **Never expose API keys in client-side code**:
 
@@ -553,19 +553,19 @@ const API_KEY = "sk_live_1234567890";
 **Solution**: Use server-side proxy to keep keys secure.
 
 
-## 11. Webhooks: Reverse APIs
+## Webhooks: Reverse APIs
 
-### 11.1. Concept
+### Concept
 
 **Webhooks** are "reverse APIs" - instead of you calling the API, the API calls you.
 
-### 11.2. How Webhooks Work
+### How Webhooks Work
 
 1. You register a URL endpoint with the service
 2. When an event occurs, the service sends an HTTP request to your URL
 3. Your application processes the incoming data
 
-### 11.3. Use Cases
+### Use Cases
 
 | Scenario | Webhook Action |
 |----------|----------------|
@@ -574,7 +574,7 @@ const API_KEY = "sk_live_1234567890";
 | Git push | GitHub triggers CI/CD pipeline |
 | New email | Email service notifies your app |
 
-### 11.4. Webhook Response
+### Webhook Response
 
 Your endpoint must return appropriate response:
 
@@ -588,9 +588,9 @@ response.end(twiml.toString());
 ```
 
 
-## 12. Building a Complete API Application
+## Building a Complete API Application
 
-### 12.1. Project Architecture
+### Project Architecture
 
 **Photo Collection App** ("Pickle" - Pick Your Pics):
 
@@ -607,9 +607,9 @@ response.end(twiml.toString());
 └─────────────────┘     └──────────────────┘     └─────────────────┘
 ```
 
-### 12.2. Components
+### Components
 
-#### 12.2.1. Incoming Message Handler (Webhook)
+#### Incoming Message Handler (Webhook)
 
 ```javascript
 exports.handler = function(context, event, callback) {
@@ -625,7 +625,7 @@ exports.handler = function(context, event, callback) {
 };
 ```
 
-#### 12.2.2. API Endpoint (Data Provider)
+#### API Endpoint (Data Provider)
 
 ```javascript
 exports.handler = async function(context, event, callback) {
@@ -655,7 +655,7 @@ exports.handler = async function(context, event, callback) {
 };
 ```
 
-#### 12.2.3. Frontend Integration
+#### Frontend Integration
 
 ```javascript
 async loadImages() {
@@ -664,7 +664,7 @@ async loadImages() {
 }
 ```
 
-### 12.3. Data Flow
+### Data Flow
 
 1. **User sends photo** via SMS to Twilio number
 2. **Twilio webhook** triggers your function
@@ -674,9 +674,9 @@ async loadImages() {
 6. **Gallery displays** user-submitted photos
 
 
-## 13. API Design Considerations
+## API Design Considerations
 
-### 13.1. RESTful Evaluation
+### RESTful Evaluation
 
 When designing an API, evaluate against REST constraints:
 
@@ -689,7 +689,7 @@ When designing an API, evaluate against REST constraints:
 | Uniform Interface | Resource URIs, CRUD operations | ⭕ |
 | Code on Demand | Not applicable | N/A |
 
-### 13.2. Key Takeaways
+### Key Takeaways
 
 1. **APIs abstract complexity** - You don't need to know implementation details
 2. **REST is the dominant standard** for web APIs
@@ -703,9 +703,9 @@ When designing an API, evaluate against REST constraints:
 10. **Constraints provide benefits** - REST constraints enable scalability
 
 
-## 14. Additional Resources
+## Additional Resources
 
-### 14.1. Tools Mentioned
+### Tools Mentioned
 
 - **cURL**: Command-line HTTP client
 - **REST Fox**: Lightweight API client
@@ -713,13 +713,13 @@ When designing an API, evaluate against REST constraints:
 - **Thunder Client**: VS Code API client extension
 - **jq**: JSON command-line processor
 
-### 14.2. Services Used
+### Services Used
 
 - **Spotify API**: Music data and streaming
 - **Twilio API**: SMS, voice, and messaging
 - **Vue.js**: Frontend framework
 
-### 14.3. Key Concepts to Explore Further
+### Key Concepts to Explore Further
 
 1. OAuth 2.0 authentication flows
 2. GraphQL as REST alternative
@@ -731,7 +731,7 @@ When designing an API, evaluate against REST constraints:
 8. Microservices and API gateways
 
 
-## 15. Summary
+## Summary
 
 **APIs (Application Programming Interfaces)** are contracts that enable software systems to communicate. They abstract implementation complexity while exposing controlled functionality. 
 

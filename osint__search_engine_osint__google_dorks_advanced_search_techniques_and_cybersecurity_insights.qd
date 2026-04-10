@@ -115,7 +115,7 @@ Dorking exploits:
 - Analyze server logs for unusual activity that may indicate malicious queries.
 
 
-## 10. Limitations and Risks of Google Dorking
+## Limitations and Risks of Google Dorking
 - Data Scope: It only works on publicly indexed data; private or encrypted data remains inaccessible.
 - False Positives: Queries may return irrelevant results if not crafted carefully.
 - Legal Risks: Misuse can lead to severe legal consequences.

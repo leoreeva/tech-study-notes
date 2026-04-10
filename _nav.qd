@@ -12,6 +12,9 @@
 ###! 💻 Software Design
 
 - [Design patterns](software_design__design_patterns.qd)
+    - [Creational patterns](software_design__design_patterns__creational_patterns.qd)
+    - [Structural patterns](software_design__design_patterns__structural_patterns.qd)
+    - [Behavioral patterns](software_design__design_patterns__behavioral_patterns.qd)
 - [Refactoring code](software_design__refactoring_code.qd)
 - [SOLID Principle](software_design__solid_principle.qd)
 - [Git workflows](software_design__git_workflows.qd)

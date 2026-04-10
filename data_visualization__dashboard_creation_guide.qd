@@ -435,29 +435,29 @@ A **dashboard** is a visual display of the most important information needed to 
 
 ---
 
-## 10. Security and Governance
+## Security and Governance
 
-### 10.1. Data Security
+### Data Security
 
-#### 10.1.1. Row-Level Security (RLS)
+#### Row-Level Security (RLS)
 - Users see only authorized data rows
 - Based on user attributes (department, region, role)
 - Applied automatically to all queries
 
-#### 10.1.2. Column-Level Security
+#### Column-Level Security
 - Restrict access to sensitive fields
 - Hide or mask confidential information
 - Different permissions for different user groups
 
-### 10.2. Data Governance
+### Data Governance
 
-#### 10.2.1. Metadata Management
+#### Metadata Management
 - **Data Dictionary**: Definitions of all fields and metrics
 - **Lineage Tracking**: Document data flow from source to dashboard
 - **Version Control**: Track changes to dashboards and data models
 - **Documentation**: User guides and technical specifications
 
-#### 10.2.2. Quality Monitoring
+#### Quality Monitoring
 - **Data Alerts**: Notify when metrics exceed thresholds
 - **Anomaly Detection**: Automated identification of unusual patterns
 - **Data Freshness**: Monitor refresh schedules and delays
@@ -465,31 +465,31 @@ A **dashboard** is a visual display of the most important information needed to 
 
 ---
 
-## 11. Testing and Validation
+## Testing and Validation
 
-### 11.1. Dashboard Testing
+### Dashboard Testing
 
-#### 11.1.1. Functional Testing:
+#### Functional Testing:
 - All filters work correctly
 - Drill-down paths function properly
 - Calculations produce correct results
 - Data refreshes update visualizations
 
-#### 11.1.2. Usability Testing:
+#### Usability Testing:
 - Users can find key information
 - Navigation is intuitive
 - Loading times are acceptable
 - Mobile experience is functional
 
-#### 11.1.3. Data Validation:
+#### Data Validation:
 - Cross-check totals with source systems
 - Verify calculations manually
 - Test edge cases (empty data, extreme values)
 - Validate date ranges and time zones
 
-### 11.2. User Acceptance
+### User Acceptance
 
-#### 11.2.1. Stakeholder Review:
+#### Stakeholder Review:
 - Confirm metrics align with business definitions
 - Validate design meets requirements
 - Ensure accessibility standards are met
@@ -497,11 +497,11 @@ A **dashboard** is a visual display of the most important information needed to 
 
 ---
 
-## 12. Deployment and Maintenance
+## Deployment and Maintenance
 
-### 12.1. Deployment Checklist
+### Deployment Checklist
 
-#### 12.1.1. Pre-Launch:
+#### Pre-Launch:
 - [ ] All data connections validated
 - [ ] Security permissions configured
 - [ ] Performance tested with full data volume
@@ -509,61 +509,61 @@ A **dashboard** is a visual display of the most important information needed to 
 - [ ] User training materials prepared
 - [ ] Rollback plan established
 
-#### 12.1.2. Post-Launch:
+#### Post-Launch:
 - [ ] Monitor usage analytics
 - [ ] Collect user feedback
 - [ ] Track performance metrics
 - [ ] Schedule regular reviews
 - [ ] Plan iterative improvements
 
-### 12.2. Maintenance Schedule
+### Maintenance Schedule
 
-#### 12.2.1. Daily:
+#### Daily:
 - Verify data freshness
 - Check for failed refreshes
 - Monitor error logs
 
-#### 12.2.2. Weekly:
+#### Weekly:
 - Review performance metrics
 - Update data sources if needed
 - Address user feedback
 
-#### 12.2.3. Monthly:
+#### Monthly:
 - Comprehensive data validation
 - Security audit
 - Usage analysis and optimization
 
-#### 12.2.4. Quarterly:
+#### Quarterly:
 - Strategic review of KPIs
 - Major feature enhancements
 - Training updates
 
 ---
 
-## 13. Best Practices for Effective Dashboards
+## Best Practices for Effective Dashboards
 
-### 13.1. Clarity and Simplicity
+### Clarity and Simplicity
 
 - **Prioritize Clarity**: Remove unnecessary elements
 - **Focus on Key Message**: Every visualization should answer a specific question
 - **Use Clear Labels**: Descriptive titles and axis labels
 - **Consistent Formatting**: Uniform colors, fonts, and styles
 
-### 13.2. Accurate Data Representation
+### Accurate Data Representation
 
 - **Avoid Misleading Scales**: Start axes at zero when appropriate
 - **Proper Proportions**: Visual size should match data values
 - **Consistent Intervals**: Maintain regular spacing
 - **Label Clearly**: Show units of measurement
 
-### 13.3. User Experience
+### User Experience
 
 - **Intuitive Navigation**: Easy to understand without training
 - **Responsive Feedback**: Show loading states and updates
 - **Error Handling**: Graceful handling of missing data
 - **Accessibility**: Support for screen readers and keyboard navigation
 
-### 13.4. Design Principles
+### Design Principles
 
 - **Color Usage**:
   - Use color purposefully, not decoratively
@@ -585,59 +585,59 @@ A **dashboard** is a visual display of the most important information needed to 
 
 ---
 
-## 14. Key Takeaways
+## Key Takeaways
 
-### 14.1. Planning
+### Planning
 - **Start with objectives**, not tools
 - **Know your audience** and their needs
 - **Define success criteria** upfront
 
-### 14.2. Design
+### Design
 - **Prioritize clarity** over complexity
 - **Maintain consistency** across all elements
 - **Test for usability** with real users
 
-### 14.3. Data
+### Data
 - **Quality is critical**: Garbage in, garbage out
 - **Model for analysis**: Star schemas enable flexibility
 - **Plan for scale**: Design for growth
 
-### 14.4. Technology
+### Technology
 - **Choose appropriate tools** for your needs
 - **Optimize performance** for user experience
 - **Ensure security** from the start
 
-### 14.5. Process
+### Process
 - **Iterate and improve**: Dashboards evolve
 - **Document everything**: Enable maintenance
 - **Train users**: Maximize adoption and value
 
 ---
 
-## 15. Quick Reference: Dashboard Checklist
+## Quick Reference: Dashboard Checklist
 
-### 15.1. Before Building:
+### Before Building:
 - [ ] Objectives defined and documented
 - [ ] Audience needs assessed
 - [ ] KPIs selected and validated
 - [ ] Data sources identified
 - [ ] Success metrics established
 
-### 15.2. During Development:
+### During Development:
 - [ ] Data model designed (star schema)
 - [ ] Calculations verified
 - [ ] Chart types appropriate for data
 - [ ] Layout follows best practices
 - [ ] Interactive elements functional
 
-### 15.3. Before Launch:
+### Before Launch:
 - [ ] All data validated against sources
 - [ ] Performance tested
 - [ ] Security configured
 - [ ] Documentation complete
 - [ ] User training prepared
 
-### 15.4. Post-Launch:
+### Post-Launch:
 - [ ] Usage being monitored
 - [ ] Feedback collected
 - [ ] Regular maintenance scheduled
