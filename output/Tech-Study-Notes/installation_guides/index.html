@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="generator" content="Quarkdown">
+    <meta charset="UTF-8">
+    <meta name="description" content="aaa">
+    <meta name="author" content="Leonardo Riva, Leonardo Riva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="quarkdown:root-path" content="..">
+    <meta name="quarkdown:search-index" content="../search-index.json">
+    <title>03_installation_guides</title>
+    <script src="../script/quarkdown.js"></script>
+    <script>const capabilities = window.quarkdownCapabilities</script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="../theme/theme.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js"></script>
+    <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+    <link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet">
+    <script>capabilities.code = true;</script>
+    <style>
+
+</style>
+    <script>prepare(new DocsDocument());</script>
+<template id="sidebar-template"><nav class="sidebar" role="doc-toc"><ol><li data-target-id="qubes-os-installation" data-depth="2"><a href="#qubes-os-installation">Qubes OS Installation</a><ol><li data-target-id="overview" data-depth="3"><a href="#overview">Overview</a></li><li data-target-id="system-requirements" data-depth="3"><a href="#system-requirements">System Requirements</a></li><li data-target-id="installation-steps" data-depth="3"><a href="#installation-steps">Installation Steps</a></li><li data-target-id="using-whonix-with-qubes" data-depth="3"><a href="#using-whonix-with-qubes">Using Whonix with Qubes</a></li></ol></li><li data-target-id="tails-os-installation" data-depth="2"><a href="#tails-os-installation">Tails OS Installation</a><ol><li data-target-id="overview" data-depth="3"><a href="#overview">Overview</a></li><li data-target-id="system-requirements" data-depth="3"><a href="#system-requirements">System Requirements</a></li><li data-target-id="installation-steps" data-depth="3"><a href="#installation-steps">Installation Steps</a></li><li data-target-id="persistent-storage-optional" data-depth="3"><a href="#persistent-storage-optional">Persistent Storage (Optional)</a></li></ol></li><li data-target-id="ubuntu-with-tor-browser" data-depth="2"><a href="#ubuntu-with-tor-browser">Ubuntu with Tor Browser</a><ol><li data-target-id="why-ubuntu" data-depth="3"><a href="#why-ubuntu">Why Ubuntu?</a></li><li data-target-id="installation-steps" data-depth="3"><a href="#installation-steps">Installation Steps</a></li><li data-target-id="system-configuration" data-depth="3"><a href="#system-configuration">System Configuration</a></li></ol></li><li data-target-id="installation-comparison" data-depth="2"><a href="#installation-comparison">Installation Comparison</a></li><li data-target-id="troubleshooting-common-issues" data-depth="2"><a href="#troubleshooting-common-issues">Troubleshooting Common Issues</a><ol><li data-target-id="qubes-os" data-depth="3"><a href="#qubes-os">Qubes OS</a></li><li data-target-id="tails-os" data-depth="3"><a href="#tails-os">Tails OS</a></li><li data-target-id="ubuntu" data-depth="3"><a href="#ubuntu">Ubuntu</a></li></ol></li><li data-target-id="post-installation-security-checklist" data-depth="2"><a href="#post-installation-security-checklist">Post-Installation Security Checklist</a><ol><li data-target-id="all-systems" data-depth="3"><a href="#all-systems">All Systems</a></li><li data-target-id="qubes-os-specific" data-depth="3"><a href="#qubes-os-specific">Qubes OS Specific</a></li><li data-target-id="tails-specific" data-depth="3"><a href="#tails-specific">Tails Specific</a></li><li data-target-id="ubuntu-specific" data-depth="3"><a href="#ubuntu-specific">Ubuntu Specific</a></li></ol></li></ol></nav>
+</template>  </head>
+  <body class="quarkdown quarkdown-docs">
+    <header>
+      <aside class="margin-area"></aside>
+      <main>
+        <div class="search-wrapper">
+          <div class="search-field"><i class="bi bi-search"></i><input type="text" id="search-input" placeholder="Search" autocomplete="off"><kbd>/</kbd></div>
+        </div>
+      </main>
+      <aside class="margin-area"></aside>
+    </header>
+    <div class="content-wrapper">
+      <aside class="margin-area" id="margin-area-left">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+      <main><div class="page-margin-content page-margin-top-left" data-on-left-page="top-left" data-on-right-page="top-left"><div style="justify-content: flex-start; align-items: center; column-gap: 1.0px;" class="stack stack-row"><figure><img src="media/logo@-1898944846.png" alt="Tech-study-notes" style="height: 400.0px;" /></figure></div></div><style data-hidden="">figure figcaption, table caption {
+  font-style: italic !important;
+}</style><div class="page-margin-content page-margin-left-top" data-on-left-page="left-top" data-on-right-page="left-top"><nav role="navigation" data-role="page-list"><h3 id="-computer-science-fundamentals" data-decorative="">🧠 Computer Science Fundamentals</h3><ul><li><a href="../programming_paradigms">Programming paradigms</a></li><li><a href="../oop">OOP</a></li></ul><h3 id="-databases" data-decorative="">🧪 Databases</h3><ul><li><a href="../acid_base_cap">ACID, BASE, CAP</a></li><li><a href="../sql">SQL</a></li></ul><h3 id="-software-design" data-decorative="">💻 Software Design</h3><ul><li><a href="../design_patterns">Design patterns</a><ul><li><a href="../design_patterns__creational_patterns">Creational patterns</a></li><li><a href="../design_patterns__structural_patterns">Structural patterns</a></li><li><a href="../design_patterns__behavioral_patterns">Behavioral patterns</a></li></ul></li><li><a href="../refactoring_code">Refactoring code</a></li><li><a href="../solid_principle">SOLID Principle</a></li><li><a href="../git_workflows">Git workflows</a></li></ul><h3 id="-system-design" data-decorative="">🏛️ System Design</h3><ul><li><a href="../distributed_systems">Distributed systems</a></li><li><a href="../microservices">Microservices</a></li><li><a href="../event_driven_architecture">Event-driven architecture</a></li><li><a href="../api_design">API Design (RPC &amp; REST)</a></li></ul><h3 id="-data-engineering" data-decorative="">🔄 Data Engineering</h3><ul><li><a href="../data_modeling">Data modeling</a></li><li><a href="../data_pipelines">Data pipelines</a></li><li><a href="../batch_streaming">Batch vs Streaming</a></li><li><a href="../data_marts">Data marts</a></li></ul><h3 id="-devops-amp-cicd" data-decorative="">🚀 DevOps &amp; CI_CD</h3><ul><li><a href="../cicd_pipelines">CI_CD pipelines</a></li></ul><h3 id="-cloud-certifications" data-decorative="">☁️ Cloud Certifications</h3><ul><li><a href="../gcp_pde">GCP PDE (2023)</a></li><li><a href="../snowpro_core">SnowPro Core (2025)</a></li></ul><h3 id="-osint" data-decorative="">🕵️ OSINT</h3><ul><li><a href="../introduction">Introduction</a></li><li><a href="../sock_puppets">Sock Puppets</a></li><li><a href="../search_engine_osint">Search Engine OSINT</a></li><li><a href="../image_osint">Image OSINT</a></li><li><a href="../email_osint">Email OSINT</a></li><li><a href="../password_osint">Password OSINT</a></li><li><a href="../username_osint">Username OSINT</a></li><li><a href="../social_media_osint">SOCMINT</a></li><li><a href="../humint">HUMINT Fundamentals</a></li><li><a href="../scraping">Scraping Fundamentals</a></li><li><a href="../api">API</a></li><li><a href="../fact_checking">Fact-checking</a></li><li><a href="../threat_profiling">Threat profiling</a></li><li><a href="../tools">Tools</a></li></ul><h3 id="-deep-web" data-decorative="">🔒 Deep web</h3><ul><li><a href="../overview">Overview</a></li><li><a href="../technical_foundations">Technical Foundations: Tor &amp; PGP</a></li><li><a href="../installation_guides" aria-current="page">Installation Guides: OS Setup</a></li><li><a href="../practical_usage">Practical Usage: Browsing &amp; Communication</a></li><li><a href="../advanced_topics">Advanced Topics: Markets &amp; Analysis</a></li></ul><h3 id="-data-visualization" data-decorative="">📊 Data Visualization</h3><ul><li><a href="../data_visualization_fundamentals">Data Visualization Fundamentals</a></li><li><a href="../dashboard_creation_guide">Dashboard Creation and Data Analysis</a></li><li><a href="../advanced_data_analysis">Advanced Data Analysis and Calculations</a></li><li><a href="../programming_visualization_concepts">Programming Languages for Data Visualization</a></li></ul></nav></div><div class="page-margin-content page-margin-right-top" data-on-left-page="right-top" data-on-right-page="right-top"><h3 id="table-of-contents">On this page</h3><nav role="table-of-contents" data-role="table-of-contents"><ol><li data-target-id="qubes-os-installation" data-depth="2"><a href="#qubes-os-installation">Qubes OS Installation</a><ol><li data-target-id="overview" data-depth="3"><a href="#overview">Overview</a></li><li data-target-id="system-requirements" data-depth="3"><a href="#system-requirements">System Requirements</a></li><li data-target-id="installation-steps" data-depth="3"><a href="#installation-steps">Installation Steps</a></li><li data-target-id="using-whonix-with-qubes" data-depth="3"><a href="#using-whonix-with-qubes">Using Whonix with Qubes</a></li></ol></li><li data-target-id="tails-os-installation" data-depth="2"><a href="#tails-os-installation">Tails OS Installation</a><ol><li data-target-id="overview" data-depth="3"><a href="#overview">Overview</a></li><li data-target-id="system-requirements" data-depth="3"><a href="#system-requirements">System Requirements</a></li><li data-target-id="installation-steps" data-depth="3"><a href="#installation-steps">Installation Steps</a></li><li data-target-id="persistent-storage-optional" data-depth="3"><a href="#persistent-storage-optional">Persistent Storage (Optional)</a></li></ol></li><li data-target-id="ubuntu-with-tor-browser" data-depth="2"><a href="#ubuntu-with-tor-browser">Ubuntu with Tor Browser</a><ol><li data-target-id="why-ubuntu" data-depth="3"><a href="#why-ubuntu">Why Ubuntu?</a></li><li data-target-id="installation-steps" data-depth="3"><a href="#installation-steps">Installation Steps</a></li><li data-target-id="system-configuration" data-depth="3"><a href="#system-configuration">System Configuration</a></li></ol></li><li data-target-id="installation-comparison" data-depth="2"><a href="#installation-comparison">Installation Comparison</a></li><li data-target-id="troubleshooting-common-issues" data-depth="2"><a href="#troubleshooting-common-issues">Troubleshooting Common Issues</a><ol><li data-target-id="qubes-os" data-depth="3"><a href="#qubes-os">Qubes OS</a></li><li data-target-id="tails-os" data-depth="3"><a href="#tails-os">Tails OS</a></li><li data-target-id="ubuntu" data-depth="3"><a href="#ubuntu">Ubuntu</a></li></ol></li><li data-target-id="post-installation-security-checklist" data-depth="2"><a href="#post-installation-security-checklist">Post-Installation Security Checklist</a><ol><li data-target-id="all-systems" data-depth="3"><a href="#all-systems">All Systems</a></li><li data-target-id="qubes-os-specific" data-depth="3"><a href="#qubes-os-specific">Qubes OS Specific</a></li><li data-target-id="tails-specific" data-depth="3"><a href="#tails-specific">Tails Specific</a></li><li data-target-id="ubuntu-specific" data-depth="3"><a href="#ubuntu-specific">Ubuntu Specific</a></li></ol></li></ol></nav></div><h1 id="_03installationguides" data-decorative="">03_installation_guides</h1><h2 id="qubes-os-installation">Qubes OS Installation</h2><h3 id="overview">Overview</h3><p><strong>Qubes OS</strong> is a security-focused operating system that uses virtualization to isolate different applications and system components. It&rsquo;s based on Fedora Linux and uses the Xen hypervisor.</p><p><strong>Key Features:</strong></p><ul><li>Application isolation through virtualization</li><li>Disposable VMs for sensitive tasks</li><li>Integration with Tor via Whonix</li><li>Endorsed by security experts</li></ul><h3 id="system-requirements">System Requirements</h3><ul><li><strong>CPU:</strong> 64-bit Intel or AMD processor</li><li><strong>RAM:</strong> Minimum 4GB (8GB+ recommended)</li><li><strong>Storage:</strong> 30GB+ free space</li><li><strong>Graphics:</strong> Intel GPU recommended (best compatibility)</li></ul><h3 id="installation-steps">Installation Steps</h3><h4 id="step-1-download-qubes-os">Step 1: Download Qubes OS</h4><ol><li>Visit: <span class="codespan-content"><code>https://www.qubes-os.org</code></span></li><li>Navigate to Downloads</li><li>Download latest ISO (Qubes 4.x)</li><li>Verify checksum: <span class="codespan-content"><code>sha256sum Qubes-R4.x-x86_64.iso</code></span></li></ol><h4 id="step-2-create-bootable-media">Step 2: Create Bootable Media</h4><p><strong>Using Rufus (Windows):</strong></p><pre><code>1. Download Rufus from rufus.ie
+2. Insert USB drive (16GB+ recommended)
+3. Select Qubes OS ISO
+4. Partition scheme: GPT
+5. File system: FAT32
+6. Click &quot;Start&quot;</code></pre><p><strong>Using dd (Linux):</strong></p><pre><code class="language-bash">sudo dd if=Qubes-R4.x-x86_64.iso of=/dev/sdX bs=4M status=progress
+sync</code></pre><h4 id="step-3-install-qubes-os">Step 3: Install Qubes OS</h4><ol><li>Boot from USB (enable VT-x/AMD-V in BIOS)</li><li>Select &ldquo;Install Qubes OS&rdquo;</li><li>Choose language and keyboard layout</li><li>Select installation destination</li><li><strong>Important:</strong> For physical install, enable disk encryption</li><li>For VM install, disable encryption (causes boot issues)</li><li>Create user account</li><li>Begin installation (takes 30-60 minutes)</li></ol><h4 id="step-4-post-installation-setup">Step 4: Post-Installation Setup</h4><pre><code>1. Boot into Qubes OS
+2. Open Qubes Manager
+3. Update all TemplateVMs:
+   - fedora-xx
+   - debian-xx
+   - whonix-gw
+   - whonix-ws
+4. Create AppVMs as needed</code></pre><h3 id="using-whonix-with-qubes">Using Whonix with Qubes</h3><p>Whonix provides Tor connectivity within Qubes:</p><pre><code>1. Gateway (sys-whonix): Routes all traffic through Tor
+2. Workstation (anon-whonix): Isolated browsing environment</code></pre><p><strong>Setup:</strong></p><ol><li>Qubes creates Whonix VMs automatically</li><li>Set <span class="codespan-content"><code>sys-whonix</code></span> as NetVM for AppVMs that need Tor</li><li>Launch Tor Browser from anon-whonix</li></ol><h2 id="tails-os-installation">Tails OS Installation</h2><h3 id="overview">Overview</h3><p><strong>Tails</strong> (The Amnesic Incognito Live System) is a live operating system designed to leave no trace on your computer.</p><p><strong>Key Features:</strong></p><ul><li>Boots from USB/DVD</li><li>No installation required</li><li>All traffic routed through Tor</li><li>Includes built-in encryption tools</li><li>Leaves no digital footprint</li></ul><h3 id="system-requirements">System Requirements</h3><ul><li><strong>USB:</strong> 8GB minimum (16GB+ for persistent storage)</li><li><strong>RAM:</strong> 2GB minimum (4GB+ recommended)</li><li><strong>CPU:</strong> 64-bit processor</li></ul><h3 id="installation-steps">Installation Steps</h3><h4 id="step-1-download-tails">Step 1: Download Tails</h4><ol><li>Visit: <span class="codespan-content"><code>https://tails.boum.org</code></span></li><li>Download latest ISO</li><li>Verify using Firefox add-on or command line</li></ol><h4 id="step-2-create-bootable-usb">Step 2: Create Bootable USB</h4><p><strong>Windows &ndash; Universal USB Installer:</strong></p><pre><code>1. Download from pendrivelinux.com
+2. Run program (portable, no install)
+3. Select &quot;Tails&quot; from distribution list
+4. Browse to downloaded ISO
+5. Select USB drive letter
+6. Format as FAT32
+7. Click &quot;Create&quot;</code></pre><p><strong>Linux &ndash; Tails Verification:</strong></p><pre><code class="language-bash"># 2. Verify ISO signature
+sha256sum tails-amd64-5.x.iso
+# 3. Compare with published checksum</code></pre><h4 id="step-3-boot-tails">Step 3: Boot Tails</h4><ol><li>Insert USB drive</li><li>Reboot computer</li><li>Enter BIOS/UEFI boot menu (F12, F2, or Del)</li><li>Select USB drive</li><li>Boot into Tails</li></ol><h4 id="step-4-configure-tails">Step 4: Configure Tails</h4><p><strong>Startup Options:</strong></p><pre><code>1. More Options? [Yes]
+2. Set administrator password (for root access)
+3. Enable MAC address spoofing [CHECKED]
+4. Network configuration:
+   - No proxy: Direct Tor connection
+   - With proxy: Configure settings</code></pre><p><strong>Login Process:</strong></p><pre><code>1. System boots in ~30 seconds
+2. Desktop loads with Tor status indicator
+3. &quot;Onion Circuits&quot; shows current Tor nodes
+4. Tor Browser ready to use</code></pre><h4 id="step-5-configure-display-if-in-vm">Step 5: Configure Display (if in VM)</h4><pre><code>1. Applications &rarr; System Tools &rarr; Settings
+2. Hardware &rarr; Display
+3. Select appropriate resolution
+4. Click &quot;Apply&quot;
+5. Confirm changes within 30 seconds</code></pre><h3 id="persistent-storage-optional">Persistent Storage (Optional)</h3><p><strong>Note:</strong> Only for physical USB, not VMs</p><pre><code>1. Applications &rarr; Tails &rarr; Configure persistent volume
+2. Create passphrase
+3. Select what to save:
+   - Personal data folder
+   - Browser bookmarks
+   - PGP keys
+   - SSH keys
+   - Additional software
+4. Restart Tails to activate</code></pre><h2 id="ubuntu-with-tor-browser">Ubuntu with Tor Browser</h2><h3 id="why-ubuntu">Why Ubuntu?</h3><ul><li>Full-featured Linux distribution</li><li>User-friendly interface</li><li>Large community support</li><li>Good for daily use + Tor browsing</li></ul><h3 id="installation-steps">Installation Steps</h3><h4 id="step-1-download-ubuntu">Step 1: Download Ubuntu</h4><ol><li>Visit: <span class="codespan-content"><code>https://ubuntu.com</code></span></li><li>Navigate to Desktop → Download</li><li>Download LTS version (e.g., 22.04 LTS)</li><li>Choose 64-bit ISO</li></ol><h4 id="step-2-create-bootable-usb">Step 2: Create Bootable USB</h4><p><strong>Universal USB Installer:</strong></p><pre><code>1. Download USB installer
+2. Select Ubuntu from list
+3. Browse to ISO file
+4. Select USB drive
+5. Format as FAT32
+6. Set persistent file size (optional)
+7. Click &quot;Create&quot;</code></pre><h4 id="step-3-install-ubuntu">Step 3: Install Ubuntu</h4><p><strong>VMware Installation:</strong></p><pre><code>1. VMware Workstation &rarr; Create New VM
+2. Installer disc image file &rarr; Select Ubuntu ISO
+3. Guest OS: Linux
+4. Version: Ubuntu 64-bit
+5. Name: Ubuntu-Tor
+6. Disk size: 20GB minimum
+7. Memory: 2GB recommended
+8. Processors: 1-2 cores
+9. Finish and start VM</code></pre><p><strong>Physical Installation:</strong></p><pre><code>1. Boot from USB
+2. Select &quot;Install Ubuntu&quot;
+3. Choose language
+4. Select timezone
+5. Create user account:
+   - Name: Your choice
+   - Username: lowercase
+   - Password: Strong password
+6. Select installation type:
+   - Erase disk (for clean install)
+   - Or dual-boot with Windows
+7. Complete installation
+8. Reboot when finished</code></pre><h4 id="step-4-install-tor-browser">Step 4: Install Tor Browser</h4><pre><code class="language-bash"># 4. Open Firefox (pre-installed)
+1. Search: &quot;tor browser download&quot;
+2. Click first result: torproject.org
+3. Click &quot;Download Tor Browser&quot;
+4. Select Linux version (64-bit)
+5. Save file to Downloads
+
+# 5. Install Tor Browser
+cd ~/Downloads
+tar -xvf tor-browser-linux*.tar.xz
+cd tor-browser_en-US/
+./start-tor-browser.desktop</code></pre><p><strong>Alternative: Register as Application</strong></p><pre><code class="language-bash"># 6. Run setup script
+./tor-browser_en-US/Browser/start-tor-browser
+# 7. Accept prompts
+# 8. Tor Browser will start automatically</code></pre><h4 id="step-5-verify-tor-connection">Step 5: Verify Tor Connection</h4><pre><code>1. Tor Browser opens
+2. Click &quot;Connect&quot; (for direct connection)
+3. Or configure proxy settings
+4. Check connection:
+   - Visit: check.torproject.org
+   - Should display: &quot;Congratulations. This browser is configured to use Tor.&quot;</code></pre><h3 id="system-configuration">System Configuration</h3><h4 id="install-additional-tools">Install Additional Tools</h4><pre><code class="language-bash"># 9. Update system
+sudo apt update &amp;&amp; sudo apt upgrade -y
+
+# 10. Install useful tools
+sudo apt install -y \
+    keepassxc \
+    veracrypt \
+    bleachbit \
+    gnupg \
+    seahorse</code></pre><h4 id="configure-network-advanced">Configure Network (Advanced)</h4><pre><code class="language-bash"># 11. Route all traffic through Tor (optional, advanced)
+# 12. Install tor service
+sudo apt install tor
+
+# 13. Configure as system-wide proxy
+sudo nano /etc/tor/torrc
+# 14. Add: SocksPort 9050
+# 15. Add: ControlPort 9051
+
+# 16. Enable and start
+echo &quot;SocksPort 9050&quot; | sudo tee -a /etc/tor/torrc
+sudo systemctl enable tor
+sudo systemctl start tor</code></pre><h2 id="installation-comparison">Installation Comparison</h2><table><thead><tr><th>Feature</th><th>Qubes OS</th><th>Tails OS</th><th>Ubuntu</th></tr></thead><tbody><tr><td><strong>Install Time</strong></td><td>45-60 min</td><td>10-15 min</td><td>20-30 min</td></tr><tr><td><strong>Disk Space</strong></td><td>30GB+</td><td>8GB USB</td><td>20GB+</td></tr><tr><td><strong>Learning Curve</strong></td><td>High</td><td>Low</td><td>Medium</td></tr><tr><td><strong>Persistence</strong></td><td>Full OS</td><td>Optional</td><td>Full OS</td></tr><tr><td><strong>Tor Pre-configured</strong></td><td>Yes (Whonix)</td><td>Yes</td><td>No</td></tr><tr><td><strong>Best For</strong></td><td>Advanced users</td><td>Beginners/casual</td><td>Daily use</td></tr><tr><td><strong>Security Level</strong></td><td>Maximum</td><td>High</td><td>Good (with config)</td></tr></tbody></table><h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2><h3 id="qubes-os">Qubes OS</h3><p><strong>Problem:</strong> &ldquo;No bootable device found&rdquo;
+<strong>Solution:</strong> Enable virtualization in BIOS (VT-x/AMD-V)</p><p><strong>Problem:</strong> Installation stuck at &ldquo;Creating filesystem&rdquo;
+<strong>Solution:</strong> Check ISO integrity; use different USB drive</p><p><strong>Problem:</strong> VMs won&rsquo;t start
+<strong>Solution:</strong> Ensure sufficient RAM allocated; check Xen logs</p><h3 id="tails-os">Tails OS</h3><p><strong>Problem:</strong> Black screen after boot
+<strong>Solution:</strong> Add boot parameter: <span class="codespan-content"><code>nomodeset</code></span></p><p><strong>Problem:</strong> Tor won&rsquo;t connect
+<strong>Solution:</strong> Check system clock; try different bridges</p><p><strong>Problem:</strong> No WiFi detected
+<strong>Solution:</strong> Check hardware compatibility; use Ethernet adapter</p><h3 id="ubuntu">Ubuntu</h3><p><strong>Problem:</strong> &ldquo;Could not detect operating system&rdquo; in VMware
+<strong>Solution:</strong> Manually select &ldquo;Linux&rdquo; and &ldquo;Ubuntu 64-bit&rdquo;</p><p><strong>Problem:</strong> Tor Browser won&rsquo;t extract
+<strong>Solution:</strong> Ensure enough disk space; verify download integrity</p><p><strong>Problem:</strong> Screen resolution too small in VM
+<strong>Solution:</strong> Install VMware Tools or VirtualBox Guest Additions</p><h2 id="post-installation-security-checklist">Post-Installation Security Checklist</h2><h3 id="all-systems">All Systems</h3><ul><li class="task-list-item"><input disabled="" type="checkbox" />Change default passwords</li><li class="task-list-item"><input disabled="" type="checkbox" />Enable automatic updates</li><li class="task-list-item"><input disabled="" type="checkbox" />Configure firewall (if applicable)</li><li class="task-list-item"><input disabled="" type="checkbox" />Disable unnecessary services</li><li class="task-list-item"><input disabled="" type="checkbox" />Set up encrypted storage</li><li class="task-list-item"><input disabled="" type="checkbox" />Configure secure browser settings</li></ul><h3 id="qubes-os-specific">Qubes OS Specific</h3><ul><li class="task-list-item"><input disabled="" type="checkbox" />Update all TemplateVMs</li><li class="task-list-item"><input disabled="" type="checkbox" />Configure Whonix gateway</li><li class="task-list-item"><input disabled="" type="checkbox" />Create separate AppVMs for different activities</li><li class="task-list-item"><input disabled="" type="checkbox" />Set up disposable VMs</li><li class="task-list-item"><input disabled="" type="checkbox" />Configure backup system</li></ul><h3 id="tails-specific">Tails Specific</h3><ul><li class="task-list-item"><input disabled="" type="checkbox" />Verify MAC spoofing enabled</li><li class="task-list-item"><input disabled="" type="checkbox" />Set up persistent volume (if needed)</li><li class="task-list-item"><input disabled="" type="checkbox" />Configure additional security settings</li><li class="task-list-item"><input disabled="" type="checkbox" />Test shutdown procedure</li></ul><h3 id="ubuntu-specific">Ubuntu Specific</h3><ul><li class="task-list-item"><input disabled="" type="checkbox" />Install security updates</li><li class="task-list-item"><input disabled="" type="checkbox" />Configure automatic security patches</li><li class="task-list-item"><input disabled="" type="checkbox" />Set up full-disk encryption (if desired)</li><li class="task-list-item"><input disabled="" type="checkbox" />Install and configure firewall</li><li class="task-list-item"><input disabled="" type="checkbox" />Remove unnecessary pre-installed software</li></ul>
+        <div id="footnote-area">
+          <div class="footnote-rule"></div>
+        </div>
+        <div id="sibling-pages-button-area"></div>
+        <footer>
+          <div class="position-left"></div>
+          <div class="position-center"></div>
+          <div class="position-right"></div>
+        </footer>
+      </main>
+      <aside class="margin-area" id="margin-area-right">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+    </div>
+  </body>
+</html>

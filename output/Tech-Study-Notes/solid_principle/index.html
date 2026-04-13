@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="generator" content="Quarkdown">
+    <meta charset="UTF-8">
+    <meta name="description" content="aaa">
+    <meta name="author" content="Leonardo Riva, Leonardo Riva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="quarkdown:root-path" content="..">
+    <meta name="quarkdown:search-index" content="../search-index.json">
+    <title>SOLID Principle</title>
+    <script src="../script/quarkdown.js"></script>
+    <script>const capabilities = window.quarkdownCapabilities</script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="../theme/theme.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js"></script>
+    <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+    <link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet">
+    <script>capabilities.code = true;</script>
+    <style>
+
+</style>
+    <script>prepare(new DocsDocument());</script>
+<template id="sidebar-template"><nav class="sidebar" role="doc-toc"><ol><li data-target-id="s--single-responsibility-srp" data-depth="2"><a href="#s--single-responsibility-srp">S = Single Responsibility (SRP)</a></li><li data-target-id="o--open-closed-ocp" data-depth="2"><a href="#o--open-closed-ocp">O = Open Closed (OCP)</a></li><li data-target-id="l--liskov-substitution-lsp" data-depth="2"><a href="#l--liskov-substitution-lsp">L = Liskov Substitution (LSP)</a></li><li data-target-id="i--interface-segregation-isp" data-depth="2"><a href="#i--interface-segregation-isp">I = Interface Segregation (ISP)</a></li><li data-target-id="d--dependency-inversion-dip" data-depth="2"><a href="#d--dependency-inversion-dip">D = Dependency Inversion (DIP)</a></li></ol></nav>
+</template>  </head>
+  <body class="quarkdown quarkdown-docs">
+    <header>
+      <aside class="margin-area"></aside>
+      <main>
+        <div class="search-wrapper">
+          <div class="search-field"><i class="bi bi-search"></i><input type="text" id="search-input" placeholder="Search" autocomplete="off"><kbd>/</kbd></div>
+        </div>
+      </main>
+      <aside class="margin-area"></aside>
+    </header>
+    <div class="content-wrapper">
+      <aside class="margin-area" id="margin-area-left">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+      <main><div class="page-margin-content page-margin-top-left" data-on-left-page="top-left" data-on-right-page="top-left"><div style="justify-content: flex-start; align-items: center; column-gap: 1.0px;" class="stack stack-row"><figure><img src="media/logo@868221163.png" alt="Tech-study-notes" style="height: 400.0px;" /></figure></div></div><style data-hidden="">figure figcaption, table caption {
+  font-style: italic !important;
+}</style><div class="page-margin-content page-margin-left-top" data-on-left-page="left-top" data-on-right-page="left-top"><nav role="navigation" data-role="page-list"><h3 id="-computer-science-fundamentals" data-decorative="">🧠 Computer Science Fundamentals</h3><ul><li><a href="../programming_paradigms">Programming paradigms</a></li><li><a href="../oop">OOP</a></li></ul><h3 id="-databases" data-decorative="">🧪 Databases</h3><ul><li><a href="../acid_base_cap">ACID, BASE, CAP</a></li><li><a href="../sql">SQL</a></li></ul><h3 id="-software-design" data-decorative="">💻 Software Design</h3><ul><li><a href="../design_patterns">Design patterns</a><ul><li><a href="../design_patterns__creational_patterns">Creational patterns</a></li><li><a href="../design_patterns__structural_patterns">Structural patterns</a></li><li><a href="../design_patterns__behavioral_patterns">Behavioral patterns</a></li></ul></li><li><a href="../refactoring_code">Refactoring code</a></li><li><a href="../solid_principle" aria-current="page">SOLID Principle</a></li><li><a href="../git_workflows">Git workflows</a></li></ul><h3 id="-system-design" data-decorative="">🏛️ System Design</h3><ul><li><a href="../distributed_systems">Distributed systems</a></li><li><a href="../microservices">Microservices</a></li><li><a href="../event_driven_architecture">Event-driven architecture</a></li><li><a href="../api_design">API Design (RPC &amp; REST)</a></li></ul><h3 id="-data-engineering" data-decorative="">🔄 Data Engineering</h3><ul><li><a href="../data_modeling">Data modeling</a></li><li><a href="../data_pipelines">Data pipelines</a></li><li><a href="../batch_streaming">Batch vs Streaming</a></li><li><a href="../data_marts">Data marts</a></li></ul><h3 id="-devops-amp-cicd" data-decorative="">🚀 DevOps &amp; CI_CD</h3><ul><li><a href="../cicd_pipelines">CI_CD pipelines</a></li></ul><h3 id="-cloud-certifications" data-decorative="">☁️ Cloud Certifications</h3><ul><li><a href="../gcp_pde">GCP PDE (2023)</a></li><li><a href="../snowpro_core">SnowPro Core (2025)</a></li></ul><h3 id="-osint" data-decorative="">🕵️ OSINT</h3><ul><li><a href="../introduction">Introduction</a></li><li><a href="../sock_puppets">Sock Puppets</a></li><li><a href="../search_engine_osint">Search Engine OSINT</a></li><li><a href="../image_osint">Image OSINT</a></li><li><a href="../email_osint">Email OSINT</a></li><li><a href="../password_osint">Password OSINT</a></li><li><a href="../username_osint">Username OSINT</a></li><li><a href="../social_media_osint">SOCMINT</a></li><li><a href="../humint">HUMINT Fundamentals</a></li><li><a href="../scraping">Scraping Fundamentals</a></li><li><a href="../api">API</a></li><li><a href="../fact_checking">Fact-checking</a></li><li><a href="../threat_profiling">Threat profiling</a></li><li><a href="../tools">Tools</a></li></ul><h3 id="-deep-web" data-decorative="">🔒 Deep web</h3><ul><li><a href="../overview">Overview</a></li><li><a href="../technical_foundations">Technical Foundations: Tor &amp; PGP</a></li><li><a href="../installation_guides">Installation Guides: OS Setup</a></li><li><a href="../practical_usage">Practical Usage: Browsing &amp; Communication</a></li><li><a href="../advanced_topics">Advanced Topics: Markets &amp; Analysis</a></li></ul><h3 id="-data-visualization" data-decorative="">📊 Data Visualization</h3><ul><li><a href="../data_visualization_fundamentals">Data Visualization Fundamentals</a></li><li><a href="../dashboard_creation_guide">Dashboard Creation and Data Analysis</a></li><li><a href="../advanced_data_analysis">Advanced Data Analysis and Calculations</a></li><li><a href="../programming_visualization_concepts">Programming Languages for Data Visualization</a></li></ul></nav></div><div class="page-margin-content page-margin-right-top" data-on-left-page="right-top" data-on-right-page="right-top"><h3 id="table-of-contents">On this page</h3><nav role="table-of-contents" data-role="table-of-contents"><ol><li data-target-id="s--single-responsibility-srp" data-depth="2"><a href="#s--single-responsibility-srp">S = Single Responsibility (SRP)</a></li><li data-target-id="o--open-closed-ocp" data-depth="2"><a href="#o--open-closed-ocp">O = Open Closed (OCP)</a></li><li data-target-id="l--liskov-substitution-lsp" data-depth="2"><a href="#l--liskov-substitution-lsp">L = Liskov Substitution (LSP)</a></li><li data-target-id="i--interface-segregation-isp" data-depth="2"><a href="#i--interface-segregation-isp">I = Interface Segregation (ISP)</a></li><li data-target-id="d--dependency-inversion-dip" data-depth="2"><a href="#d--dependency-inversion-dip">D = Dependency Inversion (DIP)</a></li></ol></nav></div><h1 id="solid-principle" data-decorative="">SOLID Principle</h1><p>In software programming, SOLID is an acronym for 5 design principles intended to make object-oriented designs more understandable, flexible, and maintainable.</p><hr /><h2 id="s--single-responsibility-srp">S = Single Responsibility (SRP)</h2><p>Classes and objects should have one, and only one, responsibility (reason to change).</p><p>This separation of responsibilities makes code more modular, more maintainable, less complex, and promotes the reduction of bugs due to changes in one responsibility that may affect another.</p><p><strong>Before:</strong></p><pre><code class="language-java">public class Employee {
+    private String name;
+    private double salary;
+    // getter and setter methods
+
+    public void saveToDatabase() {
+        // saves the employee's data to the database
+    }
+
+    public void generatePaySlip() {
+        // generates the employee's payslip
+    }
+
+    public void calculateSalary() {
+        // calculates the employee's salary
+    }
+}</code></pre><p><strong>After:</strong></p><pre><code class="language-java">public class Employee {
+    private String name;
+    private double salary;
+    // getter and setter methods
+}
+
+public class DatabaseManager {
+    public void saveEmployee(Employee employee) {
+        // save employee to db
+    }
+}
+
+public class PaySlipGenerator {
+    public void generatePaySlip(Employee employee) {
+        // generate pay slip of employee
+    }
+}
+
+public class SalaryCalculator {
+    public double calculateSalary(Employee employee) {
+        // calculate salary of employee
+        // ...
+        return salary;
+    }
+}</code></pre><hr /><h2 id="o--open-closed-ocp">O = Open Closed (OCP)</h2><p>Entities should be open for extension (can be extended by adding what is needed), but closed for modification (should never be modified).</p><p>On a practical standpoint, classes are &ldquo;open&rdquo; to extensions via interface implementation or inheritance, but &ldquo;closed&rdquo; to modifications, since the existing behavior remains unchanged. This significantly reduces the risk of breaking existing functionality and provides a looser coupling.</p><pre><code class="language-java">interface Vehicle {
+    double calculateTaxCost();
+}
+
+class Car implements Vehicle {
+    private double engineCapacity;
+
+    public Car(double engineCapacity) {
+        this.engineCapacity = engineCapacity;
+    }
+
+    public double getEngineCapacity() {
+        return engineCapacity;
+    }
+
+    public double calculateTaxCost() {
+        return engineCapacity * 2.5;
+    }
+}
+
+class Motorcycle implements Vehicle {
+    private double engineCapacity;
+
+    public Motorcycle(double engineCapacity) {
+        this.engineCapacity = engineCapacity;
+    }
+
+    public double getEngineCapacity() {
+        return engineCapacity;
+    }
+
+    public double calculateTaxCost() {
+        return engineCapacity * 1.5;
+    }
+}
+
+class TaxCalculator {
+    public double calculateTotalTax(List&lt;Vehicle&gt; vehicles) {
+        double totalTax = 0;
+        for (Vehicle vehicle : vehicles) {
+            totalTax += vehicle.calculateTaxCost();
+        }
+        return totalTax;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        List&lt;Vehicle&gt; vehicles = new ArrayList&lt;&gt;();
+        vehicles.add(new Car(2000));
+        vehicles.add(new Motorcycle(500));
+
+        TaxCalculator taxCalculator = new TaxCalculator();
+        double totalTax = taxCalculator.calculateTotalTax(vehicles);
+
+        System.out.println(&quot;Total tax: &quot; + totalTax);
+    }
+}</code></pre><p>In this example, if we wanted to add new vehicle types (e.g. truck), we would not have to modify the <span class="codespan-content"><code>TaxCalculator</code></span> class. We would simply have to create a new class that implements the Vehicle interface and provide an implementation of the <span class="codespan-content"><code>calculateTaxCost()</code></span> method. The <span class="codespan-content"><code>TaxCalculator</code></span> class would remain unchanged and would be able to calculate taxes for new vehicle types without any modifications.</p><hr /><h2 id="l--liskov-substitution-lsp">L = Liskov Substitution (LSP)</h2><p>If S is a subtype of T, then objects of type T in a program may be replaced with objects of type S without altering any of the desirable properties of that program.</p><p>When a child Class cannot perform the same actions as its parent Class, this can cause bugs. If you have a Class and create another Class from it, it becomes a parent and the new Class becomes a child. The child Class should be able to do everything the parent Class can do. This process is called Inheritance.</p><p><strong>Before:</strong></p><pre><code class="language-java">@Getter
+@Setter
+@ToString
+public class Bird {
+    private String name;
+
+    public Bird(String name) {
+        this.name = name;
+    }
+
+    public void fly() {
+        System.out.println(getName() + &quot; is flying.&quot;);
+    }
+}
+
+@Getter
+@Setter
+@ToString(callSuper = true)
+public class Penguin extends Bird {
+    public Penguin(String name) {
+        super(name);
+    }
+
+    // Penguin is a Bird that cannot fly, so using the fly method violates the Liskov Substitution Principle. This method should be removed.
+    @Override
+    public void fly() {
+        throw new UnsupportedOperationException(&quot;Penguins cannot fly!&quot;);
+    }
+}</code></pre><p><strong>After:</strong></p><pre><code class="language-java">public interface FlyingBird {
+    void fly();
+}
+
+@Getter
+@Setter
+@ToString
+public class Bird {
+    private String name;
+
+    public Bird(String name) {
+        this.name = name;
+    }
+}
+
+@Getter
+@Setter
+@ToString(callSuper = true)
+public class Eagle extends Bird implements FlyingBird {
+    public Eagle(String name) {
+        super(name);
+    }
+
+    @Override
+    public void fly() {
+        System.out.println(getName() + &quot; is flying.&quot;);
+    }
+}
+
+@Getter
+@Setter
+@ToString(callSuper = true)
+public class Penguin extends Bird {
+    public Penguin(String name) {
+        super(name);
+    }
+
+    // Penguin does not implement the FlyingBird interface because it cannot fly.
+}</code></pre><hr /><h2 id="i--interface-segregation-isp">I = Interface Segregation (ISP)</h2><p>Clients should not be forced to depend on methods that they do not use.</p><p>Classes that implement interfaces, should not be forced to implement methods they do not use. Big interfaces should be split into smaller ones so there are no methods that are not used. Classes know only about methods related to them providing decoupling and easier modifications.</p><p><strong>Before:</strong></p><pre><code class="language-java">public interface Worker {
+    void work();
+    void rest();
+}
+
+public class Robot implements Worker {
+
+    @Override
+    public void work() {
+        // implementation
+    }
+
+    @Override
+    public void rest() {
+        throw new UnsopportedOperationException();
+    }
+}
+
+public class Man implements Worker {
+
+    @Override
+    public void work() {
+        // implementation
+    }
+
+    @Override
+    public void rest() {
+        // implementation
+    }
+}</code></pre><p><strong>After:</strong></p><pre><code class="language-java">public interface Work {
+    void work();
+}
+
+public interface Rest {
+    void rest();
+}
+
+public class Robot implements Work {
+
+    @Override
+    public void work() {
+        // implementation
+    }
+}
+
+public class Man implements Work, Rest {
+
+    @Override
+    public void work() {
+        // implementation
+    }
+
+    @Override
+    public void rest() {
+        // implementation
+    }
+}</code></pre><hr /><h2 id="d--dependency-inversion-dip">D = Dependency Inversion (DIP)</h2><p>High-level modules should not depend on low-level modules; both should depend on abstractions. Abstractions should not depend on details; details should depend on abstractions.</p><p>Code is much more reusable and easier to maintain if abstractions and details are isolated from each other. This goes both ways:</p><ul><li>we can substitute different details in order to reuse high-level code</li><li>we can reuse implementation details by layering alternative business logic on top.</li></ul><p><strong>Before:</strong></p><pre><code class="language-java">public class Radio {
+    public string playSong() {
+        return &quot;random song from the radio&quot;
+    }
+}
+
+public class MusicListener {
+    private Radio radio;
+
+    public MusicListener() {
+        this.radio = new Radio();
+    }
+
+    public void listen() {
+        String song = this.radio.playSong();
+        System.out.println(song);
+    }
+}</code></pre><p><strong>After:</strong></p><pre><code class="language-java">public class MusicSource {
+    string playSong();
+}
+
+public class Radio implements MusicSource {
+    @Override
+    public string playSong() {
+        return &quot;random song from the radio&quot;
+    }
+}
+
+public class MP3Device implements MusicSource {
+    @Override
+    public string playSong() {
+        return &quot;random song from the MP3 device&quot;
+    }
+}
+
+public class MusicListener {
+    private MusicSource source;
+
+    public MusicListener(MusicSource source) {
+        this.source = source;
+    }
+
+    public void listen() {
+        String song = this.source.playSong();
+        System.out.println(song);
+    }
+}</code></pre><p>In this example, if you want to change the source of music, you just need to pass a different instance of <span class="codespan-content"><code>MusicSource</code></span> to <span class="codespan-content"><code>MusicListener</code></span>, without editing the <span class="codespan-content"><code>MusicListener</code></span> class.</p>
+        <div id="footnote-area">
+          <div class="footnote-rule"></div>
+        </div>
+        <div id="sibling-pages-button-area"></div>
+        <footer>
+          <div class="position-left"></div>
+          <div class="position-center"></div>
+          <div class="position-right"></div>
+        </footer>
+      </main>
+      <aside class="margin-area" id="margin-area-right">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+    </div>
+  </body>
+</html>

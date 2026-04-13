@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="generator" content="Quarkdown">
+    <meta charset="UTF-8">
+    <meta name="description" content="aaa">
+    <meta name="author" content="Leonardo Riva, Leonardo Riva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="quarkdown:root-path" content="..">
+    <meta name="quarkdown:search-index" content="../search-index.json">
+    <title>02_technical_foundations</title>
+    <script src="../script/quarkdown.js"></script>
+    <script>const capabilities = window.quarkdownCapabilities</script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="../theme/theme.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js"></script>
+    <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+    <link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet">
+    <script>capabilities.code = true;</script>
+    <style>
+
+</style>
+    <script>prepare(new DocsDocument());</script>
+<template id="sidebar-template"><nav class="sidebar" role="doc-toc"><ol><li data-target-id="the-tor-network-architecture" data-depth="2"><a href="#the-tor-network-architecture">The Tor Network Architecture</a><ol><li data-target-id="what-is-tor" data-depth="3"><a href="#what-is-tor">What is Tor?</a></li><li data-target-id="how-tor-works" data-depth="3"><a href="#how-tor-works">How Tor Works</a></li><li data-target-id="encryption-layers" data-depth="3"><a href="#encryption-layers">Encryption Layers</a></li><li data-target-id="security-considerations" data-depth="3"><a href="#security-considerations">Security Considerations</a></li></ol></li><li data-target-id="pgp-pretty-good-privacy" data-depth="2"><a href="#pgp-pretty-good-privacy">PGP (Pretty Good Privacy)</a><ol><li data-target-id="overview" data-depth="3"><a href="#overview">Overview</a></li><li data-target-id="how-pgp-works" data-depth="3"><a href="#how-pgp-works">How PGP Works</a></li><li data-target-id="key-components" data-depth="3"><a href="#key-components">Key Components</a></li><li data-target-id="real-world-example" data-depth="3"><a href="#real-world-example">Real-World Example</a></li><li data-target-id="using-pgp-on-the-deep-web" data-depth="3"><a href="#using-pgp-on-the-deep-web">Using PGP on the Deep Web</a></li></ol></li><li data-target-id="security-level-configuration" data-depth="2"><a href="#security-level-configuration">Security Level Configuration</a><ol><li data-target-id="tor-browser-security-settings" data-depth="3"><a href="#tor-browser-security-settings">Tor Browser Security Settings</a></li><li data-target-id="mac-address-spoofing" data-depth="3"><a href="#mac-address-spoofing">MAC Address Spoofing</a></li></ol></li><li data-target-id="network-architecture-diagram" data-depth="2"><a href="#network-architecture-diagram">Network Architecture Diagram</a></li><li data-target-id="common-technical-terms" data-depth="2"><a href="#common-technical-terms">Common Technical Terms</a></li><li data-target-id="technical-specifications" data-depth="2"><a href="#technical-specifications">Technical Specifications</a><ol><li data-target-id="tor-network-stats" data-depth="3"><a href="#tor-network-stats">Tor Network Stats</a></li><li data-target-id="pgp-specifications" data-depth="3"><a href="#pgp-specifications">PGP Specifications</a></li></ol></li><li data-target-id="best-practices-for-technical-security" data-depth="2"><a href="#best-practices-for-technical-security">Best Practices for Technical Security</a></li></ol></nav>
+</template>  </head>
+  <body class="quarkdown quarkdown-docs">
+    <header>
+      <aside class="margin-area"></aside>
+      <main>
+        <div class="search-wrapper">
+          <div class="search-field"><i class="bi bi-search"></i><input type="text" id="search-input" placeholder="Search" autocomplete="off"><kbd>/</kbd></div>
+        </div>
+      </main>
+      <aside class="margin-area"></aside>
+    </header>
+    <div class="content-wrapper">
+      <aside class="margin-area" id="margin-area-left">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+      <main><div class="page-margin-content page-margin-top-left" data-on-left-page="top-left" data-on-right-page="top-left"><div style="justify-content: flex-start; align-items: center; column-gap: 1.0px;" class="stack stack-row"><figure><img src="media/logo@-1898944846.png" alt="Tech-study-notes" style="height: 400.0px;" /></figure></div></div><style data-hidden="">figure figcaption, table caption {
+  font-style: italic !important;
+}</style><div class="page-margin-content page-margin-left-top" data-on-left-page="left-top" data-on-right-page="left-top"><nav role="navigation" data-role="page-list"><h3 id="-computer-science-fundamentals" data-decorative="">🧠 Computer Science Fundamentals</h3><ul><li><a href="../programming_paradigms">Programming paradigms</a></li><li><a href="../oop">OOP</a></li></ul><h3 id="-databases" data-decorative="">🧪 Databases</h3><ul><li><a href="../acid_base_cap">ACID, BASE, CAP</a></li><li><a href="../sql">SQL</a></li></ul><h3 id="-software-design" data-decorative="">💻 Software Design</h3><ul><li><a href="../design_patterns">Design patterns</a><ul><li><a href="../design_patterns__creational_patterns">Creational patterns</a></li><li><a href="../design_patterns__structural_patterns">Structural patterns</a></li><li><a href="../design_patterns__behavioral_patterns">Behavioral patterns</a></li></ul></li><li><a href="../refactoring_code">Refactoring code</a></li><li><a href="../solid_principle">SOLID Principle</a></li><li><a href="../git_workflows">Git workflows</a></li></ul><h3 id="-system-design" data-decorative="">🏛️ System Design</h3><ul><li><a href="../distributed_systems">Distributed systems</a></li><li><a href="../microservices">Microservices</a></li><li><a href="../event_driven_architecture">Event-driven architecture</a></li><li><a href="../api_design">API Design (RPC &amp; REST)</a></li></ul><h3 id="-data-engineering" data-decorative="">🔄 Data Engineering</h3><ul><li><a href="../data_modeling">Data modeling</a></li><li><a href="../data_pipelines">Data pipelines</a></li><li><a href="../batch_streaming">Batch vs Streaming</a></li><li><a href="../data_marts">Data marts</a></li></ul><h3 id="-devops-amp-cicd" data-decorative="">🚀 DevOps &amp; CI_CD</h3><ul><li><a href="../cicd_pipelines">CI_CD pipelines</a></li></ul><h3 id="-cloud-certifications" data-decorative="">☁️ Cloud Certifications</h3><ul><li><a href="../gcp_pde">GCP PDE (2023)</a></li><li><a href="../snowpro_core">SnowPro Core (2025)</a></li></ul><h3 id="-osint" data-decorative="">🕵️ OSINT</h3><ul><li><a href="../introduction">Introduction</a></li><li><a href="../sock_puppets">Sock Puppets</a></li><li><a href="../search_engine_osint">Search Engine OSINT</a></li><li><a href="../image_osint">Image OSINT</a></li><li><a href="../email_osint">Email OSINT</a></li><li><a href="../password_osint">Password OSINT</a></li><li><a href="../username_osint">Username OSINT</a></li><li><a href="../social_media_osint">SOCMINT</a></li><li><a href="../humint">HUMINT Fundamentals</a></li><li><a href="../scraping">Scraping Fundamentals</a></li><li><a href="../api">API</a></li><li><a href="../fact_checking">Fact-checking</a></li><li><a href="../threat_profiling">Threat profiling</a></li><li><a href="../tools">Tools</a></li></ul><h3 id="-deep-web" data-decorative="">🔒 Deep web</h3><ul><li><a href="../overview">Overview</a></li><li><a href="../technical_foundations" aria-current="page">Technical Foundations: Tor &amp; PGP</a></li><li><a href="../installation_guides">Installation Guides: OS Setup</a></li><li><a href="../practical_usage">Practical Usage: Browsing &amp; Communication</a></li><li><a href="../advanced_topics">Advanced Topics: Markets &amp; Analysis</a></li></ul><h3 id="-data-visualization" data-decorative="">📊 Data Visualization</h3><ul><li><a href="../data_visualization_fundamentals">Data Visualization Fundamentals</a></li><li><a href="../dashboard_creation_guide">Dashboard Creation and Data Analysis</a></li><li><a href="../advanced_data_analysis">Advanced Data Analysis and Calculations</a></li><li><a href="../programming_visualization_concepts">Programming Languages for Data Visualization</a></li></ul></nav></div><div class="page-margin-content page-margin-right-top" data-on-left-page="right-top" data-on-right-page="right-top"><h3 id="table-of-contents">On this page</h3><nav role="table-of-contents" data-role="table-of-contents"><ol><li data-target-id="the-tor-network-architecture" data-depth="2"><a href="#the-tor-network-architecture">The Tor Network Architecture</a><ol><li data-target-id="what-is-tor" data-depth="3"><a href="#what-is-tor">What is Tor?</a></li><li data-target-id="how-tor-works" data-depth="3"><a href="#how-tor-works">How Tor Works</a></li><li data-target-id="encryption-layers" data-depth="3"><a href="#encryption-layers">Encryption Layers</a></li><li data-target-id="security-considerations" data-depth="3"><a href="#security-considerations">Security Considerations</a></li></ol></li><li data-target-id="pgp-pretty-good-privacy" data-depth="2"><a href="#pgp-pretty-good-privacy">PGP (Pretty Good Privacy)</a><ol><li data-target-id="overview" data-depth="3"><a href="#overview">Overview</a></li><li data-target-id="how-pgp-works" data-depth="3"><a href="#how-pgp-works">How PGP Works</a></li><li data-target-id="key-components" data-depth="3"><a href="#key-components">Key Components</a></li><li data-target-id="real-world-example" data-depth="3"><a href="#real-world-example">Real-World Example</a></li><li data-target-id="using-pgp-on-the-deep-web" data-depth="3"><a href="#using-pgp-on-the-deep-web">Using PGP on the Deep Web</a></li></ol></li><li data-target-id="security-level-configuration" data-depth="2"><a href="#security-level-configuration">Security Level Configuration</a><ol><li data-target-id="tor-browser-security-settings" data-depth="3"><a href="#tor-browser-security-settings">Tor Browser Security Settings</a></li><li data-target-id="mac-address-spoofing" data-depth="3"><a href="#mac-address-spoofing">MAC Address Spoofing</a></li></ol></li><li data-target-id="network-architecture-diagram" data-depth="2"><a href="#network-architecture-diagram">Network Architecture Diagram</a></li><li data-target-id="common-technical-terms" data-depth="2"><a href="#common-technical-terms">Common Technical Terms</a></li><li data-target-id="technical-specifications" data-depth="2"><a href="#technical-specifications">Technical Specifications</a><ol><li data-target-id="tor-network-stats" data-depth="3"><a href="#tor-network-stats">Tor Network Stats</a></li><li data-target-id="pgp-specifications" data-depth="3"><a href="#pgp-specifications">PGP Specifications</a></li></ol></li><li data-target-id="best-practices-for-technical-security" data-depth="2"><a href="#best-practices-for-technical-security">Best Practices for Technical Security</a></li></ol></nav></div><h1 id="_02technicalfoundations" data-decorative="">02_technical_foundations</h1><h2 id="the-tor-network-architecture">The Tor Network Architecture</h2><h3 id="what-is-tor">What is Tor?</h3><p><strong>Tor</strong> (The Onion Router) is a free, open-source software that enables anonymous communication by directing internet traffic through a worldwide volunteer overlay network consisting of more than 7,000 relays.</p><h3 id="how-tor-works">How Tor Works</h3><h4 id="the-three-node-circuit">The Three-Node Circuit</h4><pre><code>┌──────────┐      ┌─────────────┐      ┌──────────────┐      ┌─────────────┐      ┌──────────────┐
+│   User   │ ───&rarr; │ Entry Guard │ ───&rarr; │ Middle Relay │ ───&rarr; │ Exit Relay  │ ───&rarr; │ Destination  │
+│(You)     │      │  (Node 1)   │      │   (Node 2)   │      │  (Node 3)   │      │  (Website)   │
+└──────────┘      └─────────────┘      └──────────────┘      └─────────────┘      └──────────────┘
+      │                 │                      │                    │                   │
+      │                 │                      │                    │                   │
+   Your IP           First Node              Second Node          Third Node        Website sees
+  (Hidden)            IP                    IP                   IP              Exit Node IP</code></pre><p><strong>Node Functions:</strong></p><ol><li><p><strong>Entry Guard (First Node)</strong></p><ul><li>Only node that knows your real IP address</li><li>Remains consistent throughout your session</li><li>Encrypts traffic and passes to middle relay</li></ul></li><li><p><strong>Middle Relay (Second Node)</strong></p><ul><li>Randomly selected from pool of thousands</li><li>Receives encrypted traffic from entry guard</li><li>Passes to exit relay</li><li>Neither knows origin nor destination</li></ul></li><li><p><strong>Exit Relay (Third Node)</strong></p><ul><li>Final node in the circuit</li><li>Decrypts last layer of encryption</li><li>Sends unencrypted traffic to destination</li><li>Destination sees exit node&rsquo;s IP, not yours</li></ul></li></ol><h3 id="encryption-layers">Encryption Layers</h3><p>Tor uses <strong>onion routing</strong> - multiple layers of encryption like an onion:</p><pre><code>Original Data
+    &darr;
+[Encrypted for Exit Node]
+    &darr;
+[Encrypted for Middle Relay]
+    &darr;
+[Encrypted for Entry Guard]
+    &darr;
+Transmitted through Tor network</code></pre><p>Each node can only decrypt its own layer, revealing only the next hop.</p><h3 id="security-considerations">Security Considerations</h3><p><strong>Vulnerabilities:</strong></p><ol><li><p><strong>Exit Node Monitoring</strong></p><ul><li>Traffic between exit node and destination is <strong>unencrypted</strong> (unless using HTTPS)</li><li>Malicious exit nodes can capture unencrypted data</li><li><strong>Mitigation</strong>: Always use HTTPS websites when possible</li></ul></li><li><p><strong>Traffic Correlation</strong></p><ul><li>Sophisticated adversaries can correlate entry/exit timing</li><li>Requires significant resources (nation-state level)</li><li><strong>Mitigation</strong>: Use additional VPN or bridges</li></ul></li><li><p><strong>Browser Fingerprinting</strong></p><ul><li>Screen resolution, fonts, plugins can identify users</li><li><strong>Mitigation</strong>: Use Tor Browser&rsquo;s default window size</li></ul></li></ol><h2 id="pgp-pretty-good-privacy">PGP (Pretty Good Privacy)</h2><h3 id="overview">Overview</h3><p><strong>PGP</strong> provides cryptographic privacy and authentication for data communication. It uses a combination of:</p><ul><li><strong>Symmetric-key encryption</strong> (for data)</li><li><strong>Public-key encryption</strong> (for keys)</li><li><strong>Hash functions</strong> (for integrity)</li></ul><h3 id="how-pgp-works">How PGP Works</h3><h4 id="key-exchange-process">Key Exchange Process</h4><pre><code>Alice wants to send secure message to Bob
+
+Step 1: Key Generation
+┌─────────┐                    ┌─────────┐
+│  Alice  │                    │   Bob   │
+│ Generate│                    │ Generate│
+│Key Pair │                    │Key Pair │
+│         │                    │         │
+│ Public  │                    │ Public  │
+│ Private │                    │ Private │
+└─────────┘                    └─────────┘
+
+Step 2: Public Key Exchange
+┌─────────┐   Public Key    ┌─────────┐
+│  Alice  │ ──────────────&rarr; │   Bob   │
+│         │                 │         │
+│  Bob's  │ &larr;────────────── │ Alice's │
+│  Public │    Public Key   │  Public │
+│   Key   │                 │   Key   │
+└─────────┘                 └─────────┘
+
+Step 3: Encryption &amp; Transmission
+┌─────────┐                   ┌─────────┐
+│  Alice  │                   │   Bob   │
+│ Message │                   │         │
+│    &darr;    │                   │    &darr;    │
+│ Encrypt │ ──Encrypted Msg──&rarr;│ Decrypt │
+│w/ Bob's │                   │w/ Bob's │
+│  Public │                   │ Private │
+│   Key   │                   │   Key   │
+│    &darr;    │                   │    &darr;    │
+│ Ciphertext│                 │ Original│
+└─────────┘                   └─────────┘</code></pre><h3 id="key-components">Key Components</h3><p><strong>Public Key:</strong></p><ul><li>Can be shared freely</li><li>Used to encrypt messages</li><li>Used to verify signatures</li></ul><p><strong>Private Key:</strong></p><ul><li>Must remain secret</li><li>Used to decrypt messages</li><li>Used to create signatures</li></ul><h3 id="real-world-example">Real-World Example</h3><p><strong>Scenario:</strong> Journalist wants to receive anonymous tips</p><pre><code>1. Journalist publishes their PUBLIC KEY on website
+2. Source encrypts message using journalist's PUBLIC KEY
+3. Source sends encrypted message over any channel (email, Tor, etc.)
+4. Even if intercepted, message cannot be read without PRIVATE KEY
+5. Journalist decrypts with their PRIVATE KEY
+6. Only journalist can read the original message</code></pre><h3 id="using-pgp-on-the-deep-web">Using PGP on the Deep Web</h3><p><strong>Common Applications:</strong></p><ol><li><p><strong>Email Encryption</strong></p><ul><li>ProtonMail has built-in PGP</li><li>Most secure email providers support PGP</li></ul></li><li><p><strong>Market Communications</strong></p><ul><li>Encrypt shipping addresses</li><li>Verify vendor authenticity</li></ul></li><li><p><strong>File Encryption</strong></p><ul><li>Protect sensitive documents</li><li>Create encrypted archives</li></ul></li></ol><h2 id="security-level-configuration">Security Level Configuration</h2><h3 id="tor-browser-security-settings">Tor Browser Security Settings</h3><h4 id="level-1-standard">Level 1: Standard</h4><pre><code>Features:
+- All website features enabled
+- JavaScript allowed everywhere
+- Media auto-plays
+- Performance optimizations enabled
+
+Best for: General browsing when convenience is priority</code></pre><h4 id="level-2-safer">Level 2: Safer</h4><pre><code>Features:
+- JavaScript disabled on non-HTTPS sites
+- HTML5 media click-to-play
+- Some font rendering disabled
+- Performance optimizations reduced
+
+Best for: Balanced security and usability</code></pre><h4 id="level-3-safest">Level 3: Safest</h4><pre><code>Features:
+- JavaScript disabled everywhere
+- All media click-to-play
+- Maximum security settings
+- May break some sites
+
+Best for: Maximum anonymity and security</code></pre><h3 id="mac-address-spoofing">MAC Address Spoofing</h3><p><strong>Purpose:</strong> Hide hardware identifier of network card</p><p><strong>How to Enable (Tails OS):</strong></p><ol><li>Boot Tails</li><li>In startup options, check &ldquo;MAC Address Spoofing&rdquo;</li><li>System will use random MAC address</li></ol><p><strong>Benefits:</strong></p><ul><li>Prevents network tracking</li><li>Hides geographical location</li><li>Protects hardware identity</li></ul><h2 id="network-architecture-diagram">Network Architecture Diagram</h2><pre><code>                    INTERNET
+                       │
+         ┌─────────────┼────────────┐
+         │             │            │
+    ┌────▼────┐   ┌────▼────┐   ┌───▼────┐
+    │ Google  │   │ Regular │   │  Deep  │
+    │ Search  │   │  Sites  │   │  Sites │
+    │ (Clear) │   │ (Clear) │   │  (Tor) │
+    └─────────┘   └─────────┘   └───┬────┘
+                                    │
+                         ┌──────────┴──────────┐
+                         │                     │
+                   ┌─────▼─────┐           ┌───▼────┐
+                   │  Hidden   │           │ Public │
+                   │  Services │           │ Forums │
+                   │  (&quot;onion&quot;) │           │(&quot;onion&quot;)│
+                   └───────────┘           └────────┘
+
+Access Path:
+Clear Web: User &rarr; ISP &rarr; Website
+Deep Web:  User &rarr; Tor &rarr; Website
+Dark Web:  User &rarr; Tor &rarr; &quot;onion&quot; Site</code></pre><h2 id="common-technical-terms">Common Technical Terms</h2><table><thead><tr><th>Term</th><th>Definition</th></tr></thead><tbody><tr><td><strong>Node</strong></td><td>Server in Tor network that relays traffic</td></tr><tr><td><strong>Relay</strong></td><td>Another term for Tor node</td></tr><tr><td><strong>Circuit</strong></td><td>Complete path through Tor network (3 nodes)</td></tr><tr><td><strong>Onion Site</strong></td><td>Website with &ldquo;onion&rdquo; domain, only accessible via Tor</td></tr><tr><td><strong>Exit Node</strong></td><td>Final node that connects to destination</td></tr><tr><td><strong>Entry Guard</strong></td><td>First Tor node you connect to</td></tr><tr><td><strong>Bridge</strong></td><td>Hidden Tor entry point (censorship circumvention)</td></tr><tr><td><strong>PGP Key</strong></td><td>Cryptographic key pair for encryption</td></tr><tr><td><strong>Fingerprint</strong></td><td>Unique identifier for a PGP key</td></tr><tr><td><strong>MAC Address</strong></td><td>Hardware identifier for network interface</td></tr></tbody></table><h2 id="technical-specifications">Technical Specifications</h2><h3 id="tor-network-stats">Tor Network Stats</h3><ul><li><strong>Total Nodes:</strong> 7,000+ relays worldwide</li><li><strong>Daily Users:</strong> 2+ million</li><li><strong>Encryption:</strong> AES-256, RSA 2048-bit</li><li><strong>Protocol:</strong> SOCKS5 proxy interface</li></ul><h3 id="pgp-specifications">PGP Specifications</h3><ul><li><strong>Key Sizes:</strong> 2048-bit, 4096-bit (RSA)</li><li><strong>Algorithms:</strong> RSA, DSA, ElGamal</li><li><strong>Hash Functions:</strong> SHA-256, SHA-512</li><li><strong>Compression:</strong> ZIP, ZLIB, BZIP2</li></ul><h2 id="best-practices-for-technical-security">Best Practices for Technical Security</h2><ol><li><p><strong>Keep Tor Browser Updated</strong></p><ul><li>Check for updates regularly</li><li>Use official Tor Project downloads</li></ul></li><li><p><strong>Verify PGP Keys</strong></p><ul><li>Confirm key fingerprints</li><li>Use multiple trust sources</li></ul></li><li><p><strong>Disable Unnecessary Features</strong></p><ul><li>No browser extensions</li><li>No JavaScript when not needed</li><li>No auto-play media</li></ul></li><li><p><strong>Use Bridges in Restrictive Countries</strong></p><ul><li>Obfuscated bridges prevent detection</li><li>Built-in bridge configuration in Tor Browser</li></ul></li><li><p><strong>Separate Identities</strong></p><ul><li>Never reuse usernames</li><li>Different passwords for each service</li><li>Separate email addresses</li></ul></li></ol>
+        <div id="footnote-area">
+          <div class="footnote-rule"></div>
+        </div>
+        <div id="sibling-pages-button-area"></div>
+        <footer>
+          <div class="position-left"></div>
+          <div class="position-center"></div>
+          <div class="position-right"></div>
+        </footer>
+      </main>
+      <aside class="margin-area" id="margin-area-right">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+    </div>
+  </body>
+</html>
