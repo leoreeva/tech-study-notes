@@ -10,7 +10,7 @@
     .row gap:{1px}
         !(_*400)[Tech-study-notes](_assets/logo.png)
 
-.css  
-  figure figcaption, table caption {  
-    font-style: italic !important;  
+.css
+  figure figcaption, table caption {
+    font-style: italic !important;
   }

@@ -116,7 +116,7 @@ Imagine a customer eagerly awaiting a new iPhone at a store. They could check th
 ### Solution
 The object that has some interesting state is called **publisher**; all other objects that want to track changes to the publisher's state are called **subscribers**. This pattern suggests adding a subscription mechanism to the publisher class, so individual objects can subscribe to or unsubscribe from a stream of events coming from that publisher.
 
-Whenever an event happens to the publisher, it goes over its subscribers and calls the specific notification method on their objects. Publisher doesn't need to know much about subscribers different classes: so it's crucial that they implement the same interface (with notification method and a set of parameters), and that the publisher communicates with them only via that interface. 
+Whenever an event happens to the publisher, it goes over its subscribers and calls the specific notification method on their objects. Publisher doesn't need to know much about subscribers different classes: so it's crucial that they implement the same interface (with notification method and a set of parameters), and that the publisher communicates with them only via that interface.
 
 If you have multiple publisher, even them can implement same interface, so that subscribers can observe them with same methods.
 

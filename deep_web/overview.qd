@@ -76,13 +76,13 @@ User → Entry Guard → Middle Relay → Exit Relay → Destination
    - Appears as the origin of the request to the destination server
 
 This is called **Onion Routing**, because Tor encrypts traffic in multiple layers before sending it:
-- Outer layer → decrypted by Entry Guard  
-- Middle layer → decrypted by Middle Relay  
-- Inner layer → decrypted by Exit Relay  
+- Outer layer → decrypted by Entry Guard
+- Middle layer → decrypted by Middle Relay
+- Inner layer → decrypted by Exit Relay
 
-Each node removes only its own encryption layer and forwards the rest. No single node knows both who you are and where you are going  
+Each node removes only its own encryption layer and forwards the rest. No single node knows both who you are and where you are going
 
-Also, the 3-hop circuits (entry, middle, exit) rotate periodically, among the thousands of relays worldwide. 
+Also, the 3-hop circuits (entry, middle, exit) rotate periodically, among the thousands of relays worldwide.
 
 Traffic between the Exit Relay and Destination is **not encrypted by Tor itself**. If visiting an HTTP site (not HTTPS), the exit node can read page contents, login credentials, form data. Tor provides anonymity, not guaranteed content confidentiality.
 
@@ -111,13 +111,13 @@ Sender                  Transmission                  Receiver
 1. Sender obtains recipient's public key
 2. Message is encrypted using that public key
 3. Encrypted message is transmitted
-4. Only the recipient’s private key can decrypt it
+4. Only the recipient's private key can decrypt it
 
 If intercepted, the message remains unreadable without the private key.
 
 With this metodology, PGP can also verify identity:
 - Sender signs message using their **private key**
-- Recipient verifies signature using sender’s **public key**
+- Recipient verifies signature using sender's **public key**
 
 This provides:
 - Authentication (confirms sender)

@@ -232,12 +232,12 @@ public interface Worker {
 }
 
 public class Robot implements Worker {
-    
+
     @Override
     public void work() {
         // implementation
     }
-    
+
     @Override
     public void rest() {
         throw new UnsopportedOperationException();
@@ -245,12 +245,12 @@ public class Robot implements Worker {
 }
 
 public class Man implements Worker {
-    
+
     @Override
     public void work() {
         // implementation
     }
-    
+
     @Override
     public void rest() {
         // implementation
@@ -269,7 +269,7 @@ public interface Rest {
 }
 
 public class Robot implements Work {
-    
+
     @Override
     public void work() {
         // implementation
@@ -277,12 +277,12 @@ public class Robot implements Work {
 }
 
 public class Man implements Work, Rest {
-    
+
     @Override
     public void work() {
         // implementation
     }
-    
+
     @Override
     public void rest() {
         // implementation

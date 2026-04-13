@@ -199,9 +199,9 @@ SCDs are a foundational concept in dimensional modeling and data warehousing. Th
 SCDs refer to data attributes in dimension tables that evolve gradually over time rather than changing regularly or rapidly. SCD techniques help determine whether to overwrite old values or preserve historical data.
 
 - **Type 1 SCDs** overwrite old data with new data. No historical data is preserved—only the latest value is retained.
-  - Use case example: a customer’s email address changes, and you don’t need to track previous addresses
-  - Benefits: simple to implement, saves storage space, useful when historical accuracy isn’t important
+  - Use case example: a customer's email address changes, and you don't need to track previous addresses
+  - Benefits: simple to implement, saves storage space, useful when historical accuracy isn't important
 
 - **Type 2 SCDs** preserve historical changes by creating a new record for each change. Metadata such as effective_date, end_date, or is_current helps track which version is active.
-  - Use case example: tracking a customer’s address history to understand regional buying behaviors or migration patterns over time
+  - Use case example: tracking a customer's address history to understand regional buying behaviors or migration patterns over time
   - Benefits: preserves historical data, enables time-based analytics, crucial for auditability and trend analysis

@@ -14,7 +14,7 @@ Data visualization can be created using various programming languages and librar
 
 #### Matplotlib
 - **Purpose**: Basic 2D and 3D plotting
-- **Strengths**: 
+- **Strengths**:
   - Fine-grained control over plots
   - Publication-quality output
   - Wide variety of chart types

@@ -41,11 +41,11 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 #### Dimensions (Qualitative/Discrete)
 - **Definition**: Descriptive values such as names, dates, categories, and geographical data
-- **Characteristics**: 
+- **Characteristics**:
   - Cannot be aggregated meaningfully
   - Used to categorize and segment data
   - Provide context for measures
-- **Examples**: 
+- **Examples**:
   - Product names, customer names
   - Dates, months, years
   - Categories (High/Medium/Low)
@@ -157,7 +157,7 @@ Understanding your data fields is fundamental to choosing appropriate visualizat
 
 **Best for**: Showing proportional composition of a whole
 
-**Description**: 
+**Description**:
 - **Pie Chart**: Circle divided into sectors, each representing a proportion
 - **Donut Chart**: Variation with a hollow center, allowing for multiple series or additional information
 

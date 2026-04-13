@@ -139,18 +139,18 @@ In Python, data can be easily manipulated with **DataFrames** (like Pandas). The
 ## Dynamic Content
 
 Website can be static:
-- HTML contains all data at initial page load  
-- Content is immediately available in the page source  
-- Can be scraped using standard HTTP requests and HTML parsing  
+- HTML contains all data at initial page load
+- Content is immediately available in the page source
+- Can be scraped using standard HTTP requests and HTML parsing
 
 or dynamic:
-- Initial HTML is minimal or incomplete  
-- Additional data is loaded after page load via JavaScript  
+- Initial HTML is minimal or incomplete
+- Additional data is loaded after page load via JavaScript
 - Content is fetched from API endpoints (often using Ajax or the Fetch API)
-  - Ajax (Asynchronous JavaScript and XML) is a technique for requesting data from a server without reloading the page  
-  - Commonly used by dynamic websites to update content asynchronously  
-  - Typically involves calls to backend APIs returning JSON or XML  
-- Rendered browser content may differ from the raw HTML source  
+  - Ajax (Asynchronous JavaScript and XML) is a technique for requesting data from a server without reloading the page
+  - Commonly used by dynamic websites to update content asynchronously
+  - Typically involves calls to backend APIs returning JSON or XML
+- Rendered browser content may differ from the raw HTML source
 
 ### Selenium for dynamic content
 

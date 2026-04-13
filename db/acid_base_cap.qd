@@ -105,4 +105,3 @@ Despite their differences and trade-offs, both ACID and BASE database systems ar
 - **Ideal for**: Online analytical processing of less structured, high-volume data
 - **Example**: Ecommerce websites use BASE databases to update product prices, which change frequently. Pricing accuracy is less vital than allowing all customers real-time access to the product price
 - **Technologies**: NoSQL databases (MongoDB, Cassandra, DynamoDB)
-

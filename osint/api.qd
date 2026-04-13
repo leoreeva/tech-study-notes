@@ -614,13 +614,13 @@ response.end(twiml.toString());
 ```javascript
 exports.handler = function(context, event, callback) {
   const twiml = new MessagingResponse();
-  
+
   // Log incoming message
   console.log(`Received: ${event.Body}`);
-  
+
   // Send thank you response
   twiml.message('Thanks for your submission! 📷');
-  
+
   callback(null, twiml);
 };
 ```
@@ -631,16 +631,16 @@ exports.handler = function(context, event, callback) {
 exports.handler = async function(context, event, callback) {
   const client = context.getTwilioClient();
   const gallery = [];
-  
+
   // Fetch messages from Twilio API
   const messages = await client.messages.list({
     to: context.TWILIO_NUMBER
   });
-  
+
   // Process each message and extract media
   for (const message of messages) {
     const media = await message.media().list();
-    
+
     for (const item of media) {
       gallery.push({
         src: `https://api.twilio.com${item.uri.replace('.json', '')}`,
@@ -650,7 +650,7 @@ exports.handler = async function(context, event, callback) {
       });
     }
   }
-  
+
   callback(null, gallery);
 };
 ```
@@ -733,7 +733,7 @@ When designing an API, evaluate against REST constraints:
 
 ## Summary
 
-**APIs (Application Programming Interfaces)** are contracts that enable software systems to communicate. They abstract implementation complexity while exposing controlled functionality. 
+**APIs (Application Programming Interfaces)** are contracts that enable software systems to communicate. They abstract implementation complexity while exposing controlled functionality.
 
 **RESTful APIs** leverage HTTP protocols and follow architectural constraints that promote scalability, reliability, and ease of use. By understanding interfaces at all levels—from physical devices to web services—you can build powerful applications that combine multiple services through API integration.
 

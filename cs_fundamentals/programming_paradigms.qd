@@ -7,7 +7,7 @@
 
 Programming paradigms describe coding on different levels of abstraction:
 - **imperative**: concerned with how to do it, not what to do. C, Java, Python, and most other programming languages are imperative. As a rule, if it has explicit loops (for, while, repeat) that change variables with explicit assignment operations at each loop, then it's imperative.
-- **declarative**: concerned with what to do, not how to do it. SQL and XSLT are two well-known examples of declarative programming. Markup languages such as HTML and CSS are declarative too, although they are usually not powerful enough to describe arbitrary algorithms.     Declarative programming is on a higher level of abstraction than imperative programming. 
+- **declarative**: concerned with what to do, not how to do it. SQL and XSLT are two well-known examples of declarative programming. Markup languages such as HTML and CSS are declarative too, although they are usually not powerful enough to describe arbitrary algorithms.     Declarative programming is on a higher level of abstraction than imperative programming.
 
 
 ### Examples
@@ -42,7 +42,7 @@ Notice:
 
 ## Functional vs procedural
 
-Functional and procedural programming paradigms are extensions of the concept of declarative and imperative programming paradigms. 
+Functional and procedural programming paradigms are extensions of the concept of declarative and imperative programming paradigms.
 
 ### Subroutines
 Both functional and procedural programming have some kind of subroutines: one uses **functions**, the other **procedures**.

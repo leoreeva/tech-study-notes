@@ -11,7 +11,7 @@ Understanding when to perform calculations in the visualization layer versus the
 #### Table Calculations
 - **Processing Location**: Performed locally in the visualization tool
 - **Timing**: After aggregations have occurred
-- **Pros**: 
+- **Pros**:
   - Respond to filters and context changes
   - More flexible and dynamic
   - Can be adjusted without modifying source data
@@ -93,7 +93,7 @@ Understanding when to perform calculations in the visualization layer versus the
   - **Per Cell**: Band for each individual data point
   - **Per Pane**: Band for each category/group
   - **Per Table**: Single band across entire visualization
-- **Usage**: 
+- **Usage**:
   - Show acceptable ranges
   - Highlight variance zones
   - Create bullet charts
@@ -174,7 +174,7 @@ END
 **Applications**:
 - **Categorization**: Classify data into groups
   - Example: IF profit > 0 THEN "Profitable" ELSE "Loss" END
-  
+
 - **Threshold Analysis**: Flag values meeting criteria
   - Example: IF sales > 100000 THEN "High" ELSE "Low" END
 
@@ -294,7 +294,7 @@ Country
 #### Filled Maps (Choropleth)
 - Regions colored by data values
 - Best for: Comparing regions directly
-- Considerations: 
+- Considerations:
   - Larger areas visually dominate
   - Normalize by population/area when appropriate
 
