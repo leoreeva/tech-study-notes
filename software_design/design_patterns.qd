@@ -33,7 +33,7 @@ Structural patterns provide flexibility in *what* gets created, *who* creates it
 |---------|------------------|------------|----------|
 | Adapter | Convert interface to another interface | ⭐ | ✅ |
 | Facade | Provide simplified interface to subsystem | ⭐ | ✅ |
-| Decorator | Add behavior to objects dynamically | ⭐⭐ | 🚧 |
+| Decorator | Add behavior to objects dynamically | ⭐⭐ | ✅ |
 | Composite | Treat objects and compositions uniformly | ⭐⭐ | ❌ |
 | Proxy | Control access to an object | ⭐⭐ | ❌ |
 | Bridge | Decouple abstraction from implementation | ⭐⭐⭐ | ❌ |

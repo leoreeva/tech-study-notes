@@ -8,27 +8,27 @@ They explain how to assemble objects and classes into larger structures, while k
 ## Adapter
 Allows objects with incompatible interfaces to collaborate.
 
-### Problem
+###! Problem
 Imagine that you're creating a stock market monitoring app. The app downloads the stock data in XML format and then displays charts for the user. Then you decide to improve the app by integrating a smart 3rd-party analytics library. But there's a catch: the analytics library only works with data in JSON format. You could change the library to work with XML. However, this might break some existing code that relies on the library. And worse, you might not have access to the library's source code in the first place, making this approach impossible.
 
-### Solution
+###! Solution
 You can create an adapter. It wraps one of the objects to hide the complexity of conversion happening behind the scenes. The wrapped object isn't even aware of the adapter.
 
 Adapters can not only convert data into various formats but can also help objects with different interfaces collaborate. Sometimes it's even possible to create a two-way adapter that can convert the calls in both directions.
 
-### Structure
+###! Structure
 
-#### Object adapter
+####! Object adapter
 ![Object adapter structure](images/adapter1.png)
 
 The client contains existing logic and should remain unchanged. It depends only on a client interface, which defines a stable contract. The service provides the needed functionality but exposes an incompatible interface, so it cannot be used directly. The adapter implements the client interface, wraps the service, and translates calls and data between the two. As a result, the client stays decoupled from concrete services, and new or changed services can be integrated without modifying client code.
 
-#### Class adapter
+####! Class adapter
 ![Class adapter structure](images/adapter2.png)
 
 The Class Adapter doesn't need to wrap any objects because it inherits behaviors from both the client and the service. The adaptation happens within the overridden methods. The resulting adapter can be used in place of an existing client class.
 
-### Drawbacks
+###! Drawbacks
 The overall complexity of the code increases because you need to introduce a set of new interfaces and classes. Sometimes it's simpler just to change the service class so that it matches the rest of your code
 
 ---
@@ -36,15 +36,15 @@ The overall complexity of the code increases because you need to introduce a set
 ## Facade
 Defines a high-level, unified, simplified interface to make a subsystem (library, a framework, or any other complex set of classes) easier to use.
 
-### Problem
+###! Problem
 Imagine that you have to make your code work with a broad set of objects that belong to a sophisticated library or framework. Ordinarily, you'd need to initialize all of those objects, keep track of dependencies, execute methods in the correct order, etc. As a result, the business logic of your classes would become tightly coupled to the implementation details of 3rd-party classes, making it hard to comprehend and maintain.
 
-### Solution
+###! Solution
 A facade is a class that provides a simple interface to a complex subsystem which contains lots of moving parts.
 
 It might provide limited functionality in comparison to working with the subsystem directly; however, it includes only those features that clients really care about. It's handy when a sophisticated library has dozens of features, but you just need a tiny bit of them.
 
-### Structure
+###! Structure
 ![facade1](images/facade1.png)
 
 - The Facade provides convenient access to a particular part of the subsystem's functionality. It knows where to direct the client's request and how to operate all the moving parts.
@@ -52,41 +52,78 @@ It might provide limited functionality in comparison to working with the subsyst
 - The Complex Subsystem consists of dozens of various objects. To make them all do something meaningful, you have to dive deep into the subsystem's implementation details, such as initializing objects in the correct order and supplying them with data in the proper format. Subsystem classes aren't aware of the facade's existence. They operate within the system and work with each other directly.
 - The Client uses the facade instead of calling the subsystem objects directly.
 
-### Drawbacks
+###! Drawbacks
 It's useless if the subsystem is already simple, it would add an unnecessary layer. There's also the risk of a facade becoming a "god object", a large object coupled to all classes of an app
+
+---
+
+## Decorator
+
+AKA wrapper, it lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.
+Because the wrapper and the wrapped object share the same interface, client code can treat them interchangeably.
+
+###! Problem
+
+A common design problem has a simple base class (e.g. Notifier) that does one job well (e.g. sending e-mail notifications),
+then accumulates feature requests for optional variations (e.g. support for SMS, Facebook, Slack, etc. and a combination of them).
+Building a subclass for every combination causes a combinatorial explosion of classes.
+
+Inheritance also has two core limitations here:
+- It is **static**: you cannot change an existing object's behavior at runtime.
+- A class usually has only **one parent**, so behavior combinations are constrained.
+
+###! Solution
+
+Instead of extending behavior through inheritance, Decorator uses **composition**.
+A decorator object keeps a reference to another object that follows the same interface and delegates work to it,
+while adding behavior before or after the delegated call.
+
+Because each decorator implements the same interface as the wrapped object, you can stack multiple decorators on top of one another.
+This lets you combine behaviors dynamically at runtime.
+
+In short: use **Decorator** when you want to add optional, composable behavior to objects dynamically without creating a large inheritance tree.
+
+###! Structure
+![Decorator structure](images/decorator1.png)
+
+The pattern typically has these roles:
+
+1. **Component**
+   Declares the common interface shared by both core objects and decorators.
+
+1. **Concrete Component**
+   The original object being wrapped. It contains the base behavior.
+
+1. **Base Decorator**
+   Stores a reference to a `Component` and delegates operations to it.
+
+1. **Concrete Decorators**
+   Add specific responsibilities before or after delegating to the wrapped object.
+
+1. **Client**
+   Works against the shared interface and can compose stacks of decorators as needed.
+
+###! Drawbacks
+
+- Removing a specific wrapper from a stack can be difficult.
+- Behavior may depend on the **order** of decorators.
+- Object assembly can become verbose or messy.
 
 ---
 
 ## Composite
 Lets you compose objects into tree structures and then work with these structures as if they were individual objects.
 
-### Problem
+###! Problem
 aaa
 
-### Solution
+###! Solution
 aaa
 
-### Structure
+###! Structure
 aaa
 
-### Drawbacks
-aaa
-
----
-
-## Decorator
-Lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.
-
-### Problem
-aaa
-
-### Solution
-aaa
-
-### Structure
-aaa
-
-### Drawbacks
+###! Drawbacks
 aaa
 
 ---
@@ -94,32 +131,32 @@ aaa
 ## Proxy
 Lets you provide a substitute or placeholder for another object. A proxy controls access to the original object, allowing you to perform something either before or after the request gets through to the original object.
 
-### Problem
+###! Problem
 aaa
 
-### Solution
+###! Solution
 aaa
 
-### Structure
+###! Structure
 aaa
 
-### Drawbacks
+###! Drawbacks
 aaa
 
 ---
 
 ## Bridge
 
-### Problem
+###! Problem
 Lets you split a large class or a set of closely related classes into two separate hierarchies (abstraction and implementation) which can be developed independently of each other.
 
-### Solution
+###! Solution
 aaa
 
-### Structure
+###! Structure
 aaa
 
-### Drawbacks
+###! Drawbacks
 aaa
 
 ---
@@ -127,16 +164,16 @@ aaa
 ## Flyweight
 Lets you fit more objects into the available amount of RAM by sharing common parts of state between multiple objects instead of keeping all of the data in each object.
 
-### Problem
+###! Problem
 aaa
 
-### Solution
+###! Solution
 aaa
 
-### Structure
+###! Structure
 aaa
 
-### Drawbacks
+###! Drawbacks
 aaa
 
 ---
