@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="generator" content="Quarkdown">
+    <meta charset="UTF-8">
+    <meta name="description" content="aaa">
+    <meta name="author" content="Leonardo Riva, Leonardo Riva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="quarkdown:root-path" content="..">
+    <meta name="quarkdown:search-index" content="../search-index.json">
+    <title>Programming paradigms</title>
+    <script src="../script/quarkdown.js"></script>
+    <script>const capabilities = window.quarkdownCapabilities</script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="../theme/theme.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js"></script>
+    <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+    <link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet">
+    <script>capabilities.code = true;</script>
+    <style>
+
+</style>
+    <script>prepare(new DocsDocument());</script>
+<template id="sidebar-template"><nav class="sidebar" role="doc-toc"><ol><li data-target-id="imperative-vs-declarative" data-depth="2"><a href="#imperative-vs-declarative">Imperative vs Declarative</a><ol><li data-target-id="examples" data-depth="3"><a href="#examples">Examples</a></li></ol></li><li data-target-id="functional-vs-procedural" data-depth="2"><a href="#functional-vs-procedural">Functional vs procedural</a><ol><li data-target-id="subroutines" data-depth="3"><a href="#subroutines">Subroutines</a></li><li data-target-id="objects" data-depth="3"><a href="#objects">Objects</a></li></ol></li></ol></nav>
+</template>  </head>
+  <body class="quarkdown quarkdown-docs">
+    <header>
+      <aside class="margin-area"></aside>
+      <main>
+        <div class="search-wrapper">
+          <div class="search-field"><i class="bi bi-search"></i><input type="text" id="search-input" placeholder="Search" autocomplete="off"><kbd>/</kbd></div>
+        </div>
+      </main>
+      <aside class="margin-area"></aside>
+    </header>
+    <div class="content-wrapper">
+      <aside class="margin-area" id="margin-area-left">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+      <main><div class="page-margin-content page-margin-top-left" data-on-left-page="top-left" data-on-right-page="top-left"><div style="justify-content: flex-start; align-items: center; column-gap: 1.0px;" class="stack stack-row"><figure><img src="programming_paradigms/media/logo@75967600.png" alt="Tech-study-notes" style="height: 400.0px;" /></figure></div></div><style data-hidden="">figure figcaption, table caption {
+  font-style: italic !important;
+}</style><div class="page-margin-content page-margin-left-top" data-on-left-page="left-top" data-on-right-page="left-top"><nav role="navigation" data-role="page-list"><h3 id="-computer-science-fundamentals" data-decorative="">🧠 Computer Science Fundamentals</h3><ul><li><a href="../programming_paradigms" aria-current="page">Programming paradigms</a></li><li><a href="../oop">OOP</a></li></ul><h3 id="-databases" data-decorative="">🧪 Databases</h3><ul><li><a href="../acid_base_cap">ACID, BASE, CAP</a></li><li><a href="../sql">SQL</a></li></ul><h3 id="-software-design" data-decorative="">💻 Software Design</h3><ul><li><a href="../design_patterns">Design patterns</a><ul><li><a href="../design_patterns__creational_patterns">Creational patterns</a></li><li><a href="../design_patterns__structural_patterns">Structural patterns</a></li><li><a href="../design_patterns__behavioral_patterns">Behavioral patterns</a></li></ul></li><li><a href="../refactoring_code">Refactoring code</a></li><li><a href="../solid_principle">SOLID Principle</a></li><li><a href="../git_workflows">Git workflows</a></li></ul><h3 id="-system-design" data-decorative="">🏛️ System Design</h3><ul><li><a href="../distributed_systems">Distributed systems</a></li><li><a href="../microservices">Microservices</a></li><li><a href="../event_driven_architecture">Event-driven architecture</a></li><li><a href="../api_design">API Design (RPC &amp; REST)</a></li></ul><h3 id="-data-engineering" data-decorative="">🔄 Data Engineering</h3><ul><li><a href="../data_modeling">Data modeling</a></li><li><a href="../data_pipelines">Data pipelines</a></li><li><a href="../batch_streaming">Batch vs Streaming</a></li><li><a href="../data_marts">Data marts</a></li></ul><h3 id="-devops-amp-cicd" data-decorative="">🚀 DevOps &amp; CI_CD</h3><ul><li><a href="../cicd_pipelines">CI_CD pipelines</a></li></ul><h3 id="-cloud-certifications" data-decorative="">☁️ Cloud Certifications</h3><ul><li><a href="../gcp_pde">GCP PDE (2023)</a></li><li><a href="../snowpro_core">SnowPro Core (2025)</a></li></ul><h3 id="-osint" data-decorative="">🕵️ OSINT</h3><ul><li><a href="../introduction">Introduction</a></li><li><a href="../sock_puppets">Sock Puppets</a></li><li><a href="../search_engine_osint">Search Engine OSINT</a></li><li><a href="../image_osint">Image OSINT</a></li><li><a href="../email_osint">Email OSINT</a></li><li><a href="../password_osint">Password OSINT</a></li><li><a href="../username_osint">Username OSINT</a></li><li><a href="../social_media_osint">SOCMINT</a></li><li><a href="../humint">HUMINT Fundamentals</a></li><li><a href="../scraping">Scraping Fundamentals</a></li><li><a href="../api">API</a></li><li><a href="../fact_checking">Fact-checking</a></li><li><a href="../threat_profiling">Threat profiling</a></li><li><a href="../tools">Tools</a></li></ul><h3 id="-deep-web" data-decorative="">🔒 Deep web</h3><ul><li><a href="../overview">Overview</a></li><li><a href="../technical_foundations">Technical Foundations: Tor &amp; PGP</a></li><li><a href="../installation_guides">Installation Guides: OS Setup</a></li><li><a href="../practical_usage">Practical Usage: Browsing &amp; Communication</a></li><li><a href="../advanced_topics">Advanced Topics: Markets &amp; Analysis</a></li></ul><h3 id="-data-visualization" data-decorative="">📊 Data Visualization</h3><ul><li><a href="../data_visualization_fundamentals">Data Visualization Fundamentals</a></li><li><a href="../dashboard_creation_guide">Dashboard Creation and Data Analysis</a></li><li><a href="../advanced_data_analysis">Advanced Data Analysis and Calculations</a></li><li><a href="../programming_visualization_concepts">Programming Languages for Data Visualization</a></li></ul></nav></div><div class="page-margin-content page-margin-right-top" data-on-left-page="right-top" data-on-right-page="right-top"><h3 id="table-of-contents">On this page</h3><nav role="table-of-contents" data-role="table-of-contents"><ol><li data-target-id="imperative-vs-declarative" data-depth="2"><a href="#imperative-vs-declarative">Imperative vs Declarative</a><ol><li data-target-id="examples" data-depth="3"><a href="#examples">Examples</a></li></ol></li><li data-target-id="functional-vs-procedural" data-depth="2"><a href="#functional-vs-procedural">Functional vs procedural</a><ol><li data-target-id="subroutines" data-depth="3"><a href="#subroutines">Subroutines</a></li><li data-target-id="objects" data-depth="3"><a href="#objects">Objects</a></li></ol></li></ol></nav></div><h1 id="programming-paradigms" data-decorative="">Programming paradigms</h1><h2 id="imperative-vs-declarative">Imperative vs Declarative</h2><figure><img src="programming_paradigms/media/programming_paradigms@829701110.png" alt="Programming paradigms" style="width: 700.0px;" /></figure><p>Programming paradigms describe coding on different levels of abstraction:</p><ul><li><strong>imperative</strong>: concerned with how to do it, not what to do. C, Java, Python, and most other programming languages are imperative. As a rule, if it has explicit loops (for, while, repeat) that change variables with explicit assignment operations at each loop, then it&rsquo;s imperative.</li><li><strong>declarative</strong>: concerned with what to do, not how to do it. SQL and XSLT are two well-known examples of declarative programming. Markup languages such as HTML and CSS are declarative too, although they are usually not powerful enough to describe arbitrary algorithms.     Declarative programming is on a higher level of abstraction than imperative programming.</li></ul><h3 id="examples">Examples</h3><p>Here is an example computation (summing the income by gender, from a suitable data source).</p><p><strong>Imperative programming</strong></p><pre><code class="language-javascript">var income_m = 0, income_f = 0;
+for (var i = 0; i &lt; income_list.length; i++) {
+    if (income_list[i].gender == 'M')
+        income_m += income_list[i].income;
+    else
+        income_f += income_list[i].income;
+}</code></pre><p>Notice:</p><ul><li>explicit initialization of variables that will contain the running totals</li><li>explicit loop over the data, modifying the control variable (i) and the running totals at each iteration</li><li>conditionals (ifs) are only used to choose the code path at each iteration</li></ul><p><strong>Declarative programming</strong></p><pre><code class="language-sql">select gender, sum(income)
+from income_list
+group by gender;</code></pre><p>Notice:</p><ul><li>memory cells to contain running totals are implied by the output you declare you want</li><li>any loop the CPU will need to perform (eg. over the income_list table) is implied by the output you declare you want and by the structure of the source data</li><li>conditionals (eg. case in SQL) are used in a functional way to specify the output value you want based on the input values, not to choose a code path (you decide what to do, not how to do it)</li></ul><h2 id="functional-vs-procedural">Functional vs procedural</h2><p>Functional and procedural programming paradigms are extensions of the concept of declarative and imperative programming paradigms.</p><h3 id="subroutines">Subroutines</h3><p>Both functional and procedural programming have some kind of subroutines: one uses <strong>functions</strong>, the other <strong>procedures</strong>.</p><p>Subroutines that are used for re-executing a predefined block of code. The difference between them is that functions return a value, and procedures do not. More specifically, functions are designed to have minimal side effects, and always produce the same output when given the same input. Furthermore, functions are usually concerned with higher level ideas and concepts. Procedures on the other hand do not have any return value, their primary purpose is to accomplish a given task and cause a desired side effect. (this basically goes back to the examples already shown earlier).</p><p>The desired computation is specified by composing functions (in functional programming). <strong>Composition</strong> means chaining two or more functions together by specifying how the output of one is fed as the input to the next (typically by writing one inside the other) Finally the whole composition, which is still itself a big function, is applied to the available inputs to get the desired output.</p><h3 id="objects">Objects</h3><p>Data structures in procedural languages are generally mutable, which means they can be changed. Most functional languages don&rsquo;t allow you to change an object or variable after it has been created.</p>
+        <div id="footnote-area">
+          <div class="footnote-rule"></div>
+        </div>
+        <div id="sibling-pages-button-area"></div>
+        <footer>
+          <div class="position-left"></div>
+          <div class="position-center"></div>
+          <div class="position-right"></div>
+        </footer>
+      </main>
+      <aside class="margin-area" id="margin-area-right">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+    </div>
+  </body>
+</html>
