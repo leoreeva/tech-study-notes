@@ -1,5 +1,7 @@
 # Tech Study Notes
 
+**URL: https://tech-study-notes.pages.dev/**
+
 Data engineering / software engineering resources (or even personal interests, not directly related to tech). Useful for interviews or just personal knowledge.
 
 It's built with [Quarkdown](https://github.com/iamgio/quarkdown).
