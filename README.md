@@ -78,8 +78,7 @@ Note: when working locally, before previewing, run `_scripts/copy_images.py`, ot
 
 ### Publishing new release
 
-- new branch `release/vX.X.X`
-- compile
+- create and push new branch `release/vX.X.X`
 - in Cloudflare pages:
     - check deployment preview
     - update production branch
