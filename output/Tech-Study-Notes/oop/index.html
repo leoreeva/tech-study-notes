@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="generator" content="Quarkdown">
+    <meta charset="UTF-8">
+    <meta name="description" content="aaa">
+    <meta name="author" content="Leonardo Riva, Leonardo Riva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="quarkdown:root-path" content="..">
+    <meta name="quarkdown:search-index" content="../search-index.json">
+    <title>OOP (Object-Oriented Programming)</title>
+    <script src="../script/quarkdown.js"></script>
+    <script>const capabilities = window.quarkdownCapabilities</script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="../theme/theme.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js"></script>
+    <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+    <link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet">
+    <script>capabilities.code = true;</script>
+    <style>
+
+</style>
+    <script>prepare(new DocsDocument());</script>
+<template id="sidebar-template"><nav class="sidebar" role="doc-toc"><ol><li data-target-id="classes-and-objects" data-depth="3"><a href="#classes-and-objects">Classes and Objects</a></li><li data-target-id="encapsulation" data-depth="3"><a href="#encapsulation">Encapsulation</a></li><li data-target-id="inheritance" data-depth="3"><a href="#inheritance">Inheritance</a></li><li data-target-id="polymorphism" data-depth="3"><a href="#polymorphism">Polymorphism</a></li><li data-target-id="abstraction" data-depth="3"><a href="#abstraction">Abstraction</a></li><li data-target-id="composition" data-depth="3"><a href="#composition">Composition</a></li></ol></nav>
+</template>  </head>
+  <body class="quarkdown quarkdown-docs">
+    <header>
+      <aside class="margin-area"></aside>
+      <main>
+        <div class="search-wrapper">
+          <div class="search-field"><i class="bi bi-search"></i><input type="text" id="search-input" placeholder="Search" autocomplete="off"><kbd>/</kbd></div>
+        </div>
+      </main>
+      <aside class="margin-area"></aside>
+    </header>
+    <div class="content-wrapper">
+      <aside class="margin-area" id="margin-area-left">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+      <main><div class="page-margin-content page-margin-top-left" data-on-left-page="top-left" data-on-right-page="top-left"><div style="justify-content: flex-start; align-items: center; column-gap: 1.0px;" class="stack stack-row"><figure><img src="media/logo@75967600.png" alt="Tech-study-notes" style="height: 400.0px;" /></figure></div></div><style data-hidden="">figure figcaption, table caption {
+  font-style: italic !important;
+}</style><div class="page-margin-content page-margin-left-top" data-on-left-page="left-top" data-on-right-page="left-top"><nav role="navigation" data-role="page-list"><h3 id="-computer-science-fundamentals" data-decorative="">🧠 Computer Science Fundamentals</h3><ul><li><a href="../programming_paradigms">Programming paradigms</a></li><li><a href="../oop" aria-current="page">OOP</a></li></ul><h3 id="-databases" data-decorative="">🧪 Databases</h3><ul><li><a href="../acid_base_cap">ACID, BASE, CAP</a></li><li><a href="../sql">SQL</a></li></ul><h3 id="-software-design" data-decorative="">💻 Software Design</h3><ul><li><a href="../design_patterns">Design patterns</a><ul><li><a href="../design_patterns__creational_patterns">Creational patterns</a></li><li><a href="../design_patterns__structural_patterns">Structural patterns</a></li><li><a href="../design_patterns__behavioral_patterns">Behavioral patterns</a></li></ul></li><li><a href="../refactoring_code">Refactoring code</a></li><li><a href="../solid_principle">SOLID Principle</a></li><li><a href="../git_workflows">Git workflows</a></li></ul><h3 id="-system-design" data-decorative="">🏛️ System Design</h3><ul><li><a href="../distributed_systems">Distributed systems</a></li><li><a href="../microservices">Microservices</a></li><li><a href="../event_driven_architecture">Event-driven architecture</a></li><li><a href="../api_design">API Design (RPC &amp; REST)</a></li></ul><h3 id="-data-engineering" data-decorative="">🔄 Data Engineering</h3><ul><li><a href="../data_modeling">Data modeling</a></li><li><a href="../data_pipelines">Data pipelines</a></li><li><a href="../batch_streaming">Batch vs Streaming</a></li><li><a href="../data_marts">Data marts</a></li></ul><h3 id="-devops-amp-cicd" data-decorative="">🚀 DevOps &amp; CI_CD</h3><ul><li><a href="../cicd_pipelines">CI_CD pipelines</a></li></ul><h3 id="-cloud-certifications" data-decorative="">☁️ Cloud Certifications</h3><ul><li><a href="../gcp_pde">GCP PDE (2023)</a></li><li><a href="../snowpro_core">SnowPro Core (2025)</a></li></ul><h3 id="-osint" data-decorative="">🕵️ OSINT</h3><ul><li><a href="../introduction">Introduction</a></li><li><a href="../sock_puppets">Sock Puppets</a></li><li><a href="../search_engine_osint">Search Engine OSINT</a></li><li><a href="../image_osint">Image OSINT</a></li><li><a href="../email_osint">Email OSINT</a></li><li><a href="../password_osint">Password OSINT</a></li><li><a href="../username_osint">Username OSINT</a></li><li><a href="../social_media_osint">SOCMINT</a></li><li><a href="../humint">HUMINT Fundamentals</a></li><li><a href="../scraping">Scraping Fundamentals</a></li><li><a href="../api">API</a></li><li><a href="../fact_checking">Fact-checking</a></li><li><a href="../threat_profiling">Threat profiling</a></li><li><a href="../tools">Tools</a></li></ul><h3 id="-deep-web" data-decorative="">🔒 Deep web</h3><ul><li><a href="../overview">Overview</a></li><li><a href="../technical_foundations">Technical Foundations: Tor &amp; PGP</a></li><li><a href="../installation_guides">Installation Guides: OS Setup</a></li><li><a href="../practical_usage">Practical Usage: Browsing &amp; Communication</a></li><li><a href="../advanced_topics">Advanced Topics: Markets &amp; Analysis</a></li></ul><h3 id="-data-visualization" data-decorative="">📊 Data Visualization</h3><ul><li><a href="../data_visualization_fundamentals">Data Visualization Fundamentals</a></li><li><a href="../dashboard_creation_guide">Dashboard Creation and Data Analysis</a></li><li><a href="../advanced_data_analysis">Advanced Data Analysis and Calculations</a></li><li><a href="../programming_visualization_concepts">Programming Languages for Data Visualization</a></li></ul></nav></div><div class="page-margin-content page-margin-right-top" data-on-left-page="right-top" data-on-right-page="right-top"><h3 id="table-of-contents">On this page</h3><nav role="table-of-contents" data-role="table-of-contents"><ol><li data-target-id="classes-and-objects" data-depth="3"><a href="#classes-and-objects">Classes and Objects</a></li><li data-target-id="encapsulation" data-depth="3"><a href="#encapsulation">Encapsulation</a></li><li data-target-id="inheritance" data-depth="3"><a href="#inheritance">Inheritance</a></li><li data-target-id="polymorphism" data-depth="3"><a href="#polymorphism">Polymorphism</a></li><li data-target-id="abstraction" data-depth="3"><a href="#abstraction">Abstraction</a></li><li data-target-id="composition" data-depth="3"><a href="#composition">Composition</a></li></ol></nav></div><h1 id="oop-object-oriented-programming" data-decorative="">OOP (Object-Oriented Programming)</h1><p>[work in progress]</p><p><a href="https://www.interviewbit.com/oops-interview-questions/">https://www.interviewbit.com/oops-interview-questions/</a></p><p>some concepts: Encapsulation, Inheritance, Polymorphism, Abstraction, Composition, etc.</p><h3 id="classes-and-objects">Classes and Objects</h3><p><strong>Class</strong>: A blueprint for creating objects
+<strong>Object</strong>: An instance of a class</p><pre><code class="language-python">class Dog:
+    def __init__(self, name: str):
+        self.name = name
+
+    def bark(self) -&gt; str:
+        return f&quot;{self.name} says woof!&quot;
+
+# 2. Object creation
+my_dog = Dog(&quot;Buddy&quot;)
+print(my_dog.bark())  # &quot;Buddy says woof!&quot;</code></pre><h3 id="encapsulation">Encapsulation</h3><p>Bundling data and methods that operate on that data within a single unit (class). Hide internal details.</p><pre><code class="language-python">class BankAccount:
+    def __init__(self, balance: float):
+        self._balance = balance  # Protected attribute (convention)
+
+    def deposit(self, amount: float) -&gt; None:
+        if amount &gt; 0:
+            self._balance += amount
+
+    def get_balance(self) -&gt; float:
+        return self._balance
+
+    # External code can't directly modify _balance improperly</code></pre><h3 id="inheritance">Inheritance</h3><p>Create new classes based on existing ones, inheriting attributes and methods.</p><pre><code class="language-python">class Animal:
+    def __init__(self, name: str):
+        self.name = name
+
+    def speak(self) -&gt; str:
+        raise NotImplementedError(&quot;Subclass must implement&quot;)
+
+class Dog(Animal):
+    def speak(self) -&gt; str:
+        return f&quot;{self.name} barks&quot;
+
+class Cat(Animal):
+    def speak(self) -&gt; str:
+        return f&quot;{self.name} meows&quot;</code></pre><h3 id="polymorphism">Polymorphism</h3><p>Objects of different classes can be treated as objects of a common parent class. Same interface, different implementations.</p><pre><code class="language-python">def make_animal_speak(animal: Animal) -&gt; None:
+    print(animal.speak())
+
+dog = Dog(&quot;Buddy&quot;)
+cat = Cat(&quot;Whiskers&quot;)
+
+make_animal_speak(dog)  # Works with Dog
+make_animal_speak(cat)  # Works with Cat
+# 3. Both have speak() method but behave differently</code></pre><h3 id="abstraction">Abstraction</h3><p>Hide complex implementation details, expose only necessary features.</p><pre><code class="language-python">from abc import ABC, abstractmethod
+
+class PaymentProcessor(ABC):
+    @abstractmethod
+    def process_payment(self, amount: float) -&gt; bool:
+        &quot;&quot;&quot;Process payment - subclasses define how&quot;&quot;&quot;
+        pass
+
+class CreditCardProcessor(PaymentProcessor):
+    def process_payment(self, amount: float) -&gt; bool:
+        # Complex credit card logic hidden here
+        print(f&quot;Processing ${amount} via credit card&quot;)
+        return True
+
+class PayPalProcessor(PaymentProcessor):
+    def process_payment(self, amount: float) -&gt; bool:
+        # Complex PayPal API logic hidden here
+        print(f&quot;Processing ${amount} via PayPal&quot;)
+        return True
+
+# 4. Client code doesn't care about implementation details
+processor: PaymentProcessor = CreditCardProcessor()
+processor.process_payment(100.00)</code></pre><h3 id="composition">Composition</h3><p>&ldquo;Has-a&rdquo; relationship. Build complex objects from simpler ones.</p><pre><code class="language-python">class Engine:
+    def start(self) -&gt; str:
+        return &quot;Engine started&quot;
+
+class Car:
+    def __init__(self):
+        self.engine = Engine()  # Car HAS-A Engine
+
+    def start(self) -&gt; str:
+        return self.engine.start()
+
+# 5. Prefer composition over inheritance when possible</code></pre>
+        <div id="footnote-area">
+          <div class="footnote-rule"></div>
+        </div>
+        <div id="sibling-pages-button-area"></div>
+        <footer>
+          <div class="position-left"></div>
+          <div class="position-center"></div>
+          <div class="position-right"></div>
+        </footer>
+      </main>
+      <aside class="margin-area" id="margin-area-right">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+    </div>
+  </body>
+</html>
