@@ -72,14 +72,16 @@ quarkdown c main.qd -p -w
 
 The compiled output will be in the `output/` directory.
 
-Note: before previewing, run `_scripts/copy_images.py` (media is not placed correctly when previewing locally)
+Note: when working locally, before previewing, run `_scripts/copy_images.py`, otherwise media is not rendered correctly (at least on my pc)
 
 ### Publishing new release
 
 - new branch `release/vX.X.X`
 - compile
-- run `_scripts/fix_index_image_paths.py`
-- Update Cloudflare pages
+- in Cloudflare pages:
+    - check deployment preview
+    - update production branch
+    - re-run deployment
 
 ### License
 
