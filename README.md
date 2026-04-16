@@ -74,7 +74,7 @@ quarkdown c main.qd -p -w
 
 The compiled output will be in the `output/` directory.
 
-Note: when working locally, before previewing, run `_scripts/copy_images.py`, otherwise media is not rendered correctly (at least on my pc)
+Note: when working locally, before previewing, run `python _scripts/move_images.py`, otherwise media is not rendered correctly (at least on my pc)
 
 ### Publishing new release
 

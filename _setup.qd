@@ -7,8 +7,9 @@
   - Leonardo Riva
 
 .pagemargin {topleft}
-    .row gap:{1px}
-        !(_*400)[Tech-study-notes](_assets/logo.png)
+    .row gap:{12px}
+        [![Tech-study-notes](_assets/logo.png)](https://tech-study-notes.pages.dev)
+        .read {version.txt}::text
 
 .css
   figure figcaption, table caption {

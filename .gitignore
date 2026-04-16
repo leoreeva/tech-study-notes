@@ -17,6 +17,7 @@ ENV/
 *.tmp
 *.swp
 *_cache
+.DS_Store
 
 # Python egg metadata and distributions
 *.egg-info/
