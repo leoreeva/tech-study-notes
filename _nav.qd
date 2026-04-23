@@ -36,3 +36,11 @@
 ###! 🚀 DevOps & CI_CD
 
 - [CI_CD pipelines](devops_cicd/cicd_pipelines.qd)
+
+###! 🔒 Deep web
+
+- [Overview](deep_web/overview.qd)
+- [Technical Foundations: Tor & PGP](deep_web/technical_foundations.qd)
+- [Installation Guides: OS Setup](deep_web/installation_guides.qd)
+- [Practical Usage: Browsing & Communication](deep_web/practical_usage.qd)
+- [Advanced Topics: Markets & Analysis](deep_web/advanced_topics.qd)
