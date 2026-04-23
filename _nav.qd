@@ -3,6 +3,7 @@
 
 - [Programming paradigms](cs_fundamentals/programming_paradigms.qd)
 - [OOP](cs_fundamentals/oop.qd)
+- [Git](cs_fundamentals/git.qd)
 
 ###! 🧪 Databases
 
@@ -17,7 +18,6 @@
     - [Behavioral patterns](software_design/design_patterns__behavioral_patterns.qd)
 - [Refactoring code](software_design/refactoring_code.qd)
 - [SOLID Principle](software_design/solid_principle.qd)
-- [Git workflows](software_design/git_workflows.qd)
 
 ###! 🏛️ System Design
 
