@@ -30,7 +30,7 @@ java -version
 
 echo "Installing Quarkdown locally..."
 curl -fsSL \
-  "https://github.com/iamgio/quarkdown/releases/latest/download/quarkdown.zip" \
+  "https://github.com/iamgio/quarkdown/releases/download/v2.0.0/quarkdown.zip" \
   -o /tmp/quarkdown.zip
 rm -rf /tmp/quarkdown-unzip
 mkdir -p /tmp/quarkdown-unzip

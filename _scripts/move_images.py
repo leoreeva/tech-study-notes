@@ -1,60 +1,63 @@
 from pathlib import Path
 import shutil
 
-# Source root
-root = Path("output/Tech-Study-Notes")
-media_dir = root / "media"
+root = Path("quarkdown-output")
 
-# Supported image extensions
-image_extensions = {
-    ".jpg", ".jpeg", ".png", ".gif", ".bmp",
-    ".tif", ".tiff", ".webp", ".svg"
-}
+for item in root.iterdir():
+    if item.is_dir():
 
-# Create media folder if it does not exist
-media_dir.mkdir(parents=True, exist_ok=True)
+        media_dir = item / "media"
 
-# First pass: copy images to media and remove originals
-for file_path in root.rglob("*"):
-    if not file_path.is_file():
-        continue
+        # Supported image extensions
+        image_extensions = {
+            ".jpg", ".jpeg", ".png", ".gif", ".bmp",
+            ".tif", ".tiff", ".webp", ".svg"
+        }
 
-    # Skip files already inside media
-    if media_dir in file_path.parents:
-        continue
+        # Create media folder if it does not exist
+        media_dir.mkdir(parents=True, exist_ok=True)
 
-    if file_path.suffix.lower() in image_extensions:
-        destination = media_dir / file_path.name
+        # First pass: copy images to media and remove originals
+        for file_path in item.rglob("*"):
+            if not file_path.is_file():
+                continue
 
-        # Avoid overwriting files with the same name
-        if destination.exists():
-            stem = file_path.stem
-            suffix = file_path.suffix
-            counter = 1
-            while destination.exists():
-                destination = media_dir / f"{stem}_{counter}{suffix}"
-                counter += 1
+            # Skip files already inside media
+            if media_dir in file_path.parents:
+                continue
 
-        shutil.copy2(file_path, destination)
-        print(f"Copied: {file_path} -> {destination}")
+            if file_path.suffix.lower() in image_extensions:
+                destination = media_dir / file_path.name
 
-        # Remove original image after successful copy
-        file_path.unlink()
-        print(f"Deleted original: {file_path}")
+                # Avoid overwriting files with the same name
+                if destination.exists():
+                    stem = file_path.stem
+                    suffix = file_path.suffix
+                    counter = 1
+                    while destination.exists():
+                        destination = media_dir / f"{stem}_{counter}{suffix}"
+                        counter += 1
 
-# Second pass: remove empty folders, deepest first
-for dir_path in sorted(root.rglob("*"), key=lambda p: len(p.parts), reverse=True):
-    if not dir_path.is_dir():
-        continue
+                shutil.copy2(file_path, destination)
+                print(f"Copied: {file_path} -> {destination}")
 
-    # Never remove the root folder or media folder
-    if dir_path == root or dir_path == media_dir:
-        continue
+                # Remove original image after successful copy
+                file_path.unlink()
+                print(f"Deleted original: {file_path}")
 
-    try:
-        next(dir_path.iterdir())
-    except StopIteration:
-        dir_path.rmdir()
-        print(f"Removed empty folder: {dir_path}")
+        # Second pass: remove empty folders, deepest first
+        for dir_path in sorted(item.rglob("*"), key=lambda p: len(p.parts), reverse=True):
+            if not dir_path.is_dir():
+                continue
 
-print("Done.")
+            # Never remove the item folder or media folder
+            if dir_path == item or dir_path == media_dir:
+                continue
+
+            try:
+                next(dir_path.iterdir())
+            except StopIteration:
+                dir_path.rmdir()
+                print(f"Removed empty folder: {dir_path}")
+
+        print("Done.")
