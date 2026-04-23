@@ -36,3 +36,10 @@
 ###! 🚀 DevOps & CI_CD
 
 - [CI_CD pipelines](devops_cicd/cicd_pipelines.qd)
+
+###! 📊 Data Visualization
+
+- [Data Visualization Fundamentals](data_visualization/data_visualization_fundamentals.qd)
+- [Dashboard Creation and Data Analysis](data_visualization/dashboard_creation_guide.qd)
+- [Advanced Data Analysis and Calculations](data_visualization/advanced_data_analysis.qd)
+- [Programming Languages for Data Visualization](data_visualization/programming_visualization_concepts.qd)
