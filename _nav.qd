@@ -36,3 +36,20 @@
 ###! 🚀 DevOps & CI_CD
 
 - [CI_CD pipelines](devops_cicd/cicd_pipelines.qd)
+
+###! 🕵️ OSINT
+
+- [Introduction](osint/introduction.qd)
+- [Sock Puppets](osint/sock_puppets.qd)
+- [Search Engine OSINT](osint/search_engine_osint.qd)
+- [Image OSINT](osint/image_osint.qd)
+- [Email OSINT](osint/email_osint.qd)
+- [Password OSINT](osint/password_osint.qd)
+- [Username OSINT](osint/username_osint.qd)
+- [SOCMINT](osint/social_media_osint.qd)
+- [HUMINT Fundamentals](osint/humint.qd)
+- [Scraping Fundamentals](osint/scraping.qd)
+- [API](osint/api.qd)
+- [Fact-checking](osint/fact_checking.qd)
+- [Threat profiling](osint/threat_profiling.qd)
+- [Tools](osint/tools.qd)

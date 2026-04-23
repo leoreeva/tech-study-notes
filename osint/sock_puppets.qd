@@ -1,0 +1,86 @@
+.docname {Sock Puppets}
+.include {docs}
+
+
+A sock puppet is a **fake online identity** - a misrepresentation or alternate identity used for investigative purposes, research, privacy protection.
+
+**Why** use sock puppets?
+- Never let targets know you're investigating them
+- Avoid drawing attention back to yourself
+- Protect your real identity
+
+
+## Types of Sock Puppets
+
+- **Full Fake Persona**. A complete fabricated identity, with fake name, background, photos, active social media presence, etc. It takes significant time to establish. It has the risk of being identified by "sock hunters"
+
+- **Known Anonymous Account**. It's based on a non-real person that posts stuff (e.g. ShakiraSecurity account is not Shakira). It's useful for building reputation in a community without revealing identity
+
+## Creating a Sock Puppet
+
+1. Generate a fake identity
+   - [fakenamegenerator.com](https://fakenamegenerator.com) - Generates complete fake profiles
+      - Name, address, phone, SSN, mother's maiden name
+      - Coordinates, birthday, email
+      - Customizable by gender, country, etc.
+
+2. Generate a fake photo
+   - [thispersondoesnotexist.com](https://thispersondoesnotexist.com)
+      - AI-generated faces
+      - **Critical:** These photos won't show up in reverse image search
+      - Unlike stolen photos which can be traced via Google/Yandex/TinEye
+
+   **Important:** Never use real people's photos (catfishing risk)
+
+3. Create supporting accounts
+   - Email: ProtonMail (privacy-focused), Gmail (but requires phone verification)
+   - Social Media: Twitter (X), Facebook, LinkedIn, Instagram
+   - Tips
+      - Accounts need history and activity to look legitimate
+      - Don't create accounts and immediately investigate
+      - Post content, make connections, establish presence
+      - Female personas are often more effective (social engineering advantage)
+
+## Operational Security (OPSEC)
+
+### Critical Rules
+
+1. **Never use personal devices**
+   - Use dedicated laptop for investigations
+   - Never log into personal accounts on this device
+
+2. **Never use your real IP address**
+   - Use VPNs (but be careful - Facebook/social media may detect VPNs)
+   - Ideally use VPN in same location as your persona
+   - Alternative: Mobile networks work well
+
+3. **Phone Numbers**
+   - Use burner phones (Mint Mobile recommended)
+   - Can buy with virtual credit cards (privacy.com)
+   - Use for verification, then switch to Google Voice
+   - Destroy SIM after setup
+
+4. **Payment Methods**
+   - Use privacy.com for virtual credit cards
+   - Fund with specific amounts
+   - Cards don't tie to your real identity
+
+### Common Mistakes to Avoid
+
+**Facebook Example:**
+- Created sock puppet on laptop (fine)
+- Later logged in on personal phone
+- Facebook immediately pulled contacts, suggested "people you may know"
+- **Result:** Sock puppet connected to real identity
+
+**Never:**
+- Log into sock accounts from personal phone
+- Search for people you know
+- Connect accounts to personal information
+- Use same passwords as personal accounts
+
+
+## Deep-dive
+- [Creating an Effective Sock Puppet for OSINT Investigations](./sock_puppets__creating_an_effective_sock_puppet_for_osint_investigations.qd)
+- [Sock puppet Account Creation](./sock_puppets__sock_puppet_account_creation.qd)
+- [The Art Of The Sock](./sock_puppets__the_art_of_the_sock.qd)
