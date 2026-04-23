@@ -17,32 +17,7 @@ This repository contains study notes, explanations, and resources for various te
 - Databases and Data Engineering
 - Software Design and Architecture
 - System Design
-- Cloud Certifications
-- OSINT (Open Source Intelligence)
-- Deep Web Technologies
-- Data Visualization
 
-## 📚 Content Structure
-
-```
-tech-study-notes/
-├── computer_science_fundamentals/  # Core CS concepts
-├── databases/                      # Database theories and practices
-├── software_design/                 # Design patterns and principles
-├── system_design/                   # System architecture
-├── data_engineering/                # Data pipelines and infrastructure
-├── devops_cicd/                     # DevOps practices
-├── cloud_certifications/           # Cloud platform certifications
-├── osint/                          # OSINT techniques
-├── deep_web/                       # Deep web technologies
-├── data_visualization/              # Data presentation techniques
-├── images/                         # Shared images
-├── output/                         # Compiled output (generated)
-├── _nav.qd                         # Navigation structure
-├── _setup.qd                       # Global setup
-├── main.qd                         # Homepage
-└── README.md                       # This file
-```
 
 ## 🛠️ Getting Started
 
