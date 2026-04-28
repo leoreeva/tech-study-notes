@@ -1,0 +1,23 @@
+.docname {Interviews}
+.include {docs}
+
+## Learnings from conducting ~1,000 interviews at Amazon
+
+*Source*: https://newsletter.pragmaticengineer.com/p/learnings-from-conducting-1000-interviews (*April 21, 2026*)
+
+###! Summary
+
+Interviews aren't really about raw technical skill — they're about how well you communicate your experience.
+People who do well don't just answer questions; they tell clear, structured stories about what they did, why they did it, and what changed because of it.
+
+Most candidates focus too much on grinding coding problems and not enough on preparing those stories.
+A handful of strong examples (impact, failure, leadership, conflict) — practiced until they're sharp and concise — usually matters more.
+
+Clarity is everything. Weak candidates ramble, stay vague, or never make their impact obvious.
+Strong ones make it easy for the interviewer: clear ownership, concrete details, and measurable outcomes.
+
+There's also a layer of interpretation happening — interviewers are mapping what you say to what the company values.
+If you don't make that connection obvious, you're leaving room for doubt.
+
+Overall, hiring decisions end up being narrative-driven. Even solid engineers get rejected if their story is unclear,
+while good communicators with clear impact tend to stand out.

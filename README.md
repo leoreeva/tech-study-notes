@@ -59,6 +59,28 @@ Note: when working locally, before previewing, run `python _scripts/move_images.
     - update production branch
     - re-run deployment
 
+### Articles
+
+In the articles section, I present a summary. Use this prompt in an LLM to follow the same style:
+
+```txt
+Summarize the content in a concise, natural style.
+
+Rules:
+
+* Do NOT say 'the article says' or refer to the text itself — just present the ideas directly
+* Keep it relatively short (a few tight paragraphs, not long)
+* Use plain, conversational language (not formal, not academic)
+* Focus on the key insights and underlying point, not surface details
+* Prefer paragraphs over bullet points; only use bullets if absolutely necessary
+* Make the flow feel like someone explaining it clearly, not listing notes
+* Emphasize cause/effect, tradeoffs, and why things matter
+* Avoid fluff, filler, or repetition
+* Use "'" (straight apostrophe), never "’"
+
+Output should feel like a sharp, clear explanation from someone who understood the piece well
+```
+
 ### License
 
 Add a license...

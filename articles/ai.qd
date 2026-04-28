@@ -1,0 +1,29 @@
+.docname {AI}
+.include {docs}
+
+## What Happens When AI Technical Debt Compounds (And How Spec-Driven Dev Prevents It)
+
+*Source*: https://www.augmentcode.com/guides/ai-technical-debt-compounds-spec-driven-development (*March 31, 2026*)
+
+###! Summary
+
+AI-generated code doesn't just add technical debt — it multiplies it faster than teams can see or handle. The problem isn't that the code is obviously bad;
+it's that it looks fine while quietly embedding a bunch of hidden assumptions everywhere.
+
+Each feature can carry tons of implicit decisions (about dependencies, schemas, error handling, concurrency, etc.),
+and those decisions usually don't show up in reviews or tests. So things pass, ship, and only break later when systems interact or scale.
+
+AI makes this worse by sheer volume — you're producing way more code, so you're also producing way more hidden assumptions.
+Review processes weren't designed for that, so they just don't catch it.
+
+That's why teams feel like they're spending more time fixing “almost correct” code. It works on the surface, but the gaps
+(edge cases, integration issues, missing constraints) pile up and become expensive to unwind.
+
+The fix is shifting from “code-first” to spec-first. Instead of letting AI guess what you mean, you define it upfront in a detailed, enforceable way.
+Specs become the source of truth, not docs that drift.
+
+Good specs make assumptions explicit, turn them into constraints, and force the generated code to stay aligned.
+That stops the silent drift before it starts, instead of trying to clean it up afterward.
+
+Key mindset shift: the real work isn't writing code anymore — it's defining the rules the code must follow.
+If the spec is vague or missing, the AI fills in the gaps, and that's exactly where the debt comes from.

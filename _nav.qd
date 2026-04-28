@@ -33,6 +33,11 @@
 - [Batch vs Streaming](data_engineering/batch_streaming.qd)
 - [Data marts](data_engineering/data_marts.qd)
 
-###! 🚀 DevOps & CI_CD
+###! 🚀 DevOps & CI/CD
 
-- [CI_CD pipelines](devops_cicd/cicd_pipelines.qd)
+- [CI/CD pipelines](devops_cicd/cicd_pipelines.qd)
+
+###! 📰 Articles
+
+- [Interviews](articles/interviews.qd)
+- [AI](articles/ai.qd)
