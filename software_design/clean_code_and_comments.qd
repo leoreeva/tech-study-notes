@@ -1,0 +1,83 @@
+.docname {Clean Code & Comments}
+.include {docs}
+
+**Source:** https://dev.to/hamitseyrek/whyhow-to-write-comment-what-is-cleancode-5hin
+
+Comments and clean code are two closely related topics that both come down to the same question: can someone else (or future-you) understand this code without asking you to explain it?
+
+---
+
+## Clean Code
+
+The foundation is Robert C. Martin's `Clean Code` book, which opens with a hard truth: developers know they're writing messy code in the moment. They tell themselves "I'll clean it up later." LeBlanc's law: **later equals never**.
+
+Characteristics of clean code:
+
+**1. Readable, changeable, expandable, maintainable**
+These aren't four separate things — they're facets of the same quality. Code that's easy to read is easy to change. Code that's easy to change is easy to expand. Code that's easy to expand is easy to maintain.
+
+**2. Single Responsibility per method**
+Each function does one thing. Not "one thing and also logs" or "one thing and also validates input." One thing. If you can't name the function without using "and," it's doing too much.
+
+**3. Appropriate architecture with clear file organization**
+The purpose of every file should be obvious from its name and location. You shouldn't need to open a file to know what it contains. A new team member should be able to find where something lives by intuition, not by grep.
+
+**4. No zombie code**
+Commented-out code blocks are a plague. They raise questions: "Why was this commented out? Will it be needed? Is it a reference for something? Would deleting it break something?" If code isn't being used, delete it. Version control exists for a reason — you can always get it back from git history.
+
+**5. All tests written and passing**
+Clean code isn't just about aesthetics. It's about confidence. Tests prove that future changes won't silently break existing behavior. If your code has no tests, you can't refactor it safely, which means it'll never get cleaner.
+
+**6. Language separation**
+Don't embed JavaScript inside PHP files. Don't inline CSS in HTML templates (unless you're using a framework specifically designed for that, like styled-components). Each language in its own file with the appropriate extension. This makes tooling work properly and reduces cognitive load.
+
+**7. Meaningful naming**
+Variable names, function names, class names — they should tell you what they represent without needing to read the implementation. `calculateMonthlyRevenue()` beats `calc()`. `isUserAuthenticated` beats `flag`. The extra characters cost nothing; the ambiguity costs hours.
+
+**8. No code duplication**
+If you find yourself writing the same logic in multiple places, extract it. Not just for brevity — duplicated code means bugs get fixed in one place and silently persist in the copies.
+
+---
+
+## Comments
+
+### The philosophy
+
+"The best comment is the one that is not needed." If your code needs a comment to be understood, the first question should be: can I make the code clearer instead? The ideal project needs nothing beyond a README. Self-explanatory code — through good naming, clear structure, and small focused functions — communicates better than any comment because it can't go stale.
+
+That said, comments aren't evil. They're a tool. The problem is they're usually used to patch over bad code instead of fixing it.
+
+### When comments are genuinely useful:
+
+**Team communication** — marking what's done, what's next, who should handle what. These are temporary and should be deleted once they've served their purpose.
+
+**Explaining WHY, not HOW** — the code shows how. Comments should explain why you chose this approach, why an obvious alternative doesn't work, or why something counterintuitive is intentional.
+
+**File headers** — release notes, author contact info, license information. These serve a documentation purpose separate from the code itself.
+
+**Links to sources** — when code is adapted from a Stack Overflow answer, a blog post, or a library's documentation, linking to it gives future readers context and attribution.
+
+**Warning of consequences** — "Don't reorder these calls — the API requires this exact sequence" or "This timeout value is calibrated to the payment provider's SLA."
+
+### The problem with comments in practice:
+
+**They rot.** Code changes. Comments don't get updated. Within weeks, a comment can describe behavior that no longer exists, misleading anyone who trusts it. Stale comments are worse than no comments because they actively deceive.
+
+**They hide bad code.** Most comments in the wild exist because the developer knew the code was confusing but couldn't be bothered to rewrite it clearly. The comment becomes a band-aid on a wound that should've been stitched.
+
+**Commented-out code steals time.** Every team member who sees it wastes mental energy wondering about its purpose. Delete it. Git remembers.
+
+### Rules for clean comments:
+
+1. Comments should not duplicate what the code already says
+2. Good comments don't excuse unclear code — fix the code instead
+3. If you can't write a clear comment, there may be a problem with the code itself
+4. Comments should dispel confusion, not cause it
+5. When borrowing code, link to the original source
+
+### Practical guidelines:
+
+- Write comments at the function/method level, not for every line or block
+- Keep them up to date — a comment that contradicts the code is dangerous
+- Delete them when they've served their purpose
+- Personal notes are fine in personal projects (learning context), not in shared codebases

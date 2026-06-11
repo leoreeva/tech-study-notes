@@ -1,0 +1,118 @@
+.docname {Software testing}
+.include {docs}
+
+**Source:** https://dev.to/hamitseyrek/why-should-i-write-tests-while-developing-software-2pfm
+
+Mistakes are inevitable when writing code. The fundamental problem with manual testing: you test from the same mental model you had when writing the code. Your blind spots carry over. You test the paths you thought about, which are exactly the paths you already coded correctly.
+
+---
+
+## Manual vs Automated Testing
+
+**Manual testing** — you use the software yourself, clicking through flows, trying inputs, watching for unexpected behavior. Necessary for UX evaluation but terrible for regression coverage. It's slow, can't be repeated consistently, and humans get tired/sloppy.
+
+**Automated testing** — pre-written assertions executed by machines. Every defined condition gets checked every single time, with perfect consistency. It's the foundation of CI/CD — without automated tests, continuous integration is just "continuous merging and hoping."
+
+Both have their place. Automated tests verify logic; manual testing verifies experience. You need both, but automated tests scale and manual testing doesn't.
+
+---
+
+## Test Types
+
+From cheapest to most expensive.
+
+**Unit Tests**
+Test individual functions, methods, or classes in isolation. Fast to write, fast to run, easy to maintain. These should make up the bulk of your test suite. If a unit test fails, you know exactly where the problem is — the function you just tested.
+
+**Integration Tests**
+Verify that different modules work together correctly. A function might pass its unit test perfectly but fail when connected to a real database, an API, or another service. More expensive to run (they need real infrastructure) but catch problems that unit tests can't.
+
+**Functional Tests**
+Focus purely on business requirements. Given this input, do I get the correct output? They don't care about internal module structure — just whether the result matches what the business expects.
+
+**End-to-End (E2E) Tests**
+Simulate full user journeys through the application. Open the browser, click the button, fill the form, submit, verify the result. Expensive to write, slow to run, and brittle (they break when UI changes). Use them only for critical happy paths — the flows that absolutely cannot break without someone noticing immediately.
+
+**Acceptance Tests**
+Similar to E2E but framed around business requirements rather than user flows. "Does the system meet the acceptance criteria defined by stakeholders?" If any criterion isn't met, the test fails.
+
+**Performance Tests**
+Measure system behavior under load. How many concurrent users before response time degrades? Where are the bottlenecks? Expensive to set up properly but critical after major architectural changes or before launches.
+
+**Smoke Tests**
+Quick sanity checks on core features. Not comprehensive — just "does the application start, can a user log in, does the main page load?" Run these first; if smoke tests fail, nothing else matters.
+
+### The test pyramid (Martin Fowler)
+
+```
+        /   E2E     \     ←  Few, expensive, slow
+       / Integration \    ←  Some, moderate cost
+      /  Unit Tests   \   ←  Many, cheap, fast
+```
+
+Most of your tests should be unit tests, they give the best value for money. Integration tests fill the gaps. E2E tests cover only the most critical paths.
+
+---
+
+## Testing Approaches
+
+### TDD — Test Driven Development (Kent Beck, 2003)
+
+Not a test type but a development workflow. The idea: write the test *before* writing the code.
+
+**The cycle:**
+1. Write a test for behavior that doesn't exist yet
+2. Run it — it fails (red)
+3. Write the minimum code to make it pass (green)
+4. Refactor the code while keeping tests green
+5. Repeat
+
+**Why it works:** Writing the test first forces you to think about the interface before the implementation. What should this function accept? What should it return? What edge cases exist? You answer these questions before writing a single line of production code, which tends to produce simpler, more focused designs.
+
+**The counterargument:** TDD purists insist you should never write production code without a failing test first. In practice, this is dogmatic. TDD is a tool — use it when it helps (complex logic, unclear requirements) and skip it when it doesn't (trivial getters, obvious CRUD operations).
+
+### BDD — Behaviour Driven Development (Dan North, 2009)
+
+An evolution of TDD that tried to solve a specific problem: TDD tests are written by developers in code, which makes them opaque to business stakeholders. BDD uses natural language to describe behavior.
+
+**The format:**
+```
+Given [initial context]
+When [event occurs]
+Then [expected outcome]
+```
+
+Example:
+```
+Given a user with $100 in their account
+When they withdraw $30
+Then their balance should be $70
+And a transaction record should be created
+```
+
+**Why it matters:** Business analysts, QA, and developers all read the same spec. Misunderstandings between "what the business asked for" and "what the developer built" get caught earlier because both sides can read the tests.
+
+**Tools:** Cucumber, SpecFlow, Behave — they parse the natural language and map it to test code.
+
+### Others worth knowing about:
+
+- **DDD (Domain-Driven Design)** — not purely a testing approach, but structures code around business domains, which makes testing more natural
+- **ATDD (Acceptance Test-Driven Development)** — like TDD but the failing tests are acceptance criteria defined with stakeholders before implementation begins
+
+---
+
+## The debate
+
+The article's comment section surfaced a real disagreement among experienced developers:
+
+**Pro-testing camp:** Extensive test suites prevent regression, give confidence to refactor freely, and serve as living documentation of expected behavior. Without tests, you can't change code safely.
+
+**Skeptic camp:** Tests can pass without catching real bugs, creating false confidence. A test suite that says "all green" doesn't mean "no bugs" — it means "none of the scenarios we thought to test are broken." Over-reliance on automated tests can replace actually understanding your code.
+
+**The synthesis:** Both are right. Tests are necessary but not sufficient. They catch regressions and enforce contracts, but they don't replace careful design, code review, or manual exploratory testing. The goal isn't 100% code coverage — it's confidence that the important things work.
+
+---
+
+## Practical reality
+
+Writing tests is now a baseline expectation at any company using Agile, DevOps, or CI/CD. It's not optional knowledge for employment at scale. But the value of tests isn't measured in coverage percentages — it's measured in how confidently you can ship changes without breaking things for users.
