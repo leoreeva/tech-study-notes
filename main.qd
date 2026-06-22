@@ -1,7 +1,9 @@
 .docname {Tech Study Notes}
 .include {docs}
 
-![Tech-study-notes](_assets/logo.png)
+!(400x_)[Tech-study-notes](_assets/logo.png)
+
+GitHub repository: https://github.com/leoreeva/tech-study-notes
 
 A collection of notes on data engineering, software engineering, computer science, and related technical subjects.
 

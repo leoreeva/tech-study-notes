@@ -4,7 +4,7 @@
 
 Data engineering / software engineering resources (or even personal interests, not directly related to tech). Useful for interviews or just personal knowledge.
 
-It's built with [Quarkdown](https://github.com/iamgio/quarkdown).
+Built with [Quarkdown](https://github.com/iamgio/quarkdown), deployed with [CloudFlare Pages](https://pages.cloudflare.com/).
 
 > **Work in progress**: This is an ongoing collection based on my knowledge and interests. Many topics may be intentionally skipped or not yet covered. Contributions are welcome!
 
