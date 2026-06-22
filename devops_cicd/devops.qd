@@ -1,6 +1,8 @@
 .docname {DevOps}
 .include {docs}
 
+**[TO BE REVIEWED]**
+
 **Source:** https://dev.to/hamitseyrek/4-what-is-devops-what-are-the-benefits-what-tools-does-it-use-27fl
 
 A common misconception: DevOps is a set of tools, or it's "just CI/CD." Neither is true. DevOps is a cultural and organizational shift in how software gets built, tested, and delivered.

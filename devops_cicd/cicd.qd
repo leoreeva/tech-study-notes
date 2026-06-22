@@ -1,6 +1,8 @@
 .docname {CI/CD Pipelines}
 .include {docs}
 
+**[TO BE REVIEWED]**
+
 **Source:** https://dev.to/hamitseyrek/what-is-continuous-integration-and-continuous-delivery-why-should-it-be-used-13en
 
 CI/CD (Continuous Integration and Continuous Delivery) is the backbone of DevOps in practice. It's the machinery that takes code from a developer's machine to production reliably and repeatedly.
