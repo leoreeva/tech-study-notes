@@ -81,6 +81,6 @@ Rules:
 Output should feel like a sharp, clear explanation from someone who understood the piece well
 ```
 
-### License
+## License
 
-Add a license...
+This work is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
