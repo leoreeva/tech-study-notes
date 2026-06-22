@@ -3,7 +3,7 @@
 
 **Source:** https://dev.to/hamitseyrek/why-should-i-write-tests-while-developing-software-2pfm
 
-Mistakes are inevitable when writing code. The fundamental problem with manual testing: you test from the same mental model you had when writing the code. Your blind spots carry over. You test the paths you thought about, which are exactly the paths you already coded correctly.
+Mistakes are inevitable when writing code. The fundamental problem with manual testing: you test from the same mental model you had when writing the code, your blind spots carry over. You test the paths you thought about, which are exactly the paths you already coded correctly.
 
 ---
 
@@ -58,7 +58,7 @@ Most of your tests should be unit tests, they give the best value for money. Int
 
 ### TDD — Test Driven Development (Kent Beck, 2003)
 
-Not a test type but a development workflow. The idea: write the test *before* writing the code.
+It's a development workflow with the idea: write the test *before* writing the code.
 
 **The cycle:**
 1. Write a test for behavior that doesn't exist yet
@@ -103,16 +103,10 @@ And a transaction record should be created
 
 ## The debate
 
-The article's comment section surfaced a real disagreement among experienced developers:
+There's a real disagreement among experienced developers:
+- Pro-testing: extensive test suites prevent regression, give confidence to refactor freely, and serve as living documentation of expected behavior. Without tests, you can't change code safely.
+- skeptics: tests can pass without catching real bugs, creating false confidence. A test suite that says "all green" doesn't mean "no bugs" — it means "none of the scenarios we thought to test are broken." Over-reliance on automated tests can replace actually understanding your code.
 
-**Pro-testing camp:** Extensive test suites prevent regression, give confidence to refactor freely, and serve as living documentation of expected behavior. Without tests, you can't change code safely.
-
-**Skeptic camp:** Tests can pass without catching real bugs, creating false confidence. A test suite that says "all green" doesn't mean "no bugs" — it means "none of the scenarios we thought to test are broken." Over-reliance on automated tests can replace actually understanding your code.
-
-**The synthesis:** Both are right. Tests are necessary but not sufficient. They catch regressions and enforce contracts, but they don't replace careful design, code review, or manual exploratory testing. The goal isn't 100% code coverage — it's confidence that the important things work.
-
----
-
-## Practical reality
+Both are right. Tests are necessary but not sufficient. They catch regressions and enforce contracts, but they don't replace careful design, code review, or manual exploratory testing. The goal isn't 100% code coverage — it's confidence that the important things work.
 
 Writing tests is now a baseline expectation at any company using Agile, DevOps, or CI/CD. It's not optional knowledge for employment at scale. But the value of tests isn't measured in coverage percentages — it's measured in how confidently you can ship changes without breaking things for users.

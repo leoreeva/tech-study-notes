@@ -1,7 +1,89 @@
 .docname {Git}
 .include {docs}
 
-For learning how to use git:
+## Why you should use Git
+
+**Source:** https://dev.to/hamitseyrek/8-what-is-git-why-should-i-use-it-what-is-github-gitlab-bitbucket-used-for-5hdm
+
+### The fundamental problem
+
+You're debugging something. You change a few things. Now the original bug is still there AND something else broke. You want to go back to 20 minutes ago, but you can't — because there's no record of what "20 minutes ago" looked like.
+
+Without version control, people resort to `project_final`, `project_final_v2`, `project_final_ACTUALLY_FINAL` folder copies. It's absurd, unreliable, and doesn't scale to teams at all.
+
+Git tracks every change to every file, so any previous state is recoverable instantly. That alone justifies its existence.
+
+### Why Git specifically?
+
+About 43% of professional developers use Git, making it the dominant version control system by a wide margin. Alternatives exist — Mercurial, SVN, CVS — but they have much smaller communities, fewer integrations, and less tooling support. At this point, Git is the industry default.
+
+Git is also **distributed** — every developer has a complete copy of the entire repository history. SVN and CVS are centralized (one server holds the truth, clients hold only working copies). Distributed means no single point of failure and offline work is fully supported.
+
+### Team collaboration
+
+Without version control, team collaboration on code is essentially impossible at scale. Git provides:
+
+- **Attribution** — every change records who made it, when, and why (via commit message)
+- **Reversibility** — any change can be undone without affecting other changes
+- **Visibility** — team members see each other's work through the shared repository
+- **Merging** — when two people edit the same file, Git can usually merge both changes automatically. When it can't, it shows you exactly where the conflict is
+- **Synchronization** — `git pull` brings everyone else's changes into your local copy with one command
+
+### Branching
+
+Branching lets you work in isolation. You create a branch, make changes, experiment freely — and none of it touches the main codebase until you explicitly merge it. If the experiment fails, delete the branch. Zero cost.
+
+**Why this matters:**
+- You can try risky refactors without fear. Doesn't work? Delete the branch. The main code is untouched.
+- Multiple features can be developed in parallel on separate branches without interfering
+- Removing or reworking a module is safe because you're not directly modifying what everyone else depends on
+- New developers can experiment without risk. Mistakes cost nothing because everything is reversible.
+
+### Commit best practices
+
+A commit is a snapshot with a message explaining what changed and why. Good commit hygiene matters:
+
+**One commit = one logical change.** Don't mix a bug fix, a refactor, and a new feature in one commit. If you need to revert the bug fix later, you'll lose the refactor and feature too.
+
+**Write meaningful messages.** "fix stuff" tells your teammates nothing. "Fix null pointer in payment callback when user has no saved card" tells them everything. The first line should summarize the change in under 50-72 characters. A longer body can explain the reasoning if needed.
+
+**Git tracks everything.** Even a single changed space character shows up in the diff. This precision is a feature — it makes code review meaningful and debugging possible via `git bisect`.
+
+### Online platforms
+
+Git itself is a command-line tool that works locally. These platforms add collaboration on top:
+
+| Platform | Strengths |
+|----------|-----------|
+| **GitHub** | Largest community, most open source projects live here, excellent ecosystem (Actions, Copilot, Discussions). Industry standard for portfolios and open source. |
+| **GitLab** | Built-in CI/CD (no third-party tools needed), self-hosting option, full DevOps platform in one tool. Popular with companies wanting everything integrated. |
+| **Bitbucket** | Integrates with Jira and Trello (Atlassian ecosystem). Often chosen by teams already using Atlassian products. |
+
+All three support: pull/merge requests for code review, issue tracking, access control (public/private repos), and webhooks for automation.
+
+### Relationship to other practices
+
+Version control isn't just "nice to have" — it's a prerequisite for everything else in modern development:
+
+- **CI/CD** — pipelines trigger on git pushes. No git, no CI.
+- **DevOps** — automation, traceability, and collaboration all depend on version control
+- **Agile** — parallel work in sprints requires branching and merging
+- **Code review** — pull requests are a git feature (via platforms)
+- **Microservices** — independent repos or monorepos both require git for team coordination
+
+Git encourages modular thinking. When your team splits a project into modules (authentication, UI, payments, API), each can be developed on separate branches by different people and merged cleanly. Without version control, parallel development is chaos.
+
+### Data loss prevention
+
+What developers fear most: losing work. Hard drive failures, corrupted files, ransomware — all real threats. Git's distributed nature means every developer has a full copy of the repository, including all history. If the server dies, any team member's local copy can restore the entire project.
+
+Even companies that can't use cloud services for security reasons benefit from Git running locally. If the internal server has issues, developers still have their complete local copies and can continue working independently until the server recovers.
+
+---
+
+## How to use Git
+
+For learning all the concepts and become proficient, check these resources:
 - https://learngitbranching.js.org/?locale=en_US
 - https://gitimmersion.com/index.html
 
@@ -81,8 +163,9 @@ If a maintainer enables contributors to try their changes on their forked copy, 
 
 ---
 
+## Conventions
 
-## Branch naming conventions
+### Branch naming conventions
 Source: https://conventional-branch.github.io/
 
 Conventional Branch refers to a structured and standardized naming convention for Git branches which aims to make branch more readable and actionable
@@ -94,7 +177,7 @@ to trigger specific actions based on the branch type (e.g., auto-deployment from
 1. **Team Collaboration**: It encourages collaboration within teams by making branch purpose explicit, reducing misunderstandings,
 and making it easier for team members to switch between tasks without confusion.
 
-### Prefixes
+#### Prefixes
 The branch specification supports the following prefixes and should be structured as:
 
 ```txt
@@ -107,7 +190,7 @@ The branch specification supports the following prefixes and should be structure
 - `release/`: For branches preparing a release (e.g., `release/v1.2.0`)
 - `chore/`: For non-code tasks like dependency, docs updates (e.g., `chore/update-dependencies`)
 
-### Rules
+#### Rules
 1. Use Lowercase Alphanumerics, Hyphens, and Dots: Always use lowercase letters (a-z), numbers (0-9), and hyphens (-) to separate words.
 Avoid special characters, underscores, or spaces. For release branches, dots (.) may be used in the description to represent version numbers (e.g., release/v1.2.0).
 1. No Consecutive, Leading, or Trailing Hyphens or Dots: Ensure that hyphens and dots do not appear consecutively (e.g., feature/new--login, release/v1.-2.0),
@@ -116,7 +199,7 @@ nor at the start or end of the description (e.g., feature/-new-login, release/v1
 1. Include Ticket Numbers: If applicable, include the ticket number from your project management tool to make tracking easier.
 For example, for a ticket issue-123, the branch name could be feature/issue-123-new-login.
 
-### Branch examples
+#### Examples
 | Branch Name                     | Valid | Notes                              |
 |--------------------------------|-------|------------------------------------|
 | main                           | ✅    | Trunk branch                       |
@@ -139,9 +222,8 @@ For example, for a ticket issue-123, the branch name could be feature/issue-123-
 | fix/header_bug                 | ❌    | Underscores not allowed            |
 | unknown/some-task              | ❌    | Unknown prefix type                |
 
----
 
-## Commit messages conventions
+### Commit messages conventions
 Source: https://www.conventionalcommits.org/en/v1.0.0/
 
 The `Conventional Commits` specification is a lightweight convention that provides an easy set of rules for creating an explicit commit history,
@@ -167,7 +249,7 @@ The commit contains the following structural elements, to communicate intent to 
 Additional types are not mandated by the Conventional Commits specification, and have no implicit effect in Semantic Versioning (unless they include a BREAKING CHANGE).
 A scope may be provided to a commit’s type, to provide additional contextual information and is contained within parenthesis, e.g., feat(parser): add ability to parse arrays.
 
-### Commit examples
+#### Examples
 - Commit message with description and breaking change footer
     ```txt
     feat: allow provided config object to extend other configs
