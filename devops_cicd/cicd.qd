@@ -1,0 +1,129 @@
+.docname {CI/CD Pipelines}
+.include {docs}
+
+**Source:** https://dev.to/hamitseyrek/what-is-continuous-integration-and-continuous-delivery-why-should-it-be-used-13en
+
+CI/CD (Continuous Integration and Continuous Delivery) is the backbone of DevOps in practice. It's the machinery that takes code from a developer's machine to production reliably and repeatedly.
+
+![CI/CD Flow](images/cicd_flow.png)
+
+---
+
+## Continuous Integration (CI)
+
+### The problem it solves
+
+Developers push code frequently (ideally daily or more) to a shared repository. In a team of any size, these changes can conflict — your feature touches a module my feature depends on, and neither of us knows until something breaks.
+
+Without CI, you discover these conflicts late — often at "integration time" right before a release. The term **"Integration Hell"** describes what happens when you try to merge weeks or months of divergent work. Hundreds of commits, dozens of conflicting changes, obscure bugs that only appear when two separately-working features interact.
+
+### How CI eliminates this
+
+Every push triggers an automated process:
+1. Pull the latest code
+2. Build it
+3. Run the full test suite
+4. Report results immediately
+
+If anything breaks, the developer who pushed the change knows within minutes — not days or weeks. The problem is small, fresh in memory, and cheap to fix. Compare that to discovering the same bug two weeks later when nobody remembers the context.
+
+CI also enables automated code analysis, performance benchmarking, security scanning, and quality metrics — all running continuously without human effort.
+
+### The key principle
+
+Integrate frequently. The longer you wait between integrations, the more painful each one becomes. Teams practicing CI merge to main at least once per day, often multiple times.
+
+---
+
+## Continuous Delivery vs Continuous Deployment (CD)
+
+These terms are often used interchangeably but they're slightly different:
+
+**Continuous Delivery** — every change that passes the CI pipeline produces a release-ready artifact. You *can* deploy at any time with the push of a button, but a human makes the final decision.
+
+**Continuous Deployment** — every change that passes the pipeline deploys automatically to production. No human gate. If tests pass, it ships.
+
+Most teams start with continuous delivery and move toward continuous deployment as their test suite and monitoring mature.
+
+---
+
+## The CI/CD Pipeline — step by step
+
+### 1. Triggering
+Something kicks off the pipeline. Usually: a push to the repository. The CI/CD tool watches for changes in Git and fires automatically. Manual triggers are possible but defeat the purpose — they add human overhead and are easy to forget.
+
+### 2. Code Checkout
+The CI tool pulls the latest code from GitHub, GitLab, Bitbucket, or wherever your repo lives.
+
+### 3. Static Code Analysis
+Before building, automated tools verify code quality — linting, style checks, security scanning, complexity metrics. This catches obvious issues (unused variables, known vulnerability patterns, style violations) before spending time on compilation and tests.
+
+### 4. Compilation / Build
+The code gets compiled (or bundled, transpiled, etc.) in a clean environment. Docker is popular here because it provides fresh, reproducible environments every time. No "it built on my machine" issues — if it builds in the container, it builds anywhere.
+
+### 5. Testing
+The test suite runs. This is where CI earns its value:
+- Unit tests run first (fast, catch most issues)
+- Integration tests follow (slower, catch interaction bugs)
+- Regression tests verify that previously fixed bugs haven't resurfaced
+- End-to-end tests last (slowest, verify critical flows)
+
+Martin Fowler's test pyramid applies: the majority of your tests should be unit tests. They give the most value for money.
+
+**Critical point:** tests must be maintained as the codebase grows. A test suite that doesn't keep up with new modules provides false confidence. If you add a feature without tests, your pipeline says "all green" but you've just created an untested gap.
+
+### 6. Packaging
+The compiled, tested code gets packaged for deployment. The format depends on your target: Docker image, JAR file, npm package, compiled binary, zip archive. The output is an immutable artifact — the exact thing that will run in production.
+
+### 7. Acceptance Tests
+Beyond technical correctness: does the software do what it's supposed to? Tools like Selenium or Cypress simulate real user behavior — opening pages, clicking buttons, filling forms, verifying results. These validate business requirements, not just code logic.
+
+### 8. Delivery / Deployment
+The artifact moves to its target environment. Kubernetes, AWS ECS, Heroku, a bare metal server — doesn't matter. The point is that this step is automated and repeatable. The same artifact that passed testing is the same artifact that reaches production. No "let me just rebuild for prod."
+
+---
+
+## Why the "unnecessary overhead" argument is wrong
+
+Some teams resist CI/CD because setting it up takes time. True — initial setup has a cost. But consider what you're replacing:
+
+- Manual builds (error-prone, inconsistent)
+- Manual testing (incomplete, slow, forgotten)
+- Manual deployment (stressful, risky, infrequent)
+- Late integration (painful, expensive, demoralizing)
+
+David Farley: "In software, when something is painful, the way to reduce the pain is to do it more frequently, not less."
+
+Deployment stops being a terrifying event that happens once per quarter. It becomes boring. It happens multiple times per day. Nobody loses sleep over it.
+
+---
+
+## Concrete advantages
+
+- **Ship faster** — changes reach users in hours, not weeks
+- **Controlled remote work** — the pipeline enforces standards regardless of where people sit
+- **Confidence** — continuously applied tests catch errors early while they're cheap to fix
+- **Instant feedback** — developers know immediately when they break something
+- **Easier delivery** — deployment is a non-event, not a ceremony
+
+---
+
+## Popular CI/CD tools
+
+| Tool | Notes |
+|------|-------|
+| **Jenkins** | Open source, extremely extensible, massive plugin ecosystem. Requires self-hosting and maintenance. |
+| **GitLab CI** | Built into GitLab. Configuration lives in `.gitlab-ci.yml` alongside your code. Great if you're already on GitLab. |
+| **GitHub Actions** | Built into GitHub. YAML-configured workflows. Generous free tier for open source. |
+| **CircleCI** | Cloud-native, fast, good Docker support. Popular with startups. |
+| **Travis CI** | Pioneer of cloud CI. Simple config. Less popular now but still used. |
+| **TeamCity** | JetBrains product. Powerful but heavier setup. Good for enterprises already in the JetBrains ecosystem. |
+| **Bamboo** | Atlassian product. Integrates with Jira/Bitbucket. Being phased out in favor of cloud solutions. |
+
+---
+
+## Key quotes
+
+David Farley: "The earlier you catch defects, the cheaper they are to fix."
+
+This is the entire economic argument for CI/CD. A bug caught in CI costs 5 minutes to fix. The same bug caught in production costs hours of debugging, emergency patches, user complaints, and reputation damage.

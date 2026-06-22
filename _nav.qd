@@ -38,7 +38,9 @@
 
 ###! 🚀 DevOps & CI/CD
 
-- [CI/CD pipelines](devops_cicd/cicd_pipelines.qd)
+- [DevOps](devops_cicd/devops.qd)
+- [CI/CD](devops_cicd/cicd.qd)
+- [Containerization](aaa)
 
 ###! 📰 Articles
 
