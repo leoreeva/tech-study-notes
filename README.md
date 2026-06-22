@@ -9,7 +9,7 @@ Built with [Quarkdown](https://github.com/iamgio/quarkdown), deployed with [Clou
 > **Work in progress**: This is an ongoing collection based on my knowledge and interests. Many topics may be intentionally skipped or not yet covered. Contributions are welcome!
 
 
-## About
+## ℹ️ About
 
 This repository contains study notes, explanations, and resources for various technical topics including:
 
@@ -61,7 +61,7 @@ Note: when working locally, before previewing, run `python _scripts/move_images.
 
 ### Articles
 
-In the articles section, I present a summary. Use this prompt in an LLM to follow the same style:
+In the articles section, there's a summary in each file. Use this prompt in an LLM to follow the same style:
 
 ```txt
 Summarize the content in a concise, natural style.
@@ -81,6 +81,6 @@ Rules:
 Output should feel like a sharp, clear explanation from someone who understood the piece well
 ```
 
-## License
+## ⚖️ License
 
 This work is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
