@@ -13,13 +13,13 @@
 ###! 💻 Software Design
 
 - [Clean code & comments](software_design/clean_code_and_comments.qd)
-- [SOLID Principle](software_design/solid_principle.qd)
-- [Software testing](software_design/software_testing.qd)
+- [Design principles](software_design/design_principles.qd)
 - [Design patterns](software_design/design_patterns.qd)
     - [Creational patterns](software_design/design_patterns__creational_patterns.qd)
     - [Structural patterns](software_design/design_patterns__structural_patterns.qd)
     - [Behavioral patterns](software_design/design_patterns__behavioral_patterns.qd)
 - [Refactoring code](software_design/refactoring_code.qd)
+- [Software testing](software_design/software_testing.qd)
 
 ###! 🏛️ System Design
 
