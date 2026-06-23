@@ -1,20 +1,11 @@
 .docname {AGILE}
 .include {docs}
 
-**[TO BE REVIEWED]**
-
 **Source:** https://dev.to/hamitseyrek/6-what-is-agile-scrum-methodology-what-are-the-benefits-to-software-development-teams-cb2
-
-Traditional companies operate with rigid chains of command. Employees execute orders without contributing ideas. Mistakes get punished — overtime, slow promotions, low raises. The result: decreased motivation, personnel loss, and a culture of hiding problems rather than solving them.
-
-Agile organizations adapt to market conditions. They treat mistakes as learning opportunities that prevent future problems. They value impact over volume of work. Leaders participate in projects rather than just delegating and reviewing. Employees have autonomy to interpret requirements and contribute solutions.
-
-This isn't just touchy-feely philosophy — it has direct business outcomes. Companies that punish mistakes get fewer reported problems but not fewer actual problems. Companies that welcome mistakes as learning get faster feedback loops and more resilient systems.
-
 
 ## What is Agile?
 
-A project management philosophy that breaks work into small iterations rather than trying to plan and execute everything in one giant phase.
+It's a project management philosophy that breaks work into small iterations rather than trying to plan and execute everything in one giant phase.
 
 **Historical context:** Agile thinking existed in software since the 1970s (iterative development, prototyping), but it was formalized in 2001 with the Agile Manifesto — a one-page document written by 17 developers who were fed up with heavyweight methodologies like Waterfall and RUP.
 
@@ -42,10 +33,11 @@ The right side isn't worthless — it just matters less than the left side.
 11. Self-organizing teams produce the best architectures and designs
 12. Regular reflection on how to become more effective
 
+---
 
 ## What is Scrum?
 
-Scrum is one specific framework for implementing Agile. It's the most popular but not the only option (Kanban, XP, SAFe, and others exist).
+It's one specific framework for implementing Agile. It's the most popular but not the only option (Kanban, XP, SAFe, and others exist).
 
 Scrum structures work into **sprints** — fixed time boxes, usually 2-4 weeks. Each sprint has a goal, and at the end of each sprint you should have something potentially shippable.
 
@@ -58,8 +50,6 @@ Scrum structures work into **sprints** — fixed time boxes, usually 2-4 weeks. 
 Waterfall assumes you know all requirements upfront and that they won't change. In practice, requirements always change — users don't know what they want until they see something working, markets shift, competitors move, technology evolves. Scrum embraces this reality.
 
 
-## How Scrum works in practice
-
 ### The sprint cycle:
 
 1. **Sprint Planning** — team selects items from the backlog to work on this sprint. Scope is based on the team's velocity (how much they've delivered in past sprints).
@@ -71,9 +61,9 @@ Waterfall assumes you know all requirements upfront and that they won't change. 
 Then the cycle repeats.
 
 
-## The three roles
+### The three roles
 
-### Scrum Master
+#### Scrum Master
 A facilitator, not a manager. Doesn't assign work or make technical decisions. Instead:
 - Ensures the team follows Scrum practices correctly
 - Removes obstacles (a team member is blocked by another department? Scrum Master handles it)
@@ -83,7 +73,7 @@ A facilitator, not a manager. Doesn't assign work or make technical decisions. I
 
 Common misconception: Scrum Master = project manager. No. A project manager controls the project. A Scrum Master serves the team.
 
-### Product Owner
+#### Product Owner
 The single point of accountability for the product's value:
 - Maintains the **product backlog** — a prioritized list of everything that could be built
 - Decides what gets built next (priority) based on business value
@@ -93,7 +83,7 @@ The single point of accountability for the product's value:
 
 The Product Owner makes scope decisions. The team makes technical decisions. Neither overrules the other.
 
-### Development Team (Scrum Team)
+#### Development Team (Scrum Team)
 A self-organizing, cross-functional group of 3-9 people:
 - Includes all skills needed to deliver (development, design, QA, etc.)
 - No sub-teams or hierarchies within the group
@@ -101,8 +91,7 @@ A self-organizing, cross-functional group of 3-9 people:
 - Decides *how* to do the work (the Product Owner decides *what*)
 - Estimates effort and commits to what they can deliver
 
-
-## Benefits of Agile Scrum
+### Benefits of Agile Scrum
 
 **Adaptability** — feedback after each sprint (every 2-4 weeks) means you can pivot quickly. Wrong direction? You've lost 2 weeks, not 6 months.
 
@@ -117,17 +106,10 @@ A self-organizing, cross-functional group of 3-9 people:
 **Team morale** — autonomy, regular accomplishment (every sprint delivers something), and sustainable pace reduce burnout.
 
 
-## Common failure modes (the article doesn't mention these, but they're important):
+### Common failure modes:
 
 - **Scrum theater** — going through the motions (daily standups, sprint planning) without actually embracing the principles. You get the overhead without the benefits.
 - **Sprint scope creep** — stakeholders adding work mid-sprint, making the time box meaningless.
 - **No actual shippable increment** — sprints end with "almost done" work that never quite reaches users.
 - **Scrum Master as micro-manager** — defeats the self-organizing principle entirely.
 - **Ignoring retrospectives** — if nothing changes after retros, the team stops being honest.
-
-
-## Practical note
-
-To do Scrum properly, you need someone who genuinely understands it — either an experienced internal practitioner or an external consultant for the initial adoption. Half-hearted adoption without understanding the framework produces meetings without results and justified cynicism about "Agile" from the team.
-
-The author recommends scrum.org for training and certification.

@@ -1,17 +1,9 @@
 .docname {DevOps}
 .include {docs}
 
-**[TO BE REVIEWED]**
-
 **Source:** https://dev.to/hamitseyrek/4-what-is-devops-what-are-the-benefits-what-tools-does-it-use-27fl
 
 A common misconception: DevOps is a set of tools, or it's "just CI/CD." Neither is true. DevOps is a cultural and organizational shift in how software gets built, tested, and delivered.
-
-**Microsoft's definition:** "The union of people, processes and technology to continually provide value to customers."
-
-**Amazon's definition:** "The combination of cultural philosophies, practices, and tools that increases an organization's ability to deliver."
-
-Notice both definitions lead with people/culture, not tools.
 
 ---
 
@@ -21,6 +13,7 @@ Traditionally, development teams and operations teams were separate. Developers 
 
 DevOps eliminates that wall. The same team (or tightly collaborating teams) owns code from commit to production, including deployment, monitoring, and incident response.
 
+Everyone can see what's happening across the pipeline. If production breaks, it's everyone's problem, not just ops.
 ---
 
 ## What DevOps actually encompasses
@@ -35,40 +28,18 @@ DevOps eliminates that wall. The same team (or tightly collaborating teams) owns
 
 ---
 
-## The culture side
-
-Tools are the easy part. Culture is where DevOps adoption actually fails. Key elements:
-
-- **Information flow** — no silos. Everyone can see what's happening across the pipeline.
-- **Shared responsibility** — if production breaks, it's everyone's problem, not just ops.
-- **Learning from failures** — blameless postmortems. Mistakes are learning opportunities, not career threats.
-- **Adopting new ideas** — willingness to change tools, processes, and habits when better options exist.
-
-The biggest value proposition: more control over the development process without slowing things down. Traditional quality gates (manual approvals, long release cycles) provide control at the cost of speed. DevOps automation provides both.
-
-### Metrics that matter (from 2015 State of DevOps Report):
-
-1. Deployment frequency — how often you ship
-2. Lead time for changes — commit to production, how long?
-3. Mean time to recovery (MTTR) — when something breaks, how fast do you fix it?
-4. Change failure rate — what percentage of deployments cause problems?
-
-High-performing teams deploy thousands of times per day with change failure rates under 15%. Low performers deploy monthly with failure rates above 45%.
-
----
-
 ## Requirements for implementation
 
-**1. Architecturally Important Requirements**
+**1. Architecturally Important Requirements**.
 Your architecture must support deployability (can you deploy one component without deploying everything?), interchangeability (can you swap components?), testability (can you test in isolation?), and monitoring capability (can you observe behavior in production?).
 
-**2. Microservices (usually)**
+**2. Microservices (usually)**.
 The most common architectural style for DevOps because each service can be deployed, scaled, and monitored independently. Monoliths can work with DevOps but impose constraints on deployment frequency and team independence.
 
-**3. Automation**
+**3. Automation**.
 Everything that can be automated should be: builds, tests, deployments, infrastructure provisioning, monitoring alerts. Manual steps are bottlenecks, error-prone, and don't scale. Automation starts with shared code repositories.
 
-**4. Version Control**
+**4. Version Control**.
 Git underpins everything. It enables automation (triggers on push), collaboration (branching, PRs), traceability (who changed what), and rollback (revert to any point). Without version control, DevOps is impossible.
 
 ---

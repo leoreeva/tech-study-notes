@@ -1,8 +1,6 @@
 .docname {CI/CD Pipelines}
 .include {docs}
 
-**[TO BE REVIEWED]**
-
 **Source:** https://dev.to/hamitseyrek/what-is-continuous-integration-and-continuous-delivery-why-should-it-be-used-13en
 
 CI/CD (Continuous Integration and Continuous Delivery) is the backbone of DevOps in practice. It's the machinery that takes code from a developer's machine to production reliably and repeatedly.
@@ -96,18 +94,6 @@ Some teams resist CI/CD because setting it up takes time. True — initial setup
 
 David Farley: "In software, when something is painful, the way to reduce the pain is to do it more frequently, not less."
 
-Deployment stops being a terrifying event that happens once per quarter. It becomes boring. It happens multiple times per day. Nobody loses sleep over it.
-
----
-
-## Concrete advantages
-
-- **Ship faster** — changes reach users in hours, not weeks
-- **Controlled remote work** — the pipeline enforces standards regardless of where people sit
-- **Confidence** — continuously applied tests catch errors early while they're cheap to fix
-- **Instant feedback** — developers know immediately when they break something
-- **Easier delivery** — deployment is a non-event, not a ceremony
-
 ---
 
 ## Popular CI/CD tools
@@ -121,11 +107,3 @@ Deployment stops being a terrifying event that happens once per quarter. It beco
 | **Travis CI** | Pioneer of cloud CI. Simple config. Less popular now but still used. |
 | **TeamCity** | JetBrains product. Powerful but heavier setup. Good for enterprises already in the JetBrains ecosystem. |
 | **Bamboo** | Atlassian product. Integrates with Jira/Bitbucket. Being phased out in favor of cloud solutions. |
-
----
-
-## Key quotes
-
-David Farley: "The earlier you catch defects, the cheaper they are to fix."
-
-This is the entire economic argument for CI/CD. A bug caught in CI costs 5 minutes to fix. The same bug caught in production costs hours of debugging, emergency patches, user complaints, and reputation damage.
