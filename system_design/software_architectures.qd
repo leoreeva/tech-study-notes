@@ -1,0 +1,84 @@
+.docname {Software Architectures}
+.include {docs}
+
+**Source:** https://dev.to/hamitseyrek/1-software-architectures-176k
+
+When you're starting out, you write code however it makes sense in the moment. That's fine for personal projects, but it falls apart the second someone else needs to read, extend, or maintain your code. Architecture gives a team a shared mental model of where things go and how they interact. It's like building construction. If you realize the blueprint was wrong after the walls are up, tearing it down and starting over is massively expensive. Same with software: migrating from one architecture to another mid-project is one of the most painful things you can do.
+
+---
+
+## What good architecture looks like
+
+- Easy to maintain — changes don't require understanding the entire codebase
+- No duplicated logic across modules
+- Team members can understand any class/file without reading everything around it
+- Existing modules are changeable and extensible without cascading rewrites
+- Scalable — handles growth in data, users, and features
+- New features can be added without heavily impacting existing functionality
+- Resilient to database changes (your business logic shouldn't be married to your DB schema)
+- System is reconfigurable without rebuilding from scratch
+
+---
+
+## Five common patterns to achieve good architecture
+
+Based on Mark Richards' work on software architecture patterns:
+
+### 1. Layered Architecture (n-Tier)
+
+The most widely used and taught pattern. Each layer only talks to the layer directly below it. A request flows down through the layers, gets processed, and the response flows back up.
+
+```
+Presentation → Application → Business Logic → Data Access
+```
+
+Frameworks like Java EE, Express.js, Laravel, and Django all encourage this structure. MVC, MVVM, and VIPER are all variations within this family. MVC separates Model (data), View (UI), and Controller (logic that connects them). MVVM replaces the Controller with a ViewModel that handles data binding. VIPER splits things even further into View, Interactor, Presenter, Entity, and Router — common in iOS development.
+
+**Strengths:** Massive ecosystem of tutorials and resources. Sustainability and testability standards are well-established. Great for teams with less experienced developers because the rules are clear.
+
+**Weaknesses:** If the fundamental layer structure turns out to be wrong for your use case, you're looking at a near-complete rewrite. Also, strict layering can lead to "pass-through" layers that exist only to satisfy the architecture rather than adding value.
+
+### 2. Event-Driven Architecture
+
+Best for software that spends most of its time idle, waiting for something to happen (anything that's fundamentally reactive rather than request-response). Instead of a request flowing through layers, the system listens for events and dispatches them to appropriate handlers.
+
+A central mediator (or event bus) receives events and routes them to the right module. Think of notification systems, chat applications, real-time dashboards, or anything with heavy user interaction patterns like mouse clicks and keyboard inputs.
+
+**Strengths:** Not every piece of data has to pass through every layer. Easy to extend — adding a new event type doesn't touch existing handlers. Modules are isolated from each other, making testing straightforward. You can define default behaviors for module failures, increasing resilience.
+
+**Weaknesses:** Harder to reason about the overall flow because there's no linear path through the code. Debugging can be painful when events trigger chains of other events. Not ideal for operations that need strict ordering or transactional guarantees across multiple steps.
+
+### 3. Microkernel Architecture (Plugin Architecture)
+
+A minimal core system with functionality added through plug-in modules. The textbook example is a web browser — it ships with basic rendering capabilities, and everything else (ad blockers, password managers, dev tools) comes as extensions. IDEs like VSCode, Eclipse, and IntelliJ all use this pattern. The core handles file editing; language support, debugging, and git integration are all plugins.
+
+**Strengths:** Extremely modular. Cores can be reused across different products. A single product can use multiple cores simultaneously. Much more flexible than layered architecture for adding/removing features.
+
+**Weaknesses:** Worse performance than layered because of the plugin dispatch overhead. Plugin APIs need careful design — a bad plugin interface becomes a permanent constraint.
+
+### 4. Microservices Architecture
+
+Instead of one big application, you build many small independent services that communicate over the network (usually HTTP/REST or message queues). Each service owns its own data, handles one specific domain responsibility, and can be deployed independently.
+
+The classic example: an e-commerce site where the product catalog, user authentication, shopping cart, payment processing, and recommendation engine are all separate services. On Black Friday, you scale the cart and payment services without touching the catalog.
+
+Important distinction: in microkernel, plugins extend a core. In microservices, there is no core — every service is a peer, and they collaborate to deliver the full product.
+
+**Strengths:** Independent deployment and scaling. Teams can work on different services without stepping on each other. You can use different languages/technologies per service. A failure in one service doesn't necessarily bring down the whole system.
+
+**Weaknesses:** Network communication adds latency and complexity. Distributed systems are harder to debug. Data consistency across services requires careful design (eventual consistency, sagas, etc.). Operational overhead is significant — you're now managing many deployable units instead of one.
+
+### 5. Space-Based Architecture (Cloud Architecture)
+
+Designed to solve database bottlenecks at scale. Instead of all requests hitting a single database, data is distributed across processing units that use in-memory data grids.
+
+Two primary components:
+
+- **Processing units** — contain the application logic and an in-memory data store. One unit for small apps, many for large ones.
+- **Virtualized middleware** — handles data synchronization between processing units and manages incoming requests.
+
+Since user sessions live in RAM rather than hitting the database on every request, the system is extremely fast. Social networks, real-time analytics platforms, and any system with heavy individual-user processing benefit from this.
+
+**Strengths:** Eliminates the database as a bottleneck. Massively scalable by adding processing units. Modules are independently testable.
+
+**Weaknesses:** Transaction support in distributed in-memory systems is genuinely hard. Not suitable for operations that need global analysis across all data (like computing averages across all users). Data consistency guarantees are weaker. Significantly more complex to implement and operate than other patterns.

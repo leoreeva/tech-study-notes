@@ -12,15 +12,18 @@
 
 ###! 💻 Software Design
 
+- [Clean code & comments](software_design/clean_code_and_comments.qd)
+- [Design principles](software_design/design_principles.qd)
 - [Design patterns](software_design/design_patterns.qd)
     - [Creational patterns](software_design/design_patterns__creational_patterns.qd)
     - [Structural patterns](software_design/design_patterns__structural_patterns.qd)
     - [Behavioral patterns](software_design/design_patterns__behavioral_patterns.qd)
 - [Refactoring code](software_design/refactoring_code.qd)
-- [SOLID Principle](software_design/solid_principle.qd)
+- [Software testing](software_design/software_testing.qd)
 
 ###! 🏛️ System Design
 
+- [Software architectures](system_design/software_architectures.qd)
 - [Distributed systems](system_design/distributed_systems.qd)
 - [Microservices](system_design/microservices.qd)
 - [Event-driven architecture](system_design/event_driven_architecture.qd)
@@ -35,7 +38,12 @@
 
 ###! 🚀 DevOps & CI/CD
 
-- [CI/CD pipelines](devops_cicd/cicd_pipelines.qd)
+- [DevOps](devops_cicd/devops.qd)
+- [CI/CD](devops_cicd/cicd.qd)
+- [Containerization](devops_cicd/containerization.qd)
+
+###! 📋 Project management
+- [Project management](project_management/agile.qd)
 
 ###! 📰 Articles
 

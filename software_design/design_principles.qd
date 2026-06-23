@@ -1,0 +1,401 @@
+.docname {Design Principles}
+.include {docs}
+
+**Source:** https://dev.to/hamitseyrek/7-what-makes-solid-principles-special-are-there-any-other-software-development-principles-what-are-they-22id
+
+---
+
+## SOLID
+
+Robert C. Martin introduced SOLID in his 2000 paper *Design Principles and Design Patterns*. The acronym was later coined by Michael Feathers. These aren't rules that a compiler enforces — they're design guidelines that make code easier to extend, maintain, and understand as it grows.
+
+Before SOLID makes sense, you need to understand what all five principles are trying to achieve: **loose coupling.**
+- Loose coupling means modules can be used, modified, replaced, or extended independently. A change to module A shouldn't require changes to modules B, C, and D. When you pull one thread, the whole sweater shouldn't unravel.
+- The opposite — tight coupling — is when everything depends on everything else. You can't touch anything without understanding the entire system. This is the natural state of code that's written without principles, and it's why old codebases become unmaintainable.
+
+Every SOLID principle attacks tight coupling from a different angle.
+
+### S — Single Responsibility Principle (SRP)
+
+**"A class should have only one reason to change."**
+
+A class, module, or function should do one thing and do it well. If a class handles both user authentication and email sending, it has two reasons to change — and a change to the email format might accidentally break authentication.
+
+**Practical test:** Can you describe what this class does without using "and"? If not, split it.
+
+**Common violation:** "God classes" or "manager classes" that accumulate responsibilities over time. `UserManager` that handles registration, authentication, profile updates, notification preferences, and password reset is five classes wearing a trench coat.
+
+**The nuance:** "One responsibility" doesn't mean "one method." A class that handles HTTP request parsing has one responsibility but might have many methods (parse headers, parse body, validate content type). The responsibility is the conceptual boundary, not the method count.
+
+**Before:**
+```java
+public class Employee {
+    private String name;
+    private double salary;
+    // getter and setter methods
+
+    public void saveToDatabase() {
+        // saves the employee's data to the database
+    }
+
+    public void generatePaySlip() {
+        // generates the employee's payslip
+    }
+
+    public void calculateSalary() {
+        // calculates the employee's salary
+    }
+}
+```
+
+**After:**
+```java
+public class Employee {
+    private String name;
+    private double salary;
+    // getter and setter methods
+}
+
+public class DatabaseManager {
+    public void saveEmployee(Employee employee) {
+        // save employee to db
+    }
+}
+
+public class PaySlipGenerator {
+    public void generatePaySlip(Employee employee) {
+        // generate pay slip of employee
+    }
+}
+
+public class SalaryCalculator {
+    public double calculateSalary(Employee employee) {
+        // calculate salary of employee
+        // ...
+        return salary;
+    }
+}
+```
+
+
+### O — Open/Closed Principle (OCP)
+
+**"Open for extension, closed for modification."**
+
+You should be able to add new behavior without editing existing code. When a new requirement arrives, you write new code — you don't modify the working code that already handles existing requirements.
+
+**How this works in practice:** Abstractions. If your payment processor is an interface, adding Stripe support means writing a new `StripeProcessor` class that implements the interface. You don't edit `PayPalProcessor` or the code that uses processors.
+
+**Why it matters:** Every time you modify existing code, you risk introducing bugs in functionality that was already working. If your design forces you to edit 5 files to add one feature, that's 5 opportunities to break something.
+
+**Common violation:** Giant if/else or switch statements that grow every time a new case is added. Each new case modifies the existing function.
+
+**Example:**
+```java
+interface Vehicle {
+    double calculateTaxCost();
+}
+
+class Car implements Vehicle {
+    private double engineCapacity;
+
+    public Car(double engineCapacity) {
+        this.engineCapacity = engineCapacity;
+    }
+
+    public double getEngineCapacity() {
+        return engineCapacity;
+    }
+
+    public double calculateTaxCost() {
+        return engineCapacity * 2.5;
+    }
+}
+
+class Motorcycle implements Vehicle {
+    private double engineCapacity;
+
+    public Motorcycle(double engineCapacity) {
+        this.engineCapacity = engineCapacity;
+    }
+
+    public double getEngineCapacity() {
+        return engineCapacity;
+    }
+
+    public double calculateTaxCost() {
+        return engineCapacity * 1.5;
+    }
+}
+
+class TaxCalculator {
+    public double calculateTotalTax(List<Vehicle> vehicles) {
+        double totalTax = 0;
+        for (Vehicle vehicle : vehicles) {
+            totalTax += vehicle.calculateTaxCost();
+        }
+        return totalTax;
+    }
+}
+```
+
+Adding a new vehicle type (e.g. `Truck`) means creating a new class implementing `Vehicle` — `TaxCalculator` stays untouched.
+
+
+### L — Liskov Substitution Principle (LSP)
+
+**"Subtypes must be substitutable for their base types."**
+
+If your code expects a `Bird` and you pass a `Penguin` (which extends `Bird`), nothing should break. A subclass must honor all the contracts of its parent — same inputs accepted, same outputs produced, no additional exceptions thrown.
+
+**The classic violation:** A `Rectangle` class with `setWidth()` and `setHeight()`. A `Square` extends `Rectangle`. But `Square.setWidth()` must also set height (to remain a square), violating the rectangle's contract where width and height are independent.
+
+**Practical test:** Can you use the subclass anywhere the parent is used without the calling code needing to know the difference? If the caller needs special handling for certain subtypes, LSP is violated.
+
+**Why it matters:** If subtypes don't behave like their parents, polymorphism doesn't work. You end up with `instanceof` checks everywhere, which defeats the purpose of inheritance.
+
+**Before:**
+```java
+@Getter
+@Setter
+@ToString
+public class Bird {
+    private String name;
+
+    public Bird(String name) {
+        this.name = name;
+    }
+
+    public void fly() {
+        System.out.println(getName() + " is flying.");
+    }
+}
+
+@Getter
+@Setter
+@ToString(callSuper = true)
+public class Penguin extends Bird {
+    public Penguin(String name) {
+        super(name);
+    }
+
+    @Override
+    public void fly() {
+        throw new UnsupportedOperationException("Penguins cannot fly!");
+    }
+}
+```
+
+**After:**
+```java
+public interface FlyingBird {
+    void fly();
+}
+
+@Getter
+@Setter
+@ToString
+public class Bird {
+    private String name;
+
+    public Bird(String name) {
+        this.name = name;
+    }
+}
+
+@Getter
+@Setter
+@ToString(callSuper = true)
+public class Eagle extends Bird implements FlyingBird {
+    public Eagle(String name) {
+        super(name);
+    }
+
+    @Override
+    public void fly() {
+        System.out.println(getName() + " is flying.");
+    }
+}
+
+@Getter
+@Setter
+@ToString(callSuper = true)
+public class Penguin extends Bird {
+    public Penguin(String name) {
+        super(name);
+    }
+    // Penguin does not implement FlyingBird because it cannot fly.
+}
+```
+
+
+### I — Interface Segregation Principle (ISP)
+
+**"No client should be forced to depend on methods it doesn't use."**
+
+Don't make fat interfaces. If you have an interface with 10 methods and a class only needs 3 of them, split it. Otherwise you're forcing that class to provide dummy implementations or throw "not supported" exceptions for 7 methods it never uses.
+
+**Example:** An `Animal` interface with `fly()`, `swim()`, and `run()`. A `Dog` class implementing it must provide a `fly()` method it can never meaningfully implement. Better: separate `Flyable`, `Swimmable`, `Runnable` interfaces.
+
+**Why it matters:** Fat interfaces create coupling. If you change one of those 10 methods, all implementors are affected — even the ones that don't use it. Smaller interfaces mean each implementor only knows about what's relevant to it.
+
+**Before:**
+```java
+public interface Worker {
+    void work();
+    void rest();
+}
+
+public class Robot implements Worker {
+
+    @Override
+    public void work() {
+        // implementation
+    }
+
+    @Override
+    public void rest() {
+        throw new UnsupportedOperationException();
+    }
+}
+
+public class Man implements Worker {
+
+    @Override
+    public void work() {
+        // implementation
+    }
+
+    @Override
+    public void rest() {
+        // implementation
+    }
+}
+```
+
+**After:**
+```java
+public interface Work {
+    void work();
+}
+
+public interface Rest {
+    void rest();
+}
+
+public class Robot implements Work {
+
+    @Override
+    public void work() {
+        // implementation
+    }
+}
+
+public class Man implements Work, Rest {
+
+    @Override
+    public void work() {
+        // implementation
+    }
+
+    @Override
+    public void rest() {
+        // implementation
+    }
+}
+```
+
+
+### D — Dependency Inversion Principle (DIP)
+
+**"High-level modules should not depend on low-level modules. Both should depend on abstractions."**
+
+Your business logic shouldn't directly instantiate a `MySQLDatabase` object. It should depend on a `DatabaseInterface`. Then whether the actual implementation is MySQL, PostgreSQL, or an in-memory mock for testing — the business logic doesn't know or care.
+
+**The second part:** "Abstractions should not depend on details. Details should depend on abstractions." The interface defines the contract. The implementation conforms to it. Not the other way around.
+
+**Why it matters:** Without DIP, replacing a dependency requires editing every class that uses it. With DIP, you swap the implementation in one place (usually your dependency injection configuration) and everything that depends on the abstraction continues working unchanged.
+
+**Practical benefit:** Testability. You can inject mocks/stubs through the same abstraction interface, making unit testing possible without hitting real databases, APIs, or file systems.
+
+**Before:**
+```java
+public class Radio {
+    public String playSong() {
+        return "random song from the radio";
+    }
+}
+
+public class MusicListener {
+    private Radio radio;
+
+    public MusicListener() {
+        this.radio = new Radio();
+    }
+
+    public void listen() {
+        String song = this.radio.playSong();
+        System.out.println(song);
+    }
+}
+```
+
+**After:**
+```java
+public interface MusicSource {
+    String playSong();
+}
+
+public class Radio implements MusicSource {
+    @Override
+    public String playSong() {
+        return "random song from the radio";
+    }
+}
+
+public class MP3Device implements MusicSource {
+    @Override
+    public String playSong() {
+        return "random song from the MP3 device";
+    }
+}
+
+public class MusicListener {
+    private MusicSource source;
+
+    public MusicListener(MusicSource source) {
+        this.source = source;
+    }
+
+    public void listen() {
+        String song = this.source.playSong();
+        System.out.println(song);
+    }
+}
+```
+
+Swap music source by passing different `MusicSource` instance — `MusicListener` never changes.
+
+---
+
+## YAGNI — You Ain't Gonna Need It
+
+Don't build features, abstractions, or infrastructure for hypothetical future requirements. Build what you need now. If the future requirement actually arrives, build it then — with the benefit of knowing what's actually needed instead of guessing.
+
+**Why developers violate this:** It feels productive to "prepare for the future." In reality, you're adding complexity that makes the code harder to understand today, and the future requirement almost never arrives in the form you predicted.
+
+---
+
+## DRY — Don't Repeat Yourself
+
+Duplicated logic is duplicated bugs. If the same business rule exists in three places, a change needs to be made three times — and the one you miss becomes a bug.
+
+**The nuance:** DRY doesn't mean "eliminate all textual similarity." Two pieces of code might look similar but represent different concepts that will evolve independently. Premature DRY (abstracting too early) creates tight coupling between unrelated things.
+
+---
+
+## KISS — Keep It Simple, Stupid
+
+Simple designs are harder to create than complex ones. Anyone can add complexity. It takes skill and discipline to find the simple solution. Simple code is easier to read, test, debug, and modify.
+
+**The trap:** Developers often equate complexity with sophistication. "This design pattern proves I'm a serious engineer." No — a design pattern proves you read a book. The right question is: does this complexity earn its keep?

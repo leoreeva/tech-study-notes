@@ -1,0 +1,74 @@
+.docname {DevOps}
+.include {docs}
+
+**Source:** https://dev.to/hamitseyrek/4-what-is-devops-what-are-the-benefits-what-tools-does-it-use-27fl
+
+A common misconception: DevOps is a set of tools, or it's "just CI/CD." Neither is true. DevOps is a cultural and organizational shift in how software gets built, tested, and delivered.
+
+---
+
+## The problem DevOps solves
+
+Traditionally, development teams and operations teams were separate. Developers wrote code and threw it over the wall. Operations deployed it and dealt with the consequences. When something broke in production, developers said "it works on my machine" and operations said "you gave us broken code." Nobody owned the full lifecycle.
+
+DevOps eliminates that wall. The same team (or tightly collaborating teams) owns code from commit to production, including deployment, monitoring, and incident response.
+
+Everyone can see what's happening across the pipeline. If production breaks, it's everyone's problem, not just ops.
+---
+
+## What DevOps actually encompasses
+
+- **Continuous planning** — not a one-time roadmap but ongoing adaptation
+- **Continuous integration** — frequent merges with automated validation
+- **Continuous delivery** — always in a deployable state
+- **Continuous testing** — automated at every stage
+- **Continuous monitoring** — observability in production, not just pre-deployment
+- **Feedback loops** — production metrics inform development priorities
+- **Traceability** — knowing what changed, when, by whom, and why
+
+---
+
+## Requirements for implementation
+
+**1. Architecturally Important Requirements**.
+Your architecture must support deployability (can you deploy one component without deploying everything?), interchangeability (can you swap components?), testability (can you test in isolation?), and monitoring capability (can you observe behavior in production?).
+
+**2. Microservices (usually)**.
+The most common architectural style for DevOps because each service can be deployed, scaled, and monitored independently. Monoliths can work with DevOps but impose constraints on deployment frequency and team independence.
+
+**3. Automation**.
+Everything that can be automated should be: builds, tests, deployments, infrastructure provisioning, monitoring alerts. Manual steps are bottlenecks, error-prone, and don't scale. Automation starts with shared code repositories.
+
+**4. Version Control**.
+Git underpins everything. It enables automation (triggers on push), collaboration (branching, PRs), traceability (who changed what), and rollback (revert to any point). Without version control, DevOps is impossible.
+
+---
+
+## Tooling landscape
+
+| Category | Tool | What it does |
+|----------|------|-------------|
+| Communication | **Slack** | Real-time team coordination, integrations with CI/monitoring tools, alert channels |
+| CI | **Jenkins** | Automates build/test cycles, provides fast feedback on broken code, extensible via plugins |
+| Containerization | **Docker** | Packages apps with all dependencies into portable containers. Eliminates environment differences. Multiple containers per OS reduces infrastructure costs |
+| Security | **Phantom** (now Splunk SOAR) | Security orchestration and automated response. Quarantine devices/files, automate incident response across SDLC |
+| VM Management | **Vagrant** | Defines reproducible development environments as code. Every developer gets the same setup. Kills "works on my machine" |
+| Config Management | **Ansible** | Automates server configuration and system changes. Agentless (SSH-based), simple YAML syntax. Manages infrastructure at scale |
+| Version Control | **GitHub / GitLab / Bitbucket** | Code hosting, PRs/MRs, code review, issue tracking. GitHub is most popular; GitLab offers built-in CI/CD; Bitbucket integrates with Jira/Trello |
+| Error Tracking | **Sentry** | Real-time error detection across languages (Ruby, Swift, JS, PHP, etc.). Used by Microsoft, PayPal, Pinterest. Shows stack traces, affected users, frequency |
+
+### Tools the article doesn't mention but should be on your radar:
+
+- **Terraform** — infrastructure as code (provision cloud resources declaratively)
+- **Kubernetes** — container orchestration (manage many containers across many machines)
+- **Prometheus + Grafana** — monitoring and visualization
+- **ArgoCD / Flux** — GitOps-style continuous deployment
+- **PagerDuty / OpsGenie** — incident management and on-call alerting
+
+---
+
+## Who actually needs full DevOps?
+
+Solo developers and tiny teams (2-3 people) don't need the full ceremony. Use Git, write some tests, maybe set up a simple CI pipeline. That's enough.
+
+But if you're aiming for corporate positions or working on anything with real users at scale, understanding DevOps culture and practices is expected. Most large companies have adopted it or are actively transitioning. Knowing the tools is table stakes — understanding *why* they exist and how the culture works is what makes you effective in those environments.

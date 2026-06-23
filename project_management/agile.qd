@@ -1,0 +1,115 @@
+.docname {AGILE}
+.include {docs}
+
+**Source:** https://dev.to/hamitseyrek/6-what-is-agile-scrum-methodology-what-are-the-benefits-to-software-development-teams-cb2
+
+## What is Agile?
+
+It's a project management philosophy that breaks work into small iterations rather than trying to plan and execute everything in one giant phase.
+
+**Historical context:** Agile thinking existed in software since the 1970s (iterative development, prototyping), but it was formalized in 2001 with the Agile Manifesto — a one-page document written by 17 developers who were fed up with heavyweight methodologies like Waterfall and RUP.
+
+### The Agile Manifesto's four values:
+
+- **Individuals and interactions** over processes and tools
+- **Working software** over comprehensive documentation
+- **Customer collaboration** over contract negotiation
+- **Responding to change** over following a plan
+
+The right side isn't worthless — it just matters less than the left side.
+
+### The 12 Principles (summarized):
+
+1. Satisfy the customer through early and continuous delivery
+2. Welcome changing requirements, even late in development
+3. Deliver working software frequently (weeks, not months)
+4. Business people and developers work together daily
+5. Build projects around motivated individuals, give them what they need, trust them
+6. Face-to-face conversation is the most effective communication
+7. Working software is the primary measure of progress
+8. Sustainable pace — no death marches
+9. Technical excellence and good design enhance agility
+10. Simplicity — maximize work not done
+11. Self-organizing teams produce the best architectures and designs
+12. Regular reflection on how to become more effective
+
+---
+
+## What is Scrum?
+
+It's one specific framework for implementing Agile. It's the most popular but not the only option (Kanban, XP, SAFe, and others exist).
+
+Scrum structures work into **sprints** — fixed time boxes, usually 2-4 weeks. Each sprint has a goal, and at the end of each sprint you should have something potentially shippable.
+
+### The key difference from Waterfall:
+
+**Waterfall:** Gather all requirements → Design everything → Build everything → Test everything → Ship once.
+
+**Scrum:** Build the most valuable piece → Ship it → Get feedback → Adjust → Repeat.
+
+Waterfall assumes you know all requirements upfront and that they won't change. In practice, requirements always change — users don't know what they want until they see something working, markets shift, competitors move, technology evolves. Scrum embraces this reality.
+
+
+### The sprint cycle:
+
+1. **Sprint Planning** — team selects items from the backlog to work on this sprint. Scope is based on the team's velocity (how much they've delivered in past sprints).
+2. **Daily Standup** — 15-minute meeting. Each person: What I did yesterday. What I'm doing today. Any blockers.
+3. **Sprint Work** — the team builds, tests, and integrates their work.
+4. **Sprint Review** — demonstrate what was built to stakeholders. Get feedback.
+5. **Sprint Retrospective** — team reflects on the process itself. What worked? What didn't? What to change?
+
+Then the cycle repeats.
+
+
+### The three roles
+
+#### Scrum Master
+A facilitator, not a manager. Doesn't assign work or make technical decisions. Instead:
+- Ensures the team follows Scrum practices correctly
+- Removes obstacles (a team member is blocked by another department? Scrum Master handles it)
+- Coaches the team toward self-organization
+- Protects the team from external distractions during a sprint
+- Runs daily standups and sprint ceremonies
+
+Common misconception: Scrum Master = project manager. No. A project manager controls the project. A Scrum Master serves the team.
+
+#### Product Owner
+The single point of accountability for the product's value:
+- Maintains the **product backlog** — a prioritized list of everything that could be built
+- Decides what gets built next (priority) based on business value
+- Defines acceptance criteria for each item
+- Represents stakeholder interests to the development team
+- Says "yes, this meets our needs" or "no, try again" at sprint review
+
+The Product Owner makes scope decisions. The team makes technical decisions. Neither overrules the other.
+
+#### Development Team (Scrum Team)
+A self-organizing, cross-functional group of 3-9 people:
+- Includes all skills needed to deliver (development, design, QA, etc.)
+- No sub-teams or hierarchies within the group
+- Collectively responsible for delivering the sprint goal
+- Decides *how* to do the work (the Product Owner decides *what*)
+- Estimates effort and commits to what they can deliver
+
+### Benefits of Agile Scrum
+
+**Adaptability** — feedback after each sprint (every 2-4 weeks) means you can pivot quickly. Wrong direction? You've lost 2 weeks, not 6 months.
+
+**Stakeholder satisfaction** — everyone stays involved. No "we built what you asked for 6 months ago but you've changed your mind."
+
+**Reduced waste** — building in small increments means you stop when you've delivered enough value. No over-engineering features nobody uses.
+
+**Earlier value delivery** — users get working software in weeks, not after the entire project completes.
+
+**Transparency** — sprint reviews and burndown charts make progress visible. No "it's 90% done" for three months straight.
+
+**Team morale** — autonomy, regular accomplishment (every sprint delivers something), and sustainable pace reduce burnout.
+
+
+### Common failure modes:
+
+- **Scrum theater** — going through the motions (daily standups, sprint planning) without actually embracing the principles. You get the overhead without the benefits.
+- **Sprint scope creep** — stakeholders adding work mid-sprint, making the time box meaningless.
+- **No actual shippable increment** — sprints end with "almost done" work that never quite reaches users.
+- **Scrum Master as micro-manager** — defeats the self-organizing principle entirely.
+- **Ignoring retrospectives** — if nothing changes after retros, the team stops being honest.
