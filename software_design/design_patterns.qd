@@ -13,13 +13,13 @@ In software terms, a design pattern is a language-independent reusable solution/
 
 Creational patterns provide flexibility in *what* gets created, *who* creates it, *how* it's created, and *when*. They abstract the instantiation process, making systems independent of how objects are created, composed, and represented.
 
-| Pattern | One-Line Summary | Difficulty | Progress |
-|---------|------------------|------------|----------|
-| Singleton | Ensure a class has only one instance | ⭐ | ✅ |
-| Prototype | Clone objects instead of creating new | ⭐ | ✅ |
-| Factory Method | Define an interface for creating objects | ⭐⭐ | ✅ |
-| Builder | Construct complex objects step by step | ⭐⭐ | ❌ |
-| Abstract Factory | Create families of related objects | ⭐⭐⭐ | ❌ |
+| Pattern | One-Line Summary | Difficulty |
+|---------|------------------|------------|
+| Singleton | Ensure a class has only one instance | ⭐ |
+| Prototype | Clone objects instead of creating new | ⭐ |
+| Factory Method | Define an interface for creating objects | ⭐⭐ |
+| Builder | Construct complex objects step by step | ⭐⭐ |
+| Abstract Factory | Create families of related objects | ⭐⭐⭐ |
 
 ---
 
@@ -29,15 +29,15 @@ Creational patterns provide flexibility in *what* gets created, *who* creates it
 
 Structural patterns provide flexibility in *what* gets created, *who* creates it, *how* it's created, and *when*. They abstract the instantiation process, making systems independent of how objects are created, composed, and represented.
 
-| Pattern | One-Line Summary | Difficulty | Progress |
-|---------|------------------|------------|----------|
-| Adapter | Convert interface to another interface | ⭐ | ✅ |
-| Facade | Provide simplified interface to subsystem | ⭐ | ✅ |
-| Decorator | Add behavior to objects dynamically | ⭐⭐ | ✅ |
-| Composite | Treat objects and compositions uniformly | ⭐⭐ | ❌ |
-| Proxy | Control access to an object | ⭐⭐ | ❌ |
-| Bridge | Decouple abstraction from implementation | ⭐⭐⭐ | ❌ |
-| Flyweight | Share common state to save memory | ⭐⭐⭐ | ❌ |
+| Pattern | One-Line Summary | Difficulty |
+|---------|------------------|------------|
+| Adapter | Convert interface to another interface | ⭐ |
+| Facade | Provide simplified interface to subsystem | ⭐ |
+| Decorator | Add behavior to objects dynamically | ⭐⭐ |
+| Composite | Treat objects and compositions uniformly | ⭐⭐ |
+| Proxy | Control access to an object | ⭐⭐ |
+| Bridge | Decouple abstraction from implementation | ⭐⭐⭐ |
+| Flyweight | Share common state to save memory | ⭐⭐⭐ |
 
 ---
 
@@ -47,18 +47,18 @@ Structural patterns provide flexibility in *what* gets created, *who* creates it
 
 Objects need to collaborate to accomplish tasks. Behavioral patterns define clear communication protocols, making interactions flexible and maintainable.
 
-| Pattern | One-Line Summary | Difficulty | Progress |
-|---------|------------------|------------|----------|
-| Iterator | Access collection elements sequentially | ⭐ | ✅ |
-| Template Method | Define skeleton of algorithm in base class | ⭐ | ❌ |
-| Chain of Responsibility | Pass requests along a chain of handlers | ⭐⭐ | ❌ |
-| Command | Encapsulate requests as objects | ⭐⭐ | ❌ |
-| Memento | Save and restore object state | ⭐⭐ | ❌ |
-| Observer | Define one-to-many dependency | ⭐⭐ | 🚧 |
-| Strategy | Define family of interchangeable algorithms | ⭐⭐ | ❌ |
-| Mediator | Reduce coupling between objects | ⭐⭐⭐ | ❌ |
-| State | Change behavior when state changes | ⭐⭐⭐ | ❌ |
-| Visitor | Add operations without modifying classes | ⭐⭐⭐ | ❌ |
+| Pattern | One-Line Summary | Difficulty |
+|---------|------------------|------------|
+| Iterator | Access collection elements sequentially | ⭐ |
+| Template Method | Define skeleton of algorithm in base class | ⭐ |
+| Chain of Responsibility | Pass requests along a chain of handlers | ⭐⭐ |
+| Command | Encapsulate requests as objects | ⭐⭐ |
+| Memento | Save and restore object state | ⭐⭐ |
+| Observer | Define one-to-many dependency | ⭐⭐ |
+| Strategy | Define family of interchangeable algorithms | ⭐⭐ |
+| Mediator | Reduce coupling between objects | ⭐⭐⭐ |
+| State | Change behavior when state changes | ⭐⭐⭐ |
+| Visitor | Add operations without modifying classes | ⭐⭐⭐ |
 
 ---
 
@@ -94,3 +94,9 @@ When NOT to use patterns:
 - **Language differences**: Some patterns (like Singleton) have better alternatives in certain languages.
 - **Patterns evolve**: Modern languages have features that reduce pattern complexity.
 - **For interview prep**, focus on: Singleton, Factory Method, Strategy, Observer, Decorator, and Adapter (most commonly discussed).
+
+---
+
+Sources (images and content): https://refactoring.guru/design-patterns/
+
+Useful resource: https://codesignal.com/learn/paths/mastering-design-patterns-with-java

@@ -40,16 +40,33 @@ This way, the iterator pattern lets you traverse different data structure, even 
 Defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
 
 ###! Problem
-aaa
+Several classes may implement the same overall algorithm but differ in a few details. For example, different document importers may all open a file, parse content, extract data, validate it, and close resources, while each file format needs different parsing logic.
+
+If every class implements the whole algorithm on its own, common steps get duplicated. If the algorithm changes, the same fix has to be repeated in many places.
 
 ###! Solution
-aaa
+Template Method puts the fixed algorithm structure in a base class. The base class defines a template method that calls a sequence of steps in a specific order.
+
+Some steps are implemented directly in the base class. Other steps are abstract or hook methods that subclasses can override. This lets subclasses customize parts of the algorithm without changing the algorithm's overall order.
+
+In short: use Template Method when the workflow is stable, but some steps vary between subclasses.
 
 ###! Structure
-aaa
+The pattern typically has these roles:
+
+1. **Abstract Class**
+   Defines the template method and declares the steps that subclasses may implement or override.
+
+1. **Concrete Classes**
+   Implement the variable steps while keeping the algorithm structure defined by the base class.
+
+1. **Hooks**
+   Optional methods with default behavior that subclasses may override only when needed.
 
 ###! Drawbacks
-aaa
+- Subclasses are limited by the algorithm structure defined in the base class.
+- The base class can become hard to understand if the template has many steps.
+- Incorrect overrides can break the expected flow or violate the superclass contract.
 
 ---
 
@@ -57,16 +74,34 @@ aaa
 Lets you pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.
 
 ###! Problem
-aaa
+Some requests may need to pass through several possible processors before they are handled. For example, an app may check authentication, permissions, rate limits, cache, and validation before executing a request.
+
+If the sender knows all possible handlers, it becomes tightly coupled to them. If the checks are hardcoded in one large method, adding or reordering behavior becomes risky and messy.
 
 ###! Solution
-aaa
+Chain of Responsibility turns each check or processing step into a handler object. Handlers share a common interface and can be linked into a chain.
+
+When a request arrives, a handler can process it, stop the chain, or pass it to the next handler. The sender only knows the first handler in the chain, so handlers can be rearranged, replaced, or extended without changing sender code.
 
 ###! Structure
-aaa
+The pattern typically has these roles:
+
+1. **Handler**
+   Declares the common interface for handling requests and usually defines how to set the next handler.
+
+1. **Base Handler**
+   Optional class that stores the next handler and provides default forwarding behavior.
+
+1. **Concrete Handlers**
+   Decide whether they can handle the request or should pass it along.
+
+1. **Client**
+   Builds the chain and sends requests to the first handler.
 
 ###! Drawbacks
-aaa
+- A request may reach the end of the chain without being handled.
+- The order of handlers matters and can be hard to reason about.
+- Debugging can be more difficult because the final handler is not obvious from the sender.
 
 ---
 
@@ -74,16 +109,39 @@ aaa
 Turns a request into a stand-alone object that contains all information about the request. This transformation lets you pass requests as a method arguments, delay or queue a request's execution, and support undoable operations.
 
 ###! Problem
-aaa
+UI elements such as buttons, menu items, and shortcuts often trigger actions. If each UI class contains the action logic directly, it becomes coupled to business logic and hard to reuse. A copy button, context menu item, and keyboard shortcut may all need to perform the same operation.
+
+The problem gets bigger when actions need to be queued, logged, scheduled, retried, or undone. A plain method call does not carry enough information to be treated as a first-class object.
 
 ###! Solution
-aaa
+Command wraps a request in an object with a common execution method, usually `execute`. The command stores the receiver, the operation to call, and any required parameters.
+
+Invokers such as buttons or queues do not know the details of the operation. They just execute a command. This decouples the object that triggers the request from the object that performs the work.
+
+Because commands are objects, they can be stored in history, placed in queues, serialized, retried, or paired with enough state to implement undo.
 
 ###! Structure
-aaa
+The pattern typically has these roles:
+
+1. **Command**
+   Declares the execution interface.
+
+1. **Concrete Command**
+   Stores the receiver and request details, then calls the receiver when executed.
+
+1. **Receiver**
+   Contains the real business logic.
+
+1. **Invoker**
+   Holds and triggers commands without knowing how they work internally.
+
+1. **Client**
+   Creates commands and connects them with receivers and invokers.
 
 ###! Drawbacks
-aaa
+- The code can become more complicated because each action may need its own command class.
+- Simple method calls may be clearer when queuing, undo, or decoupling is not needed.
+- Undo support can be difficult if commands must restore complex state.
 
 ---
 
@@ -91,19 +149,38 @@ aaa
 Lets you save and restore the previous state of an object without revealing the details of its implementation.
 
 ###! Problem
-aaa
+Applications often need undo, rollback, or checkpoints. A text editor, for example, should be able to restore a document to an earlier state.
+
+Saving state from the outside can break encapsulation. The caretaker would need access to private fields, and any change to the object's internals would also force changes in the snapshot logic.
 
 ###! Solution
-aaa
+Memento lets the object that owns the state create snapshots of itself. This object is called the originator. The snapshot is stored in a memento object.
+
+Other objects, called caretakers, can store and later return mementos to the originator, but they do not inspect or modify the saved state. This keeps the originator responsible for its own internals while still allowing state history.
 
 ###! Structure
-aaa
+The pattern typically has these roles:
+
+1. **Originator**
+   Owns the important state and can create or restore snapshots.
+
+1. **Memento**
+   Stores a snapshot of the originator's state. Its internal data should be visible only to the originator.
+
+1. **Caretaker**
+   Stores mementos and decides when to save or restore them, without depending on their contents.
 
 ###! Applicability
-aaa
+Use the Memento pattern when:
+
+- you need undo, rollback, checkpoints, or history
+- exposing an object's internal state would break encapsulation
+- snapshots should be managed by another object without giving it access to private details
 
 ###! Drawbacks
-aaa
+- Storing many snapshots can consume a lot of memory.
+- Caretakers must manage the lifecycle of mementos carefully.
+- Some languages make it hard to restrict access so only the originator can inspect the memento.
 
 ---
 
@@ -116,17 +193,17 @@ Imagine a customer eagerly awaiting a new iPhone at a store. They could check th
 ###! Solution
 The object that has some interesting state is called **publisher**; all other objects that want to track changes to the publisher's state are called **subscribers**. This pattern suggests adding a subscription mechanism to the publisher class, so individual objects can subscribe to or unsubscribe from a stream of events coming from that publisher.
 
-Whenever an event happens to the publisher, it goes over its subscribers and calls the specific notification method on their objects. Publisher doesn't need to know much about subscribers different classes: so it's crucial that they implement the same interface (with notification method and a set of parameters), and that the publisher communicates with them only via that interface.
+Whenever an event happens to the publisher, it goes over its subscribers and calls the specific notification method on their objects. The publisher doesn't need to know much about subscribers' concrete classes, so it's crucial that they implement the same interface and that the publisher communicates with them only through that interface.
 
-If you have multiple publisher, even them can implement same interface, so that subscribers can observe them with same methods.
+If you have multiple publishers, they can also implement the same publisher interface, so subscribers can observe them in a consistent way.
 
 ###! Structure
-![Observe structure](images/observer1.png)
+![Observer structure](images/observer1.png)
 - The Publisher issues events of interest to other objects. These events occur when the publisher changes its state or executes some behaviors. Publishers contain a subscription infrastructure that lets new subscribers join and current subscribers leave the list
 - When a new event happens, the publisher goes over the subscription list and calls the notification method declared in the subscriber interface on each subscriber object.
 - The Subscriber interface declares the notification interface. In most cases, it consists of a single update method. The method may have several parameters that let the publisher pass some event details along with the update.
 - Concrete Subscribers perform some actions in response to notifications issued by the publisher. All of these classes must implement the same interface so the publisher isn't coupled to concrete classes.
-- Usually, subscribers need some contextual information to handle the update correctly. For this reason, publishers often pass some context data as arguments of the notification method. The publisher can pass itself as an argument, letting subscriber fetch any required data directly.
+- Usually, subscribers need some contextual information to handle the update correctly. For this reason, publishers often pass some context data as arguments of the notification method. The publisher can pass itself as an argument, letting subscribers fetch any required data directly.
 
 ###! Applicability
 Use the Observer pattern when:
@@ -145,16 +222,34 @@ Use the Observer pattern when:
 Lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
 
 ###! Problem
-aaa
+A class may need to perform the same kind of task in several different ways. For example, a navigation app may calculate routes for walking, driving, cycling, or public transport.
+
+If all algorithms are placed inside one class, it quickly fills with conditional logic. Every new algorithm changes that class, and clients may depend on details they should not know.
 
 ###! Solution
-aaa
+Strategy extracts each algorithm into its own class with a common interface. The original object, called the context, keeps a reference to a strategy and delegates the work to it.
+
+The context does not know which concrete algorithm is being used. The client can choose the right strategy and even replace it at runtime. This keeps algorithms isolated and makes them easier to test, replace, or extend.
 
 ###! Structure
-aaa
+The pattern typically has these roles:
+
+1. **Strategy**
+   Declares the common interface for all supported algorithms.
+
+1. **Concrete Strategies**
+   Implement different versions of the algorithm.
+
+1. **Context**
+   Stores a strategy and delegates algorithm-specific work to it.
+
+1. **Client**
+   Chooses which strategy the context should use.
 
 ###! Drawbacks
-aaa
+- It can be overkill when there are only a couple of simple algorithms.
+- Clients must understand the differences between strategies to choose the right one.
+- In languages with first-class functions, small strategies can sometimes be replaced by functions or lambdas.
 
 ---
 
@@ -162,16 +257,34 @@ aaa
 Lets you reduce chaotic dependencies between objects. The pattern restricts direct communications between the objects and forces them to collaborate only via a mediator object.
 
 ###! Problem
-aaa
+When many objects communicate directly, dependencies can become tangled. A dialog window is a common example: buttons, text fields, checkboxes, and lists may all need to react to each other.
+
+If each component knows about many other components, changing or reusing one of them becomes difficult. The communication logic is spread across the whole group instead of being easy to find.
 
 ###! Solution
-aaa
+Mediator moves communication logic into a separate mediator object. Components no longer call each other directly. Instead, they notify the mediator about events, and the mediator decides what other components should do.
+
+This reduces coupling between components. They only need to know the mediator interface, while the mediator contains the coordination rules for a specific screen, workflow, or subsystem.
 
 ###! Structure
-aaa
+The pattern typically has these roles:
+
+1. **Mediator**
+   Declares methods that components use to notify it about events.
+
+1. **Concrete Mediator**
+   Coordinates components and contains the collaboration logic.
+
+1. **Components**
+   Perform their own work, but communicate with other components only through the mediator.
+
+1. **Client**
+   Creates the mediator and connects it with the components it coordinates.
 
 ###! Drawbacks
-aaa
+- The mediator can become a "god object" if too much behavior is moved into it.
+- It adds indirection, so simple interactions may become harder to trace.
+- Components become easier to reuse, but the mediator itself is usually specific to one workflow.
 
 ---
 
@@ -179,16 +292,36 @@ aaa
 Lets an object alter its behavior when its internal state changes. It appears as if the object changed its class.
 
 ###! Problem
-aaa
+An object may behave differently depending on its current state. For example, a document can be draft, moderated, or published, and the same operation may do different things in each state.
+
+This is often implemented with large conditionals. As states and transitions grow, methods fill up with repeated checks, and adding a new state requires changes in many places.
 
 ###! Solution
-aaa
+State extracts state-specific behavior into separate state classes. The context stores a reference to the current state object and delegates behavior to it.
+
+Each state class implements the behavior for that state and can decide when to transition the context to another state. This makes state-specific rules explicit and removes large conditional blocks from the context.
+
+State is similar to Strategy in structure, but its purpose is different: strategies are usually chosen by the client, while states often change internally as the object evolves.
 
 ###! Structure
-aaa
+The pattern typically has these roles:
+
+1. **Context**
+   Stores the current state and delegates state-dependent behavior to it.
+
+1. **State**
+   Declares the common interface for all concrete states.
+
+1. **Concrete States**
+   Implement behavior for a specific state and may trigger transitions to other states.
+
+1. **Client**
+   Works with the context and usually does not manage state objects directly.
 
 ###! Drawbacks
-aaa
+- It adds extra classes, which may be unnecessary for simple state machines.
+- State transitions can be harder to follow if they are spread across many state classes.
+- All state classes must stay consistent with the context's public behavior.
 
 ---
 
@@ -196,17 +329,34 @@ aaa
 Lets you separate algorithms from the objects on which they operate.
 
 ###! Problem
-aaa
+Sometimes you need to add a new operation to many classes in an object structure. For example, a set of shapes may need export, reporting, validation, or analytics behavior.
+
+Adding the operation directly to every class may pollute those classes with unrelated behavior. It can also be impossible if the classes belong to a library or are otherwise closed for modification.
 
 ###! Solution
-aaa
+Visitor moves the new operation into a separate visitor class. Each element in the object structure accepts a visitor and calls the visitor method that matches its own concrete type.
+
+This is called double dispatch: the operation depends on both the visitor type and the element type. You can add new operations by creating new visitors without changing the element classes, as long as the element hierarchy is stable.
 
 ###! Structure
-aaa
+The pattern typically has these roles:
+
+1. **Visitor**
+   Declares visit methods for each concrete element type.
+
+1. **Concrete Visitor**
+   Implements one operation across all supported element types.
+
+1. **Element**
+   Declares an `accept` method that receives a visitor.
+
+1. **Concrete Elements**
+   Call the matching visitor method and pass themselves as arguments.
+
+1. **Client**
+   Traverses the object structure and applies visitors to its elements.
 
 ###! Drawbacks
-aaa
-
----
-
-Images sources: https://refactoring.guru/design-patterns/
+- Adding a new element class is difficult because every visitor interface and concrete visitor must change.
+- Visitors often need access to element details, which can pressure classes to expose more state.
+- It is a poor fit when the object hierarchy changes often.

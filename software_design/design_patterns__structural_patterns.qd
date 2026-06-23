@@ -115,16 +115,34 @@ The pattern typically has these roles:
 Lets you compose objects into tree structures and then work with these structures as if they were individual objects.
 
 ###! Problem
-aaa
+Some object models are naturally tree-shaped. For example, an order can contain products, but it can also contain boxes, and each box can contain more products or other boxes.
+
+If client code has to calculate the total price, render the tree, or validate the structure, it may need to distinguish between simple objects and containers everywhere. This couples the client to many concrete classes and makes recursive logic spread through the codebase.
 
 ###! Solution
-aaa
+Composite defines a common interface for both simple elements and containers. A leaf object performs the actual work. A container object delegates the work to its children, combines their results, and exposes the same interface as a leaf.
+
+Because both leaves and containers share the same contract, client code can treat the whole tree as one object. It does not need to know whether it is working with a single product or a box full of nested boxes.
 
 ###! Structure
-aaa
+The pattern typically has these roles:
+
+1. **Component**
+   Declares operations common to both simple and complex elements.
+
+1. **Leaf**
+   Represents an end object with no children and performs the real work.
+
+1. **Composite**
+   Stores child components and delegates work to them.
+
+1. **Client**
+   Works with all elements through the component interface.
 
 ###! Drawbacks
-aaa
+- It can be hard to create a common interface when leaves and containers have very different behavior.
+- The design may become too general, making invalid operations possible unless they are guarded carefully.
+- Recursive structures can make debugging more difficult.
 
 ---
 
@@ -132,32 +150,74 @@ aaa
 Lets you provide a substitute or placeholder for another object. A proxy controls access to the original object, allowing you to perform something either before or after the request gets through to the original object.
 
 ###! Problem
-aaa
+Sometimes an object is expensive, remote, sensitive, or needs extra behavior around access. For example, loading a large image, calling a remote service, checking permissions, caching results, or logging calls may all be useful, but adding that logic directly to the original class can mix responsibilities.
+
+Changing client code everywhere is not ideal either. Clients should still depend on the same interface and should not need to know whether they are talking to the real object or a helper around it.
 
 ###! Solution
-aaa
+A proxy implements the same interface as the original service and keeps a reference to it. The proxy receives client requests, performs extra work if needed, and then forwards the request to the real object.
+
+This lets you add lazy initialization, access control, caching, logging, remote communication, or other access-related behavior without changing the client and without bloating the service itself.
 
 ###! Structure
-aaa
+The pattern typically has these roles:
+
+1. **Service Interface**
+   Declares the operations used by the client.
+
+1. **Service**
+   Contains the real business logic.
+
+1. **Proxy**
+   Implements the same interface, controls access to the service, and delegates to it when appropriate.
+
+1. **Client**
+   Works through the service interface and can use either the real service or the proxy.
 
 ###! Drawbacks
-aaa
+- It adds another layer of indirection, which can make behavior harder to follow.
+- Response time may increase if the proxy performs heavy checks or remote calls.
+- The proxy can become complicated if it starts owning business logic instead of only controlling access.
 
 ---
 
 ## Bridge
+Lets you split a large class or a set of closely related classes into two separate hierarchies, abstraction and implementation, which can be developed independently.
 
 ###! Problem
-Lets you split a large class or a set of closely related classes into two separate hierarchies (abstraction and implementation) which can be developed independently of each other.
+Inheritance can explode when a class varies along multiple dimensions. For example, if you have shapes and colors, you may create `RedCircle`, `BlueCircle`, `RedSquare`, `BlueSquare`, and so on. Adding a new shape or color multiplies the number of subclasses.
+
+This couples independent concepts together. A change in one dimension forces changes across many classes, even though shapes and colors could evolve separately.
 
 ###! Solution
-aaa
+Bridge replaces one large inheritance hierarchy with two linked hierarchies. The abstraction represents the high-level control layer, while the implementation represents the platform, variant, or low-level detail that actually performs the work.
+
+The abstraction stores a reference to an implementation object and delegates work to it. This lets you combine abstractions and implementations at runtime and extend each side independently.
+
+In short: use Bridge when two dimensions of variation should not be locked into one inheritance tree.
 
 ###! Structure
-aaa
+The pattern typically has these roles:
+
+1. **Abstraction**
+   Defines the high-level interface and keeps a reference to an implementation.
+
+1. **Refined Abstraction**
+   Extends the abstraction with extra behavior while still delegating implementation details.
+
+1. **Implementation**
+   Declares the low-level interface used by abstractions.
+
+1. **Concrete Implementations**
+   Provide platform-specific or variant-specific behavior.
+
+1. **Client**
+   Works with the abstraction and can choose which implementation to attach.
 
 ###! Drawbacks
-aaa
+- It can make simple code more complex by adding extra interfaces and classes.
+- The abstraction and implementation interfaces must be designed carefully, otherwise both sides may still become coupled.
+- It is most useful when there are real independent dimensions of change.
 
 ---
 
@@ -165,17 +225,37 @@ aaa
 Lets you fit more objects into the available amount of RAM by sharing common parts of state between multiple objects instead of keeping all of the data in each object.
 
 ###! Problem
-aaa
+An application may need to create a huge number of similar objects. For example, a game may create thousands of particles, bullets, trees, or characters. If each object stores all of its data, memory usage can become too high.
+
+Often, much of that data is repeated. Many trees may share the same texture, color, and species, while only their coordinates are different.
 
 ###! Solution
-aaa
+Flyweight splits object state into two parts:
+
+- **Intrinsic state** is shared, immutable data stored inside the flyweight.
+- **Extrinsic state** is unique context passed in by the client when an operation is executed.
+
+Instead of creating many full objects, the app reuses a smaller set of flyweight objects that contain the shared state. A factory is often used to cache and return existing flyweights, so duplicates are not created.
 
 ###! Structure
-aaa
+The pattern typically has these roles:
+
+1. **Flyweight**
+   Stores shared intrinsic state and exposes behavior that accepts extrinsic state.
+
+1. **Concrete Flyweight**
+   Implements shared behavior and must not depend on unique per-object context stored inside itself.
+
+1. **Flyweight Factory**
+   Creates and caches flyweights, returning existing ones when possible.
+
+1. **Context**
+   Stores extrinsic state that is unique for each logical object.
+
+1. **Client**
+   Gets flyweights from the factory and passes external state when using them.
 
 ###! Drawbacks
-aaa
-
----
-
-Images sources: https://refactoring.guru/design-patterns/
+- The code becomes more complex because state is split between shared objects and external context.
+- CPU usage may increase because extrinsic state must be calculated or passed around more often.
+- It is only worth it when many objects share enough data to meaningfully reduce memory usage.
