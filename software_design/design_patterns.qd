@@ -1,17 +1,13 @@
 .docname {Design Patterns}
 .include {docs}
 
-> "Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice."
-
-In software terms, a design pattern is a language-independent reusable solution/template to commonly occurring problems. It's not a library/framework, not algorithms, not a copy-paste solution and finally not mandatory (knowing when NOT to use them is equally important)
+A design pattern is a language-independent reusable solution/template to commonly occurring problems. It's not a library/framework, not algorithms, not a copy-paste solution and finally not mandatory (knowing when NOT to use them is equally important)
 
 ---
 
 ## Creational Patterns
 
-**Focus:** How objects are created
-
-Creational patterns provide flexibility in *what* gets created, *who* creates it, *how* it's created, and *when*. They abstract the instantiation process, making systems independent of how objects are created, composed, and represented.
+**Focus:** How objects are instantiated.
 
 | Pattern | One-Line Summary | Difficulty |
 |---------|------------------|------------|
@@ -25,9 +21,7 @@ Creational patterns provide flexibility in *what* gets created, *who* creates it
 
 ## Structural Patterns
 
-**Focus:** How objects are composed and related
-
-Structural patterns provide flexibility in *what* gets created, *who* creates it, *how* it's created, and *when*. They abstract the instantiation process, making systems independent of how objects are created, composed, and represented.
+**Focus:** How objects are related and can use each other
 
 | Pattern | One-Line Summary | Difficulty |
 |---------|------------------|------------|
@@ -43,9 +37,7 @@ Structural patterns provide flexibility in *what* gets created, *who* creates it
 
 ## Behavioral Patterns
 
-**Focus:** How objects communicate and distribute responsibility
-
-Objects need to collaborate to accomplish tasks. Behavioral patterns define clear communication protocols, making interactions flexible and maintainable.
+**Focus:** How objects communicate (protocols) and distribute responsibility
 
 | Pattern | One-Line Summary | Difficulty |
 |---------|------------------|------------|
@@ -97,6 +89,7 @@ When NOT to use patterns:
 
 ---
 
-Sources (images and content): https://refactoring.guru/design-patterns/
-
-Useful resource: https://codesignal.com/learn/paths/mastering-design-patterns-with-java
+Useful resources and sources:
+- https://refactoring.guru/design-patterns/
+- https://github.com/nilbuild/design-patterns-for-humans
+- https://codesignal.com/learn/paths/mastering-design-patterns-with-java
